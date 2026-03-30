@@ -27,7 +27,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="section-label mb-6"
+          style={{ willChange: "transform, opacity" }}
+          className="section-label mb-6 min-h-[1.5rem]"
         >
           Consultant SEO · Neuchâtel
         </motion.p>
@@ -37,26 +38,29 @@ const HeroSection = () => {
           className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6"
         >
           <motion.span
-            initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="inline-block"
           >
             Plus de visibilité Google.
           </motion.span>
           <br className="hidden md:block" />
           <motion.span
-            initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="inline-block"
           >
             Plus de clients.{" "}
           </motion.span>
           <motion.span
-            initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="inline-block text-gradient"
           >
             Moins de hasard.
@@ -79,7 +83,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[48px]"
+          style={{ willChange: "transform, opacity" }}
         >
           <Button variant="hero" size="lg" className="rounded-full" asChild>
             <a href="#contact">
@@ -96,7 +101,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto min-h-[80px]"
         >
           {[
             { value: "31", label: "Points de contrôle technique" },
