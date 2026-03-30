@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, X } from "lucide-react";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { ShineBorder } from "@/components/ui/shine-border";
 
@@ -108,56 +108,8 @@ const suiviPlans = [
   },
 ];
 
-/* ── Prestations complémentaires ── */
-const supplements = [
-  {
-    category: "Pages supplémentaires",
-    items: [
-      { name: "Page simple", price: "390" },
-      { name: "Page complexe", price: "490" },
-      { name: "Landing page conversion", price: "590" },
-    ],
-  },
-  {
-    category: "Modifications ponctuelles",
-    items: [
-      { name: "Tarif horaire", price: "150/h" },
-      { name: "Minimum facturé (30 min)", price: "75" },
-    ],
-  },
-  {
-    category: "Images et visuels",
-    items: [
-      { name: "Intégration image", price: "35" },
-      { name: "Pack 10 images", price: "250" },
-      { name: "Sourcing photo stock", price: "75/image" },
-      { name: "Retouche", price: "150/h" },
-    ],
-  },
-  {
-    category: "Fonctionnalités additionnelles",
-    items: [
-      { name: "Formulaire avancé", price: "290" },
-      { name: "Intégration réservation", price: "190" },
-      { name: "Intégration paiement", price: "390" },
-      { name: "Blog", price: "490" },
-      { name: "Module avis Google", price: "190" },
-      { name: "Multilingue (+1 langue)", price: "+60 % du prix site" },
-    ],
-  },
-  {
-    category: "Évolutions structurelles",
-    items: [
-      { name: "Refonte d'une page", price: "350" },
-      { name: "Migration contenu", price: "Sur devis" },
-      { name: "Schéma structuré additionnel", price: "90/schéma" },
-    ],
-  },
-];
 
 const ServicesSection = () => {
-  const [showSupplements, setShowSupplements] = useState(false);
-
   return (
     <section id="services" className="py-24 md:py-40">
       <div className="container max-w-6xl mx-auto px-4">
@@ -323,41 +275,17 @@ const ServicesSection = () => {
           </div>
         </motion.div>
 
-        {/* ── Prestations complémentaires ── */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <div className="text-center mb-8">
-            <button
-              onClick={() => setShowSupplements(!showSupplements)}
-              className="text-sm text-primary hover:text-primary/80 transition-colors font-mono"
-              aria-expanded={showSupplements}
-              aria-label={showSupplements ? "Masquer les prestations complémentaires" : "Voir les prestations complémentaires"}
-            >
-              {showSupplements ? "Masquer les prestations complémentaires ↑" : "Voir les prestations complémentaires →"}
-            </button>
-          </div>
-
-          {showSupplements && (
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="glass-card p-6 md:p-8">
-              <p className="section-label mb-6">補足 Prestations complémentaires</p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {supplements.map((cat) => (
-                  <div key={cat.category}>
-                    <h4 className="font-mono text-xs text-primary uppercase tracking-wider mb-3">{cat.category}</h4>
-                    <div className="space-y-2">
-                      {cat.items.map((item) => (
-                        <div key={item.name} className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">{item.name}</span>
-                          <span className="font-mono text-gold text-xs">
-                            {item.price.includes("Sur devis") || item.price.includes("%") ? item.price : `CHF ${item.price}`}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
+        {/* ── CTA prestation sur mesure ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-8">
+          <p className="text-muted-foreground mb-4">
+            Besoin d'une prestation sur mesure ?
+          </p>
+          <Link
+            to="/contact"
+            className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium"
+          >
+            Contactez-moi pour un devis personnalisé <ArrowRight size={14} />
+          </Link>
         </motion.div>
 
         {/* Inclusions communes */}

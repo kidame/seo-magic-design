@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "Ai-je besoin d'un forfait maintenance ?",
-    answer: "La maintenance n'est pas obligatoire, mais fortement recommandée. Elle assure les mises à jour de sécurité, les sauvegardes régulières et un support continu. Trois paliers sont disponibles : Essentiel (CHF 180/mois), Standard (CHF 250/mois) et Avancé (CHF 390/mois).",
+    answer: "La maintenance n'est pas obligatoire, mais fortement recommandée. Elle assure les mises à jour de sécurité, les sauvegardes régulières et un support continu. Trois formules sont disponibles : Maintenance (CHF 250/mois), Suivi Visibilité (CHF 590/mois) et Croissance (CHF 1'490/mois).",
   },
   {
     question: "Pourquoi du code sur-mesure plutôt qu'un CMS ?",
