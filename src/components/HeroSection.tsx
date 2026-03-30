@@ -7,9 +7,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Spider web SVG background — deep parallax */}
-      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.12]">
+      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.20]">
         <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-          <g stroke="hsl(var(--primary))" strokeWidth="0.8" fill="none" style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary) / 0.4))" }}>
+          <g stroke="hsl(var(--primary))" strokeWidth="1" fill="none" className="animate-spin-slow motion-reduce:animate-none" style={{ filter: "drop-shadow(0 0 12px hsl(var(--primary) / 0.6)) drop-shadow(0 0 30px hsl(var(--primary) / 0.3))", transformOrigin: "400px 300px" }}>
             <circle cx="400" cy="300" r="50" /><circle cx="400" cy="300" r="100" />
             <circle cx="400" cy="300" r="180" /><circle cx="400" cy="300" r="280" />
             {[0, 45, 90, 135, 180, 225, 270, 315].map(a => (
