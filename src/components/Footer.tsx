@@ -1,26 +1,28 @@
+import { Link } from "react-router-dom";
+
 const footerColumns = [
   {
     heading: "Services",
     links: [
-      { label: "Audit SEO complet", href: "#services" },
-      { label: "Accompagnement SEO continu", href: "#services" },
-      { label: "Création de site web", href: "#services" },
+      { label: "Audit SEO complet", href: "/services/audit-seo", isRoute: true },
+      { label: "Accompagnement SEO continu", href: "/#services", isRoute: false },
+      { label: "Création de site web", href: "/#services", isRoute: false },
     ],
   },
   {
     heading: "Ressources",
     links: [
-      { label: "Résultats d'audit", href: "#resultats" },
-      { label: "Questions fréquentes", href: "#faq" },
-      { label: "Contact & diagnostic", href: "#contact" },
+      { label: "À propos", href: "/a-propos", isRoute: true },
+      { label: "Questions fréquentes", href: "/#faq", isRoute: false },
+      { label: "Contact & diagnostic", href: "/contact", isRoute: true },
     ],
   },
   {
     heading: "Légal",
     links: [
-      { label: "Mentions légales", href: "#" },
-      { label: "CGV", href: "#" },
-      { label: "Politique de confidentialité", href: "#" },
+      { label: "Mentions légales", href: "#", isRoute: false },
+      { label: "CGV", href: "#", isRoute: false },
+      { label: "Politique de confidentialité", href: "#", isRoute: false },
     ],
   },
 ];
@@ -31,9 +33,9 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <a href="#" className="font-body text-xl font-bold text-foreground" aria-label="KUMO — Retour à l'accueil">
+            <Link to="/" className="font-body text-xl font-bold text-foreground" aria-label="KUMO — Retour à l'accueil">
               KUMO <span className="font-jp text-primary">蜘蛛</span>
-            </a>
+            </Link>
             <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
               Consultant SEO indépendant<br />
               Audit SEO & Création de sites web<br />
@@ -45,9 +47,17 @@ const Footer = () => {
               <h4 className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-4">{col.heading}</h4>
               <ul className="space-y-2">
                 {col.links.map((link) => (
-                  <li key={link.label}>
-                    <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      {link.label}
+                    <li key={link.label}>
+                      {link.isRoute ? (
+                        <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                          {link.label}
+                        </a>
+                      )}
+                    </li>
                     </a>
                   </li>
                 ))}
