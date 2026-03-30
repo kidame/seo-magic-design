@@ -3,7 +3,7 @@ import { useParallax, UseParallaxOptions } from "@/hooks/useParallax";
 import { cn } from "@/lib/utils";
 
 interface ParallaxLayerProps extends UseParallaxOptions {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   /** HTML tag to render. Default "div" */
   as?: keyof JSX.IntrinsicElements;
