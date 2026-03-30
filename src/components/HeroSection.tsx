@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Spider web SVG background — deep parallax */}
-      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.04]">
+      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.12]">
         <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
           <g stroke="currentColor" strokeWidth="0.5" fill="none">
             <circle cx="400" cy="300" r="50" /><circle cx="400" cy="300" r="100" />
