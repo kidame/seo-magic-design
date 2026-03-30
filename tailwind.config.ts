@@ -105,6 +105,7 @@ export default {
         "fade-up": "fade-up 0.6s ease-out forwards",
         "hero-reveal": "hero-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "scroll-pulse": "scroll-pulse 2s ease-in-out infinite",
+        marquee: "marquee 30s linear infinite",
       },
     },
   },
