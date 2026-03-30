@@ -8,55 +8,77 @@ const navLinks = [
   { label: "Méthode", href: "#methode" },
   { label: "Résultats", href: "#resultats" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [shrink, setShrink] = useState(false);
+  const [scrolled, setScolled] = useState(false);
 
   useEffect(() => {
-    const handler = () => setShrink(window.scrollY > 60);
+    const handler = () => setScolled(window.scrollY > 20);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-md transition-all ${shrink ? "h-14" : "h-16"}`}>
-      <div className="container flex h-full items-center justify-between">
-        <a href="#" className="font-body text-xl font-bold tracking-tight text-foreground">
-          KUMO <span className="font-jp text-primary">蜘蛛</span>
-        </a>
+    <div className="fixed top-0 left-0 right-0 z-50 pt-4 md:pt-6 px-4 md:px-8">
+      <nav
+        className={`mx-auto max-w-5xl rounded-full border transition-all duration-300 ${
+          scrolled
+            ? "border-border/60 bg-background/80 backdrop-blur-xl shadow-lg shadow-black/20"
+            : "border-border/30 bg-background/50 backdrop-blur-md"
+        }`}
+      >
+        <div className="flex h-12 md:h-14 items-center justify-between px-5 md:px-6">
+          {/* Logo */}
+          <a href="#" className="font-body text-lg font-bold tracking-tight text-foreground shrink-0">
+            KUMO <span className="font-jp text-primary">蜘蛛</span>
+          </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-7">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop CTA */}
+          <div className="hidden md:flex items-center gap-3">
             <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              href="#contact"
+              className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
             >
-              {link.label}
+              Contact
             </a>
-          ))}
-          <Button variant="hero" size="sm" asChild>
-            <a href="#contact">Diagnostic gratuit</a>
-          </Button>
+            <Button variant="hero" size="sm" className="rounded-full h-8 px-4 text-xs" asChild>
+              <a href="#contact">Diagnostic gratuit</a>
+            </Button>
+          </div>
+
+          {/* Mobile toggle */}
+          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
+      </nav>
 
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
+      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-border/50 bg-muted"
+            initial={{ opacity: 0, y: -10, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden mx-auto max-w-5xl mt-2 rounded-2xl border border-border/50 bg-background/95 backdrop-blur-xl overflow-hidden"
           >
-            <div className="container py-4 flex flex-col gap-4">
+            <div className="p-5 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -67,14 +89,21 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" asChild>
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Contact
+              </a>
+              <Button variant="hero" size="sm" className="rounded-full mt-1" asChild>
                 <a href="#contact" onClick={() => setOpen(false)}>Diagnostic gratuit</a>
               </Button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </div>
   );
 };
 
