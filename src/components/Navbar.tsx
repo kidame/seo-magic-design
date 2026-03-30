@@ -86,26 +86,38 @@ const Navbar = () => {
           >
             <div className="p-5 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  role="menuitem"
-                >
-                  {link.label}
-                </a>
+                link.href.startsWith("/") && !link.href.includes("#") ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setOpen(false)}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    role="menuitem"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    role="menuitem"
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 onClick={() => setOpen(false)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 role="menuitem"
               >
                 Contact
-              </a>
+              </Link>
               <Button variant="hero" size="sm" className="rounded-full mt-1" asChild>
-                <a href="#contact" onClick={() => setOpen(false)}>Diagnostic gratuit</a>
+                <Link to="/contact" onClick={() => setOpen(false)}>Diagnostic gratuit</Link>
               </Button>
             </div>
           </motion.div>
