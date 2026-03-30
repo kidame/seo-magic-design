@@ -4,6 +4,7 @@ import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X } from "lucide-react";
+import BlurText from "@/components/ui/blur-text";
 import { Link } from "react-router-dom";
 import {
   Breadcrumb,
@@ -126,9 +127,14 @@ const CreationSiteWeb = () => {
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ willChange: "transform, opacity" }}>
             <p className="section-label mb-4">制作 Création web</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Sites web <span className="text-gradient">sur-mesure.</span>
-            </h1>
+            <BlurText
+              text="Sites web sur-mesure."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
               Du code propre, performant et optimisé SEO dès la première ligne.
               Pas de template. Pas de CMS lourd. Juste ce dont vous avez besoin.

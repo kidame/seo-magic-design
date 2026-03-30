@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import BlurText from "@/components/ui/blur-text";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -122,9 +123,14 @@ const Rapport = () => {
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ willChange: "transform, opacity" }}>
             <p className="section-label mb-4">報告 Rapport</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Structure du <span className="text-gradient">rapport.</span>
-            </h1>
+            <BlurText
+              text="Structure du rapport."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Chaque audit produit un rapport structuré en 4 sections.
               Voici ce que vous recevez.

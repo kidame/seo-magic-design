@@ -39,6 +39,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
         onClick={() => setOpen(!open)}
         className="w-full py-5 flex items-center justify-between text-left"
         aria-expanded={open}
+        aria-label={question}
       >
         <span className="text-base font-medium pr-4" itemProp="name">{question}</span>
         <ChevronDown className={`shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} size={18} aria-hidden="true" />

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import BlurText from "@/components/ui/blur-text";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -131,9 +132,14 @@ const FAQPage = () => {
         <section className="container max-w-3xl mx-auto px-4 text-center mb-12">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ willChange: "transform, opacity" }}>
             <p className="section-label mb-4">質問 FAQ</p>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
-              Questions <span className="text-gradient">fréquentes.</span>
-            </h1>
+            <BlurText
+              text="Questions fréquentes."
+              as="h1"
+              className="text-3xl md:text-5xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-lg text-muted-foreground">
               Tout ce que vous devez savoir avant de démarrer.
             </p>

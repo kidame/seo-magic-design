@@ -6,9 +6,10 @@ interface SeoHeadProps {
   canonical: string;
   jsonLd?: Record<string, unknown>;
   noIndex?: boolean;
+  ogImage?: string;
 }
 
-const SeoHead = ({ title, description, canonical, jsonLd, noIndex }: SeoHeadProps) => {
+const SeoHead = ({ title, description, canonical, jsonLd, noIndex, ogImage = "https://kumo-seo.ch/og-image.jpg" }: SeoHeadProps) => {
   useEffect(() => {
     document.title = title;
 
@@ -30,6 +31,8 @@ const SeoHead = ({ title, description, canonical, jsonLd, noIndex }: SeoHeadProp
     setMeta("og:description", description, "property");
     setMeta("og:url", canonical, "property");
     setMeta("og:type", "website", "property");
+    setMeta("og:image", ogImage, "property");
+    setMeta("twitter:image", ogImage, "name");
 
     // Canonical
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;

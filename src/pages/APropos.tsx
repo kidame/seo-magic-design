@@ -4,6 +4,8 @@ import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import BlurText from "@/components/ui/blur-text";
 
 const values = [
   { kanji: "透", title: "Transparence", desc: "Forfaits fixes, pas de frais cachés. Vous savez exactement ce que vous payez et ce que vous obtenez." },
@@ -41,9 +43,14 @@ const APropos = () => {
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="section-label mb-4">紹介 À propos</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Un consultant, <span className="text-gradient">pas une agence.</span>
-            </h1>
+            <BlurText
+              text="Un consultant, pas une agence."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Basé à Val-de-Travers dans le canton de Neuchâtel, j'accompagne les PME de Suisse romande
               dans leur visibilité Google. Audit technique, création de sites et accompagnement SEO continu.
@@ -113,9 +120,9 @@ const APropos = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <a href="/contact">
+              <Link to="/contact">
                 Prendre contact <ArrowRight className="ml-1" size={18} />
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </section>

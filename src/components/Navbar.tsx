@@ -26,8 +26,8 @@ const Navbar = () => {
       <nav
         className={`mx-auto max-w-5xl rounded-full border transition-all duration-300 ${
           scrolled
-            ? "border-border/60 bg-background/80 backdrop-blur-xl shadow-lg shadow-black/20"
-            : "border-border/30 bg-background/50 backdrop-blur-md"
+            ? "border-border/40 bg-background/[0.13] backdrop-blur-xl backdrop-saturate-[2.8] backdrop-brightness-[0.81] shadow-lg shadow-black/20"
+            : "border-border/20 bg-background/[0.08] backdrop-blur-md backdrop-saturate-[2.0]"
         }`}
         role="navigation"
         aria-label="Navigation principale"

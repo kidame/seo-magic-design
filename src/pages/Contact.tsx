@@ -4,6 +4,7 @@ import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import BlurText from "@/components/ui/blur-text";
 
 const infoItems = [
   { kanji: "郵", label: "Email", value: "contact@kumo-seo.ch", href: "mailto:contact@kumo-seo.ch" },
@@ -46,9 +47,14 @@ const Contact = () => {
         <section className="container max-w-3xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="section-label mb-4">連絡 Contact</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Parlons de <span className="text-gradient">votre projet.</span>
-            </h1>
+            <BlurText
+              text="Parlons de votre projet."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
               Décrivez-moi votre situation et laissez-moi l'URL de votre site.
               Je vous réponds personnellement sous 24 heures avec une première analyse.

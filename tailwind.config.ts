@@ -98,6 +98,14 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "shine-rotate": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -106,6 +114,8 @@ export default {
         "hero-reveal": "hero-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "scroll-pulse": "scroll-pulse 2s ease-in-out infinite",
         marquee: "marquee 30s linear infinite",
+        "spin-slow": "spin-slow 120s linear infinite",
+        "shine-rotate": "shine-rotate var(--shine-duration, 8s) linear infinite",
       },
     },
   },

@@ -30,7 +30,7 @@ const LogoTicker = () => {
               key={`${name}-${i}`}
               className="flex-shrink-0 px-6 md:px-10 flex items-center"
             >
-              <span className="text-sm md:text-base font-mono text-muted-foreground/50 whitespace-nowrap tracking-wide">
+              <span className="text-sm md:text-base font-mono text-muted-foreground whitespace-nowrap tracking-wide">
                 {name}
               </span>
             </div>

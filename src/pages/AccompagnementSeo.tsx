@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import BlurText from "@/components/ui/blur-text";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -130,9 +131,14 @@ const AccompagnementSeo = () => {
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ willChange: "transform, opacity" }}>
             <p className="section-label mb-4">伴走 Accompagnement</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Formules de suivi <span className="text-gradient">SEO.</span>
-            </h1>
+            <BlurText
+              text="Formules de suivi SEO."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
               Une mission initiale de 90 jours pour poser les fondations, puis un suivi mensuel
               pour maintenir et améliorer vos positions.

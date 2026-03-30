@@ -4,6 +4,7 @@ import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import BlurText from "@/components/ui/blur-text";
 
 const checkpoints = [
   "Indexation & crawlabilité",
@@ -54,9 +55,14 @@ const AuditSeo = () => {
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="section-label mb-4">検査 Audit SEO</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Audit SEO <span className="text-gradient">technique complet.</span>
-            </h1>
+            <BlurText
+              text="Audit SEO technique complet."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
             <p className="text-gold font-mono font-bold text-2xl mb-4">CHF 1'200.–</p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
               31 points de contrôle, 3 concurrents analysés, un plan d'action priorisé sur 90 jours.

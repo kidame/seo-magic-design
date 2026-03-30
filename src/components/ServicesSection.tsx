@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 /* ── Offres ponctuelles ── */
 const ponctuelles = [
@@ -217,47 +218,53 @@ const ServicesSection = () => {
             Trois forfaits, un seul <span className="text-gradient">standard.</span>
           </h3>
 
-          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-4">
+          <div className="grid lg:grid-cols-3 gap-4 mb-4">
             {sitePlans.map((plan, i) => (
-              <motion.div
+              <ShineBorder
                 key={plan.name}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
+                shineColor={plan.featured ? ["#8B5CF6", "#A78BFA", "#FFFFFF"] : ["#333", "#555", "#333"]}
+                duration={plan.featured ? 6 : 12}
+                borderWidth={plan.featured ? 2 : 1}
               >
-                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                  {plan.kanji} {plan.name} {plan.featured && "⭐"}
-                </span>
-                <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
-                <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
-
-                <div className="space-y-3 flex-1">
-                  {siteFeatures.map((feat, j) => {
-                    const val = plan.values[j];
-                    return (
-                      <div key={feat} className="flex items-center gap-2">
-                        {typeof val === "string" ? (
-                          <span className="text-xs font-mono text-gold w-4 text-center shrink-0">{val === "4" ? "4" : val === "5–8" ? "5–8" : "≤10"}</span>
-                        ) : val ? (
-                          <Check size={14} className="text-primary shrink-0" />
-                        ) : (
-                          <X size={14} className="text-muted-foreground/30 shrink-0" />
-                        )}
-                        <span className="text-xs text-muted-foreground">{feat}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <Link
-                  to="/contact"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-card p-8 flex flex-col h-full"
                 >
-                  Demander un devis <ArrowRight size={14} />
-                </Link>
-              </motion.div>
+                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                  </span>
+                  <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
+                  <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
+
+                  <div className="space-y-3 flex-1">
+                    {siteFeatures.map((feat, j) => {
+                      const val = plan.values[j];
+                      return (
+                        <div key={feat} className="flex items-center gap-2">
+                          {typeof val === "string" ? (
+                            <span className="text-xs font-mono text-gold w-4 text-center shrink-0">{val === "4" ? "4" : val === "5–8" ? "5–8" : "≤10"}</span>
+                          ) : val ? (
+                            <Check size={14} className="text-primary shrink-0" />
+                          ) : (
+                            <X size={14} className="text-muted-foreground/30 shrink-0" />
+                          )}
+                          <span className="text-xs text-muted-foreground">{feat}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                  >
+                    Demander un devis <ArrowRight size={14} />
+                  </Link>
+                </motion.div>
+              </ShineBorder>
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
@@ -271,41 +278,47 @@ const ServicesSection = () => {
           <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
             Maintenir et <span className="text-gradient">progresser.</span>
           </h3>
-          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+          <div className="grid lg:grid-cols-3 gap-4">
             {suiviPlans.map((plan, i) => (
-              <motion.div
+              <ShineBorder
                 key={plan.name}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
+                shineColor={plan.featured ? ["#8B5CF6", "#A78BFA", "#FFFFFF"] : ["#333", "#555", "#333"]}
+                duration={plan.featured ? 6 : 12}
+                borderWidth={plan.featured ? 2 : 1}
               >
-                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                  {plan.kanji} {plan.name} {plan.featured && "⭐"}
-                </span>
-                <div className="text-gold font-mono font-bold text-2xl mb-1">
-                  CHF {plan.price}.–<span className="text-sm font-normal text-muted-foreground">/mois</span>
-                </div>
-                <p className="text-xs text-muted-foreground mb-1">{plan.engagement}</p>
-                <p className="text-xs text-muted-foreground mb-6">Pour qui : {plan.pourQui}</p>
-
-                <div className="space-y-2 flex-1">
-                  {plan.features.map((f) => (
-                    <div key={f} className="flex items-start gap-2">
-                      <Check size={14} className="text-primary shrink-0 mt-0.5" />
-                      <span className="text-xs text-muted-foreground">{f}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  to="/contact"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-card p-8 flex flex-col h-full"
                 >
-                  Souscrire <ArrowRight size={14} />
-                </Link>
-              </motion.div>
+                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                  </span>
+                  <div className="text-gold font-mono font-bold text-2xl mb-1">
+                    CHF {plan.price}.–<span className="text-sm font-normal text-muted-foreground">/mois</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mb-1">{plan.engagement}</p>
+                  <p className="text-xs text-muted-foreground mb-6">Pour qui : {plan.pourQui}</p>
+
+                  <div className="space-y-2 flex-1">
+                    {plan.features.map((f) => (
+                      <div key={f} className="flex items-start gap-2">
+                        <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                        <span className="text-xs text-muted-foreground">{f}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                  >
+                    Souscrire <ArrowRight size={14} />
+                  </Link>
+                </motion.div>
+              </ShineBorder>
             ))}
           </div>
         </motion.div>
@@ -316,6 +329,8 @@ const ServicesSection = () => {
             <button
               onClick={() => setShowSupplements(!showSupplements)}
               className="text-sm text-primary hover:text-primary/80 transition-colors font-mono"
+              aria-expanded={showSupplements}
+              aria-label={showSupplements ? "Masquer les prestations complémentaires" : "Voir les prestations complémentaires"}
             >
               {showSupplements ? "Masquer les prestations complémentaires ↑" : "Voir les prestations complémentaires →"}
             </button>
