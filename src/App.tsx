@@ -12,6 +12,9 @@ import Contact from "./pages/Contact.tsx";
 import FAQPage from "./pages/FAQ.tsx";
 import Rapport from "./pages/Rapport.tsx";
 import Resultats from "./pages/Resultats.tsx";
+import MentionsLegales from "./pages/MentionsLegales.tsx";
+import CGV from "./pages/CGV.tsx";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
