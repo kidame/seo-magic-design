@@ -16,6 +16,7 @@ const footerColumns = [
       { label: "Questions fréquentes", href: "/faq", isRoute: true },
       { label: "Rapport d'audit", href: "/rapport", isRoute: true },
       { label: "Résultats", href: "/resultats", isRoute: true },
+      { label: "Blog", href: "/blog", isRoute: true },
       { label: "Contact & diagnostic", href: "/contact", isRoute: true },
     ],
   },

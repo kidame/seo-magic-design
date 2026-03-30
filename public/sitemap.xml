@@ -55,6 +55,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kumo-seo.ch/blog</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumo-seo.ch/blog/site-invisible-google-pme-suisse</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumo-seo.ch/blog/mise-a-jour-google-mars-2026-pme-suisse</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumo-seo.ch/blog/creer-site-internet-pme-suisse-2026</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kumo-seo.ch/mentions-legales</loc>
     <lastmod>2026-03-30</lastmod>
     <changefreq>yearly</changefreq>

@@ -6,6 +6,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import DifferentiatorSection from "@/components/DifferentiatorSection";
 import CaseStudySection from "@/components/CaseStudySection";
+import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -47,6 +48,7 @@ const Index = () => {
         <ProcessSection />
         <DifferentiatorSection />
         <CaseStudySection />
+        <BlogSection />
         <FAQSection />
         {/* Ordre: Services > Methode > Pourquoi KUMO > Preuve > FAQ > Contact */}
         <ContactSection />

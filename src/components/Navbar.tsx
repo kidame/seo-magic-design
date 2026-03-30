@@ -10,6 +10,7 @@ const navLinks = [
   { label: "À propos", href: "/a-propos" },
   { label: "Résultats", href: "/resultats" },
   { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const Navbar = () => {

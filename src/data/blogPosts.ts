@@ -1,0 +1,91 @@
+export interface BlogPost {
+  title: string;
+  slug: string;
+  description: string;
+  date: string;
+  author: string;
+  category: string;
+  tags: string[];
+  reading_time: string;
+  word_count: number;
+  seo_title: string;
+  seo_description: string;
+  canonical: string;
+  og_title: string;
+  og_description: string;
+  og_image: string;
+  primary_keyword: string;
+  secondary_keywords: string[];
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    title: "Votre site existe mais Google l'ignore : 5 causes fréquentes chez les PME romandes",
+    slug: "site-invisible-google-pme-suisse",
+    description: "Découvrez pourquoi votre site n'apparaît pas sur Google en Suisse romande et comment corriger les 5 erreurs les plus courantes. Analyse terrain par KUMO.",
+    date: "2026-03-30",
+    author: "Thomas Puglisi",
+    category: "Référencement naturel",
+    tags: ["SEO", "PME", "Suisse romande", "visibilité Google", "référencement local"],
+    reading_time: "8 min",
+    word_count: 2200,
+    seo_title: "Site invisible sur Google en Suisse ? 5 causes fréquentes chez les PME",
+    seo_description: "Votre site web n'apparaît pas dans Google en Suisse romande ? Voici les 5 raisons les plus courantes et comment y remédier concrètement.",
+    canonical: "https://kumo-seo.ch/blog/site-invisible-google-pme-suisse",
+    og_title: "Pourquoi votre site est invisible sur Google (et comment y remédier)",
+    og_description: "5 causes concrètes identifiées sur le terrain chez les PME de Suisse romande.",
+    og_image: "/images/blog/site-invisible-google.jpg",
+    primary_keyword: "site invisible google suisse",
+    secondary_keywords: ["référencement PME suisse romande", "pourquoi mon site n'apparaît pas sur google", "SEO local suisse", "visibilité google PME"],
+  },
+  {
+    title: "Mise à jour Google mars 2026 : ce que ça change pour votre entreprise en Suisse",
+    slug: "mise-a-jour-google-mars-2026-pme-suisse",
+    description: "Google a déployé une mise à jour majeure en mars 2026. Voici ce que les PME suisses doivent savoir et les actions concrètes à prendre.",
+    date: "2026-03-30",
+    author: "Thomas Puglisi",
+    category: "Actualité SEO",
+    tags: ["Google update", "SEO 2026", "PME suisse", "spam update", "référencement naturel"],
+    reading_time: "7 min",
+    word_count: 2000,
+    seo_title: "Mise à jour Google mars 2026 : impact et actions pour les PME suisses",
+    seo_description: "La spam update Google de mars 2026 est déployée. Ce qu'elle cible, comment savoir si votre site est touché, et quoi faire maintenant.",
+    canonical: "https://kumo-seo.ch/blog/mise-a-jour-google-mars-2026-pme-suisse",
+    og_title: "Google Update mars 2026 : ce qui change pour les PME suisses",
+    og_description: "Déploiement en moins de 20h, nouvelles règles anti-spam. Le point pour les entreprises romandes.",
+    og_image: "/images/blog/google-update-mars-2026.jpg",
+    primary_keyword: "mise à jour google mars 2026",
+    secondary_keywords: ["google update 2026 PME", "SEO suisse 2026", "spam update google", "référencement naturel 2026"],
+  },
+  {
+    title: "Créer un site internet en 2026 : ce qu'une PME suisse doit exiger de son prestataire",
+    slug: "creer-site-internet-pme-suisse-2026",
+    description: "Avant d'investir 3000 à 10000 CHF dans un site web, voici les 7 critères concrets qu'une PME suisse doit vérifier. Guide sans jargon.",
+    date: "2026-03-30",
+    author: "Thomas Puglisi",
+    category: "Création web",
+    tags: ["création site internet", "PME suisse", "site web 2026", "prix site internet", "cahier des charges"],
+    reading_time: "9 min",
+    word_count: 2400,
+    seo_title: "Créer un site internet PME suisse en 2026 : le guide exigeant",
+    seo_description: "7 critères concrets pour choisir votre prestataire web en Suisse. Ce qu'il faut exiger avant de signer un devis de création de site.",
+    canonical: "https://kumo-seo.ch/blog/creer-site-internet-pme-suisse-2026",
+    og_title: "Créer un site internet en 2026 : ce qu'une PME suisse doit vraiment exiger",
+    og_description: "7 critères concrets avant de signer un devis de site web. Par KUMO, Suisse romande.",
+    og_image: "/images/blog/creer-site-internet-pme-suisse.jpg",
+    primary_keyword: "création site internet suisse",
+    secondary_keywords: ["créer site web PME", "prix site internet suisse romande", "site web sur-mesure suisse", "agence web suisse romande", "cahier des charges site web"],
+  },
+];
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find((post) => post.slug === slug);
+}
+
+export function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString("fr-CH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
