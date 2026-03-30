@@ -86,12 +86,13 @@ const PolitiqueConfidentialite = () => {
             <section>
               <h2 className="text-xl font-bold text-foreground mb-3">4. Cookies</h2>
               <p>
-                Ce site utilise exclusivement des cookies techniques nécessaires au fonctionnement du site. 
-                Aucun cookie publicitaire ou de suivi tiers n'est utilisé.
+                Ce site utilise Google Analytics 4 (GA4) pour mesurer la fréquentation de manière anonymisée
+                (adresses IP anonymisées). Ce cookie d'analyse n'est activé qu'après votre consentement
+                explicite via la bannière affichée lors de votre première visite.
               </p>
               <p className="mt-2">
-                Si un outil d'analyse est mis en place, il sera configuré pour anonymiser les adresses IP 
-                et ne pas déposer de cookies de suivi, conformément à la nLPD.
+                Aucun cookie publicitaire ou de suivi tiers n'est utilisé.
+                Vous pouvez modifier votre choix à tout moment en supprimant vos données de navigation.
               </p>
             </section>
 
