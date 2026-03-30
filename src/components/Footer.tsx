@@ -22,9 +22,9 @@ const footerColumns = [
   {
     heading: "Légal",
     links: [
-      { label: "Mentions légales", href: "#", isRoute: false },
-      { label: "CGV", href: "#", isRoute: false },
-      { label: "Politique de confidentialité", href: "#", isRoute: false },
+      { label: "Mentions légales", href: "/mentions-legales", isRoute: true },
+      { label: "CGV", href: "/cgv", isRoute: true },
+      { label: "Politique de confidentialité", href: "/politique-de-confidentialite", isRoute: true },
     ],
   },
 ];

@@ -12,6 +12,9 @@ import Contact from "./pages/Contact.tsx";
 import FAQPage from "./pages/FAQ.tsx";
 import Rapport from "./pages/Rapport.tsx";
 import Resultats from "./pages/Resultats.tsx";
+import MentionsLegales from "./pages/MentionsLegales.tsx";
+import CGV from "./pages/CGV.tsx";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/rapport" element={<Rapport />} />
           <Route path="/resultats" element={<Resultats />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/cgv" element={<CGV />} />
+          <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

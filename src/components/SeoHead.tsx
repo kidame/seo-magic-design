@@ -5,9 +5,10 @@ interface SeoHeadProps {
   description: string;
   canonical: string;
   jsonLd?: Record<string, unknown>;
+  noIndex?: boolean;
 }
 
-const SeoHead = ({ title, description, canonical, jsonLd }: SeoHeadProps) => {
+const SeoHead = ({ title, description, canonical, jsonLd, noIndex }: SeoHeadProps) => {
   useEffect(() => {
     document.title = title;
 
@@ -22,6 +23,9 @@ const SeoHead = ({ title, description, canonical, jsonLd }: SeoHeadProps) => {
     };
 
     setMeta("description", description);
+    if (noIndex) {
+      setMeta("robots", "noindex, follow");
+    }
     setMeta("og:title", title, "property");
     setMeta("og:description", description, "property");
     setMeta("og:url", canonical, "property");
