@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import ParallaxLayer from "@/components/ParallaxLayer";
 
 const metrics = [
   { value: "29/100", label: "Score de santé", detail: "318 problèmes identifiés sur 100 pages. Classé « Critique »." },
@@ -32,18 +33,19 @@ const CaseStudySection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {metrics.map((m, i) => (
-            <motion.div
-              key={m.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="glass-card p-6 text-center"
-            >
-              <span className="text-3xl font-bold text-gold font-mono block mb-2">{m.value}</span>
-              <h3 className="text-sm font-semibold mb-2">{m.label}</h3>
-              <p className="text-xs text-muted-foreground">{m.detail}</p>
-            </motion.div>
+            <ParallaxLayer key={m.label} speed={0.15} scale={1.03} disableOnMobile>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass-card p-6 text-center"
+              >
+                <span className="text-3xl font-bold text-gold font-mono block mb-2">{m.value}</span>
+                <h3 className="text-sm font-semibold mb-2">{m.label}</h3>
+                <p className="text-xs text-muted-foreground">{m.detail}</p>
+              </motion.div>
+            </ParallaxLayer>
           ))}
         </div>
 
