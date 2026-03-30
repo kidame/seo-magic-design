@@ -5,9 +5,10 @@ interface SeoHeadProps {
   description: string;
   canonical: string;
   jsonLd?: Record<string, unknown>;
+  noIndex?: boolean;
 }
 
-const SeoHead = ({ title, description, canonical, jsonLd }: SeoHeadProps) => {
+const SeoHead = ({ title, description, canonical, jsonLd, noIndex }: SeoHeadProps) => {
   useEffect(() => {
     document.title = title;
 
