@@ -5,26 +5,26 @@ const steps = [
   {
     number: "01",
     kanji: "分析 · Analyse",
-    title: "Crawl & Diagnostic",
-    description: "Chaque page de votre site est passée en revue : structure, contenu, balises, performance. Votre Google Search Console est intégrée pour croiser ce que Google voit avec la réalité de votre site.",
+    title: "Diagnostic complet",
+    description: "Votre site est analysé en profondeur : technique, contenu, performance. Je croise les données pour identifier précisément ce qui freine votre visibilité.",
   },
   {
     number: "02",
     kanji: "測定 · Mesure",
     title: "Concurrence & Marché",
-    description: "Vos 3 concurrents directs sont analysés et comparés sur 7 indicateurs clés. Recherche des termes que vos clients tapent sur Google, avec un scoring par priorité.",
+    description: "Vos concurrents directs sont analysés et comparés. Je repère les opportunités que vous pouvez saisir pour les dépasser.",
   },
   {
     number: "03",
     kanji: "修正 · Correction",
-    title: "Rapport & Plan 90j",
-    description: "Tout est synthétisé dans un rapport HTML interactif. Chaque problème est localisé (quelle page, quel élément) avec sa solution. Le plan d'action sur 90 jours classe chaque intervention par impact et effort.",
+    title: "Rapport & Plan d'action",
+    description: "Vous recevez un rapport clair avec chaque problème localisé et sa solution. Le plan d'action classe les interventions par impact et effort.",
   },
   {
     number: "04",
     kanji: "検証 · Vérification",
     title: "Exécution & Résultats",
-    description: "Si vous choisissez l'accompagnement, j'exécute les corrections moi-même. Suivi mensuel des positions, du trafic, des conversions. Chaque action est validée par ses résultats mesurés.",
+    description: "Si vous choisissez l'accompagnement, j'exécute les corrections moi-même. Chaque action est validée par ses résultats mesurés.",
   },
 ];
 

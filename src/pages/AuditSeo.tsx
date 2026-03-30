@@ -8,22 +8,18 @@ import { Link } from "react-router-dom";
 import BlurText from "@/components/ui/blur-text";
 
 const checkpoints = [
-  "Indexation & crawlabilité",
-  "Performance Core Web Vitals",
-  "Architecture de l'information",
-  "Balisage sémantique & Schema.org",
-  "Maillage interne",
-  "Optimisation mobile",
-  "Analyse des backlinks",
-  "Audit de contenu & mots-clés",
-  "Analyse de 3 concurrents directs",
-  "Plan d'action priorisé sur 90 jours",
+  "Technique & infrastructure",
+  "Performance & vitesse",
+  "Contenu & mots-clés",
+  "Visibilité & positionnement",
+  "Analyse concurrentielle",
+  "Plan d'action priorisé",
 ];
 
 const deliverables = [
-  { title: "Rapport technique", desc: "31 points de contrôle analysés avec recommandations détaillées et priorités." },
-  { title: "Analyse concurrentielle", desc: "Étude de 3 concurrents directs : positionnement, mots-clés, backlinks." },
-  { title: "Plan d'action 90 jours", desc: "Feuille de route priorisée avec quick wins et actions structurelles." },
+  { title: "Rapport technique", desc: "31 points de contrôle analysés avec recommandations concrètes et priorités claires." },
+  { title: "Analyse concurrentielle", desc: "Étude de vos concurrents directs pour identifier vos opportunités de positionnement." },
+  { title: "Plan d'action 90 jours", desc: "Feuille de route priorisée pour des résultats rapides et durables." },
 ];
 
 const AuditSeo = () => {

@@ -60,8 +60,7 @@ const CGV = () => {
             <section>
               <h2 className="text-xl font-bold text-foreground mb-3">Art. 3 — Prix et paiement</h2>
               <p>
-                Les prix sont indiqués en francs suisses (CHF), toutes charges comprises. KUMO SEO n'est pas 
-                assujetti à la TVA (chiffre d'affaires inférieur au seuil légal de CHF 100'000).
+                Les prix sont indiqués en francs suisses (CHF), nets et toutes charges comprises. TVA non applicable.
               </p>
               <p className="mt-2">
                 Les factures sont payables dans un délai de 30 jours à compter de leur émission. En cas de 

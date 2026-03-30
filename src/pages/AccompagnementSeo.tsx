@@ -16,14 +16,12 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const mission90 = [
-  "Audit technique complet (31 points)",
-  "Recherche de mots-clés stratégiques",
-  "Optimisation on-page & balisage Schema.org",
-  "Maillage interne & architecture",
-  "Analyse concurrentielle (3 concurrents)",
+  "Audit technique complet de votre site",
+  "Analyse de votre marché et de la concurrence",
+  "Optimisation technique et structurelle",
+  "Stratégie de contenu et mots-clés",
   "Plan d'action priorisé sur 90 jours",
-  "Suivi de positionnement hebdomadaire",
-  "Rapport de progression mensuel",
+  "Suivi et rapport de progression",
 ];
 
 const suiviPlans = [

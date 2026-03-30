@@ -25,10 +25,10 @@ const avantages = [
 ];
 
 const technologies = [
-  { name: "React / Vite", desc: "Interface performante et modulaire" },
-  { name: "TypeScript", desc: "Code robuste et maintenable" },
-  { name: "Tailwind CSS", desc: "Design system cohérent" },
-  { name: "Framer Motion", desc: "Animations fluides et légères" },
+  { name: "Framework moderne", desc: "Interface performante et modulaire" },
+  { name: "Typage strict", desc: "Code robuste et maintenable" },
+  { name: "Design system", desc: "Identité visuelle cohérente" },
+  { name: "Animations natives", desc: "Transitions fluides et légères" },
 ];
 
 const siteFeatures = [
@@ -175,9 +175,9 @@ const CreationSiteWeb = () => {
         {/* Technologies */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">技術 Stack technique</p>
+            <p className="section-label mb-4">技術 Approche technique</p>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              Technologies <span className="text-gradient">utilisées.</span>
+              Technologies <span className="text-gradient">modernes.</span>
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-4 gap-px bg-border/50 rounded-lg overflow-hidden">
