@@ -23,6 +23,9 @@ const SeoHead = ({ title, description, canonical, jsonLd, noIndex }: SeoHeadProp
     };
 
     setMeta("description", description);
+    if (noIndex) {
+      setMeta("robots", "noindex, follow");
+    }
     setMeta("og:title", title, "property");
     setMeta("og:description", description, "property");
     setMeta("og:url", canonical, "property");
