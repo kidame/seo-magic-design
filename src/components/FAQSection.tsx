@@ -4,16 +4,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Combien coûte un audit SEO en Suisse ?",
-    answer: "Chez KUMO, l'audit complet est à CHF 1'200 forfaitaire. Ce prix inclut le crawl technique (31 points de contrôle), l'analyse de 3 concurrents, la recherche de mots-clés, un rapport HTML interactif avec plan d'action sur 90 jours, et une restitution en visioconférence.",
+    question: "Combien coûte un site web sur-mesure ?",
+    answer: "Les forfaits vont de CHF 1'200 pour une landing page à CHF 7'500 pour un e-commerce complet (grille Standard). L'option SEO+ ajoute un audit technique, une recherche de mots-clés et une optimisation avancée, pour des prix allant de CHF 1'800 à CHF 9'800.",
   },
   {
-    question: "Quelle différence entre un audit et un accompagnement SEO ?",
-    answer: "L'audit identifie les problèmes : c'est un diagnostic complet de votre site. L'accompagnement les résout : corrections techniques, optimisation de contenu, suivi de positionnement. L'audit est livré en 5 jours. L'accompagnement se déroule sur une mission de 90 jours puis un retainer mensuel.",
+    question: "Quelle est la différence entre Standard et SEO+ ?",
+    answer: "Le forfait Standard inclut le design, le développement et l'hébergement première année. Le forfait SEO+ ajoute un audit technique complet (31 points de contrôle), une recherche de mots-clés ciblée, l'optimisation on-page avancée, le balisage Schema.org et un rapport de positionnement initial.",
   },
   {
-    question: "Pourquoi pas de WordPress ?",
-    answer: "Pour un site vitrine de 5 à 8 pages, le sur-mesure offre un meilleur contrôle sur la performance, la sécurité et le poids des pages. Mon approche : coder exactement ce dont votre site a besoin, rien de plus. Le résultat est généralement plus rapide et plus simple à maintenir.",
+    question: "Comment se passe le paiement ?",
+    answer: "Un acompte de 40% est demandé à la commande pour lancer le projet. Le solde de 60% est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait.",
+  },
+  {
+    question: "Qu'est-ce que la garantie 30 jours ?",
+    answer: "Pendant 30 jours après la livraison, toute correction de bug ou ajustement technique est prise en charge sans frais supplémentaires. Cela couvre les dysfonctionnements, pas les demandes de nouvelles fonctionnalités.",
+  },
+  {
+    question: "Ai-je besoin d'un forfait maintenance ?",
+    answer: "La maintenance n'est pas obligatoire, mais fortement recommandée. Elle assure les mises à jour de sécurité, les sauvegardes régulières et un support continu. Trois paliers sont disponibles : Essentiel (CHF 180/mois), Standard (CHF 250/mois) et Avancé (CHF 390/mois).",
+  },
+  {
+    question: "Pourquoi du code sur-mesure plutôt qu'un CMS ?",
+    answer: "Pour un site vitrine de 5 à 8 pages, le sur-mesure offre un meilleur contrôle sur la performance, la sécurité et le poids des pages. Le résultat est plus rapide, plus léger et plus simple à maintenir. Objectif : 90+ sur PageSpeed.",
   },
 ];
 
