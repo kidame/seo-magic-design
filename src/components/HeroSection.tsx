@@ -20,7 +20,7 @@ const HeroSection = () => {
       </ParallaxLayer>
 
       {/* Red glow — slowest layer, slight scale */}
-      <ParallaxLayer speed={0.1} scale={1.1} disableOnMobile className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-primary/8 rounded-full blur-[100px]" />
+      <ParallaxLayer speed={0.1} scale={1.1} disableOnMobile className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/12 rounded-full blur-[120px]" />
 
       <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
         {/* Animated section label */}
