@@ -1,0 +1,170 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import SeoHead from "@/components/SeoHead";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+
+const faqs = [
+  {
+    question: "Combien coûte un audit SEO ?",
+    answer: "L'audit SEO technique complet comprend 31 points de contrôle, l'analyse de 3 concurrents directs et un plan d'action priorisé sur 90 jours. Le prix dépend de la taille du site et du périmètre. Contactez-nous pour un devis personnalisé.",
+  },
+  {
+    question: "Quelle est la différence entre un audit et un accompagnement ?",
+    answer: "L'audit est une prestation ponctuelle : un état des lieux complet avec recommandations. L'accompagnement est un suivi mensuel continu qui inclut la mise en œuvre des recommandations, le suivi de positionnement et l'optimisation continue du contenu.",
+  },
+  {
+    question: "Combien coûte un site web sur-mesure ?",
+    answer: "Les forfaits vont de CHF 1'200 pour une landing page à CHF 7'500 pour un e-commerce complet (grille Standard). L'option SEO+ ajoute un audit technique, une recherche de mots-clés et une optimisation avancée, pour des prix allant de CHF 1'800 à CHF 9'800.",
+  },
+  {
+    question: "Quelle est la différence entre Standard et SEO+ ?",
+    answer: "Le forfait Standard inclut le design, le développement et l'hébergement première année. Le forfait SEO+ ajoute un audit technique complet (31 points de contrôle), une recherche de mots-clés ciblée, l'optimisation on-page avancée, le balisage Schema.org et un rapport de positionnement initial.",
+  },
+  {
+    question: "Pourquoi du code sur-mesure plutôt qu'un CMS ?",
+    answer: "Pour un site vitrine de 5 à 8 pages, le sur-mesure offre un meilleur contrôle sur la performance, la sécurité et le poids des pages. Le résultat est plus rapide, plus léger et plus simple à maintenir. Objectif : 90+ sur PageSpeed.",
+  },
+  {
+    question: "Travaillez-vous uniquement en Suisse romande ?",
+    answer: "Le bureau est basé à Neuchâtel, mais les prestations sont réalisables à distance pour toute la Suisse romande et au-delà. Les échanges se font par visioconférence, email et outils de gestion de projet.",
+  },
+  {
+    question: "Que contient le rapport d'audit ?",
+    answer: "Le rapport comprend 4 sections : un audit technique de 31 points de contrôle, une analyse de performance avec données Google Search Console, une étude concurrentielle de 3 concurrents directs, et une recherche de mots-clés stratégiques avec plan d'action priorisé.",
+  },
+  {
+    question: "Comment se passe le paiement ?",
+    answer: "Un acompte de 40% est demandé à la commande pour lancer le projet. Le solde de 60% est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait.",
+  },
+  {
+    question: "Forfait ou tarif horaire ?",
+    answer: "Tous les projets sont proposés au forfait pour garantir la transparence. Vous connaissez le prix total avant de commencer. Le tarif horaire (CHF 140/h) est réservé aux interventions ponctuelles hors forfait.",
+  },
+  {
+    question: "Qu'est-ce que la garantie 30 jours ?",
+    answer: "Pendant 30 jours après la livraison, toute correction de bug ou ajustement technique est prise en charge sans frais supplémentaires. Cela couvre les dysfonctionnements, pas les demandes de nouvelles fonctionnalités.",
+  },
+];
+
+const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-border/50" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+      <button onClick={() => setOpen(!open)} className="w-full py-5 flex items-center justify-between text-left" aria-expanded={open}>
+        <span className="text-base font-medium pr-4" itemProp="name">{question}</span>
+        <ChevronDown className={`shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} size={18} aria-hidden="true" />
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
+      >
+        <p className="text-sm text-muted-foreground pb-5 leading-relaxed" itemProp="text">{answer}</p>
+      </div>
+    </div>
+  );
+};
+
+const FAQPage = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+      { "@type": "ListItem", position: 2, name: "FAQ", item: "https://kumo-seo.ch/faq" },
+    ],
+  };
+
+  return (
+    <div className="min-h-screen">
+      <SeoHead
+        title="Questions fréquentes — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        description="Réponses aux questions fréquentes sur l'audit SEO, la création de site web sur-mesure, les tarifs et l'accompagnement SEO pour PME suisses."
+        canonical="https://kumo-seo.ch/faq"
+        jsonLd={jsonLd}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Navbar />
+      <main className="pt-32 pb-24">
+        {/* Breadcrumb */}
+        <div className="container max-w-3xl mx-auto px-4 mb-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/">Accueil</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>FAQ</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
+        {/* Hero */}
+        <section className="container max-w-3xl mx-auto px-4 text-center mb-12">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ willChange: "transform, opacity" }}>
+            <p className="section-label mb-4">質問 FAQ</p>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+              Questions <span className="text-gradient">fréquentes.</span>
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Tout ce que vous devez savoir avant de démarrer.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* FAQ List */}
+        <section className="container max-w-3xl mx-auto px-4 mb-24" itemScope itemType="https://schema.org/FAQPage">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            {faqs.map((faq, i) => (
+              <FAQItem key={i} {...faq} />
+            ))}
+          </motion.div>
+        </section>
+
+        {/* CTA */}
+        <section className="container max-w-3xl mx-auto px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
+              Une autre question ?
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
+            </p>
+            <Button variant="hero" size="lg" className="rounded-full" asChild>
+              <Link to="/contact">
+                Nous contacter <ArrowRight className="ml-1" size={18} />
+              </Link>
+            </Button>
+          </motion.div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default FAQPage;

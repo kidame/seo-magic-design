@@ -5,15 +5,17 @@ const footerColumns = [
     heading: "Services",
     links: [
       { label: "Audit SEO complet", href: "/services/audit-seo", isRoute: true },
-      { label: "Accompagnement SEO continu", href: "/#services", isRoute: false },
-      { label: "Création de site web", href: "/#services", isRoute: false },
+      { label: "Accompagnement SEO", href: "/services/accompagnement-seo", isRoute: true },
+      { label: "Création de site web", href: "/services/creation-site-web", isRoute: true },
     ],
   },
   {
     heading: "Ressources",
     links: [
       { label: "À propos", href: "/a-propos", isRoute: true },
-      { label: "Questions fréquentes", href: "/#faq", isRoute: false },
+      { label: "Questions fréquentes", href: "/faq", isRoute: true },
+      { label: "Rapport d'audit", href: "/rapport", isRoute: true },
+      { label: "Résultats", href: "/resultats", isRoute: true },
       { label: "Contact & diagnostic", href: "/contact", isRoute: true },
     ],
   },
