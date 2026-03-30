@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import ParallaxLayer from "@/components/ParallaxLayer";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
-      {/* Spider web SVG background */}
-      <div className="absolute inset-0 opacity-[0.04]">
+      {/* Spider web SVG background — deep parallax */}
+      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.04]">
         <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
           <g stroke="currentColor" strokeWidth="0.5" fill="none">
             <circle cx="400" cy="300" r="50" /><circle cx="400" cy="300" r="100" />
@@ -16,10 +17,10 @@ const HeroSection = () => {
             ))}
           </g>
         </svg>
-      </div>
+      </ParallaxLayer>
 
-      {/* Red glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-primary/8 rounded-full blur-[100px]" />
+      {/* Red glow — slowest layer, slight scale */}
+      <ParallaxLayer speed={0.1} scale={1.1} disableOnMobile className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-primary/8 rounded-full blur-[100px]" />
 
       <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
         {/* Animated section label */}
@@ -33,39 +34,41 @@ const HeroSection = () => {
           Consultant SEO · Neuchâtel
         </motion.p>
 
-        {/* Title with staggered word animation */}
-        <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6"
-        >
-          <motion.span
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            style={{ willChange: "transform, opacity" }}
-            className="inline-block"
+        {/* Title with subtle inverse parallax */}
+        <ParallaxLayer speed={0.05} direction="reverse">
+          <motion.h1
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6"
           >
-            Plus de visibilité Google.
-          </motion.span>
-          <br className="hidden md:block" />
-          <motion.span
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            style={{ willChange: "transform, opacity" }}
-            className="inline-block"
-          >
-            Plus de clients.{" "}
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            style={{ willChange: "transform, opacity" }}
-            className="inline-block text-gradient"
-          >
-            Moins de hasard.
-          </motion.span>
-        </motion.h1>
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              style={{ willChange: "transform, opacity" }}
+              className="inline-block"
+            >
+              Plus de visibilité Google.
+            </motion.span>
+            <br className="hidden md:block" />
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              style={{ willChange: "transform, opacity" }}
+              className="inline-block"
+            >
+              Plus de clients.{" "}
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              style={{ willChange: "transform, opacity" }}
+              className="inline-block text-gradient"
+            >
+              Moins de hasard.
+            </motion.span>
+          </motion.h1>
+        </ParallaxLayer>
 
         {/* Subtitle */}
         <motion.p
@@ -96,31 +99,33 @@ const HeroSection = () => {
           </Button>
         </motion.div>
 
-        {/* Metrics bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto min-h-[80px]"
-        >
-          {[
-            { value: "31", label: "Points de contrôle technique" },
-            { value: "3", label: "Concurrents analysés par audit" },
-            { value: "90j", label: "Plan d'action priorisé" },
-            { value: "1:1", label: "Interlocuteur unique" },
-          ].map((m, i) => (
-            <motion.div
-              key={m.label}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
-              className="text-center"
-            >
-              <span className="text-2xl md:text-3xl font-bold text-gold font-mono">{m.value}</span>
-              <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Metrics bar — slight delay parallax */}
+        <ParallaxLayer speed={0.08}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }}
+            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto min-h-[80px]"
+          >
+            {[
+              { value: "31", label: "Points de contrôle technique" },
+              { value: "3", label: "Concurrents analysés par audit" },
+              { value: "90j", label: "Plan d'action priorisé" },
+              { value: "1:1", label: "Interlocuteur unique" },
+            ].map((m, i) => (
+              <motion.div
+                key={m.label}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
+                className="text-center"
+              >
+                <span className="text-2xl md:text-3xl font-bold text-gold font-mono">{m.value}</span>
+                <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </ParallaxLayer>
 
         {/* Scroll indicator */}
         <motion.div

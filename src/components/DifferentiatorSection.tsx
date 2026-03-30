@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ParallaxLayer from "@/components/ParallaxLayer";
 
 const them = [
   "Rapport PDF générique : « améliorez votre contenu »",
@@ -34,39 +35,45 @@ const DifferentiatorSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-6"
-          >
-            <h3 className="font-mono text-sm text-muted-foreground uppercase tracking-wider mb-6">Agence classique</h3>
-            <div className="space-y-4">
-              {them.map((t, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <span className="text-primary/40 font-mono text-sm shrink-0">✕</span>
-                  <p className="text-sm text-muted-foreground">{t}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          {/* "Them" column — slight downward parallax */}
+          <ParallaxLayer speed={0.1} disableOnMobile>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-6"
+            >
+              <h3 className="font-mono text-sm text-muted-foreground uppercase tracking-wider mb-6">Agence classique</h3>
+              <div className="space-y-4">
+                {them.map((t, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-primary/40 font-mono text-sm shrink-0">✕</span>
+                    <p className="text-sm text-muted-foreground">{t}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </ParallaxLayer>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-6 border-primary/20"
-          >
-            <h3 className="font-mono text-sm text-primary uppercase tracking-wider mb-6">KUMO</h3>
-            <div className="space-y-4">
-              {us.map((u, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <span className="text-primary font-mono text-sm shrink-0">→</span>
-                  <p className="text-sm text-foreground">{u}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          {/* "Us" column — inverse parallax for convergence */}
+          <ParallaxLayer speed={0.1} direction="reverse" disableOnMobile>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-6 border-primary/20"
+            >
+              <h3 className="font-mono text-sm text-primary uppercase tracking-wider mb-6">KUMO</h3>
+              <div className="space-y-4">
+                {us.map((u, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-primary font-mono text-sm shrink-0">→</span>
+                    <p className="text-sm text-foreground">{u}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </ParallaxLayer>
         </div>
       </div>
     </section>

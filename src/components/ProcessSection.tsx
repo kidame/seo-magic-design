@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ParallaxLayer from "@/components/ParallaxLayer";
 
 const steps = [
   {
@@ -58,7 +59,10 @@ const ProcessSection = () => {
               transition={{ delay: i * 0.12 }}
               className="relative"
             >
-              <span className="text-5xl font-bold text-primary/10 font-mono block mb-2">{step.number}</span>
+              {/* Step number with parallax float */}
+              <ParallaxLayer speed={0.12} disableOnMobile>
+                <span className="text-5xl font-bold text-primary/10 font-mono block mb-2">{step.number}</span>
+              </ParallaxLayer>
               <span className="font-jp text-xs text-primary/60 block mb-3">{step.kanji}</span>
               <h3 className="text-lg font-bold mb-2">{step.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
