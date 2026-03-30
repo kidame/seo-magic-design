@@ -38,48 +38,79 @@ const BlogPost = () => {
 
   const ArticleContent = articleComponents[slug];
 
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.seo_description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      "@type": "Person",
-      name: post.author,
-    },
-    publisher: {
-      "@type": "ProfessionalService",
-      name: "KUMO — Consultant SEO & Création Web",
-      url: "https://kumo-seo.ch",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://kumo-seo.ch/og-image.jpg",
-      },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": post.canonical,
-    },
-    image: `https://kumo-seo.ch${post.og_image}`,
-    wordCount: post.word_count,
-    keywords: [post.primary_keyword, ...post.secondary_keywords].join(", "),
-  };
-
   const faqItems = extractFaqFromSlug(slug);
-  const faqJsonLd = faqItems.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
+
+  // Combined JSON-LD: BlogPosting + BreadcrumbList + FAQPage
+  const jsonLdArray: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.seo_description,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: {
+        "@type": "Person",
+        name: post.author,
       },
-    })),
-  } : undefined;
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "KUMO — Consultant SEO & Création Web",
+        url: "https://kumo-seo.ch",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://kumo-seo.ch/og-image.jpg",
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": post.canonical,
+      },
+      image: `https://kumo-seo.ch${post.og_image}`,
+      wordCount: post.word_count,
+      keywords: [post.primary_keyword, ...post.secondary_keywords].join(", "),
+      articleSection: post.category,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: "https://kumo-seo.ch/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://kumo-seo.ch/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: post.canonical,
+        },
+      ],
+    },
+  ];
+
+  if (faqItems.length > 0) {
+    jsonLdArray.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    });
+  }
 
   return (
     <div className="min-h-screen">
@@ -87,32 +118,40 @@ const BlogPost = () => {
         title={post.seo_title}
         description={post.seo_description}
         canonical={post.canonical}
-        jsonLd={articleJsonLd}
+        jsonLd={jsonLdArray}
         ogImage={`https://kumo-seo.ch${post.og_image}`}
+        ogType="article"
+        article={{ publishedTime: post.date, author: post.author }}
       />
-      {faqJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      )}
+      <a href="#article-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md">
+        Aller au contenu de l'article
+      </a>
       <Navbar />
 
       <main className="pt-32 md:pt-40 pb-24 md:pb-40">
-        <article className="container max-w-3xl mx-auto px-4">
-          {/* Back link */}
-          <motion.div
+        <article className="container max-w-3xl mx-auto px-4" id="article-content">
+          {/* Breadcrumb */}
+          <motion.nav
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
+            aria-label="Fil d'Ariane"
+            className="mb-8"
           >
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
-              <ArrowLeft size={16} /> Retour au blog
-            </Link>
-          </motion.div>
+            <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+              <li>
+                <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
+              </li>
+              <li aria-hidden="true" className="text-muted-foreground/40">/</li>
+              <li>
+                <Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link>
+              </li>
+              <li aria-hidden="true" className="text-muted-foreground/40">/</li>
+              <li aria-current="page" className="text-foreground/70 truncate max-w-[200px] md:max-w-none">
+                {post.title}
+              </li>
+            </ol>
+          </motion.nav>
 
           {/* Article header */}
           <motion.header
@@ -129,13 +168,13 @@ const BlogPost = () => {
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
-                <User size={14} /> {post.author}
+                <User size={14} aria-hidden="true" /> {post.author}
               </span>
-              <span>·</span>
-              <span>{formatDate(post.date)}</span>
-              <span>·</span>
+              <span aria-hidden="true">·</span>
+              <time dateTime={post.date}>{formatDate(post.date)}</time>
+              <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1.5">
-                <Clock size={14} /> {post.reading_time}
+                <Clock size={14} aria-hidden="true" /> <span>{post.reading_time} de lecture</span>
               </span>
             </div>
             <hr className="border-border/50 mt-8" />
@@ -147,21 +186,22 @@ const BlogPost = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Suspense fallback={<div className="h-96 flex items-center justify-center text-muted-foreground">Chargement…</div>}>
+            <Suspense fallback={<div className="h-96 flex items-center justify-center text-muted-foreground" role="status">Chargement de l'article…</div>}>
               {ArticleContent && <ArticleContent />}
             </Suspense>
           </motion.div>
 
           {/* Navigation between articles */}
-          <nav className="mt-16 pt-8 border-t border-border/50">
-            <div className="flex justify-between gap-4">
+          <nav className="mt-16 pt-8 border-t border-border/50" aria-label="Articles adjacents">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
               {prevPost ? (
                 <Link
                   to={`/blog/${prevPost.slug}`}
                   className="group flex-1 glass-card rounded-xl p-5 transition-all duration-300 hover:border-primary/30"
+                  rel="prev"
                 >
                   <span className="text-xs text-muted-foreground/60 flex items-center gap-1 mb-2">
-                    <ArrowLeft size={12} /> Article précédent
+                    <ArrowLeft size={12} aria-hidden="true" /> Article précédent
                   </span>
                   <span className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
                     {prevPost.title}
@@ -172,9 +212,10 @@ const BlogPost = () => {
                 <Link
                   to={`/blog/${nextPost.slug}`}
                   className="group flex-1 glass-card rounded-xl p-5 text-right transition-all duration-300 hover:border-primary/30"
+                  rel="next"
                 >
                   <span className="text-xs text-muted-foreground/60 flex items-center justify-end gap-1 mb-2">
-                    Article suivant <ArrowRight size={12} />
+                    Article suivant <ArrowRight size={12} aria-hidden="true" />
                   </span>
                   <span className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
                     {nextPost.title}
@@ -185,7 +226,7 @@ const BlogPost = () => {
           </nav>
 
           {/* CTA */}
-          <div className="mt-12 glass-card rounded-xl p-8 md:p-10 text-center">
+          <aside className="mt-12 glass-card rounded-xl p-8 md:p-10 text-center" aria-label="Appel à l'action">
             <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary mb-3">
               Besoin d'un diagnostic ?
             </p>
@@ -199,7 +240,7 @@ const BlogPost = () => {
             <Button variant="hero" className="rounded-full" asChild>
               <Link to="/contact">Prendre contact</Link>
             </Button>
-          </div>
+          </aside>
         </article>
       </main>
 

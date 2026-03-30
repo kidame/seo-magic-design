@@ -5,18 +5,38 @@ import SeoHead from "@/components/SeoHead";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/data/blogPosts";
 
-const blogJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Blog — KUMO",
-  description: "Articles SEO, guides pratiques et actualités pour les PME de Suisse romande.",
-  url: "https://kumo-seo.ch/blog",
-  publisher: {
-    "@type": "ProfessionalService",
-    name: "KUMO — Consultant SEO & Création Web",
-    url: "https://kumo-seo.ch",
+const blogJsonLd: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Blog — KUMO",
+    description: "Articles SEO, guides pratiques et actualités pour les PME de Suisse romande.",
+    url: "https://kumo-seo.ch/blog",
+    publisher: {
+      "@type": "ProfessionalService",
+      name: "KUMO — Consultant SEO & Création Web",
+      url: "https://kumo-seo.ch",
+    },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://kumo-seo.ch/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://kumo-seo.ch/blog",
+      },
+    ],
+  },
+];
 
 const Blog = () => {
   return (
@@ -27,9 +47,12 @@ const Blog = () => {
         canonical="https://kumo-seo.ch/blog"
         jsonLd={blogJsonLd}
       />
+      <a href="#blog-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md">
+        Aller au contenu principal
+      </a>
       <Navbar />
 
-      <main className="pt-32 md:pt-40 pb-24 md:pb-40">
+      <main className="pt-32 md:pt-40 pb-24 md:pb-40" id="blog-content">
         <div className="container max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,9 +73,11 @@ const Blog = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
             {blogPosts.map((post, i) => (
-              <BlogCard key={post.slug} post={post} index={i} />
+              <div key={post.slug} role="listitem">
+                <BlogCard post={post} index={i} />
+              </div>
             ))}
           </div>
         </div>

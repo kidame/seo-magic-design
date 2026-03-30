@@ -19,6 +19,7 @@ const BlogCard = ({ post, index = 0 }: BlogCardProps) => {
       <Link
         to={`/blog/${post.slug}`}
         className="group block h-full glass-card rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-[0_4px_24px_hsl(270_60%_55%/0.1)]"
+        aria-label={`Lire l'article : ${post.title}`}
       >
         <span className="inline-block font-mono text-[11px] uppercase tracking-[0.15em] text-primary mb-4">
           {post.category}
@@ -33,10 +34,10 @@ const BlogCard = ({ post, index = 0 }: BlogCardProps) => {
         </p>
 
         <div className="mt-auto flex items-center justify-between">
-          <span className="font-mono text-xs text-muted-foreground/60">
+          <time dateTime={post.date} className="font-mono text-xs text-muted-foreground/60">
             {formatDate(post.date)} · {post.reading_time}
-          </span>
-          <span className="text-sm text-primary font-medium inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          </time>
+          <span className="text-sm text-primary font-medium inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             Lire <ArrowRight size={14} />
           </span>
         </div>
