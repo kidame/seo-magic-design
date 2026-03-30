@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -19,7 +19,7 @@ import {
 const faqs = [
   {
     question: "Combien coûte un audit SEO ?",
-    answer: "L'audit SEO technique complet comprend 31 points de contrôle, l'analyse de 3 concurrents directs et un plan d'action priorisé sur 90 jours. Le prix dépend de la taille du site et du périmètre. Contactez-nous pour un devis personnalisé.",
+    answer: "L'audit SEO technique complet coûte CHF 1'200. Il comprend 31 points de contrôle, l'analyse de 3 concurrents directs, un plan d'action priorisé sur 90 jours et un appel de restitution de 30 min.",
   },
   {
     question: "Quelle est la différence entre un audit et un accompagnement ?",
@@ -27,11 +27,15 @@ const faqs = [
   },
   {
     question: "Combien coûte un site web sur-mesure ?",
-    answer: "Les forfaits vont de CHF 1'200 pour une landing page à CHF 7'500 pour un e-commerce complet (grille Standard). L'option SEO+ ajoute un audit technique, une recherche de mots-clés et une optimisation avancée, pour des prix allant de CHF 1'800 à CHF 9'800.",
+    answer: "Trois forfaits : Essentiel à CHF 3'900 (4 pages), Pro à CHF 4'900 (5–8 pages, textes rédigés, fiche Google, annuaires suisses) et Premium à CHF 6'500 (jusqu'à 10 pages, accompagnement 3 mois inclus). Tous incluent un design sur-mesure et la préparation stratégique.",
   },
   {
-    question: "Quelle est la différence entre Standard et SEO+ ?",
-    answer: "Le forfait Standard inclut le design, le développement et l'hébergement première année. Le forfait SEO+ ajoute un audit technique complet (31 points de contrôle), une recherche de mots-clés ciblée, l'optimisation on-page avancée, le balisage Schema.org et un rapport de positionnement initial.",
+    question: "Quelle est la différence entre Essentiel, Pro et Premium ?",
+    answer: "Le forfait Essentiel convient aux indépendants avec une activité simple (4 pages). Le forfait Pro, recommandé pour les entreprises locales, ajoute la rédaction des textes, la fiche Google et l'inscription aux annuaires suisses. Le forfait Premium ajoute un accompagnement de 3 mois et jusqu'à 10 pages.",
+  },
+  {
+    question: "Qu'est-ce que l'Étude et plan ?",
+    answer: "L'Étude et plan (CHF 1'190) comprend l'architecture du site, la recherche de mots-clés, la rédaction des textes et la feuille de route. C'est la fondation d'un site qui performe. Le montant est crédité à 100 % si vous signez un forfait site.",
   },
   {
     question: "Pourquoi du code sur-mesure plutôt qu'un CMS ?",
@@ -42,16 +46,16 @@ const faqs = [
     answer: "Le bureau est basé à Neuchâtel, mais les prestations sont réalisables à distance pour toute la Suisse romande et au-delà. Les échanges se font par visioconférence, email et outils de gestion de projet.",
   },
   {
-    question: "Que contient le rapport d'audit ?",
-    answer: "Le rapport comprend 4 sections : un audit technique de 31 points de contrôle, une analyse de performance avec données Google Search Console, une étude concurrentielle de 3 concurrents directs, et une recherche de mots-clés stratégiques avec plan d'action priorisé.",
+    question: "Quelles sont les formules de suivi mensuel ?",
+    answer: "Trois formules : Maintenance à CHF 250/mois (surveillance, sauvegardes, correctifs), Suivi Visibilité à CHF 590/mois (suivi positions, rapport mensuel, 1 amélioration/mois) et Croissance à CHF 1'490/mois (sprint stratégique, analyse GSC approfondie, point mensuel).",
   },
   {
     question: "Comment se passe le paiement ?",
-    answer: "Un acompte de 40% est demandé à la commande pour lancer le projet. Le solde de 60% est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait.",
+    answer: "Un acompte de 40 % est demandé à la commande pour lancer le projet. Le solde de 60 % est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait.",
   },
   {
     question: "Forfait ou tarif horaire ?",
-    answer: "Tous les projets sont proposés au forfait pour garantir la transparence. Vous connaissez le prix total avant de commencer. Le tarif horaire (CHF 140/h) est réservé aux interventions ponctuelles hors forfait.",
+    answer: "Tous les projets sont proposés au forfait pour garantir la transparence. Vous connaissez le prix total avant de commencer. Le tarif horaire (CHF 150/h, minimum facturé 30 min = CHF 75) est réservé aux modifications ponctuelles hors forfait.",
   },
   {
     question: "Qu'est-ce que la garantie 30 jours ?",

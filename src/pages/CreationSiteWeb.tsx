@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Breadcrumb,
@@ -30,11 +30,39 @@ const technologies = [
   { name: "Framer Motion", desc: "Animations fluides et légères" },
 ];
 
-const grille = [
-  { type: "Landing page", standard: "1'200", seoPlus: "1'800", kanji: "着地" },
-  { type: "Site vitrine (3–5 pages)", standard: "2'800", seoPlus: "3'800", kanji: "展示" },
-  { type: "Site vitrine étendu (6–10 pages)", standard: "4'500", seoPlus: "6'200", kanji: "拡張" },
-  { type: "E-commerce complet", standard: "7'500", seoPlus: "9'800", kanji: "商店" },
+const siteFeatures = [
+  "Pages",
+  "Préparation stratégique",
+  "Textes rédigés",
+  "Fiche Google",
+  "Annuaires suisses",
+  "Design sur-mesure",
+  "Accompagnement 3 mois",
+];
+
+const sitePlans = [
+  {
+    kanji: "基本",
+    name: "Essentiel",
+    price: "3'900",
+    pourQui: "Indépendant, activité simple",
+    values: ["4", true, false, false, false, true, false],
+  },
+  {
+    kanji: "推奨",
+    name: "Pro",
+    price: "4'900",
+    featured: true,
+    pourQui: "Entreprise locale (recommandé)",
+    values: ["5–8", true, true, true, true, true, false],
+  },
+  {
+    kanji: "最上",
+    name: "Premium",
+    price: "6'500",
+    pourQui: "Ambition de croissance",
+    values: ["Jusqu'à 10", true, true, true, true, true, true],
+  },
 ];
 
 const CreationSiteWeb = () => {
@@ -43,7 +71,7 @@ const CreationSiteWeb = () => {
     "@type": "Service",
     name: "Création de site web sur-mesure",
     description:
-      "Création de site web sur-mesure en code : landing page, site vitrine, e-commerce. Performance 90+ PageSpeed, SEO natif. Dès CHF 1'200.",
+      "Création de site web sur-mesure en code : 3 forfaits de CHF 3'900 à CHF 6'500. Performance 90+ PageSpeed, SEO natif.",
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
@@ -68,7 +96,7 @@ const CreationSiteWeb = () => {
     <div className="min-h-screen">
       <SeoHead
         title="Création de site web sur-mesure — KUMO 蜘蛛 Consultant SEO Neuchâtel"
-        description="Site web sur-mesure en code : landing page dès CHF 1'200, site vitrine, e-commerce. Performance 90+ PageSpeed, SEO intégré dès la conception."
+        description="Site web sur-mesure en code : 3 forfaits dès CHF 3'900. Performance 90+ PageSpeed, SEO intégré dès la conception. Pour PME suisses."
         canonical="https://kumo-seo.ch/services/creation-site-web"
         jsonLd={jsonLd}
       />
@@ -168,41 +196,59 @@ const CreationSiteWeb = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="section-label mb-4">価格 Tarifs</p>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              Grille <span className="text-gradient">tarifaire.</span>
+              Trois forfaits, un seul <span className="text-gradient">standard.</span>
             </h2>
           </motion.div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-border/50">
-                  <th className="py-4 pr-4 text-xs font-mono uppercase tracking-wider text-muted-foreground">Prestation</th>
-                  <th className="py-4 px-4 text-xs font-mono uppercase tracking-wider text-muted-foreground">Standard</th>
-                  <th className="py-4 pl-4 text-xs font-mono uppercase tracking-wider text-muted-foreground">SEO+</th>
-                </tr>
-              </thead>
-              <tbody>
-                {grille.map((row, i) => (
-                  <motion.tr
-                    key={row.type}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="border-b border-border/30"
-                  >
-                    <td className="py-4 pr-4">
-                      <span className="text-xs text-muted-foreground font-mono mr-2">{row.kanji}</span>
-                      <span className="text-sm">{row.type}</span>
-                    </td>
-                    <td className="py-4 px-4 font-mono text-sm text-gold">CHF {row.standard}</td>
-                    <td className="py-4 pl-4 font-mono text-sm text-gold">CHF {row.seoPlus}</td>
-                  </motion.tr>
-                ))}
-              </tbody>
-            </table>
+
+          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-4">
+            {sitePlans.map((plan, i) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
+              >
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                  {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                </span>
+                <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
+                <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
+
+                <div className="space-y-3 flex-1">
+                  {siteFeatures.map((feat, j) => {
+                    const val = plan.values[j];
+                    return (
+                      <div key={feat} className="flex items-center gap-2">
+                        {typeof val === "string" ? (
+                          <span className="text-xs font-mono text-gold w-4 text-center shrink-0">{val === "Jusqu'à 10" ? "≤10" : val}</span>
+                        ) : val ? (
+                          <Check size={14} className="text-primary shrink-0" />
+                        ) : (
+                          <X size={14} className="text-muted-foreground/30 shrink-0" />
+                        )}
+                        <span className="text-xs text-muted-foreground">{feat}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <Link
+                  to="/contact"
+                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                >
+                  Demander un devis <ArrowRight size={14} />
+                </Link>
+              </motion.div>
+            ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-4">
-            Paiement : 40% à la commande, 60% à la livraison. Deux séries de retours incluses. Garantie 30 jours.
+
+          <p className="text-xs text-muted-foreground mb-2">
+            Étude et plan (CHF 1'190) créditée à 100 % si vous signez un forfait site.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Paiement : 40 % à la commande, 60 % à la livraison. Deux séries de retours incluses. Garantie 30 jours.
           </p>
         </section>
 

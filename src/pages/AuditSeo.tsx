@@ -57,9 +57,10 @@ const AuditSeo = () => {
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
               Audit SEO <span className="text-gradient">technique complet.</span>
             </h1>
+            <p className="text-gold font-mono font-bold text-2xl mb-4">CHF 1'200.–</p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
               31 points de contrôle, 3 concurrents analysés, un plan d'action priorisé sur 90 jours.
-              Tout ce qu'il faut pour comprendre où vous en êtes et où aller.
+              Appel de restitution de 30 min inclus.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <a href="/contact">
