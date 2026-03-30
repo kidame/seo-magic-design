@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Méthode", href: "#methode" },
-  { label: "Résultats", href: "#resultats" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/#services" },
+  { label: "Méthode", href: "/#methode" },
+  { label: "Résultats", href: "/resultats" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 const Navbar = () => {
