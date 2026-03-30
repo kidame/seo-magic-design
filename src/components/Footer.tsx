@@ -47,18 +47,16 @@ const Footer = () => {
               <h4 className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-4">{col.heading}</h4>
               <ul className="space-y-2">
                 {col.links.map((link) => (
-                    <li key={link.label}>
-                      {link.isRoute ? (
-                        <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                          {link.label}
-                        </Link>
-                      ) : (
-                        <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                          {link.label}
-                        </a>
-                      )}
-                    </li>
-                    </a>
+                  <li key={link.label}>
+                    {link.isRoute ? (
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
