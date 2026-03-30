@@ -1,67 +1,161 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const mainServices = [
+/* ── Offres ponctuelles ── */
+const ponctuelles = [
   {
-    number: "01",
-    label: "ENTRÉE",
-    title: "Landing page",
-    description: "Une page unique, percutante, optimisée pour la conversion. Idéale pour valider une offre ou lancer un produit rapidement.",
-    price: "CHF 1'200.–",
-    priceSeo: "CHF 1'800.–",
-    includes: ["Design responsive sur-mesure", "Formulaire de contact", "Hébergement 1 an inclus", "Optimisation vitesse"],
+    kanji: "検査",
+    title: "Audit SEO",
+    price: "1'200",
+    description: "Diagnostic complet : technique, contenu, visibilité, concurrents. Rapport interactif + plan d'action 90 jours + appel de restitution 30 min.",
+    pourQui: "Toute entreprise qui a déjà un site.",
+    link: "/services/audit-seo",
   },
   {
-    number: "02",
-    label: "POPULAIRE",
-    title: "Site vitrine pro",
-    description: "Le site complet pour affirmer votre présence digitale. 5 à 8 pages structurées pour convertir vos visiteurs en clients.",
-    price: "CHF 3'900.–",
-    priceSeo: "CHF 5'400.–",
-    includes: ["Jusqu'à 8 pages", "Blog ou actualités", "SEO on-page de base", "Formulaires avancés"],
-    featured: true,
-  },
-  {
-    number: "03",
-    label: "PERFORMANCE",
-    title: "E-commerce simple",
-    description: "Votre boutique en ligne clé en main. Catalogue produits, panier, paiement sécurisé et gestion des commandes.",
-    price: "CHF 4'900.–",
-    priceSeo: "CHF 6'700.–",
-    includes: ["Catalogue produits", "Paiement sécurisé", "Gestion des commandes", "Tableau de bord"],
+    kanji: "設計",
+    title: "Étude et plan",
+    price: "1'190",
+    description: "Architecture, mots-clés, textes, feuille de route. La fondation d'un site qui performe.",
+    pourQui: "Entreprise qui veut un nouveau site.",
+    note: "Crédité à 100 % si vous signez un forfait site.",
+    link: "/contact",
   },
 ];
 
-const allServices = [
-  { name: "Landing page", standard: "1'200", seo: "1'800" },
-  { name: "Site vitrine", standard: "2'500", seo: "3'500" },
-  { name: "Site vitrine pro", standard: "3'900", seo: "5'400" },
-  { name: "E-commerce simple", standard: "4'900", seo: "6'700" },
-  { name: "E-commerce avancé", standard: "5'900", seo: "7'900" },
-  { name: "E-commerce complet", standard: "7'500", seo: "9'800" },
+/* ── Création de site ── */
+const siteFeatures = [
+  "Pages",
+  "Préparation stratégique",
+  "Textes rédigés",
+  "Fiche Google",
+  "Annuaires suisses",
+  "Design sur-mesure",
+  "Accompagnement 3 mois",
 ];
 
-const maintenance = [
+const sitePlans = [
   {
+    kanji: "基本",
     name: "Essentiel",
-    price: "180",
-    features: ["Mises à jour mensuelles", "Sauvegarde hebdomadaire", "Support par email"],
+    price: "3'900",
+    featured: false,
+    pourQui: "Indépendant, activité simple",
+    values: ["4", true, false, false, false, true, false],
   },
   {
-    name: "Standard",
+    kanji: "推奨",
+    name: "Pro",
+    price: "4'900",
+    featured: true,
+    pourQui: "Entreprise locale (recommandé)",
+    values: ["5–8", true, true, true, true, true, false],
+  },
+  {
+    kanji: "最上",
+    name: "Premium",
+    price: "6'500",
+    featured: false,
+    pourQui: "Ambition de croissance",
+    values: ["Jusqu'à 10", true, true, true, true, true, true],
+  },
+];
+
+/* ── Formules de suivi ── */
+const suiviPlans = [
+  {
+    kanji: "保守",
+    name: "Maintenance",
     price: "250",
-    features: ["Mises à jour bi-mensuelles", "Sauvegarde quotidienne", "Support prioritaire", "Rapport mensuel"],
+    engagement: "Sans engagement, résiliable à 30 jours",
+    pourQui: "Tout client avec un site actif KUMO.",
+    features: [
+      "Surveillance, sauvegardes, correctifs",
+      "Sécurité & mises à jour",
+      "Modifications mineures (max 30 min/mois)",
+    ],
   },
   {
-    name: "Avancé",
-    price: "390",
-    features: ["Mises à jour hebdomadaires", "Sauvegarde temps réel", "Support dédié", "Rapport + optimisation", "Monitoring 24/7"],
+    kanji: "追跡",
+    name: "Suivi Visibilité",
+    price: "590",
+    featured: true,
+    engagement: "Engagement 6 mois, puis résiliable mensuellement",
+    pourQui: "Entreprise qui veut progresser dans Google.",
+    features: [
+      "Tout Maintenance inclus",
+      "Suivi positions & Search Console",
+      "Rapport mensuel détaillé",
+      "1 amélioration ciblée/mois",
+      "Vérification fiche Google",
+    ],
+  },
+  {
+    kanji: "成長",
+    name: "Croissance",
+    price: "1'490",
+    engagement: "Engagement 6 mois, puis résiliable mensuellement",
+    pourQui: "Objectif de croissance active.",
+    features: [
+      "Tout Suivi Visibilité inclus",
+      "1 sprint mensuel stratégique",
+      "Analyse GSC approfondie",
+      "Point mensuel 15 min",
+      "Actions supp. : CHF 300/action",
+    ],
+  },
+];
+
+/* ── Prestations complémentaires ── */
+const supplements = [
+  {
+    category: "Pages supplémentaires",
+    items: [
+      { name: "Page simple", price: "390" },
+      { name: "Page complexe", price: "490" },
+      { name: "Landing page conversion", price: "590" },
+    ],
+  },
+  {
+    category: "Modifications ponctuelles",
+    items: [
+      { name: "Tarif horaire", price: "150/h" },
+      { name: "Minimum facturé (30 min)", price: "75" },
+    ],
+  },
+  {
+    category: "Images et visuels",
+    items: [
+      { name: "Intégration image", price: "35" },
+      { name: "Pack 10 images", price: "250" },
+      { name: "Sourcing photo stock", price: "75/image" },
+      { name: "Retouche", price: "150/h" },
+    ],
+  },
+  {
+    category: "Fonctionnalités additionnelles",
+    items: [
+      { name: "Formulaire avancé", price: "290" },
+      { name: "Intégration réservation", price: "190" },
+      { name: "Intégration paiement", price: "390" },
+      { name: "Blog", price: "490" },
+      { name: "Module avis Google", price: "190" },
+      { name: "Multilingue (+1 langue)", price: "+60 % du prix site" },
+    ],
+  },
+  {
+    category: "Évolutions structurelles",
+    items: [
+      { name: "Refonte d'une page", price: "350" },
+      { name: "Migration contenu", price: "Sur devis" },
+      { name: "Schéma structuré additionnel", price: "90/schéma" },
+    ],
   },
 ];
 
 const ServicesSection = () => {
-  const [showAll, setShowAll] = useState(false);
+  const [showSupplements, setShowSupplements] = useState(false);
 
   return (
     <section id="services" className="py-24 md:py-40">
@@ -79,160 +173,186 @@ const ServicesSection = () => {
             <span className="text-gradient">résultats mesurables.</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Acompte 40% à la commande, solde à la livraison. 2 séries de retours incluses. Garantie 30 jours.
+            Acompte 40 % à la commande, solde à la livraison. 2 séries de retours incluses. Garantie 30 jours.
           </p>
         </motion.div>
 
-        {/* 3 cartes principales */}
-        <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-8">
-          {mainServices.map((s, i) => (
-            <motion.div
-              key={s.number}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={`bg-card p-8 flex flex-col ${s.featured ? "ring-1 ring-primary/30" : ""}`}
-            >
-              <span className="font-mono text-xs text-muted-foreground tracking-wider mb-4">
-                {s.number} — {s.label}
-              </span>
-              <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
-                {s.description}
-              </p>
+        {/* ── Offres ponctuelles ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
+          <p className="section-label mb-4">単発 Offres ponctuelles</p>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+            Diagnostiquer et <span className="text-gradient">planifier.</span>
+          </h3>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            {ponctuelles.map((s, i) => (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card p-8 flex flex-col"
+              >
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-3">{s.kanji} {s.title}</span>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{s.description}</p>
+                {s.note && (
+                  <p className="text-xs text-primary mb-4">{s.note}</p>
+                )}
+                <p className="text-xs text-muted-foreground mb-4">Pour qui : {s.pourQui}</p>
+                <div className="border-t border-border/50 pt-4 mt-auto">
+                  <div className="text-gold font-mono font-bold text-lg mb-3">CHF {s.price}.–</div>
+                  <Link to={s.link} className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+                    En savoir plus <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-              {/* Inclusions */}
-              <div className="space-y-2 mb-6">
-                {s.includes.map((inc, j) => (
-                  <div key={j} className="flex items-center gap-2">
-                    <Check size={14} className="text-primary shrink-0" />
-                    <span className="text-xs text-muted-foreground">{inc}</span>
-                  </div>
-                ))}
-              </div>
+        {/* ── Création de site ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
+          <p className="section-label mb-4">制作 Création de site</p>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+            Trois forfaits, un seul <span className="text-gradient">standard.</span>
+          </h3>
 
-              {/* Prix */}
-              <div className="border-t border-border/50 pt-4 mt-auto">
-                <div className="text-gold font-mono font-bold text-lg mb-1">{s.price}</div>
-                <p className="text-xs text-muted-foreground mb-1">Standard</p>
-                <p className="text-xs text-muted-foreground/60 mb-4">
-                  Option SEO+ : {s.priceSeo}
-                </p>
-                <a
-                  href="#contact"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium"
+          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-4">
+            {sitePlans.map((plan, i) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
+              >
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                  {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                </span>
+                <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
+                <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
+
+                <div className="space-y-3 flex-1">
+                  {siteFeatures.map((feat, j) => {
+                    const val = plan.values[j];
+                    return (
+                      <div key={feat} className="flex items-center gap-2">
+                        {typeof val === "string" ? (
+                          <span className="text-xs font-mono text-gold w-4 text-center shrink-0">{val === "4" ? "4" : val === "5–8" ? "5–8" : "≤10"}</span>
+                        ) : val ? (
+                          <Check size={14} className="text-primary shrink-0" />
+                        ) : (
+                          <X size={14} className="text-muted-foreground/30 shrink-0" />
+                        )}
+                        <span className="text-xs text-muted-foreground">{feat}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <Link
+                  to="/contact"
+                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                 >
                   Demander un devis <ArrowRight size={14} />
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Toggle grille complète */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="text-sm text-primary hover:text-primary/80 transition-colors font-mono"
-          >
-            {showAll ? "Masquer la grille complète ↑" : "Voir les 6 forfaits Standard & SEO+ →"}
-          </button>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground">
+            Étude et plan (CHF 1'190) créditée à 100 % si vous signez un forfait site.
+          </p>
         </motion.div>
 
-        {/* Grille complète */}
-        {showAll && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="glass-card overflow-hidden mb-20"
-          >
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-border/50">
-                    <th className="text-left p-4 font-mono text-xs text-muted-foreground uppercase tracking-wider">Prestation</th>
-                    <th className="text-right p-4 font-mono text-xs text-muted-foreground uppercase tracking-wider">Standard</th>
-                    <th className="text-right p-4 font-mono text-xs text-primary uppercase tracking-wider">SEO+</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {allServices.map((s, i) => (
-                    <tr key={i} className="border-b border-border/30 last:border-0">
-                      <td className="p-4 text-foreground">{s.name}</td>
-                      <td className="p-4 text-right font-mono text-gold">CHF {s.standard}.–</td>
-                      <td className="p-4 text-right font-mono text-primary">CHF {s.seo}.–</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="p-4 border-t border-border/50">
-              <p className="text-xs text-muted-foreground">
-                <span className="text-primary font-medium">SEO+</span> inclut : audit technique complet, recherche de mots-clés, optimisation on-page avancée, balisage Schema.org et rapport de positionnement.
-              </p>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Maintenance */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <p className="section-label mb-4">保守 Maintenance</p>
-          <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-            Forfaits de maintenance <span className="text-gradient">mensuels.</span>
+        {/* ── Formules de suivi ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
+          <p className="section-label mb-4">月額 Formules de suivi</p>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+            Maintenir et <span className="text-gradient">progresser.</span>
           </h3>
+          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+            {suiviPlans.map((plan, i) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
+              >
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                  {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                </span>
+                <div className="text-gold font-mono font-bold text-2xl mb-1">
+                  CHF {plan.price}.–<span className="text-sm font-normal text-muted-foreground">/mois</span>
+                </div>
+                <p className="text-xs text-muted-foreground mb-1">{plan.engagement}</p>
+                <p className="text-xs text-muted-foreground mb-6">Pour qui : {plan.pourQui}</p>
+
+                <div className="space-y-2 flex-1">
+                  {plan.features.map((f) => (
+                    <div key={f} className="flex items-start gap-2">
+                      <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                      <span className="text-xs text-muted-foreground">{f}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  to="/contact"
+                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                >
+                  Souscrire <ArrowRight size={14} />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-          {maintenance.map((m, i) => (
-            <motion.div
-              key={m.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card p-6 flex flex-col"
+        {/* ── Prestations complémentaires ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="text-center mb-8">
+            <button
+              onClick={() => setShowSupplements(!showSupplements)}
+              className="text-sm text-primary hover:text-primary/80 transition-colors font-mono"
             >
-              <h4 className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-4">{m.name}</h4>
-              <div className="text-gold font-mono font-bold text-lg mb-4">
-                CHF {m.price}.–<span className="text-sm font-normal text-muted-foreground">/mois</span>
-              </div>
-              <div className="space-y-2 flex-1">
-                {m.features.map((f, j) => (
-                  <div key={j} className="flex items-center gap-2">
-                    <Check size={14} className="text-primary shrink-0" />
-                    <span className="text-xs text-muted-foreground">{f}</span>
+              {showSupplements ? "Masquer les prestations complémentaires ↑" : "Voir les prestations complémentaires →"}
+            </button>
+          </div>
+
+          {showSupplements && (
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="glass-card p-6 md:p-8">
+              <p className="section-label mb-6">補足 Prestations complémentaires</p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {supplements.map((cat) => (
+                  <div key={cat.category}>
+                    <h4 className="font-mono text-xs text-primary uppercase tracking-wider mb-3">{cat.category}</h4>
+                    <div className="space-y-2">
+                      {cat.items.map((item) => (
+                        <div key={item.name} className="flex items-center justify-between text-sm">
+                          <span className="text-muted-foreground">{item.name}</span>
+                          <span className="font-mono text-gold text-xs">
+                            {item.price.includes("Sur devis") || item.price.includes("%") ? item.price : `CHF ${item.price}`}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
-              <a
-                href="#contact"
-                className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-4"
-              >
-                Souscrire <ArrowRight size={14} />
-              </a>
             </motion.div>
-          ))}
-        </div>
+          )}
+        </motion.div>
 
         {/* Inclusions communes */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-8 glass-card p-6"
+          className="mt-12 glass-card p-6"
         >
-          <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tous les forfaits incluent</p>
+          <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tous les forfaits site incluent</p>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
             {[
               "Design responsive",

@@ -25,30 +25,46 @@ const mission90 = [
   "Rapport de progression mensuel",
 ];
 
-const retainers = [
+const suiviPlans = [
   {
-    name: "Essentiel",
-    price: "490",
-    kanji: "基本",
+    kanji: "保守",
+    name: "Maintenance",
+    price: "250",
+    engagement: "Sans engagement, résiliable à 30 jours",
+    pourQui: "Tout client avec un site actif KUMO.",
     features: [
-      "Suivi de positionnement mensuel",
-      "1 rapport SEO par mois",
-      "Veille technique & algorithmes",
-      "Support par email (48h)",
-      "Recommandations mensuelles",
+      "Surveillance, sauvegardes, correctifs",
+      "Sécurité & mises à jour",
+      "Modifications mineures (max 30 min/mois)",
     ],
   },
   {
-    name: "Avancé",
-    price: "1'290",
-    kanji: "高度",
+    kanji: "追跡",
+    name: "Suivi Visibilité",
+    price: "590",
+    featured: true,
+    engagement: "Engagement 6 mois, puis résiliable mensuellement",
+    pourQui: "Entreprise qui veut progresser dans Google.",
     features: [
-      "Tout le forfait Essentiel",
-      "Optimisation continue du contenu",
-      "Création de 2 contenus SEO/mois",
-      "Stratégie de netlinking",
-      "Appel mensuel de 30 min",
-      "Rapport détaillé avec KPIs",
+      "Tout Maintenance inclus",
+      "Suivi positions & Search Console",
+      "Rapport mensuel détaillé",
+      "1 amélioration ciblée/mois",
+      "Vérification fiche Google",
+    ],
+  },
+  {
+    kanji: "成長",
+    name: "Croissance",
+    price: "1'490",
+    engagement: "Engagement 6 mois, puis résiliable mensuellement",
+    pourQui: "Objectif de croissance active.",
+    features: [
+      "Tout Suivi Visibilité inclus",
+      "1 sprint mensuel stratégique",
+      "Analyse GSC approfondie",
+      "Point mensuel 15 min",
+      "Actions supp. : CHF 300/action",
     ],
   },
 ];
@@ -57,9 +73,9 @@ const AccompagnementSeo = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Accompagnement SEO continu",
+    name: "Formules de suivi SEO",
     description:
-      "Accompagnement SEO mensuel pour PME suisses : mission 90 jours, suivi de positionnement, optimisation continue et rapports mensuels.",
+      "Formules de suivi SEO mensuel pour PME suisses : maintenance dès CHF 250/mois, suivi visibilité CHF 590/mois, croissance CHF 1'490/mois.",
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
@@ -83,8 +99,8 @@ const AccompagnementSeo = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Accompagnement SEO continu — KUMO 蜘蛛 Consultant SEO Neuchâtel"
-        description="Accompagnement SEO mensuel pour PME suisses : mission 90 jours, suivi de positionnement, optimisation continue. Dès CHF 490/mois."
+        title="Formules de suivi SEO — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        description="Formules de suivi SEO mensuel : maintenance dès CHF 250/mois, suivi visibilité CHF 590/mois, croissance CHF 1'490/mois. Pour PME suisses."
         canonical="https://kumo-seo.ch/services/accompagnement-seo"
         jsonLd={jsonLd}
       />
@@ -104,7 +120,7 @@ const AccompagnementSeo = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Accompagnement SEO</BreadcrumbPage>
+                <BreadcrumbPage>Formules de suivi</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
@@ -115,7 +131,7 @@ const AccompagnementSeo = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ willChange: "transform, opacity" }}>
             <p className="section-label mb-4">伴走 Accompagnement</p>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Accompagnement SEO <span className="text-gradient">continu.</span>
+              Formules de suivi <span className="text-gradient">SEO.</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
               Une mission initiale de 90 jours pour poser les fondations, puis un suivi mensuel
@@ -154,30 +170,34 @@ const AccompagnementSeo = () => {
           </div>
         </section>
 
-        {/* Forfaits retainer */}
+        {/* Forfaits suivi */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="section-label mb-4">月額 Forfaits mensuels</p>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              Deux paliers <span className="text-gradient">d'accompagnement.</span>
+              Trois formules <span className="text-gradient">de suivi.</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            {retainers.map((plan, i) => (
+          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+            {suiviPlans.map((plan, i) => (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-card p-8"
+                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
               >
-                <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider mb-2">{plan.kanji} {plan.name}</p>
-                <p className="text-3xl font-bold mb-1">
-                  <span className="font-mono text-gold">CHF {plan.price}</span>
+                <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                  {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                </p>
+                <p className="text-2xl font-bold mb-1">
+                  <span className="font-mono text-gold">CHF {plan.price}.–</span>
                   <span className="text-sm text-muted-foreground font-normal">/mois</span>
                 </p>
-                <ul className="mt-6 space-y-3">
+                <p className="text-xs text-muted-foreground mb-1">{plan.engagement}</p>
+                <p className="text-xs text-muted-foreground mb-6">Pour qui : {plan.pourQui}</p>
+                <ul className="space-y-3 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <Check size={14} className="text-primary shrink-0 mt-0.5" />
