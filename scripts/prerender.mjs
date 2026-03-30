@@ -20,6 +20,10 @@ const ROUTES = [
   "/mentions-legales",
   "/cgv",
   "/politique-de-confidentialite",
+  "/blog",
+  "/blog/site-invisible-google-pme-suisse",
+  "/blog/mise-a-jour-google-mars-2026-pme-suisse",
+  "/blog/creer-site-internet-pme-suisse-2026",
 ];
 
 // Simple static file server for dist/

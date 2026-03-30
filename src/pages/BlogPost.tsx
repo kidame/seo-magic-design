@@ -1,5 +1,5 @@
-import { lazy, Suspense, useMemo } from "react";
-import { useParams, Navigate, Link } from "react-router-dom";
+import { lazy, Suspense, useEffect, useMemo } from "react";
+import { useParams, Navigate, Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,12 @@ const articleComponents: Record<string, React.LazyExoticComponent<React.Componen
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { pathname } = useLocation();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const { prevPost, nextPost } = useMemo(() => {
     if (!post) return { prevPost: undefined, nextPost: undefined };
