@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CreerSiteInternet2026 = () => (
-  <div className="space-y-6">
+  <div className="article-prose space-y-6">
     <p className="text-muted-foreground leading-relaxed">
       Un site web représente un investissement significatif pour une PME suisse. Entre 3 000 et 10 000 CHF selon la complexité, parfois davantage. Pourtant, beaucoup d'entreprises romandes se retrouvent avec un site qui ne génère ni trafic, ni appels, ni demandes de devis.
     </p>

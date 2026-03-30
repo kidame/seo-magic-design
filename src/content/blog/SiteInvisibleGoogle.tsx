@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const SiteInvisibleGoogle = () => (
-  <div className="space-y-6">
+  <div className="article-prose space-y-6">
     <p className="text-muted-foreground leading-relaxed">
       Vous avez investi dans un site web. Il est en ligne. Vous tapez le nom de votre entreprise dans Google et… rien. Ou pire : vous tapez votre métier suivi de votre ville, et ce sont vos concurrents qui apparaissent.
     </p>

@@ -94,6 +94,17 @@
   .font-jp {
     font-family: 'Noto Sans JP', sans-serif;
   }
+
+  /* Blog article prose — mobile-safe overflow for code and links */
+  .article-prose {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .article-prose code {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
 }
 
 /* Slow spin for spider web */

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const MiseAJourGoogle2026 = () => (
-  <div className="space-y-6">
+  <div className="article-prose space-y-6">
     <p className="text-muted-foreground leading-relaxed">
       Le 24 mars 2026, Google a déployé l'une de ses mises à jour anti-spam les plus rapides. En moins de 20 heures, l'algorithme était entièrement mis à jour. Pour les PME suisses, cette rapidité de déploiement envoie un signal clair : il n'y a plus de période de grâce.
     </p>

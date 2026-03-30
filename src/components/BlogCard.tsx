@@ -37,7 +37,7 @@ const BlogCard = ({ post, index = 0 }: BlogCardProps) => {
           <time dateTime={post.date} className="font-mono text-xs text-muted-foreground/60">
             {formatDate(post.date)} · {post.reading_time}
           </time>
-          <span className="text-sm text-primary font-medium inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span className="text-sm text-primary font-medium inline-flex items-center gap-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity" aria-hidden="true">
             Lire <ArrowRight size={14} />
           </span>
         </div>
