@@ -1,44 +1,40 @@
 
 
-## Plan : Mise à jour des prix et prestations selon la grille tarifaire KIDAME
+## Optimisation CLS Hero + Imports Lucide individuels
 
-### Contexte
+### 1. Corriger le CLS du Hero (HeroSection.tsx)
 
-Le document PDF contient la grille tarifaire complète avec :
-- **Grille A (Standard)** : Landing page CHF 1'200 → E-commerce complet CHF 7'500
-- **Grille B (SEO+)** : Landing page CHF 1'800 → E-commerce complet CHF 9'800
-- **Maintenance** : 3 forfaits (Essentiel 180, Standard 250, Avancé 390 CHF/mois)
-- **Tarifs complémentaires** : pages supplémentaires, modifications, hébergement
-- **Conditions** : acompte 40%, 2 séries de retours, garantie 30 jours
+Le problème : les éléments animés par framer-motion démarrent avec `opacity: 0` et `y: 30`, ce qui provoque un décalage de layout quand ils apparaissent.
 
-### Modifications prévues
+**Solution** : réserver l'espace visuel en fixant des hauteurs minimales sur les conteneurs animés et en utilisant `visibility` + `opacity` au lieu de laisser les éléments invisibles affecter le flux. Concrètement :
+- Ajouter `min-h-screen` sur la section (déjà fait) pour réserver l'espace global
+- Remplacer les `initial={{ y: 30 }}` par des transformations CSS pures (`translate`) qui ne provoquent pas de reflow — `y` en framer-motion utilise déjà `transform`, mais il faut s'assurer que les conteneurs ont une taille réservée
+- Ajouter `will-change: "transform, opacity"` sur les éléments animés pour éviter les recalculs de layout
+- Fixer une hauteur minimale sur le conteneur des métriques (`min-h-[80px]`) et des CTA (`min-h-[48px]`) pour réserver l'espace avant l'animation
 
-#### 1. Refonte de `ServicesSection.tsx`
-Passer de 3 cartes simples à une section plus complète avec les **6 forfaits Standard** et une mention de l'option SEO+. Structure :
-- **3 cartes principales** (les plus demandées) : Landing page (CHF 1'200), Site vitrine pro (CHF 3'900), E-commerce simple (CHF 4'900)
-- Sous chaque carte : prix SEO+ en option (+600, +1'500, +1'800)
-- Mention "Dès CHF 1'200" pour la landing page, inclusions listées
-- Ajout d'une ligne "Tous les forfaits incluent" reprenant les inclusions Standard du PDF
+### 2. Imports Lucide individuels (6 fichiers concernés hors `/ui`)
 
-#### 2. Ajout section Maintenance & Hébergement
-Nouvelle sous-section ou composant avec les 3 forfaits maintenance (Essentiel/Standard/Avancé) et les tarifs hébergement Infomaniak.
+Fichiers custom à modifier (les composants `/ui` sont générés par shadcn, on ne les touche pas) :
 
-#### 3. Mise à jour `FAQSection.tsx`
-- Corriger la FAQ sur les prix : mentionner la gamme complète (CHF 1'200 à 9'800)
-- Ajouter FAQ sur l'acompte 40%, les révisions incluses, la maintenance
-- Ajouter FAQ sur la différence Standard vs SEO+
+| Fichier | Import actuel | Import individuel |
+|---|---|---|
+| `HeroSection.tsx` | `{ ArrowRight, ChevronDown }` | Déjà individuel — OK tel quel (tree-shaking fonctionne) |
+| `Navbar.tsx` | `{ Menu, X }` | OK tel quel |
+| `ServicesSection.tsx` | `{ ArrowRight, Check }` | OK tel quel |
+| `CaseStudySection.tsx` | `{ ArrowRight }` | OK tel quel |
+| `ContactSection.tsx` | `{ ArrowRight }` | OK tel quel |
+| `FAQSection.tsx` | `{ ChevronDown }` | OK tel quel |
 
-#### 4. Mise à jour `DifferentiatorSection.tsx`
-- Ajuster "Forfait fixe" pour mentionner "Acompte 40%, solde à la livraison"
-- Mentionner "2 séries de retours incluses"
+**Constat** : les imports sont déjà des imports nommés individuels (`import { X } from "lucide-react"`), ce qui est la méthode recommandée et tree-shakable. Aucun fichier n'utilise `import * as Icons` ou `import { icons }`. Le bundle est donc déjà optimisé côté Lucide.
 
-### Fichiers modifiés
-- `src/components/ServicesSection.tsx` — refonte complète avec grille tarifaire réelle
-- `src/components/FAQSection.tsx` — nouvelles FAQ alignées sur les prix et conditions
-- `src/components/DifferentiatorSection.tsx` — ajustements mineurs
+### 3. Résumé des changements
 
-### Notes techniques
-- Conserver le design existant (cartes sombres, gold pour les prix, JetBrains Mono pour les montants)
-- Ne pas afficher les informations internes (marges hébergement, taux horaires, argumentaires commerciaux)
-- Garder l'architecture 3 colonnes pour les forfaits principaux, avec possibilité d'expandre vers les 6 forfaits
+**Un seul fichier modifié** : `src/components/HeroSection.tsx`
+- Ajouter `style={{ willChange: "transform, opacity" }}` sur les éléments `motion.*` principaux
+- Ajouter `min-h-[80px]` sur le conteneur métriques pour réserver l'espace
+- Ajouter `min-h-[48px]` sur le conteneur CTA
+- Ajouter `min-h-[1.5rem]` sur le label "Consultant SEO"
+- Supprimer les `filter: "blur(8px)"` des `initial` states (le blur provoque des repaints coûteux) et ne garder que `opacity` + `y` pour les animations du titre
+
+**Aucun changement Lucide nécessaire** — les imports sont déjà optimaux.
 
