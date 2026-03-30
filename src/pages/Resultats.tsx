@@ -97,6 +97,21 @@ const Resultats = () => {
           </motion.div>
         </section>
 
+        {/* Liens services */}
+        <section className="container max-w-3xl mx-auto px-4 mb-24 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-wrap justify-center gap-4">
+            <Link to="/services/audit-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Audit SEO technique <ArrowRight size={14} />
+            </Link>
+            <Link to="/services/accompagnement-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Accompagnement SEO <ArrowRight size={14} />
+            </Link>
+            <Link to="/rapport" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Structure du rapport <ArrowRight size={14} />
+            </Link>
+          </motion.div>
+        </section>
+
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

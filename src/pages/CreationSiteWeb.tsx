@@ -258,6 +258,28 @@ const CreationSiteWeb = () => {
           </p>
         </section>
 
+        {/* Services complémentaires */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">関連 Voir aussi</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Optimisez votre <span className="text-gradient">visibilité.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
+              <h3 className="font-bold mb-2">Audit SEO technique</h3>
+              <p className="text-sm text-muted-foreground">Diagnostiquez votre site existant avec 31 points de contrôle.</p>
+            </Link>
+            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
+              <h3 className="font-bold mb-2">Accompagnement SEO</h3>
+              <p className="text-sm text-muted-foreground">Maintenez et améliorez vos positions avec un suivi mensuel.</p>
+            </Link>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

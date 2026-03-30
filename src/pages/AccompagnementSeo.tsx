@@ -219,6 +219,28 @@ const AccompagnementSeo = () => {
           </div>
         </section>
 
+        {/* Services complémentaires */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">関連 Voir aussi</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Services <span className="text-gradient">complémentaires.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
+              <h3 className="font-bold mb-2">Audit SEO technique</h3>
+              <p className="text-sm text-muted-foreground">31 points de contrôle pour identifier les problèmes de votre site.</p>
+            </Link>
+            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
+              <h3 className="font-bold mb-2">Site web sur-mesure</h3>
+              <p className="text-sm text-muted-foreground">Un site performant et optimisé SEO dès la première ligne de code.</p>
+            </Link>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

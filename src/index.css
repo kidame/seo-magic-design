@@ -88,7 +88,7 @@
   }
 
   .section-label {
-    @apply font-mono text-[0.65rem] uppercase tracking-[0.35em] text-primary font-medium;
+    @apply font-mono text-[0.65rem] uppercase tracking-[0.35em] text-foreground/70 font-medium;
   }
 
   .font-jp {

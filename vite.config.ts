@@ -13,6 +13,21 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-ogl': ['ogl'],
+          'vendor-gsap': ['gsap'],
+          'vendor-icons': ['lucide-react'],
+          'vendor-radix': ['@radix-ui/react-tooltip', '@radix-ui/react-toast', '@radix-ui/react-slot'],
+          'vendor-query': ['@tanstack/react-query'],
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

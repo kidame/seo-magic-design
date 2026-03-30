@@ -48,6 +48,7 @@ const Index = () => {
         <DifferentiatorSection />
         <CaseStudySection />
         <FAQSection />
+        {/* Ordre: Services > Methode > Pourquoi KUMO > Preuve > FAQ > Contact */}
         <ContactSection />
       </main>
       <Footer />

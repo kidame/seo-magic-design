@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -102,6 +103,27 @@ const FAQSection = () => {
           {faqs.map((faq, i) => (
             <FAQItem key={i} {...faq} />
           ))}
+        </motion.div>
+
+        {/* Liens vers les services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 flex flex-wrap justify-center gap-4"
+        >
+          <Link to="/services/audit-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            Audit SEO <ArrowRight size={14} />
+          </Link>
+          <Link to="/services/creation-site-web" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            Création de site <ArrowRight size={14} />
+          </Link>
+          <Link to="/services/accompagnement-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            Accompagnement SEO <ArrowRight size={14} />
+          </Link>
+          <Link to="/faq" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            Toutes les questions <ArrowRight size={14} />
+          </Link>
         </motion.div>
       </div>
     </section>

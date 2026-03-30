@@ -4,6 +4,7 @@ import SeoHead from "@/components/SeoHead";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import BlurText from "@/components/ui/blur-text";
 
 const checkpoints = [
@@ -123,6 +124,33 @@ const AuditSeo = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* Services complémentaires */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">関連 Aller plus loin</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Services <span className="text-gradient">complémentaires.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/rapport" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">報告 Rapport</p>
+              <h3 className="font-bold mb-2">Structure du rapport</h3>
+              <p className="text-sm text-muted-foreground">Découvrez le contenu détaillé du rapport d'audit que vous recevrez.</p>
+            </Link>
+            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
+              <h3 className="font-bold mb-2">Accompagnement SEO</h3>
+              <p className="text-sm text-muted-foreground">Après l'audit, passez à l'action avec un suivi mensuel continu.</p>
+            </Link>
+            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
+              <h3 className="font-bold mb-2">Site web sur-mesure</h3>
+              <p className="text-sm text-muted-foreground">Un nouveau site optimisé SEO dès la première ligne de code.</p>
+            </Link>
           </div>
         </section>
 

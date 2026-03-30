@@ -1,7 +1,8 @@
 import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Aurora from "@/components/ui/aurora";
+
+const Aurora = lazy(() => import("@/components/ui/aurora"));
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,14 +28,16 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <div className="fixed inset-0 -z-10 opacity-60">
-        <Aurora
-          colorStops={["#8B5CF6", "#A78BFA", "#C4B5FD"]}
-          speed={0.6}
-          blend={0.5}
-          amplitude={1.2}
-        />
-      </div>
+      <Suspense fallback={null}>
+        <div className="fixed inset-0 -z-10 opacity-60">
+          <Aurora
+            colorStops={["#8B5CF6", "#A78BFA", "#C4B5FD"]}
+            speed={0.6}
+            blend={0.5}
+            amplitude={1.2}
+          />
+        </div>
+      </Suspense>
       <BrowserRouter>
         <Suspense fallback={null}>
           <Routes>

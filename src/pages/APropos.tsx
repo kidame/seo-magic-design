@@ -110,6 +110,30 @@ const APropos = () => {
           </motion.div>
         </section>
 
+        {/* Services */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">提供 Services</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Ce que je <span className="text-gradient">propose.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Audit SEO</h3>
+              <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours.</p>
+            </Link>
+            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Accompagnement SEO</h3>
+              <p className="text-sm text-muted-foreground">Suivi mensuel continu pour progresser dans Google.</p>
+            </Link>
+            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Création de site</h3>
+              <p className="text-sm text-muted-foreground">Sites web sur-mesure, optimisés SEO.</p>
+            </Link>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
