@@ -5,15 +5,15 @@ const them = [
   "Facturation à l'heure : plus c'est long, plus ils gagnent",
   "Un senior en réunion de vente, un stagiaire sur votre dossier",
   "Sites basés sur des thèmes surchargés de plugins, lents et fragiles",
-  "Résultats vagues : « votre visibilité a augmenté »",
+  "Devis opaque, surprises à la facture finale",
 ];
 
 const us = [
   "Rapport interactif : page X, balise Y, remplacer par Z",
-  "Forfait fixe : vous savez exactement ce que vous payez",
+  "Forfait fixe : acompte 40%, solde à la livraison, pas de surprise",
   "Un seul interlocuteur du diagnostic à la dernière optimisation",
   "Code sur-mesure, léger, objectif 90+ sur PageSpeed",
-  "Résultats chiffrés : position 14→5, +230% d'impressions, CTR doublé",
+  "2 séries de retours incluses, garantie 30 jours",
 ];
 
 const DifferentiatorSection = () => {
@@ -29,12 +29,11 @@ const DifferentiatorSection = () => {
           <p className="section-label mb-4">Approche</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Ce qui me distingue d'une{" "}
-            <span className="text-gradient">agence SEO classique.</span>
+            <span className="text-gradient">agence classique.</span>
           </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Agence classique */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +51,6 @@ const DifferentiatorSection = () => {
             </div>
           </motion.div>
 
-          {/* KUMO */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
