@@ -7,9 +7,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Spider web SVG background — deep parallax */}
-      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.12]">
+      <ParallaxLayer speed={0.15} disableOnMobile className="absolute inset-0 opacity-[0.20]">
         <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-          <g stroke="hsl(var(--primary))" strokeWidth="0.8" fill="none" style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary) / 0.4))" }}>
+          <g stroke="hsl(var(--primary))" strokeWidth="1" fill="none" className="animate-spin-slow motion-reduce:animate-none" style={{ filter: "drop-shadow(0 0 12px hsl(var(--primary) / 0.6)) drop-shadow(0 0 30px hsl(var(--primary) / 0.3))", transformOrigin: "400px 300px" }}>
             <circle cx="400" cy="300" r="50" /><circle cx="400" cy="300" r="100" />
             <circle cx="400" cy="300" r="180" /><circle cx="400" cy="300" r="280" />
             {[0, 45, 90, 135, 180, 225, 270, 315].map(a => (
@@ -20,7 +20,7 @@ const HeroSection = () => {
       </ParallaxLayer>
 
       {/* Red glow — slowest layer, slight scale */}
-      <ParallaxLayer speed={0.1} scale={1.1} disableOnMobile className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-primary/8 rounded-full blur-[100px]" />
+      <ParallaxLayer speed={0.1} scale={1.1} disableOnMobile className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/12 rounded-full blur-[120px]" />
 
       <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
         {/* Animated section label */}
