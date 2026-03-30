@@ -12,5 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /assets/
 
 Sitemap: https://kumo-seo.ch/sitemap.xml
