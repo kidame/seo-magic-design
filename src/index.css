@@ -91,8 +91,17 @@
     @apply font-mono text-[0.65rem] uppercase tracking-[0.35em] text-foreground/70 font-medium;
   }
 
+  /* Kanji: system CJK fonts — avoids loading Noto webfont (~170 KiB) */
   .font-jp {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family:
+      "Hiragino Sans",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic UI",
+      "Yu Gothic",
+      "Meiryo",
+      "Segoe UI",
+      system-ui,
+      sans-serif;
   }
 
   /* Blog article prose — mobile-safe overflow for code and links */

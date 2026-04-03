@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-motion': ['framer-motion'],
           'vendor-ogl': ['ogl'],
-          'vendor-gsap': ['gsap'],
+          'vendor-gsap': ['gsap', 'gsap/ScrollTrigger'],
           'vendor-icons': ['lucide-react'],
           'vendor-radix': ['@radix-ui/react-tooltip', '@radix-ui/react-toast', '@radix-ui/react-slot'],
           'vendor-query': ['@tanstack/react-query'],
