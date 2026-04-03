@@ -7,6 +7,22 @@ import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlurText from "@/components/ui/blur-text";
 
+const mandatNiveaux = [
+  { complexite: "Standard", prix: "2'900", profil: "Site vitrine simple, quelques pages, problèmes limités" },
+  { complexite: "Élevé", prix: "4'500", profil: "Site vitrine professionnel, 20–50 pages" },
+  { complexite: "Très élevé", prix: "À partir de 6'900", profil: "E-commerce ou site 50+ pages, problèmes multiples" },
+];
+
+const mandatInclus = [
+  "Corrections techniques complètes (indexation, plan du site, balises)",
+  "Optimisation de toutes les pages (titres, descriptions, structure)",
+  "Amélioration du contenu (lisibilité, pages sous-performantes)",
+  "Stratégie de visibilité externe",
+  "Suivi de positionnement pendant la mission",
+  "2 points d'avancement en visioconférence",
+  "Rapport de résultats détaillé à 90 jours",
+];
+
 const checkpoints = [
   "Indexation & crawlabilité",
   "Performance Core Web Vitals",
@@ -125,6 +141,59 @@ const AuditSeo = () => {
               </motion.div>
             ))}
           </div>
+        </section>
+
+        {/* Mandat SEO 90 jours */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">九十日 Aller plus loin</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
+              Mandat SEO <span className="text-gradient">90 jours.</span>
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Si votre site nécessite un travail d'optimisation en profondeur, nous proposons un mandat forfaitaire sur 90 jours. Le prix est fixé après l'audit, selon la complexité de votre site.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-8">
+            {mandatNiveaux.map((n, i) => (
+              <motion.div
+                key={n.complexite}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card p-6 flex flex-col"
+              >
+                <span className="font-mono text-xs text-primary uppercase tracking-wider mb-2">{n.complexite}</span>
+                <div className="text-gold font-mono font-bold text-xl mb-2">
+                  {n.prix.startsWith("À") ? n.prix : `CHF ${n.prix}.–`}
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">{n.profil}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="glass-card p-6 mb-6">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-4">Ce qui est inclus</p>
+            <div className="grid sm:grid-cols-2 gap-2 mb-4">
+              {mandatInclus.map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                  <span className="text-xs text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Toujours précédé d'un Audit SEO (1'200 CHF). Paiement en 3 mensualités possibles.
+            </p>
+          </div>
+
+          <Button variant="hero" size="sm" className="rounded-full" asChild>
+            <Link to="/contact">
+              Discuter de mon projet <ArrowRight className="ml-1" size={16} />
+            </Link>
+          </Button>
         </section>
 
         {/* Services complémentaires */}

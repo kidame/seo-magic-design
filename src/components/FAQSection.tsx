@@ -7,27 +7,31 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "Combien coûte un site web sur-mesure ?",
-    answer: "Les forfaits vont de CHF 1'200 pour une landing page à CHF 7'500 pour un e-commerce complet (grille Standard). L'option SEO+ ajoute un audit technique, une recherche de mots-clés et une optimisation avancée, pour des prix allant de CHF 1'800 à CHF 9'800.",
+    answer: "Trois forfaits : Essentiel à CHF 3'900 (4 pages, rédaction guidée), Pro à CHF 4'900 (5–8 pages, rédaction complète, fiche Google, annuaires suisses) et Premium à CHF 6'500 (jusqu'à 10 pages, accompagnement 3 mois inclus). Tous incluent un design sur-mesure, la préparation stratégique et l'hébergement la première année.",
   },
   {
-    question: "Quelle est la différence entre Standard et SEO+ ?",
-    answer: "Le forfait Standard inclut le design, le développement et l'hébergement première année. Le forfait SEO+ ajoute un audit technique complet (31 points de contrôle), une recherche de mots-clés ciblée, l'optimisation on-page avancée, le balisage Schema.org et un rapport de positionnement initial.",
+    question: "Quelle est la différence entre Essentiel, Pro et Premium ?",
+    answer: "Essentiel convient aux indépendants avec une activité simple (4 pages, rédaction guidée : vous fournissez la matière, KUMO adapte). Pro est la formule recommandée pour les entreprises locales : textes rédigés intégralement, fiche Google configurée, inscription aux annuaires suisses. Premium ajoute un accompagnement de 3 mois après mise en ligne et jusqu'à 10 pages.",
+  },
+  {
+    question: "Combien coûte un audit SEO ?",
+    answer: "L'audit SEO technique complet coûte CHF 1'200. Il comprend 31 points de contrôle, l'analyse de 3 concurrents directs, un plan d'action priorisé sur 90 jours et un appel de restitution de 30 min.",
+  },
+  {
+    question: "Qu'est-ce que l'Étude et plan ?",
+    answer: "L'Étude et plan (CHF 1'190) comprend l'architecture du site, la recherche de mots-clés, les textes structurés et la feuille de route. C'est la fondation d'un site qui performe. Ce montant est intégralement crédité si vous signez un forfait site dans les 60 jours.",
+  },
+  {
+    question: "Quelles sont les formules de suivi mensuel ?",
+    answer: "Trois formules : Maintenance à CHF 250/mois (surveillance, sauvegardes, correctifs, sans engagement), Suivi Visibilité à CHF 590/mois (suivi positions Google, rapport mensuel, 1 amélioration ciblée/mois, recommandé) et Croissance à CHF 1'490/mois (sprint stratégique mensuel, analyse approfondie, point mensuel 15 min).",
   },
   {
     question: "Comment se passe le paiement ?",
-    answer: "Un acompte de 40% est demandé à la commande pour lancer le projet. Le solde de 60% est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait.",
-  },
-  {
-    question: "Qu'est-ce que la garantie 30 jours ?",
-    answer: "Pendant 30 jours après la livraison, toute correction de bug ou ajustement technique est prise en charge sans frais supplémentaires. Cela couvre les dysfonctionnements, pas les demandes de nouvelles fonctionnalités.",
-  },
-  {
-    question: "Ai-je besoin d'un forfait maintenance ?",
-    answer: "La maintenance n'est pas obligatoire, mais fortement recommandée. Elle assure les mises à jour de sécurité, les sauvegardes régulières et un support continu. Trois paliers sont disponibles : Essentiel (CHF 180/mois), Standard (CHF 250/mois) et Avancé (CHF 390/mois).",
+    answer: "Un acompte de 40 % est demandé à la commande pour lancer le projet. Le solde de 60 % est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait. Pour le Mandat SEO 90 jours, le paiement en 3 mensualités est possible.",
   },
   {
     question: "Pourquoi du code sur-mesure plutôt qu'un CMS ?",
-    answer: "Pour un site vitrine de 5 à 8 pages, le sur-mesure offre un meilleur contrôle sur la performance, la sécurité et le poids des pages. Le résultat est plus rapide, plus léger et plus simple à maintenir. Objectif : 90+ sur PageSpeed.",
+    answer: "Pour un site vitrine de 4 à 10 pages, le sur-mesure offre un meilleur contrôle sur la performance, la sécurité et le poids des pages. Le résultat est plus rapide, plus léger et plus simple à maintenir. Objectif : 90+ sur PageSpeed.",
   },
 ];
 

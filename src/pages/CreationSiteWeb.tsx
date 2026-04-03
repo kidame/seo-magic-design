@@ -34,9 +34,13 @@ const technologies = [
 const siteFeatures = [
   "Pages",
   "Préparation stratégique",
-  "Textes rédigés",
+  "Optimisé pour Google",
+  "Responsive mobile",
+  "Hébergement Suisse 1ère année",
+  "Rédaction guidée",
+  "Rédaction complète par KUMO",
   "Fiche Google",
-  "Annuaires suisses",
+  "Annuaires suisses + NAP",
   "Design sur-mesure",
   "Accompagnement 3 mois",
 ];
@@ -46,23 +50,34 @@ const sitePlans = [
     kanji: "基本",
     name: "Essentiel",
     price: "3'900",
-    pourQui: "Indépendant, activité simple",
-    values: ["4", true, false, false, false, true, false],
+    featured: false,
+    badge: undefined as string | undefined,
+    pourQui: "Indépendant, artisan, activité simple avec un service principal.",
+    description: "Une base solide. 4 pages sur-mesure pour présenter votre activité et être visible localement.",
+    noteSpeciale: "Rédaction guidée : KUMO définit avec vous la structure et les contenus attendus. Vous fournissez la matière. KUMO adapte et optimise pour Google.",
+    values: ["4", true, true, true, true, true, false, false, false, true, false] as (string | boolean)[],
   },
   {
     kanji: "推奨",
     name: "Pro",
     price: "4'900",
     featured: true,
-    pourQui: "Entreprise locale (recommandé)",
-    values: ["5–8", true, true, true, true, true, false],
+    badge: "La formule la plus choisie",
+    pourQui: "Entreprise locale qui veut être trouvée et prise au sérieux.",
+    description: "La formule complète. 5 à 8 pages, présence locale optimisée, contenus rédigés, fiche Google configurée.",
+    noteSpeciale: "Rédaction complète : KUMO rédige l'ensemble des textes. Vous validez, on ajuste.",
+    values: ["5–8", true, true, true, true, false, true, true, true, true, false] as (string | boolean)[],
   },
   {
     kanji: "最上",
     name: "Premium",
     price: "6'500",
-    pourQui: "Ambition de croissance",
-    values: ["Jusqu'à 10", true, true, true, true, true, true],
+    featured: false,
+    badge: "Lancement accompagné",
+    pourQui: "Activité avec plusieurs services, ambition de croissance, besoin d'accompagnement au lancement.",
+    description: "Site complet + 3 mois de suivi après mise en ligne. Suivi visibilité Google, ajustements contenu, rapport mensuel, support prioritaire.",
+    noteSpeciale: "Après les 3 mois inclus, transition vers une formule de suivi mensuel.",
+    values: ["≤10", true, true, true, true, false, true, true, true, true, true] as (string | boolean)[],
   },
 ];
 
@@ -206,7 +221,7 @@ const CreationSiteWeb = () => {
             </h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-4">
+          <div className="grid lg:grid-cols-3 gap-4 mb-4">
             {sitePlans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -214,21 +229,30 @@ const CreationSiteWeb = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card p-8 flex flex-col ${plan.featured ? "ring-1 ring-primary/30" : ""}`}
+                className={`bg-card border rounded-lg p-8 flex flex-col ${plan.featured ? "border-primary/30 ring-1 ring-primary/20" : "border-border/50"}`}
               >
+                {plan.badge && (
+                  <span className="inline-block text-xs font-mono text-primary border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
+                    {plan.badge}
+                  </span>
+                )}
                 <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
                   {plan.kanji} {plan.name} {plan.featured && "⭐"}
                 </span>
                 <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
-                <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
+                <p className="text-xs text-muted-foreground mb-3">{plan.description}</p>
+                {plan.noteSpeciale && (
+                  <p className="text-xs text-primary/80 italic mb-4 leading-relaxed">{plan.noteSpeciale}</p>
+                )}
+                <p className="text-xs text-muted-foreground/60 mb-6">Pour qui : {plan.pourQui}</p>
 
-                <div className="space-y-3 flex-1">
+                <div className="space-y-2 flex-1">
                   {siteFeatures.map((feat, j) => {
                     const val = plan.values[j];
                     return (
                       <div key={feat} className="flex items-center gap-2">
                         {typeof val === "string" ? (
-                          <span className="text-xs font-mono text-gold w-4 text-center shrink-0">{val === "Jusqu'à 10" ? "≤10" : val}</span>
+                          <span className="text-xs font-mono text-gold shrink-0 min-w-[2rem] text-center">{val}</span>
                         ) : val ? (
                           <Check size={14} className="text-primary shrink-0" />
                         ) : (
@@ -253,9 +277,28 @@ const CreationSiteWeb = () => {
           <p className="text-xs text-muted-foreground mb-2">
             Étude et plan (CHF 1'190) créditée à 100 % si vous signez un forfait site.
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground mb-8">
             Paiement : 40 % à la commande, 60 % à la livraison. Deux séries de retours incluses. Garantie 30 jours.
           </p>
+
+          {/* Hébergement sub-section */}
+          <div className="glass-card p-6">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Hébergement et domaine</p>
+            <div className="grid sm:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">Première année incluse dans tous les forfaits site.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">À partir de l'année 2 : <span className="text-gold font-mono font-semibold">290 CHF/an</span> (hébergement suisse + domaine + SSL).</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">Inclus sans frais pour les clients avec une formule de suivi active.</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Services complémentaires */}

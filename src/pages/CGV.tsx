@@ -72,6 +72,9 @@ const CGV = () => {
                 L'«&nbsp;Étude et plan&nbsp;» (CHF 1'190) est créditée à 100&nbsp;% si le client signe un 
                 forfait de création de site dans les 60 jours suivant la livraison de l'étude.
               </p>
+              <p className="mt-2">
+                L'hébergement suisse, le nom de domaine et le certificat SSL sont inclus la première année dans tous les forfaits de création de site. À partir de l'année 2, ce service est facturé 290 CHF/an, sauf pour les clients disposant d'une formule de suivi active (Maintenance, Suivi Visibilité ou Croissance), pour lesquels il est inclus sans frais supplémentaires.
+              </p>
             </section>
 
             <section>
@@ -84,6 +87,19 @@ const CGV = () => {
               <p className="mt-2">
                 Le client fournit les contenus nécessaires (textes, images, accès) dans les délais convenus. 
                 Tout retard de livraison des contenus par le client entraîne un report équivalent du calendrier.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 4bis : Mandat SEO 90 jours</h2>
+              <p>
+                Le «&nbsp;Mandat SEO 90 jours&nbsp;» est une prestation forfaitaire à durée déterminée (90 jours civils à compter de la date de démarrage convenue). Il est systématiquement précédé d'un Audit SEO dont les conclusions définissent le périmètre et le niveau de complexité (Standard, Élevé ou Très élevé).
+              </p>
+              <p className="mt-2">
+                Le prix forfaitaire est fixé dans le devis et ne peut être révisé une fois accepté. Le paiement peut être échelonné en trois mensualités égales, selon accord préalable indiqué dans le devis.
+              </p>
+              <p className="mt-2">
+                En cas de résiliation anticipée, les prestations réalisées jusqu'à la date de résiliation sont dues. Aucun remboursement partiel n'est accordé, sauf accord contraire écrit.
               </p>
             </section>
 
@@ -155,7 +171,7 @@ const CGV = () => {
             </section>
 
             <p className="text-sm text-muted-foreground/60 pt-6 border-t border-border/30">
-              Dernière mise à jour : mars 2026
+              Dernière mise à jour : avril 2026
             </p>
           </div>
         </div>

@@ -4,34 +4,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShineBorder } from "@/components/ui/shine-border";
 
-/* ── Offres ponctuelles ── */
-const ponctuelles = [
-  {
-    kanji: "検査",
-    title: "Audit SEO",
-    price: "1'200",
-    description: "Diagnostic complet : technique, contenu, visibilité, concurrents. Rapport interactif + plan d'action 90 jours + appel de restitution 30 min.",
-    pourQui: "Toute entreprise qui a déjà un site.",
-    link: "/services/audit-seo",
-  },
-  {
-    kanji: "設計",
-    title: "Étude et plan",
-    price: "1'190",
-    description: "Architecture, mots-clés, textes, feuille de route. La fondation d'un site qui performe.",
-    pourQui: "Entreprise qui veut un nouveau site.",
-    note: "Crédité à 100 % si vous signez un forfait site.",
-    link: "/contact",
-  },
-];
-
 /* ── Création de site ── */
 const siteFeatures = [
   "Pages",
   "Préparation stratégique",
-  "Textes rédigés",
+  "Optimisé pour Google",
+  "Responsive mobile",
+  "Hébergement Suisse 1ère année",
+  "Rédaction guidée",
+  "Rédaction complète par KUMO",
   "Fiche Google",
-  "Annuaires suisses",
+  "Annuaires suisses + NAP",
   "Design sur-mesure",
   "Accompagnement 3 mois",
 ];
@@ -42,25 +25,71 @@ const sitePlans = [
     name: "Essentiel",
     price: "3'900",
     featured: false,
-    pourQui: "Indépendant, activité simple",
-    values: ["4", true, false, false, false, true, false],
+    badge: undefined as string | undefined,
+    pourQui: "Indépendant, artisan, activité simple avec un service principal.",
+    description: "Une base solide. 4 pages sur-mesure pour présenter votre activité et être visible localement.",
+    noteSpeciale: "Rédaction guidée : KUMO définit avec vous la structure et les contenus attendus. Vous fournissez la matière. KUMO adapte et optimise pour Google.",
+    values: ["4", true, true, true, true, true, false, false, false, true, false] as (string | boolean)[],
   },
   {
     kanji: "推奨",
     name: "Pro",
     price: "4'900",
     featured: true,
-    pourQui: "Entreprise locale (recommandé)",
-    values: ["5–8", true, true, true, true, true, false],
+    badge: "La formule la plus choisie",
+    pourQui: "Entreprise locale qui veut être trouvée et prise au sérieux.",
+    description: "La formule complète. 5 à 8 pages, présence locale optimisée, contenus rédigés, fiche Google configurée.",
+    noteSpeciale: "Rédaction complète : KUMO rédige l'ensemble des textes. Vous validez, on ajuste.",
+    values: ["5–8", true, true, true, true, false, true, true, true, true, false] as (string | boolean)[],
   },
   {
     kanji: "最上",
     name: "Premium",
     price: "6'500",
     featured: false,
-    pourQui: "Ambition de croissance",
-    values: ["Jusqu'à 10", true, true, true, true, true, true],
+    badge: "Lancement accompagné",
+    pourQui: "Activité avec plusieurs services, ambition de croissance, besoin d'accompagnement au lancement.",
+    description: "Site complet + 3 mois de suivi après mise en ligne. Suivi visibilité Google, ajustements contenu, rapport mensuel, support prioritaire.",
+    noteSpeciale: "Après les 3 mois inclus, transition vers une formule de suivi mensuel.",
+    values: ["≤10", true, true, true, true, false, true, true, true, true, true] as (string | boolean)[],
   },
+];
+
+/* ── Vous avez déjà un site ── */
+const ponctuelles = [
+  {
+    kanji: "検査",
+    title: "Audit SEO",
+    price: "1'200",
+    description: "Analyse complète : technique, contenu, visibilité, concurrents. Rapport interactif + plan d'action 90 jours + appel de restitution 30 min.",
+    pourQui: "Toute entreprise qui veut savoir où elle en est et quoi améliorer.",
+    link: "/services/audit-seo",
+  },
+  {
+    kanji: "設計",
+    title: "Étude et plan",
+    price: "1'190",
+    description: "Architecture, mots-clés, textes, feuille de route. La fondation d'un site qui performe.",
+    pourQui: "Entreprise qui prépare un nouveau site et veut valider la stratégie avant de s'engager.",
+    note: "Ce montant est intégralement déduit du forfait si vous confirmez la création du site.",
+    link: "/contact",
+  },
+];
+
+const mandatNiveaux = [
+  { complexite: "Standard", prix: "2'900", profil: "Site vitrine simple, quelques pages, problèmes limités" },
+  { complexite: "Élevé", prix: "4'500", profil: "Site vitrine professionnel, 20–50 pages" },
+  { complexite: "Très élevé", prix: "À partir de 6'900", profil: "E-commerce ou site 50+ pages, problèmes multiples" },
+];
+
+const mandatInclus = [
+  "Corrections techniques complètes (indexation, plan du site, balises)",
+  "Optimisation de toutes les pages (titres, descriptions, structure)",
+  "Amélioration du contenu (lisibilité, pages sous-performantes)",
+  "Stratégie de visibilité externe",
+  "Suivi de positionnement pendant la mission",
+  "2 points d'avancement en visioconférence",
+  "Rapport de résultats détaillé à 90 jours",
 ];
 
 /* ── Formules de suivi ── */
@@ -69,12 +98,16 @@ const suiviPlans = [
     kanji: "保守",
     name: "Maintenance",
     price: "250",
-    engagement: "Sans engagement, résiliable à 30 jours",
-    pourQui: "Tout client avec un site actif KUMO.",
+    featured: false,
+    badge: undefined as string | undefined,
+    engagement: "Sans engagement. Résiliable à 30 jours.",
+    pourQui: "Votre site reste en bonne santé. Sauvegardes, surveillance, petits correctifs.",
     features: [
-      "Surveillance, sauvegardes, correctifs",
-      "Sécurité & mises à jour",
-      "Modifications mineures (max 30 min/mois)",
+      "Surveillance + sauvegardes",
+      "Correctifs techniques",
+      "Support email (48h)",
+      "Petites modifications (30 min/mois)",
+      "Hébergement inclus",
     ],
   },
   {
@@ -82,12 +115,13 @@ const suiviPlans = [
     name: "Suivi Visibilité",
     price: "590",
     featured: true,
-    engagement: "Engagement 6 mois, puis résiliable mensuellement",
-    pourQui: "Entreprise qui veut progresser dans Google.",
+    badge: "Recommandé",
+    engagement: "Engagement de 6 mois, puis résiliable mensuellement.",
+    pourQui: "On surveille, on maintient, on évite que votre site stagne. Rapport mensuel + 1 amélioration ciblée/mois.",
     features: [
       "Tout Maintenance inclus",
-      "Suivi positions & Search Console",
-      "Rapport mensuel détaillé",
+      "Suivi positions Google",
+      "Rapport mensuel",
       "1 amélioration ciblée/mois",
       "Vérification fiche Google",
     ],
@@ -96,16 +130,27 @@ const suiviPlans = [
     kanji: "成長",
     name: "Croissance",
     price: "1'490",
-    engagement: "Engagement 6 mois, puis résiliable mensuellement",
-    pourQui: "Objectif de croissance active.",
+    featured: false,
+    badge: undefined as string | undefined,
+    engagement: "Engagement de 6 mois, puis résiliable mensuellement.",
+    pourQui: "On identifie chaque mois l'amélioration la plus utile pour vos résultats, et on la met en œuvre.",
     features: [
       "Tout Suivi Visibilité inclus",
-      "1 sprint mensuel stratégique",
-      "Analyse GSC approfondie",
+      "Sprint stratégique mensuel",
+      "Analyse approfondie Google",
       "Point mensuel 15 min",
       "Actions supp. : CHF 300/action",
     ],
   },
+];
+
+/* ── Quelle formule ── */
+const situations = [
+  { situation: "Indépendant, activité simple, premier site", recommandation: "Essentiel (3'900 CHF) + Maintenance (250 CHF/mois)" },
+  { situation: "PME locale, besoin de visibilité", recommandation: "Pro (4'900 CHF) + Suivi (590 CHF/mois)" },
+  { situation: "Ambition de croissance, plusieurs services", recommandation: "Premium (6'500 CHF) puis Croissance (1'490 CHF/mois)" },
+  { situation: "Vous avez un site à améliorer", recommandation: "Audit (1'200 CHF) + Mandat 90j + Suivi (590 CHF/mois)" },
+  { situation: "Votre site va bien, vous voulez surveiller", recommandation: "Audit (1'200 CHF) + Suivi (590 CHF/mois)" },
 ];
 
 /* ── Prestations complémentaires ── */
@@ -113,47 +158,62 @@ const supplements = [
   {
     category: "Pages supplémentaires",
     items: [
-      { name: "Page simple", price: "390" },
-      { name: "Page complexe", price: "490" },
-      { name: "Landing page conversion", price: "590" },
+      { name: "Page simple", desc: "Texte + images, structure standard", price: "390" },
+      { name: "Page complexe", desc: "FAQ structurée, formulaire, contenu long", price: "490" },
+      { name: "Landing page conversion", desc: "CTA optimisé, tracking", price: "590" },
     ],
   },
   {
     category: "Modifications ponctuelles",
     items: [
-      { name: "Tarif horaire", price: "150/h" },
-      { name: "Minimum facturé (30 min)", price: "75" },
+      { name: "Taux horaire", desc: "Minimum facturé 30 min (75 CHF)", price: "150/h" },
     ],
   },
   {
     category: "Images et visuels",
     items: [
-      { name: "Intégration image", price: "35" },
-      { name: "Pack 10 images", price: "250" },
-      { name: "Sourcing photo stock", price: "75/image" },
-      { name: "Retouche", price: "150/h" },
+      { name: "Intégration image", desc: "Optimisation web d'une image fournie", price: "35/image" },
+      { name: "Pack 10 images", desc: "Au lieu de 350 CHF", price: "250" },
+      { name: "Sourcing photo stock", desc: "Recherche + intégration", price: "75/image" },
+      { name: "Retouche/remplacement", desc: "Image inutilisable (floue, trop petite)", price: "150/h" },
     ],
   },
   {
     category: "Fonctionnalités additionnelles",
     items: [
-      { name: "Formulaire avancé", price: "290" },
-      { name: "Intégration réservation", price: "190" },
-      { name: "Intégration paiement", price: "390" },
-      { name: "Blog", price: "490" },
-      { name: "Module avis Google", price: "190" },
-      { name: "Multilingue (+1 langue)", price: "+60 % du prix site" },
+      { name: "Formulaire avancé", desc: "Multi-étapes, upload, logique conditionnelle", price: "290" },
+      { name: "Intégration réservation", desc: "Calendly, Cal.com", price: "190" },
+      { name: "Intégration paiement", desc: "Stripe, lien de paiement", price: "390" },
+      { name: "Blog / actualités", desc: "Structure + 1ère page", price: "490" },
+      { name: "Module avis Google", desc: "Widget dynamique", price: "190" },
+      { name: "Multilingue (+1 langue)", desc: "Traduction non incluse", price: "+60 % du prix site" },
     ],
   },
   {
     category: "Évolutions structurelles",
     items: [
-      { name: "Refonte d'une page", price: "350" },
-      { name: "Migration contenu", price: "Sur devis" },
-      { name: "Schéma structuré additionnel", price: "90/schéma" },
+      { name: "Refonte d'une page", desc: "Redesign complet d'une page existante", price: "350" },
+      { name: "Migration contenu", desc: "Depuis un ancien site", price: "Sur devis" },
+      { name: "Schéma structuré", desc: "FAQ, Product, Event…", price: "90/schéma" },
     ],
   },
 ];
+
+/* ── Bon à savoir ── */
+const etapes = [
+  { num: "01", title: "Premier échange", desc: "On discute de vos besoins. Sans engagement." },
+  { num: "02", title: "Proposition", desc: "Offre adaptée avec prix fixe." },
+  { num: "03", title: "Validation", desc: "Vous confirmez, on démarre." },
+  { num: "04", title: "Préparation", desc: "Analyse marché, structure, mots-clés." },
+  { num: "05", title: "Création", desc: "Développement avec points de validation." },
+  { num: "06", title: "Votre retour", desc: "Validation et ajustements (2 séries de retours incluses)." },
+  { num: "07", title: "Mise en ligne", desc: "Site publié, outils actifs." },
+];
+
+const formatPrice = (price: string) => {
+  if (price.startsWith("+") || price === "Sur devis") return price;
+  return `CHF ${price}`;
+};
 
 const ServicesSection = () => {
   const [showSupplements, setShowSupplements] = useState(false);
@@ -161,6 +221,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-24 md:py-40">
       <div className="container max-w-6xl mx-auto px-4">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -178,13 +239,108 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* ── Offres ponctuelles ── */}
+        {/* ── SECTION 1 : Création de site ── */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
-          <p className="section-label mb-4">単発 Offres ponctuelles</p>
+          <p className="section-label mb-4">制作 Création de site</p>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">
+            Trois formules adaptées à <span className="text-gradient">votre situation.</span>
+          </h3>
+          <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
+            Chaque site est codé sur-mesure et inclut une phase de préparation stratégique.
+          </p>
+
+          <div className="grid lg:grid-cols-3 gap-4 mb-4">
+            {sitePlans.map((plan, i) => (
+              <ShineBorder
+                key={plan.name}
+                shineColor={plan.featured ? ["#8B5CF6", "#A78BFA", "#FFFFFF"] : ["#333", "#555", "#333"]}
+                duration={plan.featured ? 6 : 12}
+                borderWidth={plan.featured ? 2 : 1}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-card p-8 flex flex-col h-full"
+                >
+                  {plan.badge && (
+                    <span className="inline-block text-xs font-mono text-primary border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
+                      {plan.badge}
+                    </span>
+                  )}
+                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    {plan.kanji} {plan.name} {plan.featured && "⭐"}
+                  </span>
+                  <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
+                  <p className="text-xs text-muted-foreground mb-3">{plan.description}</p>
+                  {plan.noteSpeciale && (
+                    <p className="text-xs text-primary/80 italic mb-4 leading-relaxed">{plan.noteSpeciale}</p>
+                  )}
+                  <p className="text-xs text-muted-foreground/60 mb-6">Pour qui : {plan.pourQui}</p>
+
+                  <div className="space-y-2 flex-1">
+                    {siteFeatures.map((feat, j) => {
+                      const val = plan.values[j];
+                      return (
+                        <div key={feat} className="flex items-center gap-2">
+                          {typeof val === "string" ? (
+                            <span className="text-xs font-mono text-gold shrink-0 min-w-[2rem] text-center">{val}</span>
+                          ) : val ? (
+                            <Check size={14} className="text-primary shrink-0" />
+                          ) : (
+                            <X size={14} className="text-muted-foreground/30 shrink-0" />
+                          )}
+                          <span className="text-xs text-muted-foreground">{feat}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                  >
+                    Demander un devis <ArrowRight size={14} />
+                  </Link>
+                </motion.div>
+              </ShineBorder>
+            ))}
+          </div>
+
+          <p className="text-xs text-muted-foreground mb-8">
+            Étude et plan (CHF 1'190) créditée à 100 % si vous signez un forfait site.
+          </p>
+
+          {/* Hébergement sub-section */}
+          <div className="glass-card p-6">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Hébergement et domaine</p>
+            <div className="grid sm:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">Première année incluse dans tous les forfaits site.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">À partir de l'année 2 : <span className="text-gold font-mono font-semibold">290 CHF/an</span> (hébergement suisse + domaine + SSL).</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">Inclus sans frais pour les clients avec une formule de suivi active.</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ── SECTION 2 : Vous avez déjà un site ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
+          <p className="section-label mb-4">単発 Vous avez déjà un site</p>
           <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
             Diagnostiquer et <span className="text-gradient">planifier.</span>
           </h3>
-          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+
+          {/* Audit + Étude et plan */}
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden mb-12">
             {ponctuelles.map((s, i) => (
               <motion.div
                 key={s.title}
@@ -209,76 +365,76 @@ const ServicesSection = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
 
-        {/* ── Création de site ── */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
-          <p className="section-label mb-4">制作 Création de site</p>
-          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-            Trois forfaits, un seul <span className="text-gradient">standard.</span>
-          </h3>
+          {/* Mandat SEO 90 jours */}
+          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div className="glass-card p-8">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">九十日 Mandat SEO 90 jours</p>
+              <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-1">
+                Optimisation en <span className="text-gradient">profondeur.</span>
+              </h4>
+              <p className="text-sm text-muted-foreground mb-2">À partir de 2'900 CHF, forfait unique</p>
+              <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
+                Après votre audit, si votre site a besoin d'un travail d'optimisation en profondeur, nous proposons un mandat forfaitaire sur 90 jours. Le prix est fixé après l'audit, selon la complexité de votre site.
+              </p>
 
-          <div className="grid lg:grid-cols-3 gap-4 mb-4">
-            {sitePlans.map((plan, i) => (
-              <ShineBorder
-                key={plan.name}
-                shineColor={plan.featured ? ["#8B5CF6", "#A78BFA", "#FFFFFF"] : ["#333", "#555", "#333"]}
-                duration={plan.featured ? 6 : 12}
-                borderWidth={plan.featured ? 2 : 1}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-card p-8 flex flex-col h-full"
-                >
-                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                    {plan.kanji} {plan.name} {plan.featured && "⭐"}
-                  </span>
-                  <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
-                  <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
-
-                  <div className="space-y-3 flex-1">
-                    {siteFeatures.map((feat, j) => {
-                      const val = plan.values[j];
-                      return (
-                        <div key={feat} className="flex items-center gap-2">
-                          {typeof val === "string" ? (
-                            <span className="text-xs font-mono text-gold w-4 text-center shrink-0">{val === "4" ? "4" : val === "5–8" ? "5–8" : "≤10"}</span>
-                          ) : val ? (
-                            <Check size={14} className="text-primary shrink-0" />
-                          ) : (
-                            <X size={14} className="text-muted-foreground/30 shrink-0" />
-                          )}
-                          <span className="text-xs text-muted-foreground">{feat}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <Link
-                    to="/contact"
-                    className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+              {/* Niveaux */}
+              <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-8">
+                {mandatNiveaux.map((n, i) => (
+                  <motion.div
+                    key={n.complexite}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="bg-card p-6 flex flex-col"
                   >
-                    Demander un devis <ArrowRight size={14} />
-                  </Link>
-                </motion.div>
-              </ShineBorder>
-            ))}
-          </div>
-          <p className="text-xs text-muted-foreground">
-            Étude et plan (CHF 1'190) créditée à 100 % si vous signez un forfait site.
-          </p>
+                    <span className="font-mono text-xs text-primary uppercase tracking-wider mb-2">{n.complexite}</span>
+                    <div className="text-gold font-mono font-bold text-xl mb-2">{n.prix.startsWith("À") ? n.prix : `CHF ${n.prix}.–`}</div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{n.profil}</p>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Ce qui est inclus */}
+              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-4">Ce qui est inclus</p>
+              <div className="grid sm:grid-cols-2 gap-2 mb-8">
+                {mandatInclus.map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-xs text-muted-foreground mb-6">
+                Toujours précédé d'un Audit SEO (1'200 CHF). Paiement en 3 mensualités possibles.
+              </p>
+
+              {/* Encadré exemple */}
+              <div className="border border-primary/20 rounded-lg p-5 bg-primary/5">
+                <p className="font-mono text-xs text-primary uppercase tracking-wider mb-2">Exemple de projet complet</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  Audit (1'200) + Mandat 90j élevé (4'500) + Suivi 6 mois (6 × 590)
+                </p>
+                <p className="text-gold font-mono font-bold text-lg">Investissement total sur 9 mois : 9'240 CHF</p>
+                <p className="text-xs text-muted-foreground mt-1">Vous connaissez le coût complet dès le départ. Pas de surprise.</p>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
-        {/* ── Formules de suivi ── */}
+        {/* ── SECTION 3 : Formules de suivi ── */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
           <p className="section-label mb-4">月額 Formules de suivi</p>
-          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">
             Maintenir et <span className="text-gradient">progresser.</span>
           </h3>
-          <div className="grid lg:grid-cols-3 gap-4">
+          <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
+            Votre site a besoin d'être surveillé, maintenu et amélioré. Les formules KUMO assurent que votre investissement continue à travailler pour vous.
+          </p>
+
+          <div className="grid lg:grid-cols-3 gap-4 mb-6">
             {suiviPlans.map((plan, i) => (
               <ShineBorder
                 key={plan.name}
@@ -293,6 +449,11 @@ const ServicesSection = () => {
                   transition={{ delay: i * 0.1 }}
                   className="bg-card p-8 flex flex-col h-full"
                 >
+                  {plan.badge && (
+                    <span className="inline-block text-xs font-mono text-primary border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
+                      {plan.badge}
+                    </span>
+                  )}
                   <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
                     {plan.kanji} {plan.name} {plan.featured && "⭐"}
                   </span>
@@ -300,7 +461,7 @@ const ServicesSection = () => {
                     CHF {plan.price}.–<span className="text-sm font-normal text-muted-foreground">/mois</span>
                   </div>
                   <p className="text-xs text-muted-foreground mb-1">{plan.engagement}</p>
-                  <p className="text-xs text-muted-foreground mb-6">Pour qui : {plan.pourQui}</p>
+                  <p className="text-xs text-muted-foreground mb-6">{plan.pourQui}</p>
 
                   <div className="space-y-2 flex-1">
                     {plan.features.map((f) => (
@@ -321,10 +482,64 @@ const ServicesSection = () => {
               </ShineBorder>
             ))}
           </div>
+
+          {/* Sprint ponctuel */}
+          <div className="border border-primary/20 rounded-lg p-5 bg-primary/5 mb-8">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-1">Sprint ponctuel</p>
+            <p className="text-sm text-muted-foreground">
+              Disponible pour les clients Suivi. Besoin d'une action supplémentaire ponctuellement ? Ajoutez un sprint d'optimisation à{" "}
+              <span className="text-gold font-mono font-semibold">450 CHF</span>, sans engagement.
+            </p>
+          </div>
+
+          {/* Modifications */}
+          <div className="glass-card p-6">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Vos demandes de modifications</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Votre site est codé sur-mesure pour la performance et la sécurité. Pour toute modification, vous disposez d'un espace de demandes dédié avec un délai de traitement de 48h.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-xs text-muted-foreground">Les petites modifications (textes, horaires, coordonnées) sont incluses dans votre formule (30 min/mois).</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <span className="text-xs text-muted-foreground">Au-delà : <span className="text-gold font-mono">150 CHF/h</span> (minimum facturé 30 min = 75 CHF).</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
-        {/* ── Prestations complémentaires ── */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        {/* ── SECTION 4 : Quelle formule ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
+          <p className="section-label mb-4">選択 Votre situation</p>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+            Quelle formule correspond à{" "}
+            <span className="text-gradient">votre situation&nbsp;?</span>
+          </h3>
+          <div className="divide-y divide-border/50 rounded-lg border border-border/50 overflow-hidden">
+            {situations.map((s, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07 }}
+                className="bg-card px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8"
+              >
+                <span className="text-sm text-muted-foreground flex-1">{s.situation}</span>
+                <span className="text-sm font-mono text-gold shrink-0">{s.recommandation}</span>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground mt-4">
+            Ces recommandations sont indicatives. Un premier échange permet de préciser la meilleure option pour vous.
+          </p>
+        </motion.div>
+
+        {/* ── SECTION 5 : Prestations complémentaires ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
           <div className="text-center mb-8">
             <button
               onClick={() => setShowSupplements(!showSupplements)}
@@ -338,17 +553,25 @@ const ServicesSection = () => {
 
           {showSupplements && (
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="glass-card p-6 md:p-8">
-              <p className="section-label mb-6">補足 Prestations complémentaires</p>
+              <p className="section-label mb-2">補足 Prestations complémentaires</p>
+              <p className="text-xs text-muted-foreground mb-6 max-w-2xl">
+                Tarifs communiqués en annexe de votre devis, avant le début du projet. Vous savez exactement ce que coûtent les ajouts éventuels. Pas de surprise.
+              </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {supplements.map((cat) => (
                   <div key={cat.category}>
                     <h4 className="font-mono text-xs text-primary uppercase tracking-wider mb-3">{cat.category}</h4>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {cat.items.map((item) => (
-                        <div key={item.name} className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">{item.name}</span>
-                          <span className="font-mono text-gold text-xs">
-                            {item.price.includes("Sur devis") || item.price.includes("%") ? item.price : `CHF ${item.price}`}
+                        <div key={item.name} className="flex items-start justify-between gap-2">
+                          <div className="flex-1">
+                            <span className="text-sm text-muted-foreground">{item.name}</span>
+                            {item.desc && (
+                              <p className="text-xs text-muted-foreground/50 mt-0.5">{item.desc}</p>
+                            )}
+                          </div>
+                          <span className="font-mono text-gold text-xs shrink-0">
+                            {formatPrice(item.price)}
                           </span>
                         </div>
                       ))}
@@ -360,32 +583,74 @@ const ServicesSection = () => {
           )}
         </motion.div>
 
-        {/* Inclusions communes */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 glass-card p-6"
-        >
-          <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tous les forfaits site incluent</p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              "Design responsive",
-              "Hébergement 1ère année",
-              "Certificat SSL",
-              "Formulaire de contact",
-              "Conformité RGPD",
-              "Formation utilisation",
-              "Garantie 30 jours",
-              "2 séries de retours",
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <Check size={12} className="text-gold shrink-0" />
-                <span className="text-xs text-muted-foreground">{item}</span>
+        {/* ── SECTION 6 : Bon à savoir ── */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <p className="section-label mb-4">知識 Bon à savoir</p>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+            Tout ce qu'il faut savoir{" "}
+            <span className="text-gradient">avant de démarrer.</span>
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Tarifs clairs */}
+            <div className="glass-card p-6">
+              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tarifs clairs et fixes</p>
+              <p className="text-sm text-muted-foreground">
+                Tous les prix sont des forfaits fixes en francs suisses, TVA non applicable. Pas de coût caché.
+              </p>
+            </div>
+
+            {/* Délais */}
+            <div className="glass-card p-6">
+              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Délais</p>
+              <p className="text-sm text-muted-foreground">
+                Un site de 4 à 8 pages est livré en 3 à 5 semaines. Le principal facteur de délai : la réception de vos éléments.
+              </p>
+            </div>
+
+            {/* Conditions de paiement */}
+            <div className="glass-card p-6">
+              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Conditions de paiement</p>
+              <div className="space-y-2">
+                {[
+                  "Création de site : 40 % à la signature, 60 % à la livraison",
+                  "Mandat 90 jours : paiement en 3 mensualités possibles",
+                  "Abonnements : facturation mensuelle",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span className="text-primary font-mono text-xs shrink-0 mt-0.5">→</span>
+                    <span className="text-sm text-muted-foreground">{item}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Interlocuteur unique */}
+            <div className="glass-card p-6">
+              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Un interlocuteur unique</p>
+              <p className="text-sm text-muted-foreground">
+                Pas d'agence complexe. Un seul contact, des échanges simples, un suivi direct.
+              </p>
+            </div>
+          </div>
+
+          {/* Déroulement du projet */}
+          <div className="glass-card p-6 md:p-8">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-6">Comment se déroule un projet</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {etapes.map((e) => (
+                <div key={e.num} className="flex items-start gap-3">
+                  <span className="font-mono text-xs text-primary/40 shrink-0 mt-0.5">{e.num}</span>
+                  <div>
+                    <p className="text-sm font-medium mb-0.5">{e.title}</p>
+                    <p className="text-xs text-muted-foreground">{e.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

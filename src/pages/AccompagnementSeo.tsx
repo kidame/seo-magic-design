@@ -15,15 +15,20 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 
-const mission90 = [
-  "Audit technique complet (31 points)",
-  "Recherche de mots-clés stratégiques",
-  "Optimisation on-page & balisage Schema.org",
-  "Maillage interne & architecture",
-  "Analyse concurrentielle (3 concurrents)",
-  "Plan d'action priorisé sur 90 jours",
-  "Suivi de positionnement hebdomadaire",
-  "Rapport de progression mensuel",
+const mandatNiveaux = [
+  { complexite: "Standard", prix: "2'900", profil: "Site vitrine simple, quelques pages, problèmes limités" },
+  { complexite: "Élevé", prix: "4'500", profil: "Site vitrine professionnel, 20–50 pages" },
+  { complexite: "Très élevé", prix: "À partir de 6'900", profil: "E-commerce ou site 50+ pages, problèmes multiples" },
+];
+
+const mandatInclus = [
+  "Corrections techniques complètes (indexation, plan du site, balises)",
+  "Optimisation de toutes les pages (titres, descriptions, structure)",
+  "Amélioration du contenu (lisibilité, pages sous-performantes)",
+  "Stratégie de visibilité externe",
+  "Suivi de positionnement pendant la mission",
+  "2 points d'avancement en visioconférence",
+  "Rapport de résultats détaillé à 90 jours",
 ];
 
 const suiviPlans = [
@@ -140,8 +145,7 @@ const AccompagnementSeo = () => {
               direction="top"
             />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-              Une mission initiale de 90 jours pour poser les fondations, puis un suivi mensuel
-              pour maintenir et améliorer vos positions.
+              Si votre site existant a besoin d'un travail d'optimisation en profondeur, commencez par un Mandat SEO 90 jours. Ensuite, choisissez une formule mensuelle pour maintenir et améliorer vos positions dans la durée.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">
@@ -151,28 +155,47 @@ const AccompagnementSeo = () => {
           </motion.div>
         </section>
 
-        {/* Mission 90 jours */}
+        {/* Mandat SEO 90 jours */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">九十日 Phase initiale</p>
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              Mission <span className="text-gradient">90 jours.</span>
+            <p className="section-label mb-4">九十日 Mandat SEO 90 jours</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
+              Optimisation en <span className="text-gradient">profondeur.</span>
             </h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Forfait fixe sur 90 jours. Toujours précédé d'un Audit SEO (1'200 CHF) qui détermine le niveau et le périmètre. Paiement en 3 mensualités possible.
+            </p>
           </motion.div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {mission90.map((item, i) => (
+
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-8">
+            {mandatNiveaux.map((n, i) => (
               <motion.div
-                key={item}
-                initial={{ opacity: 0, y: 10 }}
+                key={n.complexite}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="flex items-center gap-3 glass-card p-4"
+                transition={{ delay: i * 0.1 }}
+                className="bg-card p-6 flex flex-col"
               >
-                <Check size={16} className="text-primary shrink-0" />
-                <span className="text-sm">{item}</span>
+                <span className="font-mono text-xs text-primary uppercase tracking-wider mb-2">{n.complexite}</span>
+                <div className="text-gold font-mono font-bold text-xl mb-2">
+                  {n.prix.startsWith("À") ? n.prix : `CHF ${n.prix}.–`}
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">{n.profil}</p>
               </motion.div>
             ))}
+          </div>
+
+          <div className="glass-card p-6">
+            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-4">Ce qui est inclus</p>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {mandatInclus.map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                  <span className="text-xs text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

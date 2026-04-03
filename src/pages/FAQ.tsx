@@ -48,7 +48,11 @@ const faqs = [
   },
   {
     question: "Quelles sont les formules de suivi mensuel ?",
-    answer: "Trois formules : Maintenance à CHF 250/mois (surveillance, sauvegardes, correctifs), Suivi Visibilité à CHF 590/mois (suivi positions, rapport mensuel, 1 amélioration/mois) et Croissance à CHF 1'490/mois (sprint stratégique, analyse GSC approfondie, point mensuel).",
+    answer: "Trois formules : Maintenance à CHF 250/mois (surveillance, sauvegardes, correctifs, sans engagement, résiliable à 30 jours), Suivi Visibilité à CHF 590/mois (suivi positions Google, rapport mensuel, 1 amélioration ciblée/mois, recommandé, engagement 6 mois) et Croissance à CHF 1'490/mois (sprint stratégique mensuel, analyse approfondie Google, point mensuel 15 min, engagement 6 mois). L'hébergement est inclus dans toutes les formules de suivi.",
+  },
+  {
+    question: "Qu'est-ce que le Mandat SEO 90 jours ?",
+    answer: "Après un audit SEO, si votre site nécessite un travail d'optimisation en profondeur, nous proposons un mandat forfaitaire sur 90 jours. Trois niveaux selon la complexité : Standard (CHF 2'900, site vitrine simple), Élevé (CHF 4'500, site professionnel 20–50 pages), Très élevé (à partir de CHF 6'900, e-commerce ou site 50+ pages). Inclus : corrections techniques complètes, optimisation de toutes les pages, amélioration du contenu, stratégie de visibilité externe, suivi de positionnement, 2 points d'avancement en visio, rapport détaillé à 90 jours. Paiement en 3 mensualités possible.",
   },
   {
     question: "Comment se passe le paiement ?",
