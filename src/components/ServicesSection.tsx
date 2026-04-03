@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, X } from "lucide-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShineBorder } from "@/components/ui/shine-border";
 
@@ -154,49 +153,12 @@ const situations = [
 ];
 
 /* ── Prestations complémentaires ── */
-const supplements = [
-  {
-    category: "Pages supplémentaires",
-    items: [
-      { name: "Page simple", desc: "Texte + images, structure standard", price: "390" },
-      { name: "Page complexe", desc: "FAQ structurée, formulaire, contenu long", price: "490" },
-      { name: "Landing page conversion", desc: "CTA optimisé, tracking", price: "590" },
-    ],
-  },
-  {
-    category: "Modifications ponctuelles",
-    items: [
-      { name: "Taux horaire", desc: "Minimum facturé 30 min (75 CHF)", price: "150/h" },
-    ],
-  },
-  {
-    category: "Images et visuels",
-    items: [
-      { name: "Intégration image", desc: "Optimisation web d'une image fournie", price: "35/image" },
-      { name: "Pack 10 images", desc: "Au lieu de 350 CHF", price: "250" },
-      { name: "Sourcing photo stock", desc: "Recherche + intégration", price: "75/image" },
-      { name: "Retouche/remplacement", desc: "Image inutilisable (floue, trop petite)", price: "150/h" },
-    ],
-  },
-  {
-    category: "Fonctionnalités additionnelles",
-    items: [
-      { name: "Formulaire avancé", desc: "Multi-étapes, upload, logique conditionnelle", price: "290" },
-      { name: "Intégration réservation", desc: "Calendly, Cal.com", price: "190" },
-      { name: "Intégration paiement", desc: "Stripe, lien de paiement", price: "390" },
-      { name: "Blog / actualités", desc: "Structure + 1ère page", price: "490" },
-      { name: "Module avis Google", desc: "Widget dynamique", price: "190" },
-      { name: "Multilingue (+1 langue)", desc: "Traduction non incluse", price: "+60 % du prix site" },
-    ],
-  },
-  {
-    category: "Évolutions structurelles",
-    items: [
-      { name: "Refonte d'une page", desc: "Redesign complet d'une page existante", price: "350" },
-      { name: "Migration contenu", desc: "Depuis un ancien site", price: "Sur devis" },
-      { name: "Schéma structuré", desc: "FAQ, Product, Event…", price: "90/schéma" },
-    ],
-  },
+const supplementCategories = [
+  "Pages supplémentaires",
+  "Modifications ponctuelles",
+  "Images & visuels",
+  "Fonctionnalités additionnelles",
+  "Évolutions structurelles",
 ];
 
 /* ── Bon à savoir ── */
@@ -210,13 +172,7 @@ const etapes = [
   { num: "07", title: "Mise en ligne", desc: "Site publié, outils actifs." },
 ];
 
-const formatPrice = (price: string) => {
-  if (price.startsWith("+") || price === "Sur devis") return price;
-  return `CHF ${price}`;
-};
-
 const ServicesSection = () => {
-  const [showSupplements, setShowSupplements] = useState(false);
 
   return (
     <section id="services" className="py-24 md:py-40">
@@ -540,47 +496,25 @@ const ServicesSection = () => {
 
         {/* ── SECTION 5 : Prestations complémentaires ── */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
-          <div className="text-center mb-8">
-            <button
-              onClick={() => setShowSupplements(!showSupplements)}
-              className="text-sm text-primary hover:text-primary/80 transition-colors font-mono"
-              aria-expanded={showSupplements}
-              aria-label={showSupplements ? "Masquer les prestations complémentaires" : "Voir les prestations complémentaires"}
+          <div className="glass-card p-6 md:p-8">
+            <p className="section-label mb-2">補足 Prestations complémentaires</p>
+            <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+              Votre projet peut évoluer. Pages supplémentaires, fonctionnalités sur mesure, intégrations spécifiques... Je m'adapte à vos besoins, avec des tarifs communiqués avant tout démarrage.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {supplementCategories.map((cat) => (
+                <span key={cat} className="font-mono text-xs text-primary border border-primary/20 rounded px-3 py-1">
+                  {cat}
+                </span>
+              ))}
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors"
             >
-              {showSupplements ? "Masquer les prestations complémentaires ↑" : "Voir les prestations complémentaires →"}
-            </button>
+              Discutons de votre projet <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-
-          {showSupplements && (
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="glass-card p-6 md:p-8">
-              <p className="section-label mb-2">補足 Prestations complémentaires</p>
-              <p className="text-xs text-muted-foreground mb-6 max-w-2xl">
-                Tarifs communiqués en annexe de votre devis, avant le début du projet. Vous savez exactement ce que coûtent les ajouts éventuels. Pas de surprise.
-              </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {supplements.map((cat) => (
-                  <div key={cat.category}>
-                    <h4 className="font-mono text-xs text-primary uppercase tracking-wider mb-3">{cat.category}</h4>
-                    <div className="space-y-3">
-                      {cat.items.map((item) => (
-                        <div key={item.name} className="flex items-start justify-between gap-2">
-                          <div className="flex-1">
-                            <span className="text-sm text-muted-foreground">{item.name}</span>
-                            {item.desc && (
-                              <p className="text-xs text-muted-foreground/50 mt-0.5">{item.desc}</p>
-                            )}
-                          </div>
-                          <span className="font-mono text-gold text-xs shrink-0">
-                            {formatPrice(item.price)}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
         </motion.div>
 
         {/* ── SECTION 6 : Bon à savoir ── */}
@@ -594,9 +528,9 @@ const ServicesSection = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Tarifs clairs */}
             <div className="glass-card p-6">
-              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tarifs clairs et fixes</p>
+              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tarifs clairs et précis</p>
               <p className="text-sm text-muted-foreground">
-                Tous les prix sont des forfaits fixes en francs suisses, TVA non applicable. Pas de coût caché.
+                Chaque projet démarre par un diagnostic complet et un listing détaillé des tâches à réaliser. Vous recevez un planning clair avant de vous engager : vous savez exactement ce qui est prévu, dans quel ordre, et pour quel résultat.
               </p>
             </div>
 
