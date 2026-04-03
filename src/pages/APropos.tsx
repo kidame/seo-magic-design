@@ -9,7 +9,7 @@ import BlurText from "@/components/ui/blur-text";
 
 const values = [
   { kanji: "透", title: "Transparence", desc: "Forfaits fixes, pas de frais cachés. Vous savez exactement ce que vous payez et ce que vous obtenez." },
-  { kanji: "精", title: "Précision", desc: "Chaque recommandation est fondée sur des données. Pas de promesses vagues, des actions mesurables." },
+  { kanji: "精", title: "Précision", desc: "Rien n'est recommandé sans mesure préalable. Des actions concrètes, avec des résultats qu'on peut vérifier." },
   { kanji: "直", title: "Franchise", desc: "Je recommande uniquement les solutions adaptées à votre situation réelle. L'objectif est de vous conseiller avec justesse, dans votre intérêt." },
   { kanji: "独", title: "Indépendance", desc: "Un interlocuteur dédié, impliqué de la première analyse jusqu'aux résultats. Votre projet est suivi avec la même attention du début à la fin." },
 ];
@@ -93,18 +93,13 @@ const APropos = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Chaque projet commence par un diagnostic approfondi. Je ne propose jamais de solution
-                sans avoir d'abord compris le contexte, les objectifs et les contraintes.
+                Chaque projet commence par un diagnostic. Avant de proposer quoi que ce soit, je prends le temps de comprendre votre situation, vos objectifs, vos limites.
               </p>
               <p>
-                Mon approche repose sur des données mesurables : positionnement, trafic organique,
-                Core Web Vitals, taux de conversion. Chaque action recommandée est priorisée par
-                impact et effort.
+                Je travaille sur des indicateurs concrets : où vous en êtes dans Google, ce que votre site charge, ce que vos visiteurs font. Les actions sont triées par ce qu'elles apportent vraiment.
               </p>
               <p>
-                Je travaille en forfait fixe, avec un périmètre défini et des livrables clairs.
-                Pas de surprise, pas de compteur horaire qui tourne. Vous savez exactement
-                ce que vous obtenez pour votre investissement.
+                Je travaille en forfait fixe. Un périmètre clair, des livrables définis, un prix qui ne bouge pas. Vous savez dès le départ ce que vous recevez.
               </p>
             </div>
           </motion.div>

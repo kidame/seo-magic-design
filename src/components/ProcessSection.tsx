@@ -18,13 +18,13 @@ const steps = [
     number: "03",
     kanji: "修正 · Correction",
     title: "Rapport & Plan 90j",
-    description: "Tout est synthétisé dans un rapport HTML interactif. Chaque problème est localisé (quelle page, quel élément) avec sa solution. Le plan d'action sur 90 jours classe chaque intervention par impact et effort.",
+    description: "Tout est synthétisé dans un rapport HTML interactif. Chaque problème est localisé : quelle page, quel élément, quelle correction. Le plan 90 jours hiérarchise les actions par impact réel.",
   },
   {
     number: "04",
     kanji: "検証 · Vérification",
     title: "Exécution & Résultats",
-    description: "Si vous choisissez l'accompagnement, j'exécute les corrections moi-même. Suivi mensuel des positions, du trafic, des conversions. Chaque action est validée par ses résultats mesurés.",
+    description: "Si vous choisissez l'accompagnement, j'exécute les corrections moi-même. Chaque mois : positions, trafic, conversions. Ce qui fonctionne, on l'amplifie. Ce qui stagne, on l'ajuste.",
   },
 ];
 
@@ -44,8 +44,7 @@ const ProcessSection = () => {
             <span className="text-gradient">De la méthode.</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Mon approche est systématique. Je mesure avant d'agir, je priorise avant de corriger, 
-            et vous voyez exactement ce qui a changé et ce que ça vous rapporte.
+            Je mesure avant d'agir. Je priorise avant de corriger. Et à chaque étape, vous voyez ce qui a changé et ce que ça vous rapporte.
           </p>
         </motion.div>
 

@@ -30,7 +30,7 @@ const homepageJsonLd: Record<string, unknown>[] = [
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: "Méthode SEO KUMO : 4 étapes pour améliorer votre visibilité",
-    description: "Mon approche est systématique. Je mesure avant d'agir, je priorise avant de corriger, et vous voyez exactement ce qui a changé et ce que ça vous rapporte.",
+    description: "Je mesure avant d'agir. Je priorise avant de corriger. Et à chaque étape, vous voyez ce qui a changé et ce que ça vous rapporte.",
     step: [
       {
         "@type": "HowToStep",
@@ -48,13 +48,13 @@ const homepageJsonLd: Record<string, unknown>[] = [
         "@type": "HowToStep",
         position: 3,
         name: "Rapport & Plan 90j",
-        text: "Tout est synthétisé dans un rapport HTML interactif. Chaque problème est localisé (quelle page, quel élément) avec sa solution. Le plan d'action sur 90 jours classe chaque intervention par impact et effort.",
+        text: "Tout est synthétisé dans un rapport HTML interactif. Chaque problème est localisé : quelle page, quel élément, quelle correction. Le plan 90 jours hiérarchise les actions par impact réel.",
       },
       {
         "@type": "HowToStep",
         position: 4,
         name: "Exécution & Résultats",
-        text: "Si vous choisissez l'accompagnement, j'exécute les corrections moi-même. Suivi mensuel des positions, du trafic, des conversions. Chaque action est validée par ses résultats mesurés.",
+        text: "Si vous choisissez l'accompagnement, j'exécute les corrections moi-même. Chaque mois : positions, trafic, conversions. Ce qui fonctionne, on l'amplifie. Ce qui stagne, on l'ajuste.",
       },
     ],
   },
