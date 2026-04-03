@@ -10,7 +10,7 @@ import BlurText from "@/components/ui/blur-text";
 const values = [
   { kanji: "透", title: "Transparence", desc: "Forfaits fixes, pas de frais cachés. Vous savez exactement ce que vous payez et ce que vous obtenez." },
   { kanji: "精", title: "Précision", desc: "Chaque recommandation est fondée sur des données. Pas de promesses vagues, des actions mesurables." },
-  { kanji: "直", title: "Franchise", desc: "Si votre site n'a pas besoin de SEO, je vous le dirai. Mon rôle est de vous conseiller, pas de vous vendre." },
+  { kanji: "直", title: "Franchise", desc: "Je recommande uniquement les solutions adaptées à votre situation réelle. L'objectif est de vous conseiller avec justesse, dans votre intérêt." },
   { kanji: "独", title: "Indépendance", desc: "Aucune agence, aucun intermédiaire. Un interlocuteur unique qui connaît votre dossier de A à Z." },
 ];
 
