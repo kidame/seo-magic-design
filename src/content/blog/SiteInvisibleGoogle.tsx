@@ -32,7 +32,7 @@ const SiteInvisibleGoogle = () => (
       Le marché suisse romand a une particularité que beaucoup de prestataires web ignorent : les volumes de recherche sont faibles comparés à la France, mais les intentions sont souvent plus qualifiées. Un internaute qui tape « électricien Neuchâtel » a besoin d'un électricien maintenant, pas demain.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Le problème que nous constatons chez la majorité des PME romandes : leurs pages ne contiennent aucun mot-clé pertinent. La page d'accueil dit « Bienvenue chez [nom de l'entreprise] » au lieu de « [Métier] à [Ville] — [Promesse claire] ». Les pages de services utilisent un vocabulaire interne que personne ne tape dans Google.
+      Le problème que nous constatons chez la majorité des PME romandes : leurs pages ne contiennent aucun mot-clé pertinent. La page d'accueil dit « Bienvenue chez [nom de l'entreprise] » au lieu de « [Métier] à [Ville] [Promesse claire] ». Les pages de services utilisent un vocabulaire interne que personne ne tape dans Google.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Une{" "}
@@ -59,7 +59,7 @@ const SiteInvisibleGoogle = () => (
       En Suisse romande, plus de la moitié des recherches B2C incluent une composante géographique. « Coiffeur Lausanne », « plombier Neuchâtel », « comptable Yverdon » : ce sont des recherches locales, et Google les traite différemment des recherches génériques.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Pour apparaître dans ces résultats locaux — et surtout dans le « pack local » (les 3 résultats avec la carte Google Maps) — plusieurs éléments doivent être en place.
+      Pour apparaître dans ces résultats locaux et surtout dans le « pack local » (les 3 résultats avec la carte Google Maps), plusieurs éléments doivent être en place.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       D'abord, une fiche Google Business Profile correctement remplie et vérifiée. Beaucoup de PME ont créé leur fiche il y a des années et ne l'ont jamais mise à jour. Catégories incorrectes, horaires obsolètes, aucune photo récente : autant de signaux négatifs pour Google.
