@@ -49,9 +49,9 @@ const ProcessSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 list-none p-0 m-0">
           {steps.map((step, i) => (
-            <motion.div
+            <motion.li
               key={step.number}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -61,14 +61,14 @@ const ProcessSection = () => {
             >
               {/* Step number with parallax float */}
               <ParallaxLayer speed={0.12} disableOnMobile>
-                <span className="text-5xl font-bold text-primary/30 font-mono block mb-2">{step.number}</span>
+                <span className="text-5xl font-bold text-primary/30 font-mono block mb-2" aria-hidden="true">{step.number}</span>
               </ParallaxLayer>
-              <span className="font-jp text-xs text-primary block mb-3">{step.kanji}</span>
+              <span className="font-jp text-xs text-primary block mb-3" aria-hidden="true">{step.kanji}</span>
               <h3 className="text-lg font-bold mb-2">{step.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
