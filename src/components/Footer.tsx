@@ -36,7 +36,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <Link to="/" className="font-body text-xl font-bold text-foreground" aria-label="KUMO — Retour à l'accueil">
+            <Link to="/" className="font-body text-xl font-bold text-foreground" aria-label="KUMO, retour à l'accueil">
               KUMO <span className="font-jp text-primary" aria-hidden="true">蜘蛛</span>
             </Link>
             <p className="text-xs text-muted-foreground mt-3 leading-relaxed">

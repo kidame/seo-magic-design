@@ -18,7 +18,7 @@ const ParallaxLayer = ({
   const ref = useParallax<HTMLDivElement>(parallaxOptions);
 
   return (
-    // @ts-ignore — dynamic tag
+    // @ts-ignore: dynamic tag
     <Tag ref={ref} className={cn(className)}>
       {children}
     </Tag>

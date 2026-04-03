@@ -55,7 +55,7 @@ const BlogPost = () => {
       },
       publisher: {
         "@type": "ProfessionalService",
-        name: "KUMO — Consultant SEO & Création Web",
+        name: "KUMO | Consultant SEO & Création Web",
         url: "https://kumo-seo.ch",
         logo: {
           "@type": "ImageObject",

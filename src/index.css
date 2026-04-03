@@ -91,7 +91,7 @@
     @apply font-mono text-[0.65rem] uppercase tracking-[0.35em] text-foreground/70 font-medium;
   }
 
-  /* Kanji: system CJK fonts — avoids loading Noto webfont (~170 KiB) */
+  /* Kanji: system CJK fonts - avoids loading Noto webfont (~170 KiB) */
   .font-jp {
     font-family:
       "Hiragino Sans",
@@ -104,7 +104,7 @@
       sans-serif;
   }
 
-  /* Blog article prose — mobile-safe overflow for code and links */
+  /* Blog article prose: mobile-safe overflow for code and links */
   .article-prose {
     overflow-wrap: break-word;
     word-break: break-word;

@@ -22,14 +22,14 @@ const homepageJsonLd: Record<string, unknown>[] = [
     description: "Audit SEO technique, accompagnement SEO continu et création de sites web sur-mesure pour PME de Suisse romande.",
     publisher: {
       "@type": "ProfessionalService",
-      name: "KUMO — Consultant SEO & Création Web",
+      name: "KUMO | Consultant SEO & Création Web",
       url: "https://kumo-seo.ch",
     },
   },
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "Méthode SEO KUMO — 4 étapes pour améliorer votre visibilité",
+    name: "Méthode SEO KUMO : 4 étapes pour améliorer votre visibilité",
     description: "Mon approche est systématique. Je mesure avant d'agir, je priorise avant de corriger, et vous voyez exactement ce qui a changé et ce que ça vous rapporte.",
     step: [
       {
@@ -64,8 +64,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="KUMO — Audit SEO & Création Web sur-mesure (Neuchâtel, Suisse romande)"
-        description="Audit SEO technique à Neuchâtel — 31 points de contrôle, rapport interactif, plan d'action 90 jours. Création de sites web sur-mesure et accompagnement SEO continu. Forfait fixe pour PME de Suisse romande."
+        title="KUMO | Audit SEO & Création Web sur-mesure (Neuchâtel, Suisse romande)"
+        description="Audit SEO technique à Neuchâtel : 31 points de contrôle, rapport interactif, plan d'action 90 jours. Création de sites web sur-mesure et accompagnement SEO continu. Forfait fixe pour PME de Suisse romande."
         canonical="https://kumo-seo.ch/"
         jsonLd={homepageJsonLd}
       />

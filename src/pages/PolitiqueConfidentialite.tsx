@@ -6,7 +6,7 @@ const PolitiqueConfidentialite = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Politique de confidentialité — KUMO SEO",
+    name: "Politique de confidentialité | KUMO SEO",
     url: "https://kumo-seo.ch/politique-de-confidentialite",
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -20,7 +20,7 @@ const PolitiqueConfidentialite = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Politique de confidentialité — KUMO 蜘蛛"
+        title="Politique de confidentialité | KUMO 蜘蛛"
         description="Politique de confidentialité conforme à la nLPD suisse. Données collectées, droits des personnes et cookies."
         canonical="https://kumo-seo.ch/politique-de-confidentialite"
         jsonLd={jsonLd}
@@ -41,7 +41,7 @@ const PolitiqueConfidentialite = () => {
                 Le responsable du traitement des données personnelles est :
               </p>
               <ul className="list-none mt-3 space-y-1">
-                <li><strong className="text-foreground">KUMO SEO</strong> — Raison individuelle</li>
+                <li><strong className="text-foreground">KUMO SEO</strong> : raison individuelle</li>
                 <li>Val-de-Travers, canton de Neuchâtel, Suisse</li>
                 <li>E-mail : contact@kumo-seo.ch</li>
               </ul>
@@ -140,7 +140,7 @@ const PolitiqueConfidentialite = () => {
                 données et à la transparence (PFPDT) :
               </p>
               <p className="mt-2">
-                PFPDT — Feldeggweg 1, 3003 Berne, Suisse<br />
+                PFPDT, Feldeggweg 1, 3003 Berne, Suisse<br />
                 <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   www.edoeb.admin.ch
                 </a>

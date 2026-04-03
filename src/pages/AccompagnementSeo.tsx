@@ -100,7 +100,7 @@ const AccompagnementSeo = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Formules de suivi SEO — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Formules de suivi SEO | KUMO 蜘蛛 Consultant SEO Neuchâtel"
         description="Formules de suivi SEO mensuel : maintenance dès CHF 250/mois, suivi visibilité CHF 590/mois, croissance CHF 1'490/mois. Pour PME suisses."
         canonical="https://kumo-seo.ch/services/accompagnement-seo"
         jsonLd={jsonLd}

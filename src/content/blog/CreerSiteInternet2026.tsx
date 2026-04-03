@@ -6,7 +6,7 @@ const CreerSiteInternet2026 = () => (
       Un site web représente un investissement significatif pour une PME suisse. Entre 3 000 et 10 000 CHF selon la complexité, parfois davantage. Pourtant, beaucoup d'entreprises romandes se retrouvent avec un site qui ne génère ni trafic, ni appels, ni demandes de devis.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Le problème n'est pas le prix. Le problème, c'est ce qu'on exige — ou plutôt ce qu'on n'exige pas — avant de signer.
+      Le problème n'est pas le prix. Le problème, c'est ce qu'on exige (ou plutôt ce qu'on n'exige pas) avant de signer.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Cet article liste les 7 critères concrets qu'une PME suisse devrait vérifier avant de confier la création de son site web à un prestataire. Pas de jargon. Des points vérifiables.
@@ -30,7 +30,7 @@ const CreerSiteInternet2026 = () => (
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">2. Exigez une structure de site pensée pour le référencement</h2>
     <p className="text-muted-foreground leading-relaxed">
-      La structure d'un site — quelles pages existent, comment elles sont liées entre elles, quelle URL correspond à quel contenu — détermine directement sa capacité à se positionner sur Google.
+      La structure d'un site (quelles pages existent, comment elles sont liées entre elles, quelle URL correspond à quel contenu) détermine directement sa capacité à se positionner sur Google.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Un site vitrine classique avec trois pages (Accueil, Services, Contact) ne peut pas se positionner sur plus de deux ou trois mots-clés. C'est mathématique : chaque page ne peut cibler efficacement qu'un seul mot-clé principal.
@@ -42,7 +42,7 @@ const CreerSiteInternet2026 = () => (
       La structure doit inclure : une page d'accueil qui présente clairement votre positionnement, une page par service principal, une page « À propos » qui renforce votre crédibilité, une page de contact facilement accessible, et idéalement une section FAQ qui répond aux questions les plus fréquentes de vos clients.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Le maillage interne — la manière dont ces pages sont liées entre elles — est tout aussi important. Google suit les liens pour comprendre la hiérarchie de votre site. Une page importante doit être accessible en moins de trois clics depuis n'importe quelle autre page.
+      Le maillage interne, autrement dit la manière dont ces pages sont liées entre elles, est tout aussi important. Google suit les liens pour comprendre la hiérarchie de votre site. Une page importante doit être accessible en moins de trois clics depuis n'importe quelle autre page.
     </p>
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">3. Exigez un hébergement suisse ou européen rapide</h2>
@@ -56,7 +56,7 @@ const CreerSiteInternet2026 = () => (
       Votre prestataire doit être capable de vous dire où votre site sera hébergé, quelle est la performance attendue, et comment il compte atteindre ces objectifs. S'il ne mentionne jamais ces aspects, c'est un signal d'alerte.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Un hébergement suisse comme Infomaniak offre d'excellentes performances pour les sites destinés au marché romand, avec en plus l'avantage de la souveraineté des données — un point de plus en plus important pour les entreprises suisses.
+      Un hébergement suisse comme Infomaniak offre d'excellentes performances pour les sites destinés au marché romand, avec en plus l'avantage de la souveraineté des données, un sujet de plus en plus sensible pour les entreprises suisses.
     </p>
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">4. Exigez un site mobile-first, pas « responsive en bonus »</h2>

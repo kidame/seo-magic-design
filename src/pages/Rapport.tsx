@@ -74,7 +74,7 @@ const Rapport = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Rapport d'audit SEO — Structure et livrables",
+    name: "Rapport d'audit SEO : structure et livrables",
     description: "Découvrez la structure du rapport d'audit SEO KUMO : 31 points de contrôle, analyse concurrentielle, performance et mots-clés stratégiques.",
     url: "https://kumo-seo.ch/rapport",
     publisher: {
@@ -96,7 +96,7 @@ const Rapport = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Rapport d'audit SEO — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Rapport d'audit SEO | KUMO 蜘蛛 Consultant SEO Neuchâtel"
         description="Structure du rapport d'audit SEO KUMO : 31 points techniques, analyse de performance, étude concurrentielle et recherche de mots-clés stratégiques."
         canonical="https://kumo-seo.ch/rapport"
         jsonLd={jsonLd}

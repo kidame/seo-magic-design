@@ -9,12 +9,12 @@ const blogJsonLd: Record<string, unknown>[] = [
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Blog — KUMO",
+    name: "Blog | KUMO",
     description: "Articles SEO, guides pratiques et actualités pour les PME de Suisse romande.",
     url: "https://kumo-seo.ch/blog",
     publisher: {
       "@type": "ProfessionalService",
-      name: "KUMO — Consultant SEO & Création Web",
+      name: "KUMO | Consultant SEO & Création Web",
       url: "https://kumo-seo.ch",
     },
   },
@@ -42,7 +42,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Blog SEO — Guides et actualités pour PME | KUMO"
+        title="Blog SEO | Guides et actualités pour PME | KUMO"
         description="Articles SEO, guides pratiques et actualités pour les PME de Suisse romande. Analyses terrain et conseils concrets par KUMO."
         canonical="https://kumo-seo.ch/blog"
         jsonLd={blogJsonLd}

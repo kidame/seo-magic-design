@@ -45,7 +45,7 @@ const AuditSeo = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Audit SEO technique — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Audit SEO technique | KUMO 蜘蛛 Consultant SEO Neuchâtel"
         description="Audit SEO technique complet : 31 points de contrôle, analyse de 3 concurrents et plan d'action 90 jours. Pour PME de Suisse romande."
         canonical="https://kumo-seo.ch/services/audit-seo"
         jsonLd={jsonLd}

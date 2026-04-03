@@ -6,7 +6,7 @@ const MentionsLegales = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Mentions légales — KUMO SEO",
+    name: "Mentions légales | KUMO SEO",
     url: "https://kumo-seo.ch/mentions-legales",
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -20,7 +20,7 @@ const MentionsLegales = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Mentions légales — KUMO 蜘蛛 Consultant SEO"
+        title="Mentions légales | KUMO 蜘蛛 Consultant SEO"
         description="Mentions légales du site kumo-seo.ch. Identité de l'éditeur, hébergement, propriété intellectuelle et droit applicable."
         canonical="https://kumo-seo.ch/mentions-legales"
         jsonLd={jsonLd}

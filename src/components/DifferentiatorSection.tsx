@@ -35,7 +35,7 @@ const DifferentiatorSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* "Them" column — slight downward parallax */}
+          {/* "Them" column: slight downward parallax */}
           <ParallaxLayer speed={0.1} disableOnMobile>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -55,7 +55,7 @@ const DifferentiatorSection = () => {
             </motion.div>
           </ParallaxLayer>
 
-          {/* "Us" column — inverse parallax for convergence */}
+          {/* "Us" column: inverse parallax for convergence */}
           <ParallaxLayer speed={0.1} direction="reverse" disableOnMobile>
             <motion.div
               initial={{ opacity: 0, x: 20 }}

@@ -32,7 +32,7 @@ const APropos = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="À propos — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="À propos | KUMO 蜘蛛 Consultant SEO Neuchâtel"
         description="Consultant SEO indépendant à Neuchâtel. Audit technique, création de sites web et accompagnement SEO pour PME de Suisse romande."
         canonical="https://kumo-seo.ch/a-propos"
         jsonLd={jsonLd}

@@ -6,7 +6,7 @@ const CGV = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Conditions générales de vente — KUMO SEO",
+    name: "Conditions générales de vente | KUMO SEO",
     url: "https://kumo-seo.ch/cgv",
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -20,7 +20,7 @@ const CGV = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Conditions générales de vente — KUMO 蜘蛛"
+        title="Conditions générales de vente | KUMO 蜘蛛"
         description="Conditions générales de vente applicables aux prestations KUMO SEO. Forfaits, abonnements, paiement et droit suisse."
         canonical="https://kumo-seo.ch/cgv"
         jsonLd={jsonLd}
@@ -36,7 +36,7 @@ const CGV = () => {
 
           <div className="space-y-10 text-muted-foreground leading-relaxed">
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 1 — Champ d'application</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 1 : Champ d'application</h2>
               <p>
                 Les présentes conditions générales de vente (ci-après «&nbsp;CGV&nbsp;») s'appliquent à 
                 l'ensemble des prestations proposées par KUMO SEO, raison individuelle sise à Val-de-Travers (NE), 
@@ -49,7 +49,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 2 — Devis et commande</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 2 : Devis et commande</h2>
               <p>
                 Chaque prestation fait l'objet d'un devis écrit détaillant le périmètre, les livrables et le prix. 
                 Le devis est valable 30 jours à compter de sa date d'émission. La commande est réputée ferme 
@@ -58,7 +58,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 3 — Prix et paiement</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 3 : Prix et paiement</h2>
               <p>
                 Les prix sont indiqués en francs suisses (CHF), toutes charges comprises. KUMO SEO n'est pas 
                 assujetti à la TVA (chiffre d'affaires inférieur au seuil légal de CHF 100'000).
@@ -75,7 +75,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 4 — Forfaits de création de site</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 4 : Forfaits de création de site</h2>
               <p>
                 Les forfaits (Essentiel, Pro, Premium) comprennent les prestations détaillées dans le devis. 
                 Le nombre de pages, la rédaction de textes et les services annexes (fiche Google, annuaires suisses, 
@@ -88,7 +88,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 5 — Formules d'abonnement</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 5 : Formules d'abonnement</h2>
               <p>
                 Les formules «&nbsp;Suivi Visibilité&nbsp;» et «&nbsp;Croissance&nbsp;» impliquent un engagement 
                 minimum de 6 mois. Passé ce délai, l'abonnement est résiliable mensuellement avec un préavis 
@@ -105,7 +105,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 6 — Propriété intellectuelle</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 6 : Propriété intellectuelle</h2>
               <p>
                 À la livraison finale et au paiement intégral, le client devient propriétaire du site web livré 
                 (code, design, contenus créés par KUMO SEO). Les outils, méthodes et frameworks utilisés par 
@@ -118,7 +118,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 7 — Garantie et responsabilité</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 7 : Garantie et responsabilité</h2>
               <p>
                 KUMO SEO s'engage à exécuter les prestations avec diligence et selon les règles de l'art. 
                 La responsabilité de KUMO SEO est limitée au montant de la prestation concernée.
@@ -130,7 +130,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 8 — Résiliation anticipée</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 8 : Résiliation anticipée</h2>
               <p>
                 En cas de résiliation anticipée d'un forfait en cours, les prestations déjà réalisées sont dues. 
                 Le solde non utilisé n'est pas remboursable, sauf accord contraire écrit.
@@ -138,7 +138,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 9 — Force majeure</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 9 : Force majeure</h2>
               <p>
                 KUMO SEO ne saurait être tenu responsable de l'inexécution de ses obligations en cas de 
                 force majeure au sens de la jurisprudence suisse (catastrophe naturelle, pandémie, panne 
@@ -147,7 +147,7 @@ const CGV = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-foreground mb-3">Art. 10 — Droit applicable et for juridique</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Art. 10 : Droit applicable et for juridique</h2>
               <p>
                 Les présentes CGV sont soumises au droit suisse, en particulier au Code des obligations (CO). 
                 Tout litige sera soumis à la compétence exclusive des tribunaux du canton de Neuchâtel, Suisse.

@@ -105,7 +105,7 @@ const FAQPage = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Questions fréquentes — KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Questions fréquentes | KUMO 蜘蛛 Consultant SEO Neuchâtel"
         description="Réponses aux questions fréquentes sur l'audit SEO, la création de site web sur-mesure, les tarifs et l'accompagnement SEO pour PME suisses."
         canonical="https://kumo-seo.ch/faq"
         jsonLd={jsonLd}
