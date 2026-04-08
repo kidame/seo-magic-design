@@ -14,7 +14,7 @@ const blogJsonLd: Record<string, unknown>[] = [
     url: "https://kumo-seo.ch/blog",
     publisher: {
       "@type": "ProfessionalService",
-      name: "KUMO | Consultant SEO & Création Web",
+      name: "KUMO SEO",
       url: "https://kumo-seo.ch",
     },
   },

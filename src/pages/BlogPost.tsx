@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { blogPosts, getBlogPostBySlug, formatDate } from "@/data/blogPosts";
+import BlogCard from "@/components/BlogCard";
 
 const articleComponents: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
   "site-invisible-google-pme-suisse": lazy(() => import("@/content/blog/SiteInvisibleGoogle")),
@@ -23,12 +24,13 @@ const BlogPost = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const { prevPost, nextPost } = useMemo(() => {
-    if (!post) return { prevPost: undefined, nextPost: undefined };
+  const { prevPost, nextPost, relatedPosts } = useMemo(() => {
+    if (!post) return { prevPost: undefined, nextPost: undefined, relatedPosts: [] };
     const currentIndex = blogPosts.findIndex((p) => p.slug === post.slug);
     return {
       prevPost: currentIndex > 0 ? blogPosts[currentIndex - 1] : undefined,
       nextPost: currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : undefined,
+      relatedPosts: blogPosts.filter((p) => p.slug !== post.slug),
     };
   }, [post]);
 
@@ -55,7 +57,7 @@ const BlogPost = () => {
       },
       publisher: {
         "@type": "ProfessionalService",
-        name: "KUMO | Consultant SEO & Création Web",
+        name: "KUMO SEO",
         url: "https://kumo-seo.ch",
         logo: {
           "@type": "ImageObject",
@@ -190,6 +192,18 @@ const BlogPost = () => {
               {ArticleContent && <ArticleContent />}
             </Suspense>
           </motion.div>
+
+          {/* Articles connexes */}
+          {relatedPosts.length > 0 && (
+            <section className="mt-16 pt-8 border-t border-border/50" aria-label="Articles connexes">
+              <h2 className="text-lg font-bold tracking-tight mb-6">Sur le même sujet</h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {relatedPosts.map((p, i) => (
+                  <BlogCard key={p.slug} post={p} index={i} />
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Navigation between articles */}
           <nav className="mt-16 pt-8 border-t border-border/50" aria-label="Articles adjacents">

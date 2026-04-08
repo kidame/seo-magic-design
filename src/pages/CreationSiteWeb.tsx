@@ -309,7 +309,7 @@ const CreationSiteWeb = () => {
               Optimisez votre <span className="text-gradient">visibilité.</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
             <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO technique</h3>
@@ -319,6 +319,11 @@ const CreationSiteWeb = () => {
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Maintenez et améliorez vos positions avec un suivi mensuel.</p>
+            </Link>
+            <Link to="/resultats" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">実績 Résultats</p>
+              <h3 className="font-bold mb-2">Nos résultats</h3>
+              <p className="text-sm text-muted-foreground">Études de cas et résultats concrets obtenus pour nos clients.</p>
             </Link>
           </div>
         </section>

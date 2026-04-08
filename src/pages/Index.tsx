@@ -22,7 +22,7 @@ const homepageJsonLd: Record<string, unknown>[] = [
     description: "Audit SEO technique, accompagnement SEO continu et création de sites web sur-mesure pour PME de Suisse romande.",
     publisher: {
       "@type": "ProfessionalService",
-      name: "KUMO | Consultant SEO & Création Web",
+      name: "KUMO SEO",
       url: "https://kumo-seo.ch",
     },
   },

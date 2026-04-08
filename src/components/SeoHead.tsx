@@ -36,6 +36,7 @@ const SeoHead = ({ title, description, canonical, jsonLd, noIndex, ogImage = "ht
     setMeta("og:description", description, "property");
     setMeta("og:url", canonical, "property");
     setMeta("og:type", ogType, "property");
+    setMeta("og:site_name", "KUMO", "property");
     if (article) {
       setMeta("article:published_time", article.publishedTime, "property");
       setMeta("article:author", article.author, "property");
