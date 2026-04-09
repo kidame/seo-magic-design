@@ -81,7 +81,7 @@ async function prerender() {
     // Wait for React to render
     await page.waitForSelector("#root > *", { timeout: 10000 });
     // Extra wait for animations to init
-    await new Promise((r) => setTimeout(r, 2000));
+    await new Promise((r) => setTimeout(r, 500));
 
     const html = await page.content();
 
