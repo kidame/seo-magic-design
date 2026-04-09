@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -25,21 +25,40 @@ const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  const [auroraReady, setAuroraReady] = useState(false);
+
+  useEffect(() => {
+    const schedule =
+      window.requestIdleCallback ||
+      ((cb: () => void) => window.setTimeout(cb, 1500));
+    const handle = schedule(() => setAuroraReady(true));
+    return () => {
+      if (window.cancelIdleCallback && typeof handle === "number") {
+        window.cancelIdleCallback(handle);
+      } else {
+        window.clearTimeout(handle as number);
+      }
+    };
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Suspense fallback={null}>
-        <div className="fixed inset-0 -z-10 opacity-60">
-          <Aurora
-            colorStops={["#8B5CF6", "#A78BFA", "#C4B5FD"]}
-            speed={0.6}
-            blend={0.5}
-            amplitude={1.2}
-          />
-        </div>
-      </Suspense>
+      {auroraReady && (
+        <Suspense fallback={null}>
+          <div className="fixed inset-0 -z-10 opacity-60">
+            <Aurora
+              colorStops={["#8B5CF6", "#A78BFA", "#C4B5FD"]}
+              speed={0.6}
+              blend={0.5}
+              amplitude={1.2}
+            />
+          </div>
+        </Suspense>
+      )}
       <BrowserRouter>
         <Suspense fallback={null}>
           <Routes>
@@ -64,6 +83,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
