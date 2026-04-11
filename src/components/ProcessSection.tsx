@@ -40,8 +40,8 @@ const ProcessSection = () => {
         >
           <p className="section-label mb-4">Méthode</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Pas de magie.<br />
-            <span className="text-gradient">De la méthode.</span>
+            Notre méthode SEO{" "}
+            <span className="text-gradient">en 4 étapes</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Je mesure avant d'agir. Je priorise avant de corriger. Et à chaque étape, vous voyez ce qui a changé et ce que ça vous rapporte.

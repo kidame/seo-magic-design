@@ -187,8 +187,8 @@ const ServicesSection = () => {
         >
           <p className="section-label mb-4">Services</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Des forfaits clairs, des{" "}
-            <span className="text-gradient">résultats mesurables.</span>
+            Nos forfaits SEO : audit, création web{" "}
+            <span className="text-gradient">et accompagnement</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Acompte 40 % à la commande, solde à la livraison. 2 séries de retours incluses. Garantie 30 jours.

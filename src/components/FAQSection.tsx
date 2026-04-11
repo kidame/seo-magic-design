@@ -95,7 +95,8 @@ const FAQSection = () => {
         >
           <p className="section-label mb-4">FAQ</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Questions <span className="text-gradient">fréquentes</span>
+            FAQ : audit SEO, création de site{" "}
+            <span className="text-gradient">et référencement</span>
           </h2>
         </motion.div>
 

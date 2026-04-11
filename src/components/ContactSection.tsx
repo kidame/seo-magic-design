@@ -20,7 +20,8 @@ const ContactSection = () => {
         >
           <p className="section-label mb-4">Contact rapide</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Parlons de <span className="text-gradient">votre site.</span>
+            Contactez votre consultant SEO{" "}
+            <span className="text-gradient">à Neuchâtel</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
             Décrivez-moi votre situation et laissez-moi l'URL de votre site. 

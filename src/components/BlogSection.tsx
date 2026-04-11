@@ -21,8 +21,8 @@ const BlogSection = () => {
             Blog
           </p>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-            Nos derniers{" "}
-            <span className="text-gradient">articles</span>
+            Blog SEO : conseils pour PME{" "}
+            <span className="text-gradient">en Suisse romande</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             Analyses, guides pratiques et actualités SEO pour les PME de Suisse romande.

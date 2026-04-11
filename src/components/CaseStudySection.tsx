@@ -21,8 +21,8 @@ const CaseStudySection = () => {
         >
           <p className="section-label mb-4">Étude de cas réelle</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Extrait anonymisé d'un{" "}
-            <span className="text-gradient">audit réel</span>
+            Exemple de rapport{" "}
+            <span className="text-gradient">d'audit SEO</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Boutique e-commerce francophone · 100 pages · Profil Shopify. 

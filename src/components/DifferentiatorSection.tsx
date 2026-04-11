@@ -29,8 +29,8 @@ const DifferentiatorSection = () => {
         >
           <p className="section-label mb-4">Approche</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Ce qui me distingue d'une{" "}
-            <span className="text-gradient">agence classique.</span>
+            Freelance SEO vs agence :{" "}
+            <span className="text-gradient">pourquoi choisir KUMO</span>
           </h2>
         </motion.div>
 
