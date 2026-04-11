@@ -116,6 +116,20 @@ const CreerSiteInternet2026 = () => (
       mensuel peut prendre le relais.
     </p>
 
+    <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Les pièges à éviter quand on fait faire son site</h2>
+    <p className="text-muted-foreground leading-relaxed">
+      Au-delà des critères positifs, certaines pratiques courantes dans l'industrie web en Suisse doivent vous alerter.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
+      Les abonnements mensuels obligatoires sont le piège le plus fréquent. Certains prestataires proposent un site « gratuit » ou à prix réduit, mais vous engagent sur un abonnement de 24 à 48 mois à 100-200 CHF par mois. Sur la durée du contrat, vous payez plus cher qu'un site sur-mesure, sans en être propriétaire.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
+      L'hébergement à l'étranger est un autre point sensible. Depuis l'entrée en vigueur de la nouvelle Loi fédérale sur la protection des données (nLPD), stocker les données de vos clients sur des serveurs américains ou asiatiques pose des questions de conformité. Privilégiez un hébergement en Suisse ou au minimum en Europe.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
+      Enfin, méfiez-vous des devis qui ne mentionnent pas le SEO. Un site sans référencement, c'est une vitrine dans une ruelle sans passage. Le coût du SEO doit être intégré au budget initial, pas ajouté comme une option après coup.
+    </p>
+
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Récapitulatif : les 7 questions à poser avant de signer</h2>
     <p className="text-muted-foreground leading-relaxed">
       Avant de valider un devis de création de site web, posez ces 7 questions à votre prestataire et exigez des réponses écrites.
