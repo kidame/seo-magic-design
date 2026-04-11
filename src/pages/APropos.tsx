@@ -23,19 +23,34 @@ const values = [
 ];
 
 const APropos = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    mainEntity: {
-      "@type": "ProfessionalService",
-      name: "KUMO SEO",
-      description: "Consultant SEO indépendant basé à Neuchâtel, spécialisé dans l'audit technique et la création de sites web pour PME de Suisse romande.",
-      url: "https://kumo-seo.ch",
-      founder: { "@type": "Person", name: "KUMO SEO", jobTitle: "Consultant SEO" },
-      areaServed: { "@type": "Place", name: "Suisse romande" },
+  const jsonLd: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      mainEntity: {
+        "@type": "ProfessionalService",
+        name: "KUMO SEO",
+        description: "Consultant SEO indépendant basé à Neuchâtel, spécialisé dans l'audit technique et la création de sites web pour PME de Suisse romande.",
+        url: "https://kumo-seo.ch",
+        founder: { "@type": "Person", name: "Thomas Puglisi", jobTitle: "Consultant SEO & Développeur Web" },
+        areaServed: { "@type": "Place", name: "Suisse romande" },
+        address: { "@type": "PostalAddress", addressLocality: "Val-de-Travers", addressRegion: "Neuchâtel", addressCountry: "CH" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Thomas Puglisi",
+      jobTitle: "Consultant SEO & Développeur Web",
+      url: "https://kumo-seo.ch/a-propos",
+      worksFor: {
+        "@type": "ProfessionalService",
+        name: "KUMO SEO",
+        url: "https://kumo-seo.ch",
+      },
       address: { "@type": "PostalAddress", addressLocality: "Val-de-Travers", addressRegion: "Neuchâtel", addressCountry: "CH" },
     },
-  };
+  ];
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
