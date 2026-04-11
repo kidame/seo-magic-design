@@ -1,0 +1,1564 @@
+{
+  "metadata": {
+    "date": "2026-04-11",
+    "target": "KUMO SEO - Freelance SEO Neuchatel, Suisse",
+    "location_code": 2756,
+    "language": "fr",
+    "api": "DataForSEO",
+    "note": "Recherche complementaire orientee problemes clients et questions"
+  },
+  "suggestions": [
+    {
+      "seed": "mon site n'apparait pas sur google",
+      "keywords": [
+        {
+          "keyword": "mon site shopify n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "pourquoi mon site wix n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "mon site wix n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.14,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "mon site internet n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "mon site wordpress n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "pourquoi mon site web n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "pourquoi mon site internet n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "pourquoi mon site n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.6,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "mon site n'apparait pas sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.57,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "pourquoi mon site wordpress n'apparait pas sur google",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "mon site jimdo n'apparait pas sur google",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        }
+      ],
+      "total_keywords": 11
+    },
+    {
+      "seed": "combien coute un site internet suisse",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "site internet professionnel prix",
+      "keywords": [
+        {
+          "keyword": "prix d'un site internet professionnel",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "création de site internet professionnel prix",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "création d un site internet professionnel prix",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.71,
+          "competition_level": "HIGH",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "création site internet professionnel prix",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "prix création site internet professionnel",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "création d'un site internet professionnel prix",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "prix site internet professionnel",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "site internet professionnel prix",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "créer un site internet professionnel prix",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": 16.45,
+          "competition": 0.86,
+          "competition_level": "HIGH",
+          "search_intent": "commercial"
+        }
+      ],
+      "total_keywords": 9
+    },
+    {
+      "seed": "comment attirer des clients sur internet",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "referencement local",
+      "keywords": [
+        {
+          "keyword": "referencement local",
+          "search_volume": 40,
+          "search_volume_clickstream": null,
+          "cpc": 23.83,
+          "competition": 0.31,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "referencement seo local",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "agence referencement local",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.29,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "tarif referencement local",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "outils referencement local",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "le referencement local",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "seo referencement local",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        }
+      ],
+      "total_keywords": 7
+    },
+    {
+      "seed": "site web pas assez de clients",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "ameliorer visibilite google",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "devis site internet",
+      "keywords": [
+        {
+          "keyword": "devis création site internet",
+          "search_volume": 90,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.14,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis pour creation site internet",
+          "search_volume": 90,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.14,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "création site internet devis",
+          "search_volume": 90,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.14,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis pour site internet",
+          "search_volume": 70,
+          "search_volume_clickstream": null,
+          "cpc": 9.67,
+          "competition": 0.71,
+          "competition_level": "HIGH",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "site internet devis",
+          "search_volume": 70,
+          "search_volume_clickstream": null,
+          "cpc": 9.67,
+          "competition": 0.71,
+          "competition_level": "HIGH",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet",
+          "search_volume": 70,
+          "search_volume_clickstream": null,
+          "cpc": 9.67,
+          "competition": 0.71,
+          "competition_level": "HIGH",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis pour un site internet",
+          "search_volume": 70,
+          "search_volume_clickstream": null,
+          "cpc": 9.67,
+          "competition": 0.71,
+          "competition_level": "HIGH",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis création de site internet",
+          "search_volume": 20,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet vitrine",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet e-commerce",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple devis création site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.86,
+          "competition_level": "HIGH",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis creation site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "demande de devis site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis refonte site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet gratuit",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis en ligne site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis gratuit site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "creation site internet devis",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet en ligne",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis referencement site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.03,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple devis refonte site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "exemple de devis site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "exemple devis site internet wordpress",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple devis site internet pdf",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet exemple",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.29,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet e commerce",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple devis site internet",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "exemple devis site internet freelance",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis création d'un site internet",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "modele devis site internet",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis de site internet",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet wordpress",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple devis site internet wordpress pdf",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis création site internet professionnel",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "questionnaire devis site internet",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis type site internet",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis pour site internet exemple",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis maintenance site internet",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet pdf",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "kobone devis site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis agence site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet webdesign",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet toulouse",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis sur site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis détaillé site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "demande de devis création site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis création site internet vitrine",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "formulaire devis site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple devis site internet word",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "prix d un site internet devis",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis site internet doc",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "demande de devis pour création d un site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "faire un devis site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis création site internet maroc",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet avocat",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis pour un site internet exemple",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis pour faire un site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis site internet marchand",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis audit site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "exemple de devis creation de site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "devis maquette site internet",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        }
+      ],
+      "total_keywords": 61
+    },
+    {
+      "seed": "site internet pas visible",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "google my business optimisation",
+      "keywords": [
+        {
+          "keyword": "google my business optimisation",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": 11,
+          "competition": 0.61,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "optimisation google my business",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": 11,
+          "competition": 0.61,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "google my business optimisation checklist",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        }
+      ],
+      "total_keywords": 3
+    },
+    {
+      "seed": "comment etre premier sur google",
+      "keywords": [
+        {
+          "keyword": "comment etre premier sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.52,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "comment etre référencé en premier sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": 9.44,
+          "competition": 0.64,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "comment etre le premier sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.52,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "comment etre en premier sur google",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "informational"
+        },
+        {
+          "keyword": "comment etre premier sur google business",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "comment etre premier sur google maps",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        }
+      ],
+      "total_keywords": 6
+    },
+    {
+      "seed": "creation site internet artisan",
+      "keywords": [
+        {
+          "keyword": "creation site internet artisan",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        }
+      ],
+      "total_keywords": 1
+    },
+    {
+      "seed": "pourquoi mon site ne genere pas de leads",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "seo pour pme",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "refonte site web",
+      "keywords": [
+        {
+          "keyword": "refonte site web",
+          "search_volume": 20,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.51,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "prix refonte site web",
+          "search_volume": 20,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web prix",
+          "search_volume": 20,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte du site web",
+          "search_volume": 20,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.51,
+          "competition_level": "MEDIUM",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web wordpress",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte de site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.57,
+          "competition_level": "MEDIUM",
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "refonte du site web en anglais",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte d'un site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "la refonte d'un site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "refonte site web définition",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "informational"
+        },
+        {
+          "keyword": "refonte site web cahier des charges",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "la refonte du site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "tarif refonte site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis refonte site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "méthodologie refonte site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "refonte de site web et référencement",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "agence refonte site web",
+          "search_volume": 10,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": 0.86,
+          "competition_level": "HIGH",
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte de site web en anglais",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "prix refonte site web wordpress",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web en anglais",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web redirection",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web étapes",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web seo",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "planning refonte site web",
+          "search_volume": 0,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "pourquoi refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "devis refonte site web pdf",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web definition",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "informational"
+        },
+        {
+          "keyword": "exemple note de cadrage refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "question refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "dossier refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "gestion projet refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "chef de projet refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web exemple",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "refonte de site web 6 pièges à éviter absolument",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "commercial"
+        },
+        {
+          "keyword": "guide refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "refonte site web etape",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "durée refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        },
+        {
+          "keyword": "mémoire refonte site web",
+          "search_volume": null,
+          "search_volume_clickstream": null,
+          "cpc": null,
+          "competition": null,
+          "competition_level": null,
+          "search_intent": "navigational"
+        }
+      ],
+      "total_keywords": 38
+    }
+  ],
+  "related": [
+    {
+      "seed": "consultant seo freelance",
+      "keywords": [
+        {
+          "keyword": "consultant seo freelance",
+          "search_volume": 10,
+          "cpc": null,
+          "competition": 0,
+          "competition_level": "LOW",
+          "search_intent": "commercial"
+        }
+      ],
+      "total_keywords": 1
+    },
+    {
+      "seed": "site vitrine professionnel",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "prix referencement google",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "audit referencement",
+      "keywords": [],
+      "total_keywords": 0
+    },
+    {
+      "seed": "referencement naturel pme",
+      "keywords": [],
+      "total_keywords": 0
+    }
+  ],
+  "questions_paa": [
+    {
+      "question": "pourquoi mon site wix n'apparait pas sur google",
+      "search_volume": 10,
+      "source": "suggestion/mon site n'apparait pas sur google"
+    },
+    {
+      "question": "pourquoi mon site web n'apparait pas sur google",
+      "search_volume": 10,
+      "source": "suggestion/mon site n'apparait pas sur google"
+    },
+    {
+      "question": "pourquoi mon site internet n'apparait pas sur google",
+      "search_volume": 10,
+      "source": "suggestion/mon site n'apparait pas sur google"
+    },
+    {
+      "question": "pourquoi mon site n'apparait pas sur google",
+      "search_volume": 10,
+      "source": "suggestion/mon site n'apparait pas sur google"
+    },
+    {
+      "question": "pourquoi mon site wordpress n'apparait pas sur google",
+      "search_volume": 0,
+      "source": "suggestion/mon site n'apparait pas sur google"
+    },
+    {
+      "question": "comment etre premier sur google",
+      "search_volume": 10,
+      "source": "suggestion/comment etre premier sur google"
+    },
+    {
+      "question": "comment etre référencé en premier sur google",
+      "search_volume": 10,
+      "source": "suggestion/comment etre premier sur google"
+    },
+    {
+      "question": "comment etre le premier sur google",
+      "search_volume": 10,
+      "source": "suggestion/comment etre premier sur google"
+    },
+    {
+      "question": "comment etre en premier sur google",
+      "search_volume": 10,
+      "source": "suggestion/comment etre premier sur google"
+    },
+    {
+      "question": "comment etre premier sur google business",
+      "search_volume": 0,
+      "source": "suggestion/comment etre premier sur google"
+    },
+    {
+      "question": "comment etre premier sur google maps",
+      "search_volume": 0,
+      "source": "suggestion/comment etre premier sur google"
+    },
+    {
+      "question": "pourquoi refonte site web",
+      "search_volume": null,
+      "source": "suggestion/refonte site web"
+    },
+    {
+      "question": "Qu'est-ce que le referencement ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Pourquoi Google est le moteur de recherche le plus important ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Pouvez-vous placer mon site en premiere position ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Combien coute le referencement premiere page Google ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Combien de temps faut-il pour atteindre la premiere page de Google ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quel est le taux de clic sur la premiere et deuxieme page ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Pourquoi mon site est bien reference mais personne n'achete mes produits ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Le referencement peut-il etre garanti ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Dois-je soumettre mon site a Google ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quelles sont les regles du referencement ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quelle est la difference entre liens organiques et sponsorises ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Combien coute un site vitrine en Suisse ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Combien coute un site e-commerce en Suisse ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quels sont les couts recurrents d'un site internet ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Comment choisir un prestataire web en Suisse ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Faut-il un hebergement suisse pour son site ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quel CMS choisir pour un site professionnel ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Combien de temps pour creer un site internet ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Comment choisir un consultant SEO ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quel est le prix d'un audit SEO ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Combien de temps pour voir les resultats du SEO ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Quelle est la difference entre SEO et SEA ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Le SEO vaut-il la peine pour une petite entreprise ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Comment savoir si mon site est bien reference ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Pourquoi mon site n'apparait pas sur Google ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Comment ameliorer le referencement local de mon entreprise ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Qu'est-ce que Google My Business et comment l'optimiser ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    },
+    {
+      "question": "Faut-il un blog pour ameliorer son referencement ?",
+      "search_volume": null,
+      "source": "web_search_paa"
+    }
+  ],
+  "stats": {
+    "total_suggestion_seeds": 15,
+    "total_related_seeds": 5,
+    "total_unique_keywords_suggestions": 136,
+    "total_unique_keywords_related": 1,
+    "total_questions_paa": 40
+  }
+}
