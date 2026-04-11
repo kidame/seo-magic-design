@@ -64,16 +64,28 @@
         "latitude": 46.9333,
         "longitude": 6.6333
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Suisse romande"
-      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Neuchâtel"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Suisse romande"
+        }
+      ],
       "founder": {
         "@type": "Person",
         "name": "Thomas Puglisi",
         "jobTitle": "Consultant SEO & Développeur Web"
       },
       "priceRange": "CHF 1200 - CHF 6500",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services SEO & Web",
