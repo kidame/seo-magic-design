@@ -53,6 +53,20 @@ const SeoHead = ({ title, description, canonical, jsonLd, noIndex, ogImage = "ht
     }
     link.href = canonical;
 
+    // hreflang
+    const setHreflang = (lang: string) => {
+      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement("link");
+        el.rel = "alternate";
+        el.setAttribute("hreflang", lang);
+        document.head.appendChild(el);
+      }
+      el.href = canonical;
+    };
+    setHreflang("fr");
+    setHreflang("x-default");
+
     // JSON-LD (supports single object or array of objects)
     const scriptId = "page-jsonld";
     let script = document.getElementById(scriptId) as HTMLScriptElement | null;
