@@ -269,6 +269,28 @@ const AccompagnementSeo = () => {
           </div>
         </section>
 
+        {/* Articles liés */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">記事 Articles liés</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Sur le <span className="text-gradient">blog.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
+              <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
+              <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
+            </Link>
+            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
+              <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
+            </Link>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

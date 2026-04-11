@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlurText from "@/components/ui/blur-text";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 const mandatNiveaux = [
   { complexite: "Standard", prix: "2'900", profil: "Site vitrine simple, quelques pages, problèmes limités" },
@@ -58,6 +66,16 @@ const AuditSeo = () => {
     serviceType: "Audit SEO",
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://kumo-seo.ch/#services" },
+      { "@type": "ListItem", position: 3, name: "Audit SEO", item: "https://kumo-seo.ch/services/audit-seo" },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
       <SeoHead
@@ -66,8 +84,28 @@ const AuditSeo = () => {
         canonical="https://kumo-seo.ch/services/audit-seo"
         jsonLd={jsonLd}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
       <main className="pt-32 pb-24">
+        {/* Breadcrumb */}
+        <div className="container max-w-4xl mx-auto px-4 mb-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/">Accueil</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/#services">Services</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Audit SEO</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
         {/* Hero */}
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -224,6 +262,28 @@ const AuditSeo = () => {
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">実績 Résultats</p>
               <h3 className="font-bold mb-2">Nos résultats</h3>
               <p className="text-sm text-muted-foreground">Études de cas et résultats concrets obtenus pour nos clients.</p>
+            </Link>
+          </div>
+        </section>
+
+        {/* Articles liés */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">記事 Articles liés</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Sur le <span className="text-gradient">blog.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
+              <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
+            </Link>
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
+              <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
+              <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
             </Link>
           </div>
         </section>

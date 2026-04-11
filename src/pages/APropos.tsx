@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlurText from "@/components/ui/blur-text";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 const values = [
   { kanji: "透", title: "Transparence", desc: "Forfaits fixes, pas de frais cachés. Vous savez exactement ce que vous payez et ce que vous obtenez." },
@@ -29,6 +37,15 @@ const APropos = () => {
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+      { "@type": "ListItem", position: 2, name: "À propos", item: "https://kumo-seo.ch/a-propos" },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
       <SeoHead
@@ -37,8 +54,24 @@ const APropos = () => {
         canonical="https://kumo-seo.ch/a-propos"
         jsonLd={jsonLd}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
       <main className="pt-32 pb-24">
+        {/* Breadcrumb */}
+        <div className="container max-w-4xl mx-auto px-4 mb-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/">Accueil</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>À propos</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
         {/* Hero */}
         <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -113,7 +146,7 @@ const APropos = () => {
               Ce que je <span className="text-gradient">propose.</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/50 rounded-lg overflow-hidden">
             <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <h3 className="font-bold mb-2">Audit SEO</h3>
               <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours.</p>
@@ -125,6 +158,10 @@ const APropos = () => {
             <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <h3 className="font-bold mb-2">Création de site</h3>
               <p className="text-sm text-muted-foreground">Sites web sur-mesure, optimisés SEO.</p>
+            </Link>
+            <Link to="/blog" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Blog</h3>
+              <p className="text-sm text-muted-foreground">Guides et analyses SEO pour PME suisses.</p>
             </Link>
           </div>
         </section>

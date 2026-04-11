@@ -1,14 +1,23 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+
+const serviceLinks = [
+  { label: "Audit SEO", href: "/services/audit-seo" },
+  { label: "Création de site web", href: "/services/creation-site-web" },
+  { label: "Accompagnement SEO", href: "/services/accompagnement-seo" },
+];
 
 const navLinks = [
-  { label: "Services", href: "/#services" },
-  { label: "Méthode", href: "/#methode" },
   { label: "À propos", href: "/a-propos" },
-  { label: "Résultats", href: "/resultats" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
 ];
@@ -16,12 +25,17 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-4 md:pt-6 px-4 md:px-8" role="banner">
@@ -40,25 +54,34 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center gap-7">
-            {navLinks.map((link) =>
-              link.href.startsWith("/") && !link.href.includes("#") ? (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </a>
-              )
-            )}
+            {/* Services dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-[13px] text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 outline-none">
+                Services <ChevronDown size={12} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" sideOffset={12} className="bg-background/95 backdrop-blur-xl border-border/50">
+                {serviceLinks.map((link) => (
+                  <DropdownMenuItem key={link.href} asChild>
+                    <Link
+                      to={link.href}
+                      className="cursor-pointer"
+                    >
+                      {link.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           <div className="hidden md:flex items-center gap-3">
@@ -97,28 +120,29 @@ const Navbar = () => {
             role="menu"
           >
             <div className="p-5 flex flex-col gap-4">
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Services</p>
+              {serviceLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors pl-3"
+                  role="menuitem"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="border-t border-border/30 my-1" />
               {navLinks.map((link) => (
-                link.href.startsWith("/") && !link.href.includes("#") ? (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    onClick={() => setOpen(false)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    role="menuitem"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    role="menuitem"
-                  >
-                    {link.label}
-                  </a>
-                )
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  role="menuitem"
+                >
+                  {link.label}
+                </Link>
               ))}
               <Link
                 to="/contact"

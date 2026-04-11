@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlurText from "@/components/ui/blur-text";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -71,6 +79,15 @@ const Contact = () => {
     },
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+      { "@type": "ListItem", position: 2, name: "Contact", item: "https://kumo-seo.ch/contact" },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
       <SeoHead
@@ -79,8 +96,24 @@ const Contact = () => {
         canonical="https://kumo-seo.ch/contact"
         jsonLd={jsonLd}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
       <main className="pt-32 pb-24">
+        {/* Breadcrumb */}
+        <div className="container max-w-3xl mx-auto px-4 mb-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/">Accueil</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Contact</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
         {/* Hero */}
         <section className="container max-w-3xl mx-auto px-4 text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
