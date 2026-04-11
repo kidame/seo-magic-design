@@ -51,6 +51,9 @@ const SiteInvisibleGoogle = () => (
       Des images non compressées qui pèsent plusieurs mégaoctets chacune. Un hébergement lointain (serveur en France ou aux États-Unis) alors que vos clients sont en Suisse. Un code surchargé par des plugins inutiles, typique des sites WordPress mal configurés. L'absence de protocole HTTPS, qui est un signal de sécurité pour Google depuis plusieurs années.
     </p>
     <p className="text-muted-foreground leading-relaxed">
+      Le mobile est un facteur critique : depuis 2021, Google utilise exclusivement la version mobile de votre site pour déterminer son classement. Si votre site s'affiche mal sur un smartphone - texte trop petit, boutons trop proches, contenu qui déborde de l'écran - Google le pénalise, même si la version desktop est impeccable.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
       Google met à disposition un outil gratuit, PageSpeed Insights, qui analyse ces paramètres et attribue un score de performance. Chez KUMO, nous visons systématiquement un LCP (temps d'affichage du contenu principal) inférieur à 2,5 secondes et un CLS (stabilité visuelle) inférieur à 0,1. Ce sont les seuils recommandés par Google pour une expérience utilisateur correcte.
     </p>
 
@@ -73,7 +76,7 @@ const SiteInvisibleGoogle = () => (
       inclut systématiquement l'optimisation de ces signaux locaux.
     </p>
 
-    <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">5. Pas de contenu qui répond aux questions de vos clients</h2>
+    <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">5. Pas de contenu et aucun lien entrant vers votre site</h2>
     <p className="text-muted-foreground leading-relaxed">
       Google est devenu un moteur de réponses. Il privilégie les sites qui apportent des réponses claires aux questions que se posent les internautes. Un site avec 3 pages statiques (Accueil, Services, Contact) n'a tout simplement pas assez de matière pour que Google le considère comme pertinent.
     </p>
@@ -84,7 +87,10 @@ const SiteInvisibleGoogle = () => (
       Ce n'est pas du « contenu pour le contenu ». C'est du contenu stratégique qui démontre votre expertise, qui rassure le prospect avant même qu'il vous contacte, et qui génère du trafic qualifié mois après mois sans budget publicitaire.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Un site avec 15 à 20 pages bien structurées et régulièrement mises à jour aura toujours un avantage sur un site de 3 pages, aussi beau soit-il. C'est un investissement dans un actif commercial durable.
+      Le SEO est un jeu relatif : si vos concurrents investissent dans leur contenu et leur référencement et que vous ne faites rien, vous reculez mécaniquement dans les résultats. Même sans changement de votre côté, vous perdez des positions simplement parce que les autres en gagnent. Un site avec 15 à 20 pages bien structurées et régulièrement mises à jour aura toujours un avantage sur un site de 3 pages, aussi beau soit-il.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
+      L'autre pilier souvent négligé : les liens entrants (backlinks). Google accorde une importance majeure aux liens que d'autres sites font vers le vôtre - chaque lien est interprété comme un vote de confiance. Sans aucun backlink, Google considère que votre site n'a pas de crédibilité dans votre domaine. Pour une PME suisse, les premières sources de liens sont souvent accessibles gratuitement : inscription sur local.ch et search.ch, fiche auprès de la chambre de commerce de votre canton, référencement dans les annuaires professionnels de votre branche, partenariats avec d'autres entreprises locales.
     </p>
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Comment savoir où en est votre site ?</h2>
@@ -95,6 +101,9 @@ const SiteInvisibleGoogle = () => (
       Notre{" "}
       <Link to="/services/audit-seo" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
       analyse 31 points techniques, évalue votre positionnement actuel sur vos mots-clés stratégiques, identifie vos concurrents locaux et produit un plan d'action priorisé sur 90 jours. Vous savez exactement ce qui bloque et dans quel ordre agir.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
+      L'avantage d'un diagnostic professionnel par rapport à un outil automatique : un consultant interprète les résultats dans le contexte de votre marché. Un score PageSpeed de 60 n'a pas la même gravité pour un restaurant neuchâtelois que pour un e-commerce vaudois. Le plan d'action qui en découle doit être adapté à votre réalité commerciale, pas générique.
     </p>
 
     <hr className="border-border/50 my-12" />
