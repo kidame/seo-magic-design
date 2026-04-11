@@ -320,10 +320,10 @@ const CreationSiteWeb = () => {
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Maintenez et améliorez vos positions avec un suivi mensuel.</p>
             </Link>
-            <Link to="/resultats" className="bg-card p-6 hover:bg-card/80 transition-colors">
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">実績 Résultats</p>
-              <h3 className="font-bold mb-2">Nos résultats</h3>
-              <p className="text-sm text-muted-foreground">Études de cas et résultats concrets obtenus pour nos clients.</p>
+            <Link to="/consultant-seo-suisse-romande" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">地域 Zones</p>
+              <h3 className="font-bold mb-2">Suisse romande</h3>
+              <p className="text-sm text-muted-foreground">Consultant SEO actif dans toute la Romandie.</p>
             </Link>
           </div>
         </section>
