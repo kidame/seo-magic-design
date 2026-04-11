@@ -15,17 +15,36 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 
-const specificites = [
-  "Stratégie SEO adaptée au marché genevois et à sa dimension internationale",
-  "Connaissance des secteurs clés : finance, horlogerie, commerce international, santé",
-  "Référencement bilingue possible (français/anglais) pour les entreprises du Grand Genève",
-  "Optimisation Google Business Profile pour la visibilité locale",
-  "Tarifs forfaitaires en CHF, transparents et prévisibles",
-  "Accompagnement à distance ou en présentiel selon vos besoins",
+const secteursCles = [
+  {
+    nom: "Finance et banque",
+    texte: "Genève est une place financière mondiale. Banques privées, gestionnaires de fortune, fintechs : la concurrence en ligne est féroce. Le SEO permet de se positionner sur des requêtes ciblées sans dépendre uniquement de la publicité payante. Un contenu de qualité et une autorité technique sont les clés pour ranker dans ce secteur exigeant.",
+  },
+  {
+    nom: "Organisations internationales et ONG",
+    texte: "La Genève internationale attire des recherches spécifiques, souvent en anglais. Un SEO bilingue (français et anglais) permet de capter ces audiences distinctes avec des contenus adaptés à chaque langue et chaque intention de recherche.",
+  },
+  {
+    nom: "Hôtellerie de luxe et immobilier",
+    texte: "Les recherches \"hôtel de luxe Genève\", \"appartement à louer Genève\" ou \"agence immobilière Genève\" sont parmi les plus compétitives de Suisse romande. Un audit SEO identifie vos lacunes face aux concurrents et un plan d'action ciblé permet de gagner des positions sur ces requêtes à forte valeur commerciale.",
+  },
+  {
+    nom: "Santé et cliniques privées",
+    texte: "Genève concentre des cliniques privées, des spécialistes médicaux et des centres de bien-être. Les patients recherchent activement des praticiens sur Google. Un site techniquement propre, une fiche Google Business complète et des avis bien gérés font la différence entre un cabinet plein et un cabinet vide.",
+  },
+  {
+    nom: "Commerce et services",
+    texte: "Des boutiques de la rue du Rhône aux prestataires de services dans le quartier des Eaux-Vives, chaque commerce genevois peut capter des clients via la recherche locale. Le référencement local est souvent le levier le plus rentable : être visible quand quelqu'un cherche exactement ce que vous proposez, dans votre zone.",
+  },
 ];
 
-const villesVoisines = [
-  { name: "Lausanne", href: "/consultant-seo-lausanne" },
+const fonctionnementRemote = [
+  "Diagnostic initial par visioconférence (30 min, gratuit)",
+  "Communication par email et outils de suivi partagés",
+  "Rapports mensuels détaillés avec indicateurs clés",
+  "Visioconférence de suivi selon la formule choisie",
+  "Déplacement possible à Genève pour les projets qui le nécessitent",
+  "Réponse sous 24 heures, du lundi au vendredi",
 ];
 
 const ConsultantSeoGeneve = () => {
@@ -34,9 +53,21 @@ const ConsultantSeoGeneve = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Genève",
-      description: "Consultant SEO pour PME à Genève. Audit technique, création de sites et accompagnement SEO dans le canton de Genève et le Grand Genève.",
       url: "https://kumo-seo.ch/consultant-seo-geneve",
-      areaServed: { "@type": "Place", name: "Genève" },
+      description: "Consultant SEO indépendant pour entreprises genevoises. Audit technique, création de site, accompagnement mensuel. Sans engagement longue durée. Forfait fixe CHF.",
+      areaServed: {
+        "@type": "State",
+        name: "Genève",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Suisse",
+        },
+      },
+      provider: {
+        "@type": "Person",
+        name: "Thomas Puglisi",
+        jobTitle: "Consultant SEO",
+      },
       address: {
         "@type": "PostalAddress",
         addressLocality: "Val-de-Travers",
@@ -58,8 +89,8 @@ const ConsultantSeoGeneve = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Consultant SEO Genève | KUMO 蜘蛛 Suisse romande"
-        description="Consultant SEO pour PME à Genève. Audit technique, création de sites web et accompagnement SEO dans le canton de Genève. Forfaits fixes dès CHF 1'200."
+        title="Consultant SEO à Genève - Audit & Référencement naturel | KUMO"
+        description="Consultant SEO indépendant pour entreprises genevoises. Audit technique, création de site, accompagnement mensuel. Sans engagement longue durée. Forfait fixe CHF."
         canonical="https://kumo-seo.ch/consultant-seo-geneve"
         jsonLd={jsonLd}
       />
@@ -89,16 +120,15 @@ const ConsultantSeoGeneve = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="section-label mb-4">地域 Genève</p>
             <BlurText
-              text="Consultant SEO à Genève."
+              text="Consultant SEO à Genève : référencement naturel pour PME genevoises."
               as="h1"
-              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              className="text-4xl md:text-5xl font-bold tracking-tight mb-6 justify-center"
               delay={120}
               animateBy="words"
               direction="top"
             />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-              J'accompagne les PME genevoises dans leur visibilité sur Google.
-              Audit technique, création de sites web et suivi SEO continu, avec des forfaits fixes et sans surprises.
+              Genève est le marché le plus compétitif de Suisse romande. Les PME genevoises font face à une concurrence internationale : sièges de multinationales, organisations internationales, et entreprises de toute la francophonie qui se positionnent sur les mêmes requêtes Google. Pour se démarquer dans ce contexte, il faut une stratégie SEO précise et exécutée avec rigueur. KUMO propose une approche boutique, pas une usine à sites. Un consultant indépendant, un forfait fixe en CHF, des résultats mesurables. Je travaille depuis Neuchâtel avec des clients dans tout le canton de Genève et le Grand Genève, par visioconférence et email, avec la possibilité de déplacements quand le projet le justifie.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">
@@ -108,16 +138,95 @@ const ConsultantSeoGeneve = () => {
           </motion.div>
         </section>
 
-        {/* Spécificités */}
+        {/* SEO à Genève : marché ultra-compétitif */}
+        <section className="container max-w-3xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">市場 Le marché SEO</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
+              SEO à Genève : un marché <span className="text-gradient">ultra-compétitif.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Genève est la deuxième ville de Suisse et un centre économique international. La concurrence en ligne y est particulièrement forte : des entreprises locales rivalisent avec des acteurs internationaux sur les mêmes requêtes Google. Dans ce contexte, un référencement approximatif ne suffit pas. Chaque détail technique compte : la vitesse de chargement, la structure du site, le balisage sémantique, la qualité du contenu.
+              </p>
+              <p>
+                Pour une PME genevoise, le SEO local est un levier stratégique. Google Maps, la fiche Google Business, les résultats locaux : ces canaux captent les recherches de proximité et dirigent les clients vers votre porte. Mais la dimension internationale de Genève ouvre aussi des opportunités uniques. Le Grand Genève, avec sa dimension transfrontalière, permet de capter des recherches depuis la France voisine. Les entreprises qui servent une clientèle bilingue (français et anglais) peuvent doubler leur surface de capture en ciblant les deux langues.
+              </p>
+              <p>
+                L'importance du SEO local est confirmée par les données : "référencement local" génère 40 recherches par mois en Suisse, avec un CPC de 23.83 CHF. C'est un investissement que vos concurrents sont prêts à payer. Le référencement organique vous positionne sur ces mêmes requêtes sans coût par clic.
+              </p>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Prestations SEO */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">特長 Pourquoi KUMO</p>
+            <p className="section-label mb-4">提供 Prestations</p>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              SEO pour les PME <span className="text-gradient">genevoises.</span>
+              Nos prestations SEO pour <span className="text-gradient">Genève.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
+              <h3 className="font-bold mb-2">Audit SEO - CHF 1'200</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                31 points de contrôle techniques, analyse de 3 concurrents genevois directs, plan d'action priorisé sur 90 jours. Votre site est évalué selon les critères qui comptent pour Google.
+              </p>
+            </Link>
+            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
+              <h3 className="font-bold mb-2">Création de site internet - dès CHF 3'900</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Site web codé sur-mesure, pas un thème WordPress. Performance 90+ PageSpeed, SEO natif, hébergement suisse inclus. Adapté aux exigences du marché genevois.
+              </p>
+            </Link>
+            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
+              <h3 className="font-bold mb-2">Accompagnement SEO continu - dès CHF 250/mois</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Surveillance des positions, rapport mensuel, améliorations continues. Trois formules : maintenance (CHF 250), suivi visibilité (CHF 590), croissance (CHF 1'490).
+              </p>
+            </Link>
+          </div>
+        </section>
+
+        {/* Secteurs clés */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">業種 Secteurs clés</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Secteurs clés à <span className="text-gradient">Genève.</span>
+            </h2>
+          </motion.div>
+          <div className="space-y-4">
+            {secteursCles.map((s, i) => (
+              <motion.div
+                key={s.nom}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="glass-card p-6"
+              >
+                <h3 className="font-bold mb-2">{s.nom}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{s.texte}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Collaboration à distance */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">方法 Collaboration</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Collaboration à distance depuis <span className="text-gradient">Neuchâtel.</span>
             </h2>
           </motion.div>
           <div className="grid sm:grid-cols-2 gap-4">
-            {specificites.map((item, i) => (
+            {fonctionnementRemote.map((item, i) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: 10 }}
@@ -131,104 +240,46 @@ const ConsultantSeoGeneve = () => {
               </motion.div>
             ))}
           </div>
-        </section>
-
-        {/* Le marché genevois */}
-        <section className="container max-w-3xl mx-auto px-4 mb-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">市場 Le marché local</p>
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
-              Genève, un marché <span className="text-gradient">exigeant.</span>
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Genève est la deuxième ville de Suisse et un centre économique international. La concurrence en ligne y est particulièrement forte, avec des entreprises locales qui rivalisent avec des acteurs internationaux sur les mêmes requêtes Google.
-              </p>
-              <p>
-                Pour une PME genevoise, se démarquer dans les résultats de recherche demande une stratégie ciblée. Le référencement local, l'optimisation de la fiche Google Business et un contenu de qualité en français (et parfois en anglais) sont des leviers essentiels.
-              </p>
-              <p>
-                Le Grand Genève, avec sa dimension transfrontalière, offre aussi des opportunités : capter les recherches depuis la France voisine, se positionner sur des requêtes bilingues, et couvrir une zone de chalandise élargie.
-              </p>
-            </div>
-          </motion.div>
-        </section>
-
-        {/* Services */}
-        <section className="container max-w-4xl mx-auto px-4 mb-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">提供 Services</p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-              Services SEO à <span className="text-gradient">Genève.</span>
-            </h2>
-          </motion.div>
-          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
-              <h3 className="font-bold mb-2">Audit SEO technique</h3>
-              <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours. CHF 1'200.</p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link to="/consultant-seo-lausanne" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Consultant SEO Lausanne <ArrowRight size={14} />
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
-              <h3 className="font-bold mb-2">Site web sur-mesure</h3>
-              <p className="text-sm text-muted-foreground">Sites codés en React, optimisés SEO. Dès CHF 3'900.</p>
-            </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
-              <h3 className="font-bold mb-2">Accompagnement SEO</h3>
-              <p className="text-sm text-muted-foreground">Suivi mensuel continu. Dès CHF 250/mois.</p>
+            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
           </div>
         </section>
 
-        {/* Ville voisine */}
-        <section className="container max-w-4xl mx-auto px-4 mb-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">近隣 Régions voisines</p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-              Également actif <span className="text-gradient">à proximité.</span>
-            </h2>
-          </motion.div>
-          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-4">
-            {villesVoisines.map((ville, i) => (
-              <motion.div
-                key={ville.name}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <Link to={ville.href} className="bg-card p-6 hover:bg-card/80 transition-colors block">
-                  <h3 className="font-bold mb-1">Consultant SEO {ville.name}</h3>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-          <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
-            Toutes les zones couvertes <ArrowRight size={14} />
-          </Link>
-        </section>
-
-        {/* Article lié */}
+        {/* Articles liés */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="section-label mb-4">記事 Sur le blog</p>
           </motion.div>
-          <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="glass-card p-6 hover:bg-card/80 transition-colors block">
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
-            <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
-            <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
-          </Link>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
+              <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
+              <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
+            </Link>
+            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
+              <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
+            </Link>
+          </div>
         </section>
 
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
-              Votre PME genevoise mérite d'être visible.
+              Prenez contact.
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-4">
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
+            </p>
+            <p className="text-sm text-muted-foreground mb-8">
+              contact@kumo-seo.ch
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">
