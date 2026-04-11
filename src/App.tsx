@@ -21,6 +21,10 @@ const CGV = lazy(() => import("./pages/CGV.tsx"));
 const PolitiqueConfidentialite = lazy(() => import("./pages/PolitiqueConfidentialite.tsx"));
 const Blog = lazy(() => import("./pages/Blog.tsx"));
 const BlogPost = lazy(() => import("./pages/BlogPost.tsx"));
+const ConsultantSeoSuisseRomande = lazy(() => import("./pages/ConsultantSeoSuisseRomande.tsx"));
+const ConsultantSeoNeuchatel = lazy(() => import("./pages/ConsultantSeoNeuchatel.tsx"));
+const ConsultantSeoLausanne = lazy(() => import("./pages/ConsultantSeoLausanne.tsx"));
+const ConsultantSeoGeneve = lazy(() => import("./pages/ConsultantSeoGeneve.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -76,6 +80,10 @@ const App = () => {
             <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/consultant-seo-suisse-romande" element={<ConsultantSeoSuisseRomande />} />
+            <Route path="/consultant-seo-neuchatel" element={<ConsultantSeoNeuchatel />} />
+            <Route path="/consultant-seo-lausanne" element={<ConsultantSeoLausanne />} />
+            <Route path="/consultant-seo-geneve" element={<ConsultantSeoGeneve />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
