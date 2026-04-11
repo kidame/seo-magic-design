@@ -3,35 +3,12 @@ import { createServer } from "http";
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { ROUTES } from "./routes.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, "../dist");
 
-const ROUTES = [
-  "/",
-  "/services/audit-seo",
-  "/services/accompagnement-seo",
-  "/services/creation-site-web",
-  "/a-propos",
-  "/contact",
-  "/faq",
-  "/rapport",
-  "/resultats",
-  "/mentions-legales",
-  "/cgv",
-  "/politique-de-confidentialite",
-  "/blog",
-  "/blog/site-invisible-google-pme-suisse",
-  "/blog/mise-a-jour-google-mars-2026-pme-suisse",
-  "/blog/creer-site-internet-pme-suisse-2026",
-  "/blog/freelance-seo-vs-agence-suisse",
-  "/blog/audit-seo-pourquoi-indispensable",
-  "/consultant-seo-suisse-romande",
-  "/consultant-seo-neuchatel",
-  "/consultant-seo-lausanne",
-  "/consultant-seo-geneve",
-  "/consultant-seo-la-chaux-de-fonds",
-];
+const PRERENDER_PATHS = ROUTES.map((r) => r.path);
 
 // Simple static file server for dist/
 function startServer(port) {
@@ -76,7 +53,7 @@ async function prerender() {
   console.log("Launching browser...");
   const browser = await puppeteer.launch({ headless: true });
 
-  for (const route of ROUTES) {
+  for (const route of PRERENDER_PATHS) {
     console.log(`Prerendering ${route}...`);
     const page = await browser.newPage();
 
