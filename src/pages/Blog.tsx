@@ -10,7 +10,7 @@ const blogJsonLd: Record<string, unknown>[] = [
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Blog | KUMO",
-    description: "Articles SEO, guides pratiques et actualités pour les PME de Suisse romande.",
+    description: "Articles SEO pratiques pour PME de Suisse romande. Référencement naturel, création de site, visibilité Google.",
     url: "https://kumo-seo.ch/blog",
     publisher: {
       "@type": "ProfessionalService",
@@ -42,8 +42,8 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Blog SEO | Guides et actualités pour PME | KUMO"
-        description="Articles SEO, guides pratiques et actualités pour les PME de Suisse romande. Analyses terrain et conseils concrets par KUMO."
+        title="Blog SEO - Conseils référencement pour PME suisses | KUMO"
+        description="Articles SEO pratiques pour PME de Suisse romande. Référencement naturel, création de site, visibilité Google. Par un consultant SEO indépendant à Neuchâtel."
         canonical="https://kumo-seo.ch/blog"
         jsonLd={blogJsonLd}
       />
@@ -65,8 +65,8 @@ const Blog = () => {
               Blog
             </p>
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Analyses et guides{" "}
-              <span className="text-gradient">SEO</span>
+              Blog SEO : conseils pratiques pour les PME de{" "}
+              <span className="text-gradient">Suisse romande</span>
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
               Des articles concrets pour comprendre le référencement naturel et prendre les bonnes décisions pour votre entreprise en Suisse romande.
