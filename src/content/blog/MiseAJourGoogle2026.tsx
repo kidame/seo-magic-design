@@ -17,7 +17,10 @@ const MiseAJourGoogle2026 = () => (
       Une « core update » (mise à jour principale) réévalue la qualité globale du contenu. Si votre site perd des positions après une core update, cela signifie que Google considère que d'autres contenus méritent davantage d'être mis en avant. La réponse est d'améliorer la qualité de votre contenu.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      La mise à jour de mars 2026 est une « spam update » (mise à jour anti-spam). Elle ne réévalue pas la qualité : elle sanctionne les pratiques trompeuses. Si votre site est touché, ce n'est pas parce qu'un concurrent fait mieux. C'est parce que quelque chose dans votre site ou votre stratégie SEO enfreint les règles de Google.
+      La « spam update » du 24 mars 2026 est de ce second type : elle ne réévalue pas la qualité, elle sanctionne les pratiques trompeuses. Si votre site est touché, ce n'est pas parce qu'un concurrent fait mieux. C'est parce que quelque chose dans votre site ou votre stratégie SEO enfreint les règles de Google.
+    </p>
+    <p className="text-muted-foreground leading-relaxed">
+      Trois jours plus tard, le 27 mars, Google a lancé sa première core update de 2026. Cette mise à jour principale, dont le déploiement a pris 12 jours (terminé le 8 avril), réévalue la pertinence globale du contenu. L'impact combiné de ces deux mises à jour en une semaine est significatif : les sites touchés par la spam update puis par la core update subissent un double effet qui rend la récupération plus complexe.
     </p>
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Les trois profils de sites les plus exposés</h2>
