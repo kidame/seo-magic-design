@@ -13,6 +13,7 @@ const articleComponents: Record<string, React.LazyExoticComponent<React.Componen
   "site-invisible-google-pme-suisse": lazy(() => import("@/content/blog/SiteInvisibleGoogle")),
   "mise-a-jour-google-mars-2026-pme-suisse": lazy(() => import("@/content/blog/MiseAJourGoogle2026")),
   "creer-site-internet-pme-suisse-2026": lazy(() => import("@/content/blog/CreerSiteInternet2026")),
+  "freelance-seo-vs-agence-suisse": lazy(() => import("@/content/blog/FreelanceSeoVsAgence")),
 };
 
 const BlogPost = () => {
@@ -317,6 +318,24 @@ function extractFaqFromSlug(slug: string): { question: string; answer: string }[
       {
         question: "Faut-il un blog sur un site de PME ?",
         answer: "Un blog n'est pas obligatoire, mais une section de contenu stratégique est fortement recommandée. Trois articles bien écrits et bien positionnés peuvent générer plus de trafic qualifié que 50 articles génériques.",
+      },
+    ],
+    "freelance-seo-vs-agence-suisse": [
+      {
+        question: "Un freelance peut-il gérer un projet SEO complexe ?",
+        answer: "Un freelance expérimenté peut gérer un audit complet, une stratégie de contenu, de l'optimisation technique et du suivi mensuel pour un site de PME. Pour des projets nécessitant des équipes dédiées ou des campagnes multicanales, une agence sera plus adaptée.",
+      },
+      {
+        question: "Les résultats sont-ils meilleurs avec une agence qu'avec un freelance ?",
+        answer: "Les résultats dépendent de la compétence du prestataire, pas de sa structure. Un freelance expérimenté obtiendra de meilleurs résultats qu'une agence médiocre, et inversement.",
+      },
+      {
+        question: "Combien de temps dure un accompagnement SEO en général ?",
+        answer: "Les premiers résultats significatifs apparaissent entre 3 et 6 mois. Un suivi de 12 mois permet de consolider les positions. Chez KUMO, il n'y a pas d'engagement minimum.",
+      },
+      {
+        question: "Peut-on combiner un freelance et une agence ?",
+        answer: "Oui, certaines entreprises combinent un freelance SEO pour la stratégie et l'audit, une agence web pour le développement, et un rédacteur freelance pour le contenu. Cette approche offre de la flexibilité mais demande plus de coordination.",
       },
     ],
   };

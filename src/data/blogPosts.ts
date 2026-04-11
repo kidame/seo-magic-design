@@ -76,6 +76,25 @@ export const blogPosts: BlogPost[] = [
     primary_keyword: "création site internet suisse",
     secondary_keywords: ["créer site web PME", "prix site internet suisse romande", "site web sur-mesure suisse", "agence web suisse romande", "cahier des charges site web"],
   },
+  {
+    title: "Freelance SEO ou agence : comment choisir en Suisse romande",
+    slug: "freelance-seo-vs-agence-suisse",
+    description: "Freelance SEO vs agence web : avantages, inconvénients, prix. Guide objectif pour les PME de Suisse romande qui cherchent un prestataire SEO.",
+    date: "2026-04-11",
+    author: "Thomas Puglisi",
+    category: "Référencement naturel",
+    tags: ["SEO", "freelance", "agence", "Suisse romande", "choix prestataire"],
+    reading_time: "8 min",
+    word_count: 1800,
+    seo_title: "Freelance SEO ou agence : que choisir en Suisse romande ?",
+    seo_description: "Freelance SEO vs agence web : avantages, inconvénients, prix. Guide objectif pour les PME de Suisse romande qui cherchent un prestataire SEO.",
+    canonical: "https://kumo-seo.ch/blog/freelance-seo-vs-agence-suisse",
+    og_title: "Freelance SEO ou agence : comment choisir en Suisse romande",
+    og_description: "Comparatif objectif freelance vs agence SEO pour les PME suisses. Prix, avantages, questions à poser.",
+    og_image: "/images/blog/freelance-seo-vs-agence.jpg",
+    primary_keyword: "freelance SEO Suisse",
+    secondary_keywords: ["agence SEO Suisse romande", "consultant SEO indépendant", "choisir agence SEO", "prix SEO Suisse"],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
