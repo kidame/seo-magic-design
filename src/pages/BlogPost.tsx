@@ -14,6 +14,7 @@ const articleComponents: Record<string, React.LazyExoticComponent<React.Componen
   "mise-a-jour-google-mars-2026-pme-suisse": lazy(() => import("@/content/blog/MiseAJourGoogle2026")),
   "creer-site-internet-pme-suisse-2026": lazy(() => import("@/content/blog/CreerSiteInternet2026")),
   "freelance-seo-vs-agence-suisse": lazy(() => import("@/content/blog/FreelanceSeoVsAgence")),
+  "audit-seo-pourquoi-indispensable": lazy(() => import("@/content/blog/AuditSeoPourquoiIndispensable")),
 };
 
 const BlogPost = () => {
@@ -336,6 +337,24 @@ function extractFaqFromSlug(slug: string): { question: string; answer: string }[
       {
         question: "Peut-on combiner un freelance et une agence ?",
         answer: "Oui, certaines entreprises combinent un freelance SEO pour la stratégie et l'audit, une agence web pour le développement, et un rédacteur freelance pour le contenu. Cette approche offre de la flexibilité mais demande plus de coordination.",
+      },
+    ],
+    "audit-seo-pourquoi-indispensable": [
+      {
+        question: "Mon site est tout neuf, ai-je besoin d'un audit ?",
+        answer: "Un site récent peut avoir des problèmes techniques invisibles à l'oeil nu : balises noindex oubliées, sitemap absent, erreurs de configuration du serveur, contenu trop mince. Un audit post-lancement évite de perdre des mois de visibilité potentielle.",
+      },
+      {
+        question: "Quelle est la différence entre un audit SEO gratuit et un audit payant ?",
+        answer: "Un audit gratuit est généralement un scan automatique limité aux aspects techniques de surface. Un audit payant professionnel inclut une analyse humaine complète, une interprétation contextuelle et un plan d'action personnalisé.",
+      },
+      {
+        question: "Combien de temps prend un audit SEO complet ?",
+        answer: "Chez KUMO, un audit complet est livré en 5 à 7 jours ouvrables. Ce délai inclut la collecte des données, l'analyse, la rédaction du rapport et la préparation du plan d'action.",
+      },
+      {
+        question: "Puis-je mettre en oeuvre les recommandations moi-même ?",
+        answer: "Oui. Le rapport et le plan d'action sont rédigés pour être compréhensibles par un non-spécialiste. Certaines actions techniques nécessiteront un développeur, mais les recommandations de contenu et de structure peuvent souvent être mises en oeuvre en interne.",
       },
     ],
   };

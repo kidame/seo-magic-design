@@ -25,6 +25,7 @@ const ROUTES = [
   "/blog/mise-a-jour-google-mars-2026-pme-suisse",
   "/blog/creer-site-internet-pme-suisse-2026",
   "/blog/freelance-seo-vs-agence-suisse",
+  "/blog/audit-seo-pourquoi-indispensable",
   "/consultant-seo-suisse-romande",
   "/consultant-seo-neuchatel",
   "/consultant-seo-lausanne",

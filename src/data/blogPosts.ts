@@ -95,6 +95,25 @@ export const blogPosts: BlogPost[] = [
     primary_keyword: "freelance SEO Suisse",
     secondary_keywords: ["agence SEO Suisse romande", "consultant SEO indépendant", "choisir agence SEO", "prix SEO Suisse"],
   },
+  {
+    title: "Audit SEO : pourquoi c'est la première étape pour améliorer votre site",
+    slug: "audit-seo-pourquoi-indispensable",
+    description: "Découvrez pourquoi un audit SEO est indispensable avant toute action de référencement. Les 31 points de contrôle KUMO, livrables, prix et cas concrets pour les PME suisses.",
+    date: "2026-04-11",
+    author: "Thomas Puglisi",
+    category: "Référencement naturel",
+    tags: ["audit SEO", "référencement naturel", "PME suisse", "diagnostic SEO", "plan d'action"],
+    reading_time: "9 min",
+    word_count: 2000,
+    seo_title: "Audit SEO : pourquoi c'est indispensable pour votre site",
+    seo_description: "Découvrez pourquoi un audit SEO est indispensable avant toute action de référencement. Les 31 points de contrôle, livrables et prix pour les PME suisses.",
+    canonical: "https://kumo-seo.ch/blog/audit-seo-pourquoi-indispensable",
+    og_title: "Audit SEO : pourquoi c'est indispensable pour votre site",
+    og_description: "31 points de contrôle, rapport interactif, plan d'action 90 jours. Ce que comprend un audit SEO professionnel pour les PME suisses.",
+    og_image: "/images/blog/audit-seo-indispensable.jpg",
+    primary_keyword: "audit SEO",
+    secondary_keywords: ["audit SEO site", "audit référencement", "diagnostic SEO", "audit SEO prix Suisse"],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
