@@ -1,6 +1,9 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
+import CookieConsent from "@/components/CookieConsent";
+import GtmScript from "@/components/GtmScript";
 
 const Aurora = lazy(() => import("@/components/ui/aurora"));
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -30,7 +33,10 @@ const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
+const GTM_ID = import.meta.env.VITE_GTM_ID;
+
 const App = () => {
+  const { consent, accept, refuse } = useCookieConsent();
   const [auroraReady, setAuroraReady] = useState(false);
 
   useEffect(() => {
@@ -65,6 +71,7 @@ const App = () => {
         </Suspense>
       )}
       <BrowserRouter>
+        <GtmScript consent={consent} />
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -90,6 +97,9 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        {GTM_ID && consent === null && (
+          <CookieConsent onAccept={accept} onRefuse={refuse} />
+        )}
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
