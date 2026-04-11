@@ -15,19 +15,40 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 
-const specificites = [
-  "Basé à Val-de-Travers, au coeur du canton de Neuchâtel",
-  "Connaissance du tissu économique neuchâtelois : horlogerie, microtechniques, PME locales",
-  "Stratégie SEO adaptée aux recherches locales (Google Maps, fiche Google Business)",
-  "Disponible pour des rendez-vous en personne dans tout le canton",
-  "Tarifs forfaitaires transparents, adaptés aux budgets PME",
-  "Expérience avec les secteurs industriels et de services de la région",
+const secteurs = [
+  {
+    nom: "Horlogerie et microtechnique",
+    texte: "Le canton de Neuchâtel est le berceau de l'industrie horlogère suisse. Beaucoup de sous-traitants et manufactures ont un site web qui ne reflète pas leur savoir-faire. Un audit SEO permet d'identifier les lacunes techniques et de rendre votre expertise visible sur les moteurs de recherche, y compris à l'international.",
+  },
+  {
+    nom: "Artisans et commerces locaux",
+    texte: "Menuisier, électricien, boulanger, fleuriste : vos clients cherchent sur Google avant de se déplacer. Une fiche Google Business optimisée et un site bien référencé localement vous placent devant la concurrence dans votre zone de chalandise.",
+  },
+  {
+    nom: "Restaurants et hôtellerie",
+    texte: "Les recherches \"restaurant + ville\" et \"hôtel + région\" génèrent un trafic direct. Un bon référencement local, combiné à des avis Google bien gérés, peut transformer vos places vides en réservations régulières.",
+  },
+  {
+    nom: "Cabinets et professions libérales",
+    texte: "Avocats, fiduciaires, thérapeutes, architectes : la crédibilité en ligne passe par un site professionnel et une présence Google maîtrisée. Le SEO positionne votre cabinet sur les recherches de proximité sans dépendre de la publicité payante.",
+  },
+  {
+    nom: "Santé et bien-être",
+    texte: "Physiothérapeutes, dentistes, médecins : vos patients vous cherchent en ligne. Être visible sur Google Maps et dans les résultats naturels pour votre spécialité et votre localité est un avantage concurrentiel direct.",
+  },
 ];
 
-const villesVoisines = [
-  { name: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds" },
-  { name: "Bienne", href: "/consultant-seo-bienne" },
-  { name: "Yverdon", href: "/consultant-seo-yverdon" },
+const zones = [
+  "Neuchâtel ville",
+  "Val-de-Travers",
+  "La Chaux-de-Fonds",
+  "Le Locle",
+  "Boudry",
+  "Colombier",
+  "Peseux",
+  "Cortaillod",
+  "Hauterive",
+  "Marin-Epagnier",
 ];
 
 const ConsultantSeoNeuchatel = () => {
@@ -36,9 +57,21 @@ const ConsultantSeoNeuchatel = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Neuchâtel",
-      description: "Consultant SEO indépendant à Neuchâtel. Audit technique, création de sites web et accompagnement SEO pour PME du canton de Neuchâtel.",
       url: "https://kumo-seo.ch/consultant-seo-neuchatel",
-      areaServed: { "@type": "Place", name: "Neuchâtel" },
+      description: "Consultant SEO indépendant à Neuchâtel. Audit SEO 31 points, création de site web sur-mesure, accompagnement mensuel. Forfait fixe pour PME neuchâteloises.",
+      areaServed: {
+        "@type": "State",
+        name: "Neuchâtel",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Suisse",
+        },
+      },
+      provider: {
+        "@type": "Person",
+        name: "Thomas Puglisi",
+        jobTitle: "Consultant SEO",
+      },
       address: {
         "@type": "PostalAddress",
         addressLocality: "Val-de-Travers",
@@ -65,8 +98,8 @@ const ConsultantSeoNeuchatel = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Consultant SEO Neuchâtel | KUMO 蜘蛛 Val-de-Travers"
-        description="Consultant SEO à Neuchâtel. Audit technique, création de sites et accompagnement SEO pour PME neuchâteloises. Basé à Val-de-Travers."
+        title="Consultant SEO à Neuchâtel - Audit & Création Web | KUMO"
+        description="Consultant SEO indépendant à Neuchâtel. Audit SEO 31 points, création de site web sur-mesure, accompagnement mensuel. Forfait fixe pour PME neuchâteloises."
         canonical="https://kumo-seo.ch/consultant-seo-neuchatel"
         jsonLd={jsonLd}
       />
@@ -96,16 +129,15 @@ const ConsultantSeoNeuchatel = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="section-label mb-4">地域 Neuchâtel</p>
             <BlurText
-              text="Consultant SEO à Neuchâtel."
+              text="Consultant SEO à Neuchâtel : plus de visibilité pour votre entreprise."
               as="h1"
-              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              className="text-4xl md:text-5xl font-bold tracking-tight mb-6 justify-center"
               delay={120}
               animateBy="words"
               direction="top"
             />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-              Basé à Val-de-Travers, j'aide les PME du canton de Neuchâtel à gagner en visibilité sur Google.
-              Un interlocuteur unique, des forfaits fixes, des résultats mesurables.
+              Basé à Val-de-Travers, au coeur du canton de Neuchâtel, j'aide les PME neuchâteloises à gagner en visibilité sur Google. En tant que consultant SEO indépendant, je propose des forfaits fixes et transparents : audit technique, création de sites web sur-mesure et accompagnement SEO continu. Pas d'intermédiaire, pas de frais cachés. Un seul interlocuteur qui connaît votre marché local et qui travaille avec vous du diagnostic jusqu'aux résultats. Les PME neuchâteloises sont souvent moins visibles en ligne que leurs concurrentes lausannoises ou genevoises. C'est une réalité, mais c'est aussi une opportunité : le marché local est moins saturé, et chaque position gagnée sur Google a un impact direct sur votre chiffre d'affaires.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">
@@ -115,127 +147,148 @@ const ConsultantSeoNeuchatel = () => {
           </motion.div>
         </section>
 
-        {/* Spécificités locales */}
-        <section className="container max-w-4xl mx-auto px-4 mb-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">特長 Pourquoi Neuchâtel</p>
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              Un consultant SEO <span className="text-gradient">ancré localement.</span>
-            </h2>
-          </motion.div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {specificites.map((item, i) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="flex items-center gap-3 glass-card p-4"
-              >
-                <Check size={16} className="text-primary shrink-0" />
-                <span className="text-sm">{item}</span>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* Le marché neuchâtelois */}
+        {/* Pourquoi un consultant SEO local */}
         <section className="container max-w-3xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">市場 Le marché local</p>
+            <p className="section-label mb-4">特長 Pourquoi un consultant local</p>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
-              Le SEO pour les PME <span className="text-gradient">neuchâteloises.</span>
+              Pourquoi les PME de Neuchâtel ont besoin d'un consultant SEO <span className="text-gradient">local.</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Le canton de Neuchâtel compte un tissu dense de PME dans l'horlogerie, les microtechniques, l'industrie et les services. Beaucoup ont un site web, mais peu sont réellement visibles sur Google pour les recherches qui comptent.
+                Le canton de Neuchâtel possède un tissu économique riche mais concentré. L'horlogerie, la microtechnique, les commerces de proximité et les professions libérales forment l'essentiel de l'activité. Pourtant, beaucoup de ces entreprises restent invisibles sur Google, faute d'un site web correctement optimisé ou d'une fiche Google Business bien configurée.
               </p>
               <p>
-                Un artisan à La Chaux-de-Fonds, un cabinet à Neuchâtel ville, un commerce au Val-de-Travers - chacun peut capter des clients via la recherche locale. Le référencement local (Google Maps, fiche Google Business) est souvent le levier le plus rentable pour une PME neuchâteloise.
+                Dans un marché plus petit que Lausanne ou Genève, chaque position gagnée dans les résultats de recherche compte davantage. Un artisan qui apparaît en première page pour "menuisier Neuchâtel" ou un restaurant visible sur Google Maps capte directement les clients de sa zone. Le référencement local est le levier le plus rentable pour une PME neuchâteloise.
               </p>
               <p>
-                En tant que consultant basé dans le canton, je comprends ces réalités. Je ne propose pas de solutions génériques : chaque recommandation est calibrée pour votre marché, votre zone de chalandise et votre budget.
+                Travailler avec un consultant basé dans le canton, c'est travailler avec quelqu'un qui connaît le terrain. Je comprends les réalités économiques locales, les habitudes de recherche de vos clients, et la concurrence dans votre secteur. Contrairement aux agences basées à Lausanne ou Genève, je ne facture pas au temps passé. Mes forfaits sont fixes, définis à l'avance, et adaptés aux budgets des PME neuchâteloises.
               </p>
             </div>
           </motion.div>
         </section>
 
-        {/* Services */}
+        {/* Services SEO */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="section-label mb-4">提供 Services</p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-              Services SEO à <span className="text-gradient">Neuchâtel.</span>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Nos services SEO pour les entreprises <span className="text-gradient">neuchâteloises.</span>
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
             <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
-              <h3 className="font-bold mb-2">Audit SEO technique</h3>
-              <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours. CHF 1'200.</p>
+              <h3 className="font-bold mb-2">Audit SEO - CHF 1'200</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                31 points de contrôle, analyse de 3 concurrents, plan d'action priorisé sur 90 jours. Vous savez exactement où vous en êtes et quoi corriger en premier. Appel de restitution de 30 minutes inclus.
+              </p>
             </Link>
             <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
-              <h3 className="font-bold mb-2">Site web sur-mesure</h3>
-              <p className="text-sm text-muted-foreground">Sites codés en React, optimisés SEO. Dès CHF 3'900.</p>
+              <h3 className="font-bold mb-2">Site web sur-mesure - dès CHF 3'900</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Site codé en React, optimisé SEO dès la première ligne. Performance 90+ PageSpeed, design sur-mesure, hébergement suisse inclus la première année. Pas de CMS lourd, pas de template.
+              </p>
             </Link>
             <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
-              <h3 className="font-bold mb-2">Accompagnement SEO</h3>
-              <p className="text-sm text-muted-foreground">Suivi mensuel continu. Dès CHF 250/mois.</p>
+              <h3 className="font-bold mb-2">Accompagnement SEO - dès CHF 250/mois</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Suivi mensuel continu : surveillance des positions, rapport détaillé, améliorations ciblées. Trois formules selon vos objectifs : maintenance, suivi visibilité ou croissance active.
+              </p>
             </Link>
           </div>
         </section>
 
-        {/* Villes voisines */}
+        {/* Secteurs d'activité */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="section-label mb-4">近隣 Régions voisines</p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
-              Également actif <span className="text-gradient">à proximité.</span>
+            <p className="section-label mb-4">業種 Secteurs d'activité</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Secteurs d'activité à <span className="text-gradient">Neuchâtel.</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden mb-4">
-            {villesVoisines.map((ville, i) => (
+          <div className="space-y-4">
+            {secteurs.map((s, i) => (
               <motion.div
-                key={ville.name}
-                initial={{ opacity: 0, y: 15 }}
+                key={s.nom}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
+                className="glass-card p-6"
               >
-                <Link to={ville.href} className="bg-card p-6 hover:bg-card/80 transition-colors block">
-                  <h3 className="font-bold mb-1">Consultant SEO {ville.name}</h3>
-                </Link>
+                <h3 className="font-bold mb-2">{s.nom}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{s.texte}</p>
               </motion.div>
             ))}
           </div>
-          <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
-            Toutes les zones couvertes <ArrowRight size={14} />
-          </Link>
         </section>
 
-        {/* Article lié */}
+        {/* Zones couvertes */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">地図 Zones couvertes</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Zones couvertes dans le canton de <span className="text-gradient">Neuchâtel.</span>
+            </h2>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {zones.map((z, i) => (
+              <motion.div
+                key={z}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.03 }}
+                className="flex items-center gap-3 glass-card p-4"
+              >
+                <Check size={16} className="text-primary shrink-0" />
+                <span className="text-sm">{z}</span>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link to="/consultant-seo-la-chaux-de-fonds" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Consultant SEO La Chaux-de-Fonds <ArrowRight size={14} />
+            </Link>
+            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              Toutes les zones couvertes <ArrowRight size={14} />
+            </Link>
+          </div>
+        </section>
+
+        {/* Articles liés */}
         <section className="container max-w-4xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="section-label mb-4">記事 Sur le blog</p>
           </motion.div>
-          <Link to="/blog/site-invisible-google-pme-suisse" className="glass-card p-6 hover:bg-card/80 transition-colors block">
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
-            <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
-            <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
-          </Link>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
+              <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
+            </Link>
+            <Link to="/blog/creer-site-internet-pme-suisse-2026" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Créer un site internet en 2026</h3>
+              <p className="text-sm text-muted-foreground">Ce qu'une PME suisse doit exiger de son prestataire.</p>
+            </Link>
+          </div>
         </section>
 
         {/* CTA */}
         <section className="container max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
-              Votre PME neuchâteloise mérite d'être visible.
+              Contactez votre consultant SEO à Neuchâtel.
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-4">
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
+            </p>
+            <p className="text-sm text-muted-foreground mb-8">
+              contact@kumo-seo.ch
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">
