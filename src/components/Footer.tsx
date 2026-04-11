@@ -15,6 +15,7 @@ const footerColumns = [
       { label: "Neuchâtel", href: "/consultant-seo-neuchatel" },
       { label: "Lausanne", href: "/consultant-seo-lausanne" },
       { label: "Genève", href: "/consultant-seo-geneve" },
+      { label: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds" },
       { label: "Suisse romande", href: "/consultant-seo-suisse-romande" },
     ],
   },

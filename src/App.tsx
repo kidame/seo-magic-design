@@ -25,6 +25,7 @@ const ConsultantSeoSuisseRomande = lazy(() => import("./pages/ConsultantSeoSuiss
 const ConsultantSeoNeuchatel = lazy(() => import("./pages/ConsultantSeoNeuchatel.tsx"));
 const ConsultantSeoLausanne = lazy(() => import("./pages/ConsultantSeoLausanne.tsx"));
 const ConsultantSeoGeneve = lazy(() => import("./pages/ConsultantSeoGeneve.tsx"));
+const ConsultantSeoLaChaux = lazy(() => import("./pages/ConsultantSeoLaChaux.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -84,6 +85,7 @@ const App = () => {
             <Route path="/consultant-seo-neuchatel" element={<ConsultantSeoNeuchatel />} />
             <Route path="/consultant-seo-lausanne" element={<ConsultantSeoLausanne />} />
             <Route path="/consultant-seo-geneve" element={<ConsultantSeoGeneve />} />
+            <Route path="/consultant-seo-la-chaux-de-fonds" element={<ConsultantSeoLaChaux />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

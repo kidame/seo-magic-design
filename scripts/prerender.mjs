@@ -28,6 +28,7 @@ const ROUTES = [
   "/consultant-seo-neuchatel",
   "/consultant-seo-lausanne",
   "/consultant-seo-geneve",
+  "/consultant-seo-la-chaux-de-fonds",
 ];
 
 // Simple static file server for dist/
