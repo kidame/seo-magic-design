@@ -13,11 +13,17 @@ const REPORTS_DIR = resolve(__dirname, "../lighthouse-reports");
 const PORT = 4174;
 
 const PAGES = [
+  "/",
+  "/services/audit-seo",
+  "/services/accompagnement-seo",
+  "/services/creation-site-web",
+  "/blog",
+  "/blog/site-invisible-google-pme-suisse",
+  "/consultant-seo-suisse-romande",
   "/consultant-seo-neuchatel",
   "/consultant-seo-lausanne",
   "/consultant-seo-geneve",
   "/consultant-seo-la-chaux-de-fonds",
-  "/consultant-seo-suisse-romande",
 ];
 
 // Simple static file server for dist/ (same pattern as prerender.mjs)
