@@ -2,29 +2,20 @@ import puppeteer from "puppeteer";
 import lighthouse from "lighthouse";
 import desktopConfig from "lighthouse/core/config/desktop-config.js";
 import { createServer } from "http";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
-import { resolve, dirname, join } from "path";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "fs";
+import { resolve, dirname, join, extname } from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
+import { ROUTES } from "./routes.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, "../dist");
 const REPORTS_DIR = resolve(__dirname, "../lighthouse-reports");
 const PORT = 4174;
 
-const PAGES = [
-  "/",
-  "/services/audit-seo",
-  "/services/accompagnement-seo",
-  "/services/creation-site-web",
-  "/blog",
-  "/blog/site-invisible-google-pme-suisse",
-  "/consultant-seo-suisse-romande",
-  "/consultant-seo-neuchatel",
-  "/consultant-seo-lausanne",
-  "/consultant-seo-geneve",
-  "/consultant-seo-la-chaux-de-fonds",
-];
+const PAGES = ROUTES
+  .filter((route) => route.path !== "/rapport")
+  .map((route) => route.path);
 
 // Simple static file server for dist/ (same pattern as prerender.mjs)
 function startServer(port) {
@@ -40,7 +31,21 @@ function startServer(port) {
   };
 
   const server = createServer((req, res) => {
-    let filePath = join(DIST, req.url === "/" ? "/index.html" : req.url);
+    const requestPath = new URL(req.url, `http://localhost:${port}`).pathname;
+    let filePath = join(DIST, requestPath === "/" ? "/index.html" : requestPath);
+
+    // If route maps to a directory, serve its index.html
+    if (existsSync(filePath) && statSync(filePath).isDirectory()) {
+      filePath = join(filePath, "index.html");
+    }
+
+    // If no file extension, try /path/index.html first
+    if (!existsSync(filePath) && extname(filePath) === "") {
+      const candidate = join(filePath, "index.html");
+      if (existsSync(candidate)) {
+        filePath = candidate;
+      }
+    }
 
     // SPA fallback
     if (!existsSync(filePath)) {
