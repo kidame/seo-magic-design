@@ -51,10 +51,27 @@ async function prerender() {
   const server = await startServer(PORT);
 
   console.log("Launching browser...");
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
-  });
+
+  // On Vercel/CI, use @sparticuz/chromium (built for Linux serverless environments).
+  // Locally, use the Chromium bundled with Puppeteer.
+  const isVercel = !!process.env.VERCEL || !!process.env.CI;
+  let launchOptions;
+  if (isVercel) {
+    const chromium = (await import("@sparticuz/chromium")).default;
+    launchOptions = {
+      args: [...chromium.args, "--no-sandbox", "--disable-dev-shm-usage"],
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    };
+  } else {
+    launchOptions = {
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+    };
+  }
+
+  const browser = await puppeteer.launch(launchOptions);
 
   for (const route of PRERENDER_PATHS) {
     console.log(`Prerendering ${route}...`);
