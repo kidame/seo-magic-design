@@ -6,13 +6,10 @@ const FreelanceSeoVsAgence = () => (
       Quand une PME de Suisse romande décide d'investir dans le référencement naturel, la première question qui se pose est rarement « comment faire du SEO » mais plutôt « à qui confier le travail ». Et la réponse n'est pas aussi simple qu'il y paraît.
     </p>
     <p className="text-muted-foreground leading-relaxed">
-      Le marché romand propose deux grandes options : les agences web/SEO et les consultants freelances. Chaque modèle a ses forces et ses limites. Cet article fait le point de manière objective pour vous aider à faire le bon choix selon votre situation.
+      En Suisse romande, deux options : une agence SEO ou un freelance. Ce n'est pas une question de prestige, c'est une question de ce que vous achetez concrètement. Budget, interlocuteur, suivi, résultats : les deux modèles ont des implications très différentes.
     </p>
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Les différences fondamentales entre un freelance SEO et une agence</h2>
-    <p className="text-muted-foreground leading-relaxed">
-      Avant d'entrer dans les détails, voici les principales différences structurelles entre les deux modèles.
-    </p>
     <p className="text-muted-foreground leading-relaxed">
       Une agence SEO emploie plusieurs personnes avec des spécialités différentes : chefs de projet, rédacteurs, développeurs, spécialistes du netlinking, consultants SEA. Cette structure permet de couvrir un large spectre de compétences, mais elle implique aussi une organisation plus lourde avec des couches intermédiaires entre vous et la personne qui travaille réellement sur votre site.
     </p>
@@ -25,7 +22,7 @@ const FreelanceSeoVsAgence = () => (
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Quand choisir une agence SEO</h2>
     <p className="text-muted-foreground leading-relaxed">
-      Le modèle agence est pertinent dans certaines situations spécifiques.
+      Une agence a du sens dans certains cas précis.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Si votre entreprise a besoin de plusieurs compétences simultanément - SEO, SEA (Google Ads), réseaux sociaux, design, développement web - une agence full-service peut centraliser tous ces besoins sous un seul contrat. Cela simplifie la gestion pour vous, même si le coût est plus élevé.
@@ -42,7 +39,7 @@ const FreelanceSeoVsAgence = () => (
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Quand choisir un freelance SEO</h2>
     <p className="text-muted-foreground leading-relaxed">
-      Le modèle freelance convient à un profil différent d'entreprise et de besoin.
+      Un freelance convient si vous voulez un interlocuteur unique, un suivi direct, et des tarifs lisibles.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Si vous êtes une PME avec un budget maîtrisé et un besoin ciblé - améliorer votre visibilité locale, auditer votre site existant, créer un nouveau site optimisé - un freelance offre un meilleur rapport qualité-prix. Vous payez l'expertise directement, sans financer la structure (locaux, management, commercial) d'une agence.

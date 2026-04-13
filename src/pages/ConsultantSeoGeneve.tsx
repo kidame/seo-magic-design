@@ -18,23 +18,23 @@ import {
 const secteursCles = [
   {
     nom: "Finance et banque",
-    texte: "Genève est une place financière mondiale. Banques privées, gestionnaires de fortune, fintechs : la concurrence en ligne est féroce. Le SEO permet de se positionner sur des requêtes ciblées sans dépendre uniquement de la publicité payante. Un contenu de qualité et une autorité technique sont les clés pour ranker dans ce secteur exigeant.",
+    texte: "Fiduciaires, avocats, gérants de patrimoine à Genève : quand quelqu'un cherche un professionnel libéral à Genève, il compare plusieurs résultats avant d'appeler. Votre positionnement sur ces requêtes locales conditionne les premiers contacts que vous recevez.",
   },
   {
     nom: "Organisations internationales et ONG",
-    texte: "La Genève internationale attire des recherches spécifiques, souvent en anglais. Un SEO bilingue (français et anglais) permet de capter ces audiences distinctes avec des contenus adaptés à chaque langue et chaque intention de recherche.",
+    texte: "Organisations internationales, ONG, consultants actifs à Genève : une partie de votre audience cherche en anglais, une autre en français. Un site qui ne traite qu'une seule langue passe à côté de la moitié des requêtes qui vous concernent.",
   },
   {
     nom: "Hôtellerie de luxe et immobilier",
-    texte: "Les recherches \"hôtel de luxe Genève\", \"appartement à louer Genève\" ou \"agence immobilière Genève\" sont parmi les plus compétitives de Suisse romande. Un audit SEO identifie vos lacunes face aux concurrents et un plan d'action ciblé permet de gagner des positions sur ces requêtes à forte valeur commerciale.",
+    texte: "Hôtellerie haut de gamme, agences immobilières, gestionnaires de biens à Genève : les requêtes sont chères en publicité et concurrentielles en organique. Une base SEO solide vous rend visible sur ces recherches sans payer chaque clic.",
   },
   {
     nom: "Santé et cliniques privées",
-    texte: "Genève concentre des cliniques privées, des spécialistes médicaux et des centres de bien-être. Les patients recherchent activement des praticiens sur Google. Un site techniquement propre, une fiche Google Business complète et des avis bien gérés font la différence entre un cabinet plein et un cabinet vide.",
+    texte: "Médecins, dentistes, thérapeutes à Genève : la densité d'offre dans le canton joue contre vous si votre présence en ligne est faible. Les patients comparent avant d'appeler. Si vous n'apparaissez pas, un confrère mieux positionné reçoit ces demandes à votre place.",
   },
   {
     nom: "Commerce et services",
-    texte: "Des boutiques de la rue du Rhône aux prestataires de services dans le quartier des Eaux-Vives, chaque commerce genevois peut capter des clients via la recherche locale. Le référencement local est souvent le levier le plus rentable : être visible quand quelqu'un cherche exactement ce que vous proposez, dans votre zone.",
+    texte: "Artisans, commerces, restaurateurs genevois : vos clients regardent Google avant de se déplacer. Une fiche à jour et un site bien référencé vous aident à capter des demandes régulières sans miser uniquement sur la publicité.",
   },
 ];
 

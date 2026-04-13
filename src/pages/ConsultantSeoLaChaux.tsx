@@ -18,23 +18,23 @@ import {
 const secteurs = [
   {
     nom: "Horlogerie",
-    texte: "La Chaux-de-Fonds est le coeur de l'horlogerie suisse. Manufactures, sous-traitants, fournisseurs de composants : ces entreprises exportent dans le monde entier mais sont souvent invisibles sur Google. Un site bien référencé, en français et en anglais, ouvre des opportunités commerciales directes. Le SEO technique permet de positionner votre savoir-faire sur les requêtes que tapent vos prospects internationaux.",
+    texte: "Sous-traitants horlogers, ateliers de microtechnique, fabricants de composants : vos partenaires commerciaux cherchent aussi en ligne avant de prendre contact. Un site qui reflète votre niveau technique peut soutenir votre démarche commerciale. Pas seulement rester en ligne sans vrai rôle commercial.",
   },
   {
     nom: "Industrie et microtechnique",
-    texte: "L'arc jurassien concentre un savoir-faire industriel de pointe. Usinage, traitement de surface, électronique embarquée : les recherches B2B existent, mais la concurrence en ligne reste faible. Se positionner maintenant sur des requêtes industrielles ciblées, c'est prendre de l'avance avant que vos concurrents ne s'y mettent.",
+    texte: "Ateliers d'usinage, bureaux d'études, fournisseurs de précision : vos donneurs d'ordre cherchent désormais leurs partenaires en ligne avant de lancer un appel d'offres. Un site qui présente clairement vos compétences techniques vous met dans la short-list.",
   },
   {
     nom: "Commerces et artisans",
-    texte: "Restaurants, boulangeries, coiffeurs, garagistes : les commerces de proximité dépendent de la recherche locale. Quand un habitant de La Chaux-de-Fonds cherche \"boulangerie ouverte dimanche\" ou \"garagiste La Chaux-de-Fonds\", votre entreprise doit apparaître. Une fiche Google Business bien remplie et un site optimisé localement sont les fondations d'une visibilité durable.",
+    texte: "Artisans et PME à La Chaux-de-Fonds : le bouche-à-oreille fonctionne, mais il ne couvre pas tout le bassin de clientèle potentiel. Une présence Google structurée capte les demandes des personnes qui cherchent sans connaître quelqu'un dans votre réseau.",
   },
   {
     nom: "Architecture et patrimoine",
-    texte: "La Chaux-de-Fonds est classée au patrimoine mondial de l'UNESCO pour son urbanisme horloger. Les cabinets d'architecture, les bureaux d'études et les acteurs du patrimoine ont un public captif de professionnels et de passionnés qui cherchent en ligne. Un contenu bien structuré et une présence web optimisée attirent ce trafic qualifié.",
+    texte: "Architectes, bureaux d'études, acteurs du patrimoine à La Chaux-de-Fonds : votre travail se montre. Un site qui présente vos projets et un référencement propre vous rendent trouvables quand un maître d'ouvrage ou un journaliste cherche un spécialiste local.",
   },
   {
     nom: "Santé et services",
-    texte: "Médecins, dentistes, physiothérapeutes, avocats, fiduciaires : les professions libérales de La Chaux-de-Fonds servent une clientèle locale. Être trouvable sur Google pour votre spécialité et votre localité est un avantage concurrentiel que peu de praticiens exploitent dans la région.",
+    texte: "Thérapeutes, médecins, professions libérales : même dans une ville de cette taille, vos futurs clients passent par Google avant de vous contacter. Fiche incomplète, site introuvable, avis absents : chaque point manquant est une raison de passer au suivant.",
   },
 ];
 

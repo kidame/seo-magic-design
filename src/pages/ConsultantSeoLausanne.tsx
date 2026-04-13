@@ -18,19 +18,19 @@ import {
 const industries = [
   {
     nom: "Tech et startups",
-    texte: "L'écosystème tech lausannois, porté par l'EPFL et les incubateurs, produit des startups ambitieuses. Mais un bon produit ne suffit pas : sans visibilité organique, vous dépendez du bouche-à-oreille ou de la publicité payante. Le SEO technique et le contenu optimisé positionnent votre startup sur les requêtes qui génèrent des leads qualifiés.",
+    texte: "À Lausanne, beaucoup d'entreprises ont un bon produit et une réputation solide dans leur réseau. Mais le bouche-à-oreille a un plafond. Si vos futurs clients ne peuvent pas vous trouver seuls sur Google, vous restez dépendant de qui vous connaît déjà.",
   },
   {
     nom: "Hôtellerie et tourisme",
-    texte: "Lausanne attire des visiteurs pour ses vignobles classés UNESCO, ses musées et sa position au bord du Léman. Les recherches \"hôtel Lausanne\", \"restaurant vue lac Léman\" ou \"activités Lausanne\" génèrent un trafic qualifié. Un référencement local efficace et une fiche Google Business optimisée transforment ces recherches en réservations.",
+    texte: "Hôteliers, restaurateurs, prestataires touristiques à Lausanne : une partie significative de vos clients réservent après une recherche \"hôtel Lausanne\" ou \"restaurant vue lac\". Si votre fiche et votre site ne répondent pas rapidement aux questions pratiques, la réservation part ailleurs.",
   },
   {
     nom: "Santé et formation",
-    texte: "Cliniques, cabinets médicaux, centres de formation : Lausanne concentre une forte densité de professionnels de la santé et de l'éducation. Vos patients et étudiants commencent leur recherche sur Google. Être visible pour \"dentiste Lausanne\" ou \"formation continue Vaud\" est un avantage concurrentiel direct.",
+    texte: "Thérapeutes, médecins, praticiens de santé : vos futurs patients cherchent en ligne avant de prendre rendez-vous. Une fiche claire, des avis et un site rassurant comptent dans leur première impression.",
   },
   {
     nom: "Commerce de détail et services B2B",
-    texte: "Du commerce de la rue de Bourg aux prestataires B2B du quartier du Flon, les entreprises lausannoises doivent être trouvables en ligne. Le référencement local, combiné à un site rapide et bien structuré, capte les clients au moment où ils cherchent exactement ce que vous proposez.",
+    texte: "Artisans, commerces, restaurateurs lausannois : vos clients vérifient les horaires, les avis, l'adresse avant de se déplacer. Si votre fiche ou votre site ne répondent pas à ces questions en quelques secondes, ils passent au suivant.",
   },
 ];
 

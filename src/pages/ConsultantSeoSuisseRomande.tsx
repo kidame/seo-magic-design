@@ -31,6 +31,21 @@ const pourquoi = [
   "Proximité géographique pour les rendez-vous si nécessaire",
 ];
 
+const secteurs = [
+  {
+    nom: "PME et indépendants",
+    texte: "PME et indépendants en Suisse romande : vos clients commencent souvent par Google avant d'appeler. Si votre concurrent apparaît et pas vous, c'est lui qui reçoit la demande.",
+  },
+  {
+    nom: "Artisans et services",
+    texte: "Artisans du bâtiment, électriciens, menuisiers : votre réputation se construit sur le terrain. Mais les nouveaux appels entrants viennent souvent d'une recherche Google. Une fiche et un site bien tenus changent concrètement ce que vous recevez sans effort actif.",
+  },
+  {
+    nom: "Santé et professions libérales",
+    texte: "Thérapeutes, médecins, avocats, fiduciaires : une bonne partie de votre clientèle potentielle commence par chercher en ligne. L'enjeu n'est pas d'avoir un site spectaculaire, c'est d'être trouvé et crédible quand quelqu'un cherche ce que vous faites.",
+  },
+];
+
 const ConsultantSeoSuisseRomande = () => {
   const jsonLd = [
     {
@@ -175,6 +190,34 @@ const ConsultantSeoSuisseRomande = () => {
               >
                 <Check size={16} className="text-primary shrink-0" />
                 <span className="text-sm">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Secteurs */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">分野 Secteurs</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
+              Qui je <span className="text-gradient">accompagne.</span>
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Le SEO n'a pas le même rôle selon votre activité. Voici comment il se traduit concrètement pour les profils de PME romandes avec lesquels je travaille le plus.
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
+            {secteurs.map((s, i) => (
+              <motion.div
+                key={s.nom}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-card p-6 h-full"
+              >
+                <h3 className="font-bold mb-2">{s.nom}</h3>
+                <p className="text-sm text-muted-foreground">{s.texte}</p>
               </motion.div>
             ))}
           </div>

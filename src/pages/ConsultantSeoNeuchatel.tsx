@@ -22,19 +22,19 @@ const secteurs = [
   },
   {
     nom: "Artisans et commerces locaux",
-    texte: "Menuisier, électricien, boulanger, fleuriste : vos clients cherchent sur Google avant de se déplacer. Une fiche Google Business optimisée et un site bien référencé localement vous placent devant la concurrence dans votre zone de chalandise.",
+    texte: "Menuisier, électricien, boulanger à Neuchâtel : vos clients passent par Google avant de se déplacer. Si votre concurrent apparaît en premier, c'est souvent lui qui reçoit l'appel.",
   },
   {
     nom: "Restaurants et hôtellerie",
-    texte: "Les recherches \"restaurant + ville\" et \"hôtel + région\" génèrent un trafic direct. Un bon référencement local, combiné à des avis Google bien gérés, peut transformer vos places vides en réservations régulières.",
+    texte: "Restaurateurs, cafetiers, hôteliers à Neuchâtel : les gens consultent Google avant de choisir où aller manger ou dormir. Horaires du jour, menu, photos récentes, avis : ce que votre fiche affiche conditionne leur choix bien avant qu'ils passent la porte.",
   },
   {
     nom: "Cabinets et professions libérales",
-    texte: "Avocats, fiduciaires, thérapeutes, architectes : la crédibilité en ligne passe par un site professionnel et une présence Google maîtrisée. Le SEO positionne votre cabinet sur les recherches de proximité sans dépendre de la publicité payante.",
+    texte: "Avocats, fiduciaires, architectes à Neuchâtel : avant de vous appeler, une bonne partie de vos clients potentiels regardent votre site et vos avis. Ce qu'ils trouvent, ou ne trouvent pas, influe sur leur décision avant même qu'ils aient composé votre numéro.",
   },
   {
     nom: "Santé et bien-être",
-    texte: "Physiothérapeutes, dentistes, médecins : vos patients vous cherchent en ligne. Être visible sur Google Maps et dans les résultats naturels pour votre spécialité et votre localité est un avantage concurrentiel direct.",
+    texte: "Physiothérapeutes, dentistes, médecins : vos futurs patients cherchent en ligne avant de choisir. Une fiche incomplète ou un site introuvable, c'est un rendez-vous qui part chez le praticien d'à côté.",
   },
 ];
 
