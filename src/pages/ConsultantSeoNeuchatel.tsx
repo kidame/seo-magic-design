@@ -199,6 +199,13 @@ const ConsultantSeoNeuchatel = () => {
               </p>
             </Link>
           </div>
+          <div className="glass-card p-6 mt-6">
+            <h3 className="font-bold mb-2">Création de site web à Neuchâtel</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              La création site web Neuchâtel est un levier direct pour les PME qui veulent être trouvées localement.
+              Le site est conçu pour vos clients neuchâtelois, hébergé en Suisse et structuré pour convertir les recherches locales en demandes de contact.
+            </p>
+          </div>
         </section>
 
         {/* Secteurs d'activité */}

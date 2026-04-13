@@ -20,9 +20,6 @@ const villes = [
   { name: "Lausanne", href: "/consultant-seo-lausanne", desc: "Canton de Vaud et agglomération lausannoise" },
   { name: "Genève", href: "/consultant-seo-geneve", desc: "Canton de Genève et Grand Genève" },
   { name: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds", desc: "Montagnes neuchâteloises" },
-  { name: "Bienne", href: "/consultant-seo-bienne", desc: "Seeland et Jura bernois" },
-  { name: "Yverdon", href: "/consultant-seo-yverdon", desc: "Nord vaudois" },
-  { name: "Fribourg", href: "/consultant-seo-fribourg", desc: "Canton de Fribourg" },
 ];
 
 const pourquoi = [
@@ -70,12 +67,42 @@ const ConsultantSeoSuisseRomande = () => {
         { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande" },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Dans quelles villes de Suisse romande intervenez-vous ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "KUMO accompagne les PME à Neuchâtel, Lausanne, Genève et La Chaux-de-Fonds, avec un suivi à distance ou sur place selon les besoins.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Pourquoi choisir un consultant SEO en Suisse romande ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Un consultant SEO en Suisse romande connaît le marché local, les intentions de recherche régionales et les réalités des PME romandes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Proposez-vous aussi du SEO local ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Oui. L'accompagnement inclut le SEO local, la fiche Google Business et l'optimisation des pages locales.",
+          },
+        },
+      ],
+    },
   ];
 
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Consultant SEO Suisse romande | KUMO 蜘蛛 Neuchâtel"
+        title="Consultant SEO en Suisse romande | KUMO - Neuchâtel"
         description="Consultant SEO indépendant en Suisse romande. Audit technique, création de sites et accompagnement SEO pour PME. Basé à Neuchâtel, actif dans toute la Romandie."
         canonical="https://kumo-seo.ch/consultant-seo-suisse-romande"
         jsonLd={jsonLd}
@@ -109,10 +136,14 @@ const ConsultantSeoSuisseRomande = () => {
               animateBy="words"
               direction="top"
             />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-              Basé à Val-de-Travers dans le canton de Neuchâtel, j'accompagne les PME de toute la Suisse romande
-              dans leur visibilité sur Google. Audit technique, création de sites web et suivi SEO continu.
-            </p>
+            <div className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 space-y-4 text-left md:text-center">
+              <p>
+                Basé à Val-de-Travers dans le canton de Neuchâtel, j'accompagne les PME de Suisse romande dans leur visibilité sur Google. Lausanne, Genève, Neuchâtel, La Chaux-de-Fonds : chaque marché a ses recherches locales, ses concurrents, ses spécificités. Une stratégie SEO qui fonctionne à Genève ne s'applique pas mécaniquement à Neuchâtel.
+              </p>
+              <p>
+                KUMO est une structure boutique : un seul interlocuteur, un forfait fixe annoncé avant le premier jour de travail, des livrables concrets. Audit SEO, site web performant ou suivi mensuel. Je travaille principalement à distance, avec des déplacements possibles selon les besoins.
+              </p>
+            </div>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
@@ -126,8 +157,11 @@ const ConsultantSeoSuisseRomande = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="section-label mb-4">利点 Avantages</p>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
-              Pourquoi un consultant SEO <span className="text-gradient">local.</span>
+              Votre consultant SEO en <span className="text-gradient">Suisse romande.</span>
             </h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Un consultant SEO en Suisse romande connaît les recherches locales, les attentes des PME et les différences entre les marchés de Neuchâtel, Lausanne et Genève.
+            </p>
           </motion.div>
           <div className="grid sm:grid-cols-2 gap-4">
             {pourquoi.map((item, i) => (
@@ -173,6 +207,35 @@ const ConsultantSeoSuisseRomande = () => {
               </motion.div>
             ))}
           </div>
+          <div className="mt-6">
+            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              SEO local pour les entreprises romandes <ArrowRight size={14} />
+            </Link>
+          </div>
+        </section>
+
+        {/* FAQ régionale */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">FAQ régionale</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Questions fréquentes en <span className="text-gradient">Suisse romande.</span>
+            </h2>
+          </motion.div>
+          <div className="space-y-4">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Dans quelles villes de Suisse romande intervenez-vous ?</h3>
+              <p className="text-sm text-muted-foreground">Neuchâtel, Lausanne, Genève et La Chaux-de-Fonds, avec un accompagnement adapté au contexte local.</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Pourquoi choisir un consultant SEO en Suisse romande ?</h3>
+              <p className="text-sm text-muted-foreground">Pour travailler avec une stratégie alignée sur les recherches régionales et les besoins des PME romandes.</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Incluez-vous le SEO local dans le suivi ?</h3>
+              <p className="text-sm text-muted-foreground">Oui, le suivi couvre le SEO local, la fiche Google Business et l'amélioration continue des pages locales.</p>
+            </div>
+          </div>
         </section>
 
         {/* Services */}
@@ -186,7 +249,7 @@ const ConsultantSeoSuisseRomande = () => {
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
             <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
-              <h3 className="font-bold mb-2">Audit SEO technique</h3>
+              <h3 className="font-bold mb-2">Audit SEO de site web</h3>
               <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours. CHF 1'200.</p>
             </Link>
             <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
@@ -210,11 +273,18 @@ const ConsultantSeoSuisseRomande = () => {
               Article <span className="text-gradient">lié.</span>
             </h2>
           </motion.div>
-          <Link to="/blog/site-invisible-google-pme-suisse" className="glass-card p-6 hover:bg-card/80 transition-colors block">
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
-            <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
-            <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
-          </Link>
+          <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
+              <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
+            </Link>
+            <Link to="/blog/creer-site-internet-pme-suisse-2026" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
+              <h3 className="font-bold mb-2">Créer un site internet en 2026</h3>
+              <p className="text-sm text-muted-foreground">Ce qu'une PME suisse doit exiger de son prestataire web.</p>
+            </Link>
+          </div>
         </section>
 
         {/* CTA */}

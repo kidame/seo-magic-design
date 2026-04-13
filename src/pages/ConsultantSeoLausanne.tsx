@@ -80,6 +80,36 @@ const ConsultantSeoLausanne = () => {
         { "@type": "ListItem", position: 3, name: "Lausanne", item: "https://kumo-seo.ch/consultant-seo-lausanne" },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Combien coûte un consultant SEO à Lausanne ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Chez KUMO, l'audit SEO démarre à CHF 1'200 et les formules de suivi mensuel démarrent à CHF 250. Le périmètre est défini à l'avance avec un forfait fixe.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Pourquoi choisir un consultant SEO local à Lausanne ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Un consultant SEO local connaît les intentions de recherche du canton de Vaud et adapte la stratégie à votre zone de chalandise.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Est-ce que vous proposez du SEO local pour Lausanne ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Oui. Le suivi inclut le SEO local, l'optimisation de la fiche Google Business et l'amélioration des pages locales.",
+          },
+        },
+      ],
+    },
   ];
 
   return (
@@ -240,9 +270,36 @@ const ConsultantSeoLausanne = () => {
             <Link to="/consultant-seo-geneve" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO Genève <ArrowRight size={14} />
             </Link>
+            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              SEO local pour PME vaudoises <ArrowRight size={14} />
+            </Link>
             <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ locale */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">FAQ locale</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Questions fréquentes à <span className="text-gradient">Lausanne.</span>
+            </h2>
+          </motion.div>
+          <div className="space-y-4">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Combien coûte un consultant SEO à Lausanne ?</h3>
+              <p className="text-sm text-muted-foreground">L'audit SEO démarre à CHF 1'200 et les formules mensuelles démarrent à CHF 250. Le périmètre est clair avant le démarrage.</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Pourquoi choisir un consultant SEO local à Lausanne ?</h3>
+              <p className="text-sm text-muted-foreground">Parce qu'il comprend les recherches locales, la concurrence vaudoise et les besoins des PME de Lausanne.</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Proposez-vous du SEO local pour Lausanne ?</h3>
+              <p className="text-sm text-muted-foreground">Oui. Le suivi inclut l'optimisation locale, la fiche Google Business et le renforcement des pages géographiques.</p>
+            </div>
           </div>
         </section>
 

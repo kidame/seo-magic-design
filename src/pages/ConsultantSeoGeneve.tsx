@@ -84,6 +84,36 @@ const ConsultantSeoGeneve = () => {
         { "@type": "ListItem", position: 3, name: "Genève", item: "https://kumo-seo.ch/consultant-seo-geneve" },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Combien coûte un consultant SEO à Genève ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "L'audit SEO démarre à CHF 1'200 et les formules d'accompagnement commencent à CHF 250 par mois, selon les objectifs de votre entreprise.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Pourquoi travailler le SEO local à Genève ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Le SEO local permet d'être visible sur les recherches de proximité et dans Google Maps, là où les prospects genevois cherchent vos services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Un consultant SEO peut-il travailler à distance pour Genève ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Oui. La majorité du suivi se fait à distance avec des rapports mensuels et des points réguliers, avec déplacement possible selon le projet.",
+          },
+        },
+      ],
+    },
   ];
 
   return (
@@ -153,7 +183,7 @@ const ConsultantSeoGeneve = () => {
                 Pour une PME genevoise, le SEO local est un levier stratégique. Google Maps, la fiche Google Business, les résultats locaux : ces canaux captent les recherches de proximité et dirigent les clients vers votre porte. Mais la dimension internationale de Genève ouvre aussi des opportunités uniques. Le Grand Genève, avec sa dimension transfrontalière, permet de capter des recherches depuis la France voisine. Les entreprises qui servent une clientèle bilingue (français et anglais) peuvent doubler leur surface de capture en ciblant les deux langues.
               </p>
               <p>
-                L'importance du SEO local est confirmée par les données : "référencement local" génère 40 recherches par mois en Suisse, avec un CPC de 23.83 CHF. C'est un investissement que vos concurrents sont prêts à payer. Le référencement organique vous positionne sur ces mêmes requêtes sans coût par clic.
+                Le SEO local est souvent le levier le plus rentable pour une PME genevoise. Vos concurrents l'ont compris et investissent sur des mots-clés locaux à fort coût par clic. Le référencement organique vous permet de capter ces mêmes recherches durablement, sans dépendre d'un budget publicitaire mensuel.
               </p>
             </div>
           </motion.div>
@@ -244,9 +274,36 @@ const ConsultantSeoGeneve = () => {
             <Link to="/consultant-seo-lausanne" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO Lausanne <ArrowRight size={14} />
             </Link>
+            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+              SEO local pour PME genevoises <ArrowRight size={14} />
+            </Link>
             <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ locale */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">FAQ locale</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Questions fréquentes à <span className="text-gradient">Genève.</span>
+            </h2>
+          </motion.div>
+          <div className="space-y-4">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Combien coûte un consultant SEO à Genève ?</h3>
+              <p className="text-sm text-muted-foreground">L'audit SEO démarre à CHF 1'200 et les formules d'accompagnement commencent à CHF 250 par mois.</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Pourquoi travailler le SEO local à Genève ?</h3>
+              <p className="text-sm text-muted-foreground">Parce que vos prospects cherchent en priorité sur Google et Google Maps avant de prendre contact.</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2">Peut-on gérer un projet SEO Genève à distance ?</h3>
+              <p className="text-sm text-muted-foreground">Oui, avec un suivi mensuel structuré et des échanges réguliers. Les rendez-vous sur place restent possibles.</p>
+            </div>
           </div>
         </section>
 

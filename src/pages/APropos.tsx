@@ -43,6 +43,7 @@ const APropos = () => {
       name: "Thomas Puglisi",
       jobTitle: "Consultant SEO & Développeur Web",
       url: "https://kumo-seo.ch/a-propos",
+      knowsAbout: ["SEO", "Référencement naturel", "Création de sites web"],
       worksFor: {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
@@ -64,7 +65,7 @@ const APropos = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="À propos | KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="À propos | KUMO - Freelance SEO en Suisse romande"
         description="Consultant SEO indépendant à Neuchâtel. Audit technique, création de sites web et accompagnement SEO pour PME de Suisse romande."
         canonical="https://kumo-seo.ch/a-propos"
         jsonLd={jsonLd}
@@ -148,6 +149,29 @@ const APropos = () => {
               </p>
               <p>
                 Je travaille en forfait fixe. Un périmètre clair, des livrables définis, un prix qui ne bouge pas. Vous savez dès le départ ce que vous recevez.
+              </p>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Freelance SEO */}
+        <section className="container max-w-3xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">Freelance SEO Suisse</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
+              Freelance SEO en Suisse : pourquoi choisir un <span className="text-gradient">indépendant.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Un freelance SEO en Suisse vous donne un interlocuteur unique, du premier audit jusqu'au suivi mensuel.
+                Vous évitez les couches intermédiaires et vous gardez une vision claire sur les actions menées.
+              </p>
+              <p>
+                Chez KUMO, les forfaits sont annoncés à l'avance. Pas de facturation à l'heure qui dérive, pas de surprise en fin de mission.
+                L'objectif est simple : vous aider à gagner en visibilité avec un cadre de travail lisible.
+              </p>
+              <p>
+                Cette approche est adaptée aux PME de Suisse romande qui veulent un partenaire impliqué, réactif, et orienté résultats.
               </p>
             </div>
           </motion.div>

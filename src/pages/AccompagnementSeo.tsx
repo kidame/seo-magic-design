@@ -81,7 +81,7 @@ const AccompagnementSeo = () => {
     "@type": "Service",
     name: "Formules de suivi SEO",
     description:
-      "Formules de suivi SEO mensuel pour PME suisses : maintenance dès CHF 250/mois, suivi visibilité CHF 590/mois, croissance CHF 1'490/mois.",
+      "Formules de suivi SEO mensuel pour PME suisses : maintenance dès CHF 250/mois, suivi visibilité CHF 590/mois, croissance CHF 1'490/mois, avec un focus SEO local.",
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
@@ -90,6 +90,7 @@ const AccompagnementSeo = () => {
     },
     areaServed: { "@type": "Place", name: "Suisse romande" },
     serviceType: "Accompagnement SEO",
+    additionalType: "SEO local",
   };
 
   const breadcrumbLd = {
@@ -240,6 +241,28 @@ const AccompagnementSeo = () => {
               </motion.div>
             ))}
           </div>
+        </section>
+
+        {/* SEO local */}
+        <section id="seo-local" className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">SEO local</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
+              SEO local pour <span className="text-gradient">PME suisses.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Le SEO local vous aide à capter les recherches de proximité au moment où un prospect cherche déjà votre service.
+                Cela passe par l'optimisation de la fiche Google Business, la cohérence des informations NAP et des pages locales solides.
+              </p>
+              <p>
+                Dans l'accompagnement KUMO, le SEO local est intégré au suivi : contrôle de visibilité locale, ajustements de contenu et amélioration continue des signaux qui comptent pour Google.
+              </p>
+              <p>
+                Cette approche est particulièrement utile pour les entreprises actives en Suisse romande, notamment à Neuchâtel, Lausanne et Genève.
+              </p>
+            </div>
+          </motion.div>
         </section>
 
         {/* Services complémentaires */}

@@ -54,8 +54,8 @@ const AuditSeo = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Audit SEO technique",
-    description: "Audit SEO technique complet : 31 points de contrôle, analyse concurrentielle et plan d'action 90 jours pour PME suisses.",
+    name: "Audit SEO de site web",
+    description: "Audit SEO de site web : 31 points de contrôle, analyse concurrentielle et plan d'action 90 jours pour PME suisses.",
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
@@ -63,7 +63,7 @@ const AuditSeo = () => {
       areaServed: { "@type": "Place", name: "Suisse romande" },
     },
     areaServed: { "@type": "Place", name: "Suisse romande" },
-    serviceType: "Audit SEO",
+    serviceType: "Audit SEO de site web",
   };
 
   const breadcrumbLd = {
@@ -79,8 +79,8 @@ const AuditSeo = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Audit SEO technique | KUMO 蜘蛛 Consultant SEO Neuchâtel"
-        description="Audit SEO technique complet : 31 points de contrôle, analyse de 3 concurrents et plan d'action 90 jours. Pour PME de Suisse romande."
+        title="Audit SEO de site web | KUMO - Consultant SEO Neuchâtel"
+        description="Audit SEO de site web complet : 31 points de contrôle, analyse de 3 concurrents et plan d'action 90 jours pour PME romandes."
         canonical="https://kumo-seo.ch/services/audit-seo"
         jsonLd={jsonLd}
       />
@@ -154,6 +154,24 @@ const AuditSeo = () => {
               </motion.div>
             ))}
           </div>
+        </section>
+
+        {/* Audit SEO de site web */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">Analyse complète</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
+              Audit SEO de votre site web : ce qui est <span className="text-gradient">analysé.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed max-w-3xl">
+              <p>
+                L'audit SEO de site web couvre les points techniques qui bloquent votre visibilité : indexation, structure des pages, performance, balises, maillage interne et signaux de qualité.
+              </p>
+              <p>
+                Vous recevez un rapport structuré avec les priorités à traiter, les quick wins à court terme et les actions de fond pour les 90 prochains jours.
+              </p>
+            </div>
+          </motion.div>
         </section>
 
         {/* Livrables */}
