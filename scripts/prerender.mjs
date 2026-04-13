@@ -51,7 +51,10 @@ async function prerender() {
   const server = await startServer(PORT);
 
   console.log("Launching browser...");
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+  });
 
   for (const route of PRERENDER_PATHS) {
     console.log(`Prerendering ${route}...`);
