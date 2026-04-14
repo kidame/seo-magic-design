@@ -96,7 +96,7 @@ const Rapport = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Rapport d'audit SEO | KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Rapport d'audit SEO | KUMO - Consultant Neuchâtel"
         description="Structure du rapport d'audit SEO KUMO : 31 points techniques, analyse de performance, étude concurrentielle et recherche de mots-clés stratégiques."
         canonical="https://kumo-seo.ch/rapport"
         jsonLd={jsonLd}

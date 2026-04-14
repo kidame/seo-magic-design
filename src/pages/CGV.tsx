@@ -20,7 +20,7 @@ const CGV = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Conditions générales de vente | KUMO 蜘蛛"
+        title="Conditions générales de vente | KUMO"
         description="Conditions générales de vente applicables aux prestations KUMO SEO. Forfaits, abonnements, paiement et droit suisse."
         canonical="https://kumo-seo.ch/cgv"
         jsonLd={jsonLd}

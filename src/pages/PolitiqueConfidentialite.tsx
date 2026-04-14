@@ -20,7 +20,7 @@ const PolitiqueConfidentialite = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Politique de confidentialité | KUMO 蜘蛛"
+        title="Politique de confidentialité | KUMO"
         description="Politique de confidentialité conforme à la nLPD suisse. Données collectées, droits des personnes et cookies."
         canonical="https://kumo-seo.ch/politique-de-confidentialite"
         jsonLd={jsonLd}

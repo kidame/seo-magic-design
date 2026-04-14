@@ -91,7 +91,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Contact | KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Contact | KUMO - Consultant SEO Neuchâtel"
         description="Contactez KUMO SEO pour un diagnostic gratuit. Consultant SEO indépendant à Neuchâtel. Réponse personnelle sous 24 heures."
         canonical="https://kumo-seo.ch/contact"
         jsonLd={jsonLd}
