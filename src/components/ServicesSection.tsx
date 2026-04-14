@@ -221,7 +221,7 @@ const ServicesSection = () => {
                   className="bg-card p-8 flex flex-col h-full"
                 >
                   {plan.badge && (
-                    <span className="inline-block text-xs font-mono text-primary border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
+                    <span className="inline-block text-xs font-mono text-primary-light border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
                       {plan.badge}
                     </span>
                   )}
@@ -233,7 +233,7 @@ const ServicesSection = () => {
                   {plan.noteSpeciale && (
                     <p className="text-xs text-primary/80 italic mb-4 leading-relaxed">{plan.noteSpeciale}</p>
                   )}
-                  <p className="text-xs text-muted-foreground/60 mb-6">Pour qui : {plan.pourQui}</p>
+                  <p className="text-xs text-muted-foreground/80 mb-6">Pour qui : {plan.pourQui}</p>
 
                   <div className="space-y-2 flex-1">
                     {siteFeatures.map((feat, j) => {
@@ -243,7 +243,7 @@ const ServicesSection = () => {
                           {typeof val === "string" ? (
                             <span className="text-xs font-mono text-gold shrink-0 min-w-[2rem] text-center">{val}</span>
                           ) : val ? (
-                            <Check size={14} className="text-primary shrink-0" />
+                            <Check size={14} className="text-primary-light shrink-0" />
                           ) : (
                             <X size={14} className="text-muted-foreground/30 shrink-0" />
                           )}
@@ -255,7 +255,7 @@ const ServicesSection = () => {
 
                   <Link
                     to="/contact"
-                    className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                    className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                   >
                     Demander un devis <ArrowRight size={14} />
                   </Link>
@@ -270,18 +270,18 @@ const ServicesSection = () => {
 
           {/* Hébergement sub-section */}
           <div className="glass-card p-6">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Hébergement et domaine</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Hébergement et domaine</p>
             <div className="grid sm:grid-cols-3 gap-4 text-sm">
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">Première année incluse dans tous les forfaits site.</span>
               </div>
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">À partir de l'année 2 : <span className="text-gold font-mono font-semibold">290 CHF/an</span> (hébergement suisse + domaine + SSL).</span>
               </div>
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">Inclus sans frais pour les clients avec une formule de suivi active.</span>
               </div>
             </div>
@@ -309,12 +309,12 @@ const ServicesSection = () => {
                 <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-3">{s.kanji} {s.title}</span>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{s.description}</p>
                 {s.note && (
-                  <p className="text-xs text-primary mb-4">{s.note}</p>
+                  <p className="text-xs text-primary-light mb-4">{s.note}</p>
                 )}
                 <p className="text-xs text-muted-foreground mb-4">Pour qui : {s.pourQui}</p>
                 <div className="border-t border-border/50 pt-4 mt-auto">
                   <div className="text-gold font-mono font-bold text-lg mb-3">CHF {s.price}.–</div>
-                  <Link to={s.link} className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+                  <Link to={s.link} className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
                     En savoir plus <ArrowRight size={14} />
                   </Link>
                 </div>
@@ -345,7 +345,7 @@ const ServicesSection = () => {
                     transition={{ delay: i * 0.1 }}
                     className="bg-card p-6 flex flex-col"
                   >
-                    <span className="font-mono text-xs text-primary uppercase tracking-wider mb-2">{n.complexite}</span>
+                    <span className="font-mono text-xs text-primary-light uppercase tracking-wider mb-2">{n.complexite}</span>
                     <div className="text-gold font-mono font-bold text-xl mb-2">{n.prix.startsWith("À") ? n.prix : `CHF ${n.prix}.–`}</div>
                     <p className="text-xs text-muted-foreground leading-relaxed">{n.profil}</p>
                   </motion.div>
@@ -353,11 +353,11 @@ const ServicesSection = () => {
               </div>
 
               {/* Ce qui est inclus */}
-              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-4">Ce qui est inclus</p>
+              <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-4">Ce qui est inclus</p>
               <div className="grid sm:grid-cols-2 gap-2 mb-8">
                 {mandatInclus.map((item) => (
                   <div key={item} className="flex items-start gap-2">
-                    <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                    <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                     <span className="text-xs text-muted-foreground">{item}</span>
                   </div>
                 ))}
@@ -369,7 +369,7 @@ const ServicesSection = () => {
 
               {/* Encadré exemple */}
               <div className="border border-primary/20 rounded-lg p-5 bg-primary/5">
-                <p className="font-mono text-xs text-primary uppercase tracking-wider mb-2">Exemple de projet complet</p>
+                <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-2">Exemple de projet complet</p>
                 <p className="text-sm text-muted-foreground mb-2">
                   Audit (1'200) + Mandat 90j élevé (4'500) + Suivi 6 mois (6 × 590)
                 </p>
@@ -406,7 +406,7 @@ const ServicesSection = () => {
                   className="bg-card p-8 flex flex-col h-full"
                 >
                   {plan.badge && (
-                    <span className="inline-block text-xs font-mono text-primary border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
+                    <span className="inline-block text-xs font-mono text-primary-light border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
                       {plan.badge}
                     </span>
                   )}
@@ -422,7 +422,7 @@ const ServicesSection = () => {
                   <div className="space-y-2 flex-1">
                     {plan.features.map((f) => (
                       <div key={f} className="flex items-start gap-2">
-                        <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                        <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                         <span className="text-xs text-muted-foreground">{f}</span>
                       </div>
                     ))}
@@ -430,7 +430,7 @@ const ServicesSection = () => {
 
                   <Link
                     to="/contact"
-                    className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                    className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                   >
                     Souscrire <ArrowRight size={14} />
                   </Link>
@@ -441,7 +441,7 @@ const ServicesSection = () => {
 
           {/* Sprint ponctuel */}
           <div className="border border-primary/20 rounded-lg p-5 bg-primary/5 mb-8">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-1">Sprint ponctuel</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-1">Sprint ponctuel</p>
             <p className="text-sm text-muted-foreground">
               Disponible pour les clients Suivi. Besoin d'une action supplémentaire ponctuellement ? Ajoutez un sprint d'optimisation à{" "}
               <span className="text-gold font-mono font-semibold">450 CHF</span>, sans engagement.
@@ -450,17 +450,17 @@ const ServicesSection = () => {
 
           {/* Modifications */}
           <div className="glass-card p-6">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Vos demandes de modifications</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Vos demandes de modifications</p>
             <p className="text-sm text-muted-foreground mb-4">
               Votre site est codé sur-mesure pour la performance et la sécurité. Pour toute modification, vous disposez d'un espace de demandes dédié avec un délai de traitement de 48h.
             </p>
             <div className="space-y-2">
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-xs text-muted-foreground">Les petites modifications (textes, horaires, coordonnées) sont incluses dans votre formule (30 min/mois).</span>
               </div>
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-xs text-muted-foreground">Au-delà : <span className="text-gold font-mono">150 CHF/h</span> (minimum facturé 30 min = 75 CHF).</span>
               </div>
             </div>
@@ -503,14 +503,14 @@ const ServicesSection = () => {
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
               {supplementCategories.map((cat) => (
-                <span key={cat} className="font-mono text-xs text-primary border border-primary/20 rounded px-3 py-1">
+                <span key={cat} className="font-mono text-xs text-primary-light border border-primary/20 rounded px-3 py-1">
                   {cat}
                 </span>
               ))}
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary-light transition-colors"
             >
               Discutons de votre projet <ArrowRight className="w-4 h-4" />
             </Link>
@@ -528,7 +528,7 @@ const ServicesSection = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Tarifs clairs */}
             <div className="glass-card p-6">
-              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Tarifs clairs et précis</p>
+              <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Tarifs clairs et précis</p>
               <p className="text-sm text-muted-foreground">
                 Chaque projet démarre par un diagnostic complet et un listing détaillé des tâches à réaliser. Vous recevez un planning clair avant de vous engager : vous savez exactement ce qui est prévu, dans quel ordre, et pour quel résultat.
               </p>
@@ -536,7 +536,7 @@ const ServicesSection = () => {
 
             {/* Délais */}
             <div className="glass-card p-6">
-              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Délais</p>
+              <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Délais</p>
               <p className="text-sm text-muted-foreground">
                 Un site de 4 à 8 pages est livré en 3 à 5 semaines. Le principal facteur de délai : la réception de vos éléments.
               </p>
@@ -544,7 +544,7 @@ const ServicesSection = () => {
 
             {/* Conditions de paiement */}
             <div className="glass-card p-6">
-              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Conditions de paiement</p>
+              <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Conditions de paiement</p>
               <div className="space-y-2">
                 {[
                   "Création de site : 40 % à la signature, 60 % à la livraison",
@@ -552,7 +552,7 @@ const ServicesSection = () => {
                   "Abonnements : facturation mensuelle",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2">
-                    <span className="text-primary font-mono text-xs shrink-0 mt-0.5">→</span>
+                    <span className="text-primary-light font-mono text-xs shrink-0 mt-0.5">→</span>
                     <span className="text-sm text-muted-foreground">{item}</span>
                   </div>
                 ))}
@@ -561,7 +561,7 @@ const ServicesSection = () => {
 
             {/* Interlocuteur unique */}
             <div className="glass-card p-6">
-              <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Un interlocuteur unique</p>
+              <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Un interlocuteur unique</p>
               <p className="text-sm text-muted-foreground">
                 Pas d'agence complexe. Un seul contact, des échanges simples, un suivi direct.
               </p>
@@ -570,7 +570,7 @@ const ServicesSection = () => {
 
           {/* Déroulement du projet */}
           <div className="glass-card p-6 md:p-8">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-6">Comment se déroule un projet</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-6">Comment se déroule un projet</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {etapes.map((e) => (
                 <div key={e.num} className="flex items-start gap-3">

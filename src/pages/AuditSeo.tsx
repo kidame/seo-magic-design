@@ -149,7 +149,7 @@ const AuditSeo = () => {
                 transition={{ delay: i * 0.05 }}
                 className="flex items-center gap-3 glass-card p-4"
               >
-                <Check size={16} className="text-primary shrink-0" />
+                <Check size={16} className="text-primary-light shrink-0" />
                 <span className="text-sm">{cp}</span>
               </motion.div>
             ))}
@@ -221,7 +221,7 @@ const AuditSeo = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card p-6 flex flex-col"
               >
-                <span className="font-mono text-xs text-primary uppercase tracking-wider mb-2">{n.complexite}</span>
+                <span className="font-mono text-xs text-primary-light uppercase tracking-wider mb-2">{n.complexite}</span>
                 <div className="text-gold font-mono font-bold text-xl mb-2">
                   {n.prix.startsWith("À") ? n.prix : `CHF ${n.prix}.–`}
                 </div>
@@ -231,11 +231,11 @@ const AuditSeo = () => {
           </div>
 
           <div className="glass-card p-6 mb-6">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-4">Ce qui est inclus</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-4">Ce qui est inclus</p>
             <div className="grid sm:grid-cols-2 gap-2 mb-4">
               {mandatInclus.map((item) => (
                 <div key={item} className="flex items-start gap-2">
-                  <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                  <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                   <span className="text-xs text-muted-foreground">{item}</span>
                 </div>
               ))}

@@ -6,7 +6,6 @@ import CookieConsent from "@/components/CookieConsent";
 import GtmScript from "@/components/GtmScript";
 
 const Aurora = lazy(() => import("@/components/ui/aurora"));
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 const Index = lazy(() => import("./pages/Index.tsx"));
@@ -40,6 +39,12 @@ const App = () => {
   const [auroraReady, setAuroraReady] = useState(false);
 
   useEffect(() => {
+    const probe = document.createElement("canvas");
+    const supportsWebGL = !!(
+      probe.getContext("webgl") || probe.getContext("experimental-webgl")
+    );
+    if (!supportsWebGL) return;
+
     const schedule =
       window.requestIdleCallback ||
       ((cb: () => void) => window.setTimeout(cb, 1500));
@@ -57,7 +62,6 @@ const App = () => {
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
       {auroraReady && (
         <Suspense fallback={null}>
           <div className="fixed inset-0 -z-10 opacity-60">

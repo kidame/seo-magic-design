@@ -178,7 +178,7 @@ const AccompagnementSeo = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card p-6 flex flex-col"
               >
-                <span className="font-mono text-xs text-primary uppercase tracking-wider mb-2">{n.complexite}</span>
+                <span className="font-mono text-xs text-primary-light uppercase tracking-wider mb-2">{n.complexite}</span>
                 <div className="text-gold font-mono font-bold text-xl mb-2">
                   {n.prix.startsWith("À") ? n.prix : `CHF ${n.prix}.–`}
                 </div>
@@ -188,11 +188,11 @@ const AccompagnementSeo = () => {
           </div>
 
           <div className="glass-card p-6">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-4">Ce qui est inclus</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-4">Ce qui est inclus</p>
             <div className="grid sm:grid-cols-2 gap-2">
               {mandatInclus.map((item) => (
                 <div key={item} className="flex items-start gap-2">
-                  <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                  <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                   <span className="text-xs text-muted-foreground">{item}</span>
                 </div>
               ))}
@@ -230,7 +230,7 @@ const AccompagnementSeo = () => {
                 <ul className="space-y-3 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                      <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                       {f}
                     </li>
                   ))}

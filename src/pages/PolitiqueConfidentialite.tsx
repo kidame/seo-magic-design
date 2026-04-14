@@ -141,13 +141,13 @@ const PolitiqueConfidentialite = () => {
               </p>
               <p className="mt-2">
                 PFPDT, Feldeggweg 1, 3003 Berne, Suisse<br />
-                <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:underline">
                   www.edoeb.admin.ch
                 </a>
               </p>
             </section>
 
-            <p className="text-sm text-muted-foreground/60 pt-6 border-t border-border/30">
+            <p className="text-sm text-muted-foreground/80 pt-6 border-t border-border/30">
               Dernière mise à jour : mars 2026
             </p>
           </div>

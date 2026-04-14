@@ -24,7 +24,7 @@ const CreerSiteInternet2026 = () => (
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Si votre prestataire commence par le design sans avoir fait ce travail, vous construisez une maison sans fondations. Chez KUMO, l'{" "}
-      <Link to="/services/creation-site-web" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">étude stratégique</Link>{" "}
+      <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">étude stratégique</Link>{" "}
       est la première étape de tout projet de site. Elle est même créditée intégralement si vous confirmez la création du site, parce que nous considérons qu'elle est indispensable, pas optionnelle.
     </p>
 
@@ -72,7 +72,7 @@ const CreerSiteInternet2026 = () => (
 
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">5. Exigez les balises SEO et les données structurées</h2>
     <p className="text-muted-foreground leading-relaxed">
-      Chaque page de votre site doit avoir un titre SEO unique (la balise <code className="bg-card px-1.5 py-0.5 rounded text-sm font-mono text-primary">title</code>), une méta-description engageante, un titre H1 cohérent avec le mot-clé ciblé, et une structure de titres logique (H2, H3) qui organise le contenu.
+      Chaque page de votre site doit avoir un titre SEO unique (la balise <code className="bg-card px-1.5 py-0.5 rounded text-sm font-mono text-primary-light">title</code>), une méta-description engageante, un titre H1 cohérent avec le mot-clé ciblé, et une structure de titres logique (H2, H3) qui organise le contenu.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Au-delà de ces fondamentaux, les données structurées (balisage Schema.org) permettent à Google de mieux comprendre votre contenu et d'afficher des résultats enrichis : étoiles d'avis, horaires d'ouverture, FAQ dépliables directement dans les résultats de recherche.
@@ -110,9 +110,9 @@ const CreerSiteInternet2026 = () => (
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Notre offre{" "}
-      <Link to="/services/creation-site-web" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">Site Premium</Link>{" "}
+      <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Site Premium</Link>{" "}
       inclut 3 mois d'accompagnement post-lancement précisément pour cette raison. Pour les sites Essentiel et Pro, un{" "}
-      <Link to="/services/accompagnement-seo" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">retainer de suivi</Link>{" "}
+      <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">retainer de suivi</Link>{" "}
       mensuel peut prendre le relais.
     </p>
 
@@ -169,7 +169,7 @@ const CreerSiteInternet2026 = () => (
 
     <p className="text-muted-foreground leading-relaxed italic">
       Vous préparez un projet de site web pour votre entreprise ?{" "}
-      <Link to="/contact" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">Discutons-en</Link>{" "}
+      <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Discutons-en</Link>{" "}
       pour évaluer vos besoins et vous proposer une approche sur-mesure.
     </p>
   </div>

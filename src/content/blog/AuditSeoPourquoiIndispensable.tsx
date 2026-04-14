@@ -48,7 +48,7 @@ const AuditSeoPourquoiIndispensable = () => (
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Pour les PME suisses, l'analyse du contenu révèle souvent le même constat : des pages qui parlent de l'entreprise mais pas des problèmes que ses clients cherchent à résoudre. C'est la raison pour laquelle tant de sites professionnels restent{" "}
-      <Link to="/blog/site-invisible-google-pme-suisse" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">invisibles sur Google</Link>.
+      <Link to="/blog/site-invisible-google-pme-suisse" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">invisibles sur Google</Link>.
     </p>
 
     <h3 className="text-lg font-semibold mt-8 mb-3">Analyse de la concurrence - 5 points</h3>
@@ -90,12 +90,12 @@ const AuditSeoPourquoiIndispensable = () => (
     <h2 className="text-xl md:text-2xl font-bold mt-12 mb-4">Combien coûte un audit SEO</h2>
     <p className="text-muted-foreground leading-relaxed">
       Chez KUMO, l'{" "}
-      <Link to="/services/audit-seo" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
+      <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
       est proposé à CHF 1'200 forfaitaire. Ce prix est fixe et inclut l'intégralité du protocole de 31 points, le rapport interactif, le plan d'action 90 jours et l'appel de restitution.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Ce qu'il n'inclut pas : la mise en oeuvre des recommandations. L'audit vous dit quoi faire et dans quel ordre. L'exécution est une étape séparée que vous pouvez réaliser vous-même, confier à votre développeur, ou nous déléguer via un{" "}
-      <Link to="/services/accompagnement-seo" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">mandat d'accompagnement</Link>.
+      <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">mandat d'accompagnement</Link>.
     </p>
     <p className="text-muted-foreground leading-relaxed">
       À titre de comparaison, les agences SEO en Suisse facturent généralement entre 3 000 et 5 000 CHF pour un audit de profondeur similaire. Certains outils automatiques proposent des « audits » gratuits ou à bas prix, mais ils se limitent à un scan technique de surface sans analyse humaine ni plan d'action contextualisé.
@@ -110,7 +110,7 @@ const AuditSeoPourquoiIndispensable = () => (
     </p>
     <p className="text-muted-foreground leading-relaxed">
       Quand votre trafic baisse. Une chute de trafic peut avoir de nombreuses causes : pénalité Google, problème technique, changement d'algorithme (comme la{" "}
-      <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">mise à jour de mars 2026</Link>
+      <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">mise à jour de mars 2026</Link>
       ), ou simplement des concurrents qui vous dépassent. L'audit identifie la cause réelle au lieu de deviner.
     </p>
     <p className="text-muted-foreground leading-relaxed">
@@ -140,7 +140,7 @@ const AuditSeoPourquoiIndispensable = () => (
     <h3 className="text-lg font-semibold mt-8 mb-3">Quelle est la différence entre un audit SEO gratuit et un audit payant ?</h3>
     <p className="text-muted-foreground leading-relaxed">
       Un « audit gratuit » est généralement un scan automatique limité aux aspects techniques de surface. Il ne couvre ni l'analyse de contenu, ni la concurrence, ni l'autorité. Un audit payant professionnel inclut une analyse humaine complète, une interprétation contextuelle et un plan d'action personnalisé. Le{" "}
-      <Link to="/blog/freelance-seo-vs-agence-suisse" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">choix du prestataire</Link>{" "}
+      <Link to="/blog/freelance-seo-vs-agence-suisse" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">choix du prestataire</Link>{" "}
       (freelance ou agence) influence aussi la profondeur de l'analyse.
     </p>
 
@@ -152,7 +152,7 @@ const AuditSeoPourquoiIndispensable = () => (
     <h3 className="text-lg font-semibold mt-8 mb-3">Puis-je mettre en oeuvre les recommandations moi-même ?</h3>
     <p className="text-muted-foreground leading-relaxed">
       Oui. Le rapport et le plan d'action sont rédigés pour être compréhensibles par un non-spécialiste. Certaines actions techniques nécessiteront l'intervention d'un développeur, mais les recommandations de contenu et de structure peuvent souvent être mises en oeuvre en interne. Si vous préférez déléguer, KUMO propose des formules d'{" "}
-      <Link to="/services/accompagnement-seo" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement mensuel</Link>{" "}
+      <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement mensuel</Link>{" "}
       pour la mise en oeuvre.
     </p>
 
@@ -160,9 +160,9 @@ const AuditSeoPourquoiIndispensable = () => (
 
     <p className="text-muted-foreground leading-relaxed italic">
       Vous voulez savoir exactement où en est votre site ?{" "}
-      <Link to="/services/audit-seo" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">Découvrez l'audit SEO KUMO</Link>{" "}
+      <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Découvrez l'audit SEO KUMO</Link>{" "}
       ou{" "}
-      <Link to="/contact" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>{" "}
+      <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>{" "}
       pour en discuter.
     </p>
   </div>

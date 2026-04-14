@@ -145,10 +145,10 @@ const Contact = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card p-6"
               >
-                <span className="font-jp text-xl text-primary">{item.kanji}</span>
+                <span className="font-jp text-xl text-primary-light">{item.kanji}</span>
                 <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mt-2 mb-1">{item.label}</p>
                 {item.href ? (
-                  <a href={item.href} className="text-sm font-medium hover:text-primary transition-colors">{item.value}</a>
+                  <a href={item.href} className="text-sm font-medium hover:text-primary-light transition-colors">{item.value}</a>
                 ) : (
                   <p className="text-sm font-medium">{item.value}</p>
                 )}
@@ -259,7 +259,7 @@ const Contact = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card p-6"
               >
-                <span className="font-mono text-xs text-primary">{s.step}</span>
+                <span className="font-mono text-xs text-primary-light">{s.step}</span>
                 <h3 className="font-bold mt-2 mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </motion.div>
@@ -273,13 +273,13 @@ const Contact = () => {
             viewport={{ once: true }}
             className="mt-12 flex flex-wrap justify-center gap-4"
           >
-            <Link to="/services/audit-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/audit-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Audit SEO <ArrowRight size={14} />
             </Link>
-            <Link to="/services/creation-site-web" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/creation-site-web" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Création de site <ArrowRight size={14} />
             </Link>
-            <Link to="/services/accompagnement-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Accompagnement SEO <ArrowRight size={14} />
             </Link>
           </motion.div>

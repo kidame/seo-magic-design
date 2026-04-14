@@ -55,7 +55,7 @@ const CaseStudySection = () => {
           viewport={{ once: true }}
           className="text-center mt-10"
         >
-          <a href="#contact" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <a href="#contact" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             Demander votre propre diagnostic <ArrowRight size={14} />
           </a>
         </motion.div>

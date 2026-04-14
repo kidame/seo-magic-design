@@ -156,7 +156,7 @@ const Rapport = () => {
                 <ul className="space-y-2">
                   {bloc.items.map((item) => (
                     <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <span className="text-primary mt-1 text-xs">&#9632;</span>
+                      <span className="text-primary-light mt-1 text-xs">&#9632;</span>
                       {item}
                     </li>
                   ))}

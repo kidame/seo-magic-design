@@ -164,7 +164,7 @@ const BlogPost = () => {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <span className="inline-block font-mono text-[11px] uppercase tracking-[0.15em] text-primary mb-4">
+            <span className="inline-block font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-4">
               {post.category}
             </span>
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
@@ -216,10 +216,10 @@ const BlogPost = () => {
                   className="group flex-1 glass-card rounded-xl p-5 transition-all duration-300 hover:border-primary/30"
                   rel="prev"
                 >
-                  <span className="text-xs text-muted-foreground/60 flex items-center gap-1 mb-2">
+                  <span className="text-xs text-muted-foreground/80 flex items-center gap-1 mb-2">
                     <ArrowLeft size={12} aria-hidden="true" /> Article précédent
                   </span>
-                  <span className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
+                  <span className="text-sm font-medium group-hover:text-primary-light transition-colors line-clamp-2">
                     {prevPost.title}
                   </span>
                 </Link>
@@ -230,10 +230,10 @@ const BlogPost = () => {
                   className="group flex-1 glass-card rounded-xl p-5 text-right transition-all duration-300 hover:border-primary/30"
                   rel="next"
                 >
-                  <span className="text-xs text-muted-foreground/60 flex items-center justify-end gap-1 mb-2">
+                  <span className="text-xs text-muted-foreground/80 flex items-center justify-end gap-1 mb-2">
                     Article suivant <ArrowRight size={12} aria-hidden="true" />
                   </span>
-                  <span className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
+                  <span className="text-sm font-medium group-hover:text-primary-light transition-colors line-clamp-2">
                     {nextPost.title}
                   </span>
                 </Link>
@@ -243,7 +243,7 @@ const BlogPost = () => {
 
           {/* CTA */}
           <aside className="mt-12 glass-card rounded-xl p-8 md:p-10 text-center" aria-label="Appel à l'action">
-            <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary mb-3">
+            <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-3">
               Besoin d'un diagnostic ?
             </p>
             <h2 className="text-xl md:text-2xl font-bold mb-3">

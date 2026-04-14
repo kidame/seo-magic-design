@@ -265,19 +265,19 @@ const ConsultantSeoGeneve = () => {
                 transition={{ delay: i * 0.05 }}
                 className="flex items-center gap-3 glass-card p-4"
               >
-                <Check size={16} className="text-primary shrink-0" />
+                <Check size={16} className="text-primary-light shrink-0" />
                 <span className="text-sm">{item}</span>
               </motion.div>
             ))}
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link to="/consultant-seo-lausanne" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-lausanne" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO Lausanne <ArrowRight size={14} />
             </Link>
-            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               SEO local pour PME genevoises <ArrowRight size={14} />
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
           </div>

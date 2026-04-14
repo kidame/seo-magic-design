@@ -117,16 +117,16 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="mt-12 flex flex-wrap justify-center gap-4"
         >
-          <Link to="/services/audit-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <Link to="/services/audit-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             Audit SEO <ArrowRight size={14} />
           </Link>
-          <Link to="/services/creation-site-web" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <Link to="/services/creation-site-web" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             Création de site <ArrowRight size={14} />
           </Link>
-          <Link to="/services/accompagnement-seo" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <Link to="/services/accompagnement-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             Accompagnement SEO <ArrowRight size={14} />
           </Link>
-          <Link to="/faq" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <Link to="/faq" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             Toutes les questions <ArrowRight size={14} />
           </Link>
         </motion.div>

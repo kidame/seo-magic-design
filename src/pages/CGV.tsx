@@ -170,7 +170,7 @@ const CGV = () => {
               </p>
             </section>
 
-            <p className="text-sm text-muted-foreground/60 pt-6 border-t border-border/30">
+            <p className="text-sm text-muted-foreground/80 pt-6 border-t border-border/30">
               Dernière mise à jour : avril 2026
             </p>
           </div>

@@ -62,7 +62,7 @@ const ProcessSection = () => {
               <ParallaxLayer speed={0.12} disableOnMobile>
                 <span className="text-5xl font-bold text-primary/30 font-mono block mb-2" aria-hidden="true">{step.number}</span>
               </ParallaxLayer>
-              <span className="font-jp text-xs text-primary block mb-3" aria-hidden="true">{step.kanji}</span>
+              <span className="font-jp text-xs text-primary-light block mb-3" aria-hidden="true">{step.kanji}</span>
               <h3 className="text-lg font-bold mb-2">{step.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
             </motion.li>

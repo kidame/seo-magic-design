@@ -180,7 +180,7 @@ const CreationSiteWeb = () => {
                 transition={{ delay: i * 0.05 }}
                 className="flex items-center gap-3 glass-card p-4"
               >
-                <Check size={16} className="text-primary shrink-0" />
+                <Check size={16} className="text-primary-light shrink-0" />
                 <span className="text-sm">{item}</span>
               </motion.div>
             ))}
@@ -232,7 +232,7 @@ const CreationSiteWeb = () => {
                 className={`bg-card border rounded-lg p-8 flex flex-col ${plan.featured ? "border-primary/30 ring-1 ring-primary/20" : "border-border/50"}`}
               >
                 {plan.badge && (
-                  <span className="inline-block text-xs font-mono text-primary border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
+                  <span className="inline-block text-xs font-mono text-primary-light border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
                     {plan.badge}
                   </span>
                 )}
@@ -244,7 +244,7 @@ const CreationSiteWeb = () => {
                 {plan.noteSpeciale && (
                   <p className="text-xs text-primary/80 italic mb-4 leading-relaxed">{plan.noteSpeciale}</p>
                 )}
-                <p className="text-xs text-muted-foreground/60 mb-6">Pour qui : {plan.pourQui}</p>
+                <p className="text-xs text-muted-foreground/80 mb-6">Pour qui : {plan.pourQui}</p>
 
                 <div className="space-y-2 flex-1">
                   {siteFeatures.map((feat, j) => {
@@ -254,7 +254,7 @@ const CreationSiteWeb = () => {
                         {typeof val === "string" ? (
                           <span className="text-xs font-mono text-gold shrink-0 min-w-[2rem] text-center">{val}</span>
                         ) : val ? (
-                          <Check size={14} className="text-primary shrink-0" />
+                          <Check size={14} className="text-primary-light shrink-0" />
                         ) : (
                           <X size={14} className="text-muted-foreground/30 shrink-0" />
                         )}
@@ -266,7 +266,7 @@ const CreationSiteWeb = () => {
 
                 <Link
                   to="/contact"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
+                  className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                 >
                   Demander un devis <ArrowRight size={14} />
                 </Link>
@@ -283,18 +283,18 @@ const CreationSiteWeb = () => {
 
           {/* Hébergement sub-section */}
           <div className="glass-card p-6">
-            <p className="font-mono text-xs text-primary uppercase tracking-wider mb-3">Hébergement et domaine</p>
+            <p className="font-mono text-xs text-primary-light uppercase tracking-wider mb-3">Hébergement et domaine</p>
             <div className="grid sm:grid-cols-3 gap-4 text-sm">
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">Première année incluse dans tous les forfaits site.</span>
               </div>
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">À partir de l'année 2 : <span className="text-gold font-mono font-semibold">290 CHF/an</span> (hébergement suisse + domaine + SSL).</span>
               </div>
               <div className="flex items-start gap-2">
-                <Check size={14} className="text-primary shrink-0 mt-0.5" />
+                <Check size={14} className="text-primary-light shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">Inclus sans frais pour les clients avec une formule de suivi active.</span>
               </div>
             </div>

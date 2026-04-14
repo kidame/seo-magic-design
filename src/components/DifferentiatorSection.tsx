@@ -64,11 +64,11 @@ const DifferentiatorSection = () => {
               viewport={{ once: true }}
               className="glass-card p-6 border-primary/20"
             >
-              <h3 className="font-mono text-sm text-primary uppercase tracking-wider mb-6">KUMO</h3>
+              <h3 className="font-mono text-sm text-primary-light uppercase tracking-wider mb-6">KUMO</h3>
               <div className="space-y-4">
                 {us.map((u, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="text-primary font-mono text-sm shrink-0">→</span>
+                    <span className="text-primary-light font-mono text-sm shrink-0">→</span>
                     <p className="text-sm text-foreground">{u}</p>
                   </div>
                 ))}
@@ -77,7 +77,7 @@ const DifferentiatorSection = () => {
           </ParallaxLayer>
         </div>
         <div className="mt-8 text-center">
-          <Link to="/a-propos" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <Link to="/a-propos" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             En savoir plus sur le freelance SEO KUMO
           </Link>
         </div>

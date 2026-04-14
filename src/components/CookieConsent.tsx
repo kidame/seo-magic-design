@@ -17,7 +17,7 @@ const CookieConsent = ({ onAccept, onRefuse }: CookieConsentProps) => {
           Ce site utilise Google Analytics pour améliorer votre expérience. Aucune donnée personnelle n'est revendue.{" "}
           <Link
             to="/politique-de-confidentialite"
-            className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+            className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors"
           >
             En savoir plus
           </Link>

@@ -67,8 +67,8 @@ function startServer(port) {
 }
 
 function buildSite() {
-  console.log("Building site...");
-  execSync("npx vite build", {
+  console.log("Building site (with prerender)...");
+  execSync("npm run build:prerender", {
     cwd: resolve(__dirname, ".."),
     stdio: "inherit",
   });
@@ -101,6 +101,16 @@ async function runAudits(serverPort) {
       const config = formFactor === "desktop" ? desktopConfig : undefined;
 
       const runnerResult = await lighthouse(url, flags, config);
+
+      if (runnerResult.lhr.runtimeError) {
+        const { code, message } = runnerResult.lhr.runtimeError;
+        console.warn(`  runtime error: ${code} - ${message}`);
+      }
+      if (runnerResult.lhr.runWarnings && runnerResult.lhr.runWarnings.length > 0) {
+        for (const w of runnerResult.lhr.runWarnings) {
+          console.warn(`  warning: ${w}`);
+        }
+      }
 
       const categories = runnerResult.lhr.categories;
       const getScore = (cat) => cat?.score != null ? Math.round(cat.score * 100) : "N/A";

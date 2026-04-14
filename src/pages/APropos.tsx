@@ -125,7 +125,7 @@ const APropos = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card p-8"
               >
-                <span className="font-jp text-3xl text-primary mb-4 block">{v.kanji}</span>
+                <span className="font-jp text-3xl text-primary-light mb-4 block">{v.kanji}</span>
                 <h3 className="font-bold text-lg mb-2">{v.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
               </motion.div>

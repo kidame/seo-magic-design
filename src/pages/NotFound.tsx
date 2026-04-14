@@ -24,7 +24,7 @@ const NotFound = () => {
       <Navbar />
       <main className="pt-32 md:pt-40 pb-24 md:pb-40">
         <div className="container max-w-2xl mx-auto px-4 text-center">
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary mb-4">
+          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-4">
             Erreur 404
           </p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -41,7 +41,7 @@ const NotFound = () => {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+                    className="text-sm text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors"
                   >
                     {link.label}
                   </Link>

@@ -50,7 +50,7 @@ const Navbar = () => {
       >
         <div className="flex h-12 md:h-14 items-center justify-between px-5 md:px-6">
           <Link to="/" className="font-body text-lg font-bold tracking-tight text-foreground shrink-0" aria-label="KUMO, accueil">
-            KUMO <span className="font-jp text-primary" aria-hidden="true">蜘蛛</span>
+            KUMO <span className="font-jp text-primary-light" aria-hidden="true">蜘蛛</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-7">

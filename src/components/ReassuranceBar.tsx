@@ -20,7 +20,7 @@ const ReassuranceBar = () => {
         <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           {items.map((item) => (
             <div key={item.text} className="flex items-center gap-2">
-              <span className="font-jp text-primary text-sm">{item.kanji}</span>
+              <span className="font-jp text-primary-light text-sm">{item.kanji}</span>
               <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">{item.text}</span>
             </div>
           ))}

@@ -251,16 +251,16 @@ const ConsultantSeoNeuchatel = () => {
                 transition={{ delay: i * 0.03 }}
                 className="flex items-center gap-3 glass-card p-4"
               >
-                <Check size={16} className="text-primary shrink-0" />
+                <Check size={16} className="text-primary-light shrink-0" />
                 <span className="text-sm">{z}</span>
               </motion.div>
             ))}
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link to="/consultant-seo-la-chaux-de-fonds" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-la-chaux-de-fonds" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO La Chaux-de-Fonds <ArrowRight size={14} />
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
           </div>
