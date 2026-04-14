@@ -98,7 +98,7 @@ const ConsultantSeoNeuchatel = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Consultant SEO à Neuchâtel - Audit & Création Web | KUMO"
+        title="Consultant SEO Neuchâtel - Audit & Création Web | KUMO"
         description="Consultant SEO indépendant à Neuchâtel. Audit SEO 31 points, création de site web sur-mesure, accompagnement mensuel. Forfait fixe pour PME neuchâteloises."
         canonical="https://kumo-seo.ch/consultant-seo-neuchatel"
         jsonLd={jsonLd}

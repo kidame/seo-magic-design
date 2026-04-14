@@ -115,7 +115,7 @@ const ConsultantSeoLausanne = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Consultant SEO à Lausanne - Audit & Référencement | KUMO"
+        title="Consultant SEO Lausanne - Audit & Référencement | KUMO"
         description="Consultant SEO pour entreprises lausannoises. Audit SEO complet, création web sur-mesure, suivi mensuel. Intervention à distance ou sur place. Forfait fixe."
         canonical="https://kumo-seo.ch/consultant-seo-lausanne"
         jsonLd={jsonLd}

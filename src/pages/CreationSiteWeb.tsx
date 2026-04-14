@@ -111,7 +111,7 @@ const CreationSiteWeb = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Création de site web sur-mesure | KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Création de site web sur-mesure | KUMO Neuchâtel"
         description="Site web sur-mesure en code : 3 forfaits dès CHF 3'900. Performance 90+ PageSpeed, SEO intégré dès la conception. Pour PME suisses."
         canonical="https://kumo-seo.ch/services/creation-site-web"
         jsonLd={jsonLd}

@@ -42,7 +42,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Blog SEO - Conseils référencement pour PME suisses | KUMO"
+        title="Blog SEO - Conseils référencement PME suisses | KUMO"
         description="Articles SEO pratiques pour PME de Suisse romande. Référencement naturel, création de site, visibilité Google. Par un consultant SEO indépendant à Neuchâtel."
         canonical="https://kumo-seo.ch/blog"
         jsonLd={blogJsonLd}

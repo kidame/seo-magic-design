@@ -41,7 +41,7 @@ const Resultats = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="Résultats & études de cas | KUMO 蜘蛛 Consultant SEO Neuchâtel"
+        title="Résultats & études de cas SEO | KUMO Neuchâtel"
         description="Études de cas et résultats concrets d'accompagnement SEO pour PME suisses romandes. Bientôt disponible."
         canonical="https://kumo-seo.ch/resultats"
         jsonLd={jsonLd}
