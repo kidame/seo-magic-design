@@ -64,7 +64,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SeoHead
-        title="KUMO | Audit SEO & Création Web sur-mesure (Neuchâtel, Suisse romande)"
+        title="KUMO - Consultant SEO & Création Web | Neuchâtel"
         description="Audit SEO & création web sur-mesure à Neuchâtel. Rapport interactif, plan 90 jours, forfait fixe. Pour PME de Suisse romande."
         canonical="https://kumo-seo.ch/"
         jsonLd={homepageJsonLd}

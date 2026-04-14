@@ -111,7 +111,7 @@ const BlurText = ({
             }
           >
             {segment === " " ? "\u00A0" : segment}
-            {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
+            {animateBy === "words" && index < elements.length - 1 && " "}
           </motion.span>
         );
       })}
