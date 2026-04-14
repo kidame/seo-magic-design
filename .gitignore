@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .env
 lighthouse-reports
+lighthouse-reports-vercel
 
 # Editor directories and files
 .vscode/*
