@@ -89,7 +89,15 @@ const BlurText = ({
   const MotionTag = motion[Tag] as any;
 
   return (
-    <MotionTag ref={ref} className={className} style={{ display: "flex", flexWrap: "wrap" }}>
+    <MotionTag
+      ref={ref}
+      className={className}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: animateBy === "words" ? "0.25em" : undefined,
+      }}
+    >
       {elements.map((segment: string, index: number) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
         const spanTransition = {
@@ -111,7 +119,6 @@ const BlurText = ({
             }
           >
             {segment === " " ? "\u00A0" : segment}
-            {animateBy === "words" && index < elements.length - 1 && " "}
           </motion.span>
         );
       })}
