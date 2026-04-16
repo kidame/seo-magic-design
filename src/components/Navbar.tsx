@@ -49,7 +49,8 @@ const Navbar = () => {
         aria-label="Navigation principale"
       >
         <div className="flex h-12 md:h-14 items-center justify-between px-5 md:px-6">
-          <Link to="/" className="font-body text-lg font-bold tracking-tight text-foreground shrink-0" aria-label="KUMO, accueil">
+          <Link to="/" className="font-body text-lg font-bold tracking-tight text-foreground shrink-0 flex items-center gap-2" aria-label="KUMO, accueil">
+            <span className="neon-dot" aria-hidden="true" />
             KUMO <span className="font-jp text-primary-light" aria-hidden="true">蜘蛛</span>
           </Link>
 

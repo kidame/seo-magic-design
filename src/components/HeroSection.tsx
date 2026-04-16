@@ -49,6 +49,7 @@ const HeroSection = () => {
         >
           <Button variant="hero" size="lg" className="rounded-full" asChild>
             <a href="#contact">
+              <span className="neon-dot" aria-hidden="true" />
               Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
             </a>
           </Button>

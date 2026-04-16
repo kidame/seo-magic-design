@@ -13,7 +13,7 @@ const MagicCard = ({
   className,
   children,
   glowFrom = "#5B2ECC",
-  glowTo = "#8bd450",
+  glowTo = "#39FF6A",
   glowSize = 250,
 }: MagicCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
