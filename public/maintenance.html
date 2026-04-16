@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KUMO 蜘蛛 | Maintenance en cours</title>
+  <meta name="description" content="Le site KUMO SEO est en cours de maintenance. Nous revenons très vite." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript
+    ><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap"
+  /></noscript>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(240, 7%, 4%);
+      color: hsl(30, 6%, 90%);
+      font-family: 'Sora', sans-serif;
+      overflow: hidden;
+    }
+
+    .bg-glow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .bg-glow::before,
+    .bg-glow::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.3;
+      animation: float 8s ease-in-out infinite alternate;
+    }
+
+    .bg-glow::before {
+      width: 500px;
+      height: 500px;
+      background: hsl(270, 60%, 55%);
+      top: -10%;
+      left: -10%;
+    }
+
+    .bg-glow::after {
+      width: 400px;
+      height: 400px;
+      background: hsl(280, 50%, 65%);
+      bottom: -10%;
+      right: -10%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, 30px) scale(1.1); }
+    }
+
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .logo .kanji {
+      font-family:
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic UI",
+        "Yu Gothic",
+        "Meiryo",
+        "Segoe UI",
+        system-ui,
+        sans-serif;
+      color: hsl(270, 60%, 55%);
+    }
+
+    .web-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .web {
+      width: 100%;
+      height: 100%;
+      animation: spin-slow 60s linear infinite;
+      opacity: 0.2;
+    }
+
+    .web circle, .web line {
+      stroke: hsl(270, 60%, 60%);
+      fill: none;
+      stroke-width: 0.8;
+    }
+
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border: 3px solid hsl(270, 60%, 55% / 0.2);
+      border-top-color: hsl(270, 60%, 55%);
+      border-radius: 50%;
+      animation: spin-slow 1s linear infinite;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    h1 .gradient {
+      background: linear-gradient(135deg, hsl(270, 60%, 55%), hsl(280, 50%, 65%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p {
+      color: hsl(240, 3%, 68%);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: hsl(240, 3%, 68%);
+      background: hsl(240, 5%, 7%);
+      border: 1px solid hsl(240, 5%, 18%);
+      padding: 0.6rem 1.2rem;
+      border-radius: 9999px;
+    }
+
+    .status .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: hsl(270, 60%, 55%);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .contact {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: hsl(240, 3%, 50%);
+    }
+
+    .contact a {
+      color: hsl(270, 60%, 55%);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .contact a:hover {
+      opacity: 0.8;
+    }
+
+    @media (min-width: 640px) {
+      h1 { font-size: 2.25rem; }
+      .web-container { width: 240px; height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="container">
+    <div class="logo">KUMO <span class="kanji">蜘蛛</span></div>
+
+    <div class="web-container">
+      <svg class="web" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="20" />
+        <circle cx="100" cy="100" r="45" />
+        <circle cx="100" cy="100" r="70" />
+        <circle cx="100" cy="100" r="95" />
+        <line x1="100" y1="100" x2="200" y2="100" />
+        <line x1="100" y1="100" x2="170" y2="30" />
+        <line x1="100" y1="100" x2="100" y2="0" />
+        <line x1="100" y1="100" x2="30" y2="30" />
+        <line x1="100" y1="100" x2="0" y2="100" />
+        <line x1="100" y1="100" x2="30" y2="170" />
+        <line x1="100" y1="100" x2="100" y2="200" />
+        <line x1="100" y1="100" x2="170" y2="170" />
+      </svg>
+      <div class="spinner"></div>
+    </div>
+
+    <h1>Maintenance <span class="gradient">en cours.</span></h1>
+
+    <p>
+      Notre site est en cours d'amélioration pour mieux vous servir.
+      Nous revenons très vite avec une expérience encore meilleure.
+    </p>
+
+    <div class="status">
+      <span class="dot"></span>
+      Mise à jour en cours
+    </div>
+
+    <div class="contact">
+      Une question ? <a href="mailto:thomas.puglisi@kumo-seo.ch">thomas.puglisi@kumo-seo.ch</a>
+    </div>
+  </div>
+</body>
+</html>

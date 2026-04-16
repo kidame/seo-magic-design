@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /rapport
+Disallow: /api/
+
+Sitemap: https://kumo-seo.ch/sitemap.xml

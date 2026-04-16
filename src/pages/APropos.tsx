@@ -1,0 +1,230 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import SeoHead from "@/components/SeoHead";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import BlurText from "@/components/ui/blur-text";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+
+const values = [
+  { kanji: "透", title: "Transparence", desc: "Forfaits fixes, pas de frais cachés. Vous savez exactement ce que vous payez et ce que vous obtenez." },
+  { kanji: "精", title: "Précision", desc: "Rien n'est recommandé sans mesure préalable. Des actions concrètes, avec des résultats qu'on peut vérifier." },
+  { kanji: "直", title: "Franchise", desc: "Je recommande uniquement les solutions adaptées à votre situation réelle. L'objectif est de vous conseiller avec justesse, dans votre intérêt." },
+  { kanji: "独", title: "Indépendance", desc: "Un interlocuteur dédié, impliqué de la première analyse jusqu'aux résultats. Votre projet est suivi avec la même attention du début à la fin." },
+];
+
+const APropos = () => {
+  const jsonLd: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      mainEntity: {
+        "@type": "ProfessionalService",
+        name: "KUMO SEO",
+        description: "Consultant SEO indépendant basé à Neuchâtel, spécialisé dans l'audit technique et la création de sites web pour PME de Suisse romande.",
+        url: "https://kumo-seo.ch",
+        founder: { "@type": "Person", name: "Thomas Puglisi", jobTitle: "Consultant SEO & Développeur Web" },
+        areaServed: { "@type": "Place", name: "Suisse romande" },
+        address: { "@type": "PostalAddress", addressLocality: "Val-de-Travers", addressRegion: "Neuchâtel", addressCountry: "CH" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Thomas Puglisi",
+      jobTitle: "Consultant SEO & Développeur Web",
+      url: "https://kumo-seo.ch/a-propos",
+      knowsAbout: ["SEO", "Référencement naturel", "Création de sites web"],
+      worksFor: {
+        "@type": "ProfessionalService",
+        name: "KUMO SEO",
+        url: "https://kumo-seo.ch",
+      },
+      address: { "@type": "PostalAddress", addressLocality: "Val-de-Travers", addressRegion: "Neuchâtel", addressCountry: "CH" },
+    },
+  ];
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+      { "@type": "ListItem", position: 2, name: "À propos", item: "https://kumo-seo.ch/a-propos" },
+    ],
+  };
+
+  return (
+    <div className="min-h-screen">
+      <SeoHead
+        title="À propos | KUMO - Freelance SEO en Suisse romande"
+        description="Consultant SEO indépendant à Neuchâtel. Audit technique, création de sites web et accompagnement SEO pour PME de Suisse romande."
+        canonical="https://kumo-seo.ch/a-propos"
+        jsonLd={jsonLd}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <Navbar />
+      <main className="pt-32 pb-24">
+        {/* Breadcrumb */}
+        <div className="container max-w-4xl mx-auto px-4 mb-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/">Accueil</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>À propos</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
+        {/* Hero */}
+        <section className="container max-w-4xl mx-auto px-4 text-center mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <p className="section-label mb-4">紹介 À propos</p>
+            <BlurText
+              text="Un consultant, pas une agence."
+              as="h1"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 justify-center"
+              delay={120}
+              animateBy="words"
+              direction="top"
+            />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Basé à Val-de-Travers dans le canton de Neuchâtel, j'accompagne les PME de Suisse romande
+              dans leur visibilité Google. Audit technique, création de sites et accompagnement SEO continu.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* Valeurs */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">Valeurs</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-8">
+              Ce qui guide <span className="text-gradient">mon travail.</span>
+            </h2>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
+            {values.map((v, i) => (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card p-8"
+              >
+                <span className="font-jp text-3xl text-primary-light mb-4 block">{v.kanji}</span>
+                <h3 className="font-bold text-lg mb-2">{v.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Approche */}
+        <section className="container max-w-3xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">方法 Approche</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
+              Méthode de <span className="text-gradient">travail.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Chaque projet commence par un diagnostic. Avant de proposer quoi que ce soit, je prends le temps de comprendre votre situation, vos objectifs, vos limites.
+              </p>
+              <p>
+                Je travaille sur des indicateurs concrets : où vous en êtes dans Google, ce que votre site charge, ce que vos visiteurs font. Les actions sont triées par ce qu'elles apportent vraiment.
+              </p>
+              <p>
+                Je travaille en forfait fixe. Un périmètre clair, des livrables définis, un prix qui ne bouge pas. Vous savez dès le départ ce que vous recevez.
+              </p>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Freelance SEO */}
+        <section className="container max-w-3xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">Freelance SEO Suisse</p>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-6">
+              Freelance SEO en Suisse : pourquoi choisir un <span className="text-gradient">indépendant.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Un freelance SEO en Suisse vous donne un interlocuteur unique, du premier audit jusqu'au suivi mensuel.
+                Vous évitez les couches intermédiaires et vous gardez une vision claire sur les actions menées.
+              </p>
+              <p>
+                Chez KUMO, les forfaits sont annoncés à l'avance. Pas de facturation à l'heure qui dérive, pas de surprise en fin de mission.
+                L'objectif est simple : vous aider à gagner en visibilité avec un cadre de travail lisible.
+              </p>
+              <p>
+                Cette approche est adaptée aux PME de Suisse romande qui veulent un partenaire impliqué, réactif, et orienté résultats.
+              </p>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Services */}
+        <section className="container max-w-4xl mx-auto px-4 mb-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <p className="section-label mb-4">提供 Services</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8">
+              Ce que je <span className="text-gradient">propose.</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/50 rounded-lg overflow-hidden">
+            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Audit SEO</h3>
+              <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours.</p>
+            </Link>
+            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Accompagnement SEO</h3>
+              <p className="text-sm text-muted-foreground">Suivi mensuel continu pour progresser dans Google.</p>
+            </Link>
+            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Création de site</h3>
+              <p className="text-sm text-muted-foreground">Sites web sur-mesure, optimisés SEO.</p>
+            </Link>
+            <Link to="/blog" className="bg-card p-6 hover:bg-card/80 transition-colors">
+              <h3 className="font-bold mb-2">Blog</h3>
+              <p className="text-sm text-muted-foreground">Guides et analyses SEO pour PME suisses.</p>
+            </Link>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="container max-w-3xl mx-auto px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
+              Envie d'en discuter ?
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
+            </p>
+            <Button variant="hero" size="lg" className="rounded-full" asChild>
+              <Link to="/contact">
+                Prendre contact <ArrowRight className="ml-1" size={18} />
+              </Link>
+            </Button>
+          </motion.div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default APropos;
