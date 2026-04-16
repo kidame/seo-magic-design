@@ -23,7 +23,7 @@
     --muted: 270 15% 95%;
     --muted-foreground: 270 10% 40%;
 
-    --accent: 75 70% 35%;
+    --accent: 128 100% 30%;
     --accent-foreground: 0 0% 100%;
 
     --gold: 270 15% 20%;
@@ -72,8 +72,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-accent);
+    color: hsl(var(--accent));
   }
 
   .text-gold {

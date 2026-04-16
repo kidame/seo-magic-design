@@ -31,7 +31,7 @@ const DifferentiatorSection = () => {
           <p className="section-label mb-4">Approche</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Freelance SEO vs agence :{" "}
-            <span className="text-gradient">pourquoi choisir KUMO</span>
+            <span className="text-primary">pourquoi choisir</span> <span className="text-accent">KUMO</span>
           </h2>
         </motion.div>
 

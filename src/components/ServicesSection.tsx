@@ -188,7 +188,7 @@ const ServicesSection = () => {
           <p className="section-label mb-4">Services</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Nos forfaits SEO : audit, création web{" "}
-            <span className="text-gradient">et accompagnement</span>
+            <span className="text-primary">et</span> <span className="text-accent">accompagnement</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Acompte 40 % à la commande, solde à la livraison. 2 séries de retours incluses. Garantie 30 jours.
@@ -199,7 +199,7 @@ const ServicesSection = () => {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
           <p className="section-label mb-4">制作 Création de site</p>
           <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">
-            Trois formules adaptées à <span className="text-gradient">votre situation.</span>
+            Trois formules adaptées à <span className="text-primary">votre</span> <span className="text-accent">situation.</span>
           </h3>
           <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
             Chaque site est codé sur-mesure et inclut une phase de préparation stratégique.
