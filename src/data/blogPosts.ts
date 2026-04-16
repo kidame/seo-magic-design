@@ -18,6 +18,10 @@ export interface BlogPost {
   cover_image: string;
   /** Texte alternatif pour le thumbnail (a11y). */
   cover_alt: string;
+  /** Hero 16:9 SVG 1920x1080 affiché en tête de l'article (ArticleHero). */
+  hero_image: string;
+  /** Texte alternatif du hero (a11y). Si absent, fallback sur cover_alt. */
+  hero_alt?: string;
   primary_keyword: string;
   secondary_keywords: string[];
 }
@@ -41,6 +45,8 @@ export const blogPosts: BlogPost[] = [
     og_image: "/images/blog/site-invisible-google.jpg",
     cover_image: "/images/blog/thumb-site-invisible.svg",
     cover_alt: "Diagramme KUMO — toile d'araignée cartographiant les causes d'invisibilité Google pour les PME suisses",
+    hero_image: "/images/blog/site-invisible-google-v2.svg",
+    hero_alt: "Illustration éditoriale KUMO — toile d'araignée qui se dissout autour du mot invisible en italique, représentant un site absent des résultats Google",
     primary_keyword: "site invisible google suisse",
     secondary_keywords: ["référencement PME suisse romande", "pourquoi mon site n'apparaît pas sur google", "SEO local suisse", "visibilité google PME"],
   },
@@ -62,6 +68,8 @@ export const blogPosts: BlogPost[] = [
     og_image: "/images/blog/google-update-mars-2026.jpg",
     cover_image: "/images/blog/thumb-google-update-mars-2026.svg",
     cover_alt: "Sismographe KUMO — onde de choc de la mise à jour Google mars 2026 sur les PME suisses",
+    hero_image: "/images/blog/google-update-mars-2026.svg",
+    hero_alt: "Diagramme sismique KUMO — pulse radial depuis l'épicentre et timeline T+0H à T+20H, visualisation du déploiement de la mise à jour Google de mars 2026",
     primary_keyword: "mise à jour google mars 2026",
     secondary_keywords: ["google update 2026 PME", "SEO suisse 2026", "spam update google", "référencement naturel 2026"],
   },
@@ -83,6 +91,8 @@ export const blogPosts: BlogPost[] = [
     og_image: "/images/blog/creer-site-internet-pme-suisse.jpg",
     cover_image: "/images/blog/thumb-creer-site-internet-pme-suisse.svg",
     cover_alt: "Plan architectural KUMO — 7 critères structurels d'un site web PME suisse en 2026",
+    hero_image: "/images/blog/creer-site-internet-pme-suisse.svg",
+    hero_alt: "Blueprint architectural KUMO — grille 12 colonnes, 7 bandes représentant les critères d'un site web PME 2026 et échelle de budget en francs suisses",
     primary_keyword: "création site internet suisse",
     secondary_keywords: ["créer site web PME", "prix site internet suisse romande", "site web sur-mesure suisse", "agence web suisse romande", "cahier des charges site web"],
   },
@@ -104,6 +114,8 @@ export const blogPosts: BlogPost[] = [
     og_image: "/images/blog/freelance-seo-vs-agence.jpg",
     cover_image: "/images/blog/thumb-freelance-seo-vs-agence.svg",
     cover_alt: "Diptyque comparatif KUMO — freelance SEO versus agence web en Suisse romande",
+    hero_image: "/images/blog/freelance-seo-vs-agence.svg",
+    hero_alt: "Diptyque éditorial KUMO — toile compacte à 8 rayons (freelance SEO) face à une toile à 16 rayons et plusieurs nœuds (agence web) pour illustrer le choix de prestataire en Suisse romande",
     primary_keyword: "freelance SEO Suisse",
     secondary_keywords: ["agence SEO Suisse romande", "consultant SEO indépendant", "choisir agence SEO", "prix SEO Suisse"],
   },
@@ -125,6 +137,8 @@ export const blogPosts: BlogPost[] = [
     og_image: "/images/blog/audit-seo-indispensable.jpg",
     cover_image: "/images/blog/thumb-audit-seo-indispensable.svg",
     cover_alt: "Grille de contrôle KUMO — 31 points de crosshair de l'audit SEO pour PME suisses",
+    hero_image: "/images/blog/audit-seo-indispensable.svg",
+    hero_alt: "Grille de contrôle KUMO — 31 crosshairs numérotés avec 5 points flagged et un hub central, représentation de la matrice d'audit SEO pour PME suisses",
     primary_keyword: "audit SEO",
     secondary_keywords: ["audit SEO site", "audit référencement", "diagnostic SEO", "audit SEO prix Suisse"],
   },
