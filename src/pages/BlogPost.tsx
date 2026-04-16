@@ -8,6 +8,9 @@ import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import { blogPosts, getBlogPostBySlug, formatDate } from "@/data/blogPosts";
 import BlogCard from "@/components/BlogCard";
+import ReadingProgress from "@/components/blog/ReadingProgress";
+import ArticleToc from "@/components/blog/ArticleToc";
+import ArticleHero from "@/components/blog/ArticleHero";
 
 const articleComponents: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
   "site-invisible-google-pme-suisse": lazy(() => import("@/content/blog/SiteInvisibleGoogle")),
@@ -127,137 +130,151 @@ const BlogPost = () => {
         ogType="article"
         article={{ publishedTime: post.date, author: post.author }}
       />
+      <ReadingProgress />
       <a href="#article-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md">
         Aller au contenu de l'article
       </a>
       <Navbar />
 
       <main className="pt-32 md:pt-40 pb-24 md:pb-40">
-        <article className="container max-w-3xl mx-auto px-4" id="article-content">
-          {/* Breadcrumb */}
-          <motion.nav
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            aria-label="Fil d'Ariane"
-            className="mb-8"
-          >
-            <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-              <li>
-                <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
-              </li>
-              <li aria-hidden="true" className="text-muted-foreground/40">/</li>
-              <li>
-                <Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link>
-              </li>
-              <li aria-hidden="true" className="text-muted-foreground/40">/</li>
-              <li aria-current="page" className="text-foreground/70 truncate max-w-[200px] md:max-w-none">
-                {post.title}
-              </li>
-            </ol>
-          </motion.nav>
-
-          {/* Article header */}
-          <motion.header
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <span className="inline-block font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-4">
-              {post.category}
-            </span>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
-              {post.title}
-            </h1>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5">
-                <User size={14} aria-hidden="true" /> {post.author}
-              </span>
-              <span aria-hidden="true">·</span>
-              <time dateTime={post.date}>{formatDate(post.date)}</time>
-              <span aria-hidden="true">·</span>
-              <span className="inline-flex items-center gap-1.5">
-                <Clock size={14} aria-hidden="true" /> <span>{post.reading_time} de lecture</span>
-              </span>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <div className="lg:col-span-3 lg:order-1">
+              <ArticleToc />
             </div>
-            <hr className="border-border/50 mt-8" />
-          </motion.header>
 
-          {/* Article content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Suspense fallback={<div className="h-96 flex items-center justify-center text-muted-foreground" role="status">Chargement de l'article…</div>}>
-              {ArticleContent && <ArticleContent />}
-            </Suspense>
-          </motion.div>
+            <article
+              id="article-content"
+              className="lg:col-span-9 xl:col-span-8 xl:col-start-4 max-w-2xl lg:max-w-none lg:order-2"
+            >
+              {/* Breadcrumb */}
+              <motion.nav
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                aria-label="Fil d'Ariane"
+                className="mb-8"
+              >
+                <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <li>
+                    <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
+                  </li>
+                  <li aria-hidden="true" className="text-muted-foreground/40">/</li>
+                  <li>
+                    <Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link>
+                  </li>
+                  <li aria-hidden="true" className="text-muted-foreground/40">/</li>
+                  <li aria-current="page" className="text-foreground/70 truncate max-w-[200px] md:max-w-none">
+                    {post.title}
+                  </li>
+                </ol>
+              </motion.nav>
 
-          {/* Articles connexes */}
-          {relatedPosts.length > 0 && (
-            <section className="mt-16 pt-8 border-t border-border/50" aria-label="Articles connexes">
-              <h2 className="text-lg font-bold tracking-tight mb-6">Sur le même sujet</h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {relatedPosts.map((p, i) => (
-                  <BlogCard key={p.slug} post={p} index={i} />
-                ))}
-              </div>
-            </section>
-          )}
+              {/* Article header */}
+              <motion.header
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-10 md:mb-12"
+              >
+                <span className="inline-block font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-4">
+                  {post.category}
+                </span>
+                <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
+                  {post.title}
+                </h1>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                  <span className="inline-flex items-center gap-1.5">
+                    <User size={14} aria-hidden="true" /> {post.author}
+                  </span>
+                  <span aria-hidden="true">·</span>
+                  <time dateTime={post.date}>{formatDate(post.date)}</time>
+                  <span aria-hidden="true">·</span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock size={14} aria-hidden="true" /> <span>{post.reading_time} de lecture</span>
+                  </span>
+                </div>
+              </motion.header>
 
-          {/* Navigation between articles */}
-          <nav className="mt-16 pt-8 border-t border-border/50" aria-label="Articles adjacents">
-            <div className="flex flex-col sm:flex-row justify-between gap-4">
-              {prevPost ? (
-                <Link
-                  to={`/blog/${prevPost.slug}`}
-                  className="group flex-1 glass-card rounded-xl p-5 transition-all duration-300 hover:border-primary/30"
-                  rel="prev"
-                >
-                  <span className="text-xs text-muted-foreground/80 flex items-center gap-1 mb-2">
-                    <ArrowLeft size={12} aria-hidden="true" /> Article précédent
-                  </span>
-                  <span className="text-sm font-medium group-hover:text-primary-light transition-colors line-clamp-2">
-                    {prevPost.title}
-                  </span>
-                </Link>
-              ) : <div className="flex-1" />}
-              {nextPost ? (
-                <Link
-                  to={`/blog/${nextPost.slug}`}
-                  className="group flex-1 glass-card rounded-xl p-5 text-right transition-all duration-300 hover:border-primary/30"
-                  rel="next"
-                >
-                  <span className="text-xs text-muted-foreground/80 flex items-center justify-end gap-1 mb-2">
-                    Article suivant <ArrowRight size={12} aria-hidden="true" />
-                  </span>
-                  <span className="text-sm font-medium group-hover:text-primary-light transition-colors line-clamp-2">
-                    {nextPost.title}
-                  </span>
-                </Link>
-              ) : <div className="flex-1" />}
-            </div>
-          </nav>
+              {/* Hero image 1920x1080 */}
+              <ArticleHero post={post} />
 
-          {/* CTA */}
-          <aside className="mt-12 glass-card rounded-xl p-8 md:p-10 text-center" aria-label="Appel à l'action">
-            <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-3">
-              Besoin d'un diagnostic ?
-            </p>
-            <h2 className="text-xl md:text-2xl font-bold mb-3">
-              Votre site mérite d'être{" "}
-              <span className="text-gradient">visible</span>
-            </h2>
-            <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
-              Échangeons 15 minutes sur votre situation. C'est gratuit et sans engagement.
-            </p>
-            <Button variant="hero" className="rounded-full" asChild>
-              <Link to="/contact">Prendre contact</Link>
-            </Button>
-          </aside>
-        </article>
+              {/* Article content */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Suspense fallback={<div className="h-96 flex items-center justify-center text-muted-foreground" role="status">Chargement de l'article…</div>}>
+                  {ArticleContent && <ArticleContent />}
+                </Suspense>
+              </motion.div>
+
+              {/* Articles connexes */}
+              {relatedPosts.length > 0 && (
+                <section className="mt-16 pt-8 border-t border-border/50" aria-label="Articles connexes">
+                  <h2 className="text-lg font-bold tracking-tight mb-6">Sur le même sujet</h2>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {relatedPosts.map((p, i) => (
+                      <BlogCard key={p.slug} post={p} index={i} />
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Navigation between articles */}
+              <nav className="mt-16 pt-8 border-t border-border/50" aria-label="Articles adjacents">
+                <div className="flex flex-col sm:flex-row justify-between gap-4">
+                  {prevPost ? (
+                    <Link
+                      to={`/blog/${prevPost.slug}`}
+                      className="group flex-1 glass-card rounded-xl p-5 transition-all duration-300 hover:border-primary/30"
+                      rel="prev"
+                    >
+                      <span className="text-xs text-muted-foreground/80 flex items-center gap-1 mb-2">
+                        <ArrowLeft size={12} aria-hidden="true" /> Article précédent
+                      </span>
+                      <span className="text-sm font-medium group-hover:text-primary-light transition-colors line-clamp-2">
+                        {prevPost.title}
+                      </span>
+                    </Link>
+                  ) : <div className="flex-1" />}
+                  {nextPost ? (
+                    <Link
+                      to={`/blog/${nextPost.slug}`}
+                      className="group flex-1 glass-card rounded-xl p-5 text-right transition-all duration-300 hover:border-primary/30"
+                      rel="next"
+                    >
+                      <span className="text-xs text-muted-foreground/80 flex items-center justify-end gap-1 mb-2">
+                        Article suivant <ArrowRight size={12} aria-hidden="true" />
+                      </span>
+                      <span className="text-sm font-medium group-hover:text-primary-light transition-colors line-clamp-2">
+                        {nextPost.title}
+                      </span>
+                    </Link>
+                  ) : <div className="flex-1" />}
+                </div>
+              </nav>
+
+              {/* CTA */}
+              <aside className="mt-12 glass-card rounded-xl p-8 md:p-10 text-center" aria-label="Appel à l'action">
+                <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-3">
+                  Besoin d'un diagnostic ?
+                </p>
+                <h2 className="text-xl md:text-2xl font-bold mb-3">
+                  Votre site mérite d'être{" "}
+                  <span className="text-gradient">visible</span>
+                </h2>
+                <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
+                  Échangeons 15 minutes sur votre situation. C'est gratuit et sans engagement.
+                </p>
+                <Button variant="hero" className="rounded-full" asChild>
+                  <Link to="/contact">Prendre contact</Link>
+                </Button>
+              </aside>
+            </article>
+          </div>
+        </div>
       </main>
 
       <Footer />
