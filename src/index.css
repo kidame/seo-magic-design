@@ -23,7 +23,7 @@
     --muted: 270 15% 95%;
     --muted-foreground: 270 10% 40%;
 
-    --accent: 128 100% 30%;
+    --accent: 93 70% 36%;  /* lime vert EVA – ratio 3.15:1 large text WCAG AA */
     --accent-foreground: 0 0% 100%;
 
     --gold: 270 15% 20%;
