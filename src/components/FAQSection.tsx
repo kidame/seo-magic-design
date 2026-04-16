@@ -96,7 +96,7 @@ const FAQSection = () => {
           <p className="section-label mb-4">FAQ</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             FAQ : audit SEO, création de site{" "}
-            <span className="text-primary">et</span> <span className="text-accent">référencement</span>
+            <span className="text-primary">et</span> <span className="text-primary text-neon-line relative">référencement</span>
           </h2>
         </motion.div>
 
