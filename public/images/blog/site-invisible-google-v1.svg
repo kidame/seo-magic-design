@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Site invisible sur Google — 5 causes fréquentes chez les PME suisses romandes. Diagramme KUMO.">
+  <title>Site invisible sur Google — Diagramme KUMO</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display   { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand     { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono      { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.18em; }
+      .mono-soft { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.12em; }
+      .jp        { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif; font-weight: 400; }
+    </style>
+
+    <radialGradient id="ground" cx="50%" cy="46%" r="70%">
+      <stop offset="0%"   stop-color="#120a22"/>
+      <stop offset="55%"  stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8c47d1" stop-opacity="0.22"/>
+      <stop offset="45%"  stop-color="#6b2fb3" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softglow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <g id="spoke">
+      <line x1="0" y1="0" x2="340" y2="0" stroke="#8c47d1" stroke-opacity="0.55" stroke-width="0.7"/>
+      <circle cx="72"  cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.85"/>
+      <circle cx="140" cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.8"/>
+      <circle cx="208" cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.75"/>
+      <circle cx="276" cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.7"/>
+      <circle cx="340" cy="0" r="1.4" fill="#d9bff0" fill-opacity="0.95"/>
+    </g>
+
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.06"/>
+      <circle cx="40" cy="40" r="0.4" fill="#b57dd6" fill-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#ground)"/>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+
+  <rect x="80" y="80" width="1760" height="920" fill="none"
+        stroke="#8c47d1" stroke-opacity="0.18" stroke-width="0.6"/>
+
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="1">
+    <path d="M 60 96 L 96 96 M 96 60 L 96 96"/>
+    <path d="M 1860 96 L 1824 96 M 1824 60 L 1824 96"/>
+    <path d="M 60 984 L 96 984 M 96 1020 L 96 984"/>
+    <path d="M 1860 984 L 1824 984 M 1824 1020 L 1824 984"/>
+  </g>
+
+  <g stroke="#b57dd6" stroke-opacity="0.22" stroke-width="0.6">
+    <line x1="240"  y1="80" x2="240"  y2="86"/>
+    <line x1="400"  y1="80" x2="400"  y2="86"/>
+    <line x1="560"  y1="80" x2="560"  y2="86"/>
+    <line x1="720"  y1="80" x2="720"  y2="86"/>
+    <line x1="880"  y1="80" x2="880"  y2="90"/>
+    <line x1="960"  y1="80" x2="960"  y2="94"/>
+    <line x1="1040" y1="80" x2="1040" y2="90"/>
+    <line x1="1200" y1="80" x2="1200" y2="86"/>
+    <line x1="1360" y1="80" x2="1360" y2="86"/>
+    <line x1="1520" y1="80" x2="1520" y2="86"/>
+    <line x1="1680" y1="80" x2="1680" y2="86"/>
+    <line x1="240"  y1="1000" x2="240"  y2="994"/>
+    <line x1="400"  y1="1000" x2="400"  y2="994"/>
+    <line x1="560"  y1="1000" x2="560"  y2="994"/>
+    <line x1="720"  y1="1000" x2="720"  y2="994"/>
+    <line x1="880"  y1="1000" x2="880"  y2="990"/>
+    <line x1="960"  y1="1000" x2="960"  y2="986"/>
+    <line x1="1040" y1="1000" x2="1040" y2="990"/>
+    <line x1="1200" y1="1000" x2="1200" y2="994"/>
+    <line x1="1360" y1="1000" x2="1360" y2="994"/>
+    <line x1="1520" y1="1000" x2="1520" y2="994"/>
+    <line x1="1680" y1="1000" x2="1680" y2="994"/>
+  </g>
+
+  <g transform="translate(960 460)">
+    <circle cx="0" cy="0" r="460" fill="url(#aura)"/>
+
+    <g fill="none" stroke="#8c47d1" stroke-opacity="0.40" stroke-width="0.6">
+      <circle cx="0" cy="0" r="72"/>
+      <circle cx="0" cy="0" r="140"/>
+      <circle cx="0" cy="0" r="208"/>
+      <circle cx="0" cy="0" r="276"/>
+      <circle cx="0" cy="0" r="340" stroke-opacity="0.55" stroke-width="0.8"/>
+    </g>
+
+    <g fill="none" stroke="#b57dd6" stroke-opacity="0.65" stroke-width="1.1" filter="url(#softglow)">
+      <polygon points="340,0 240.4,240.4 0,340 -240.4,240.4 -340,0 -240.4,-240.4 0,-340 240.4,-240.4"/>
+    </g>
+
+    <g filter="url(#softglow)">
+      <use href="#spoke" transform="rotate(0)"/>
+      <use href="#spoke" transform="rotate(22.5)"/>
+      <use href="#spoke" transform="rotate(45)"/>
+      <use href="#spoke" transform="rotate(67.5)"/>
+      <use href="#spoke" transform="rotate(90)"/>
+      <use href="#spoke" transform="rotate(112.5)"/>
+      <use href="#spoke" transform="rotate(135)"/>
+      <use href="#spoke" transform="rotate(157.5)"/>
+      <use href="#spoke" transform="rotate(180)"/>
+      <use href="#spoke" transform="rotate(202.5)"/>
+      <use href="#spoke" transform="rotate(225)"/>
+      <use href="#spoke" transform="rotate(247.5)"/>
+      <use href="#spoke" transform="rotate(270)"/>
+      <use href="#spoke" transform="rotate(292.5)"/>
+      <use href="#spoke" transform="rotate(315)"/>
+      <use href="#spoke" transform="rotate(337.5)"/>
+    </g>
+
+    <circle cx="0" cy="0" r="4" fill="#f5ebd8" fill-opacity="0.9"/>
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#f5ebd8" stroke-opacity="0.35" stroke-width="0.6"/>
+
+    <text x="0" y="-372" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono" font-size="11">DIAGRAMME · 蜘蛛 · KUMO</text>
+  </g>
+
+  <text x="960" y="870" text-anchor="middle" fill="#f5ebd8" class="display" font-size="72">
+    Site invisible sur Google<tspan fill="#b57dd6" class="display" font-size="72"> ?</tspan>
+  </text>
+
+  <text x="960" y="918" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="14">
+    5 CAUSES FRÉQUENTES &#8212; PME DE SUISSE ROMANDE
+  </text>
+
+  <g>
+    <text x="100" y="118" fill="#f5ebd8" fill-opacity="0.95" class="brand" font-size="15">KUMO <tspan class="jp" fill="#b57dd6">蜘蛛</tspan></text>
+    <text x="100" y="140" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">SEO CARTOGRAPHIE · MMXXVI</text>
+  </g>
+
+  <g>
+    <text x="1820" y="118" text-anchor="end" fill="#f5ebd8" fill-opacity="0.9" class="mono-soft" font-size="11">OBSERVATION N° 03 &#183; 26</text>
+    <text x="1820" y="140" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">46.93° N &#183; 6.63° E &#183; CH</text>
+  </g>
+
+  <g>
+    <text x="100" y="966" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">STATUS</text>
+    <text x="100" y="984" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">— NOT INDEXED</text>
+    <text x="100" y="1004" fill="#b57dd6" fill-opacity="0.75" class="mono-soft" font-size="11">— DISALLOW&#160;: /</text>
+    <text x="100" y="1024" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">— LCP: NULL</text>
+  </g>
+
+  <g>
+    <text x="1820" y="966" text-anchor="end" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">PLANCHE V</text>
+    <text x="1820" y="984" text-anchor="end" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">DIAGRAMME 01 / 05</text>
+    <text x="1820" y="1004" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="11">KUMO-SEO.CH</text>
+  </g>
+</svg>

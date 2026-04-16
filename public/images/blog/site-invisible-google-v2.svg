@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Votre site existe mais Google ne le voit pas. Hero éditorial KUMO.">
+  <title>Invisible — Hero éditorial KUMO</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap');
+      .display    { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand      { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; letter-spacing: 0.02em; }
+      .mono       { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.22em; }
+      .mono-md    { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 500; letter-spacing: 0.16em; }
+      .kicker     { font-family: 'JetBrains Mono', monospace; font-weight: 400; letter-spacing: 0.32em; }
+      .jp         { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif; }
+    </style>
+
+    <radialGradient id="ground" cx="68%" cy="50%" r="78%">
+      <stop offset="0%"   stop-color="#180e2e"/>
+      <stop offset="45%"  stop-color="#0d0820"/>
+      <stop offset="100%" stop-color="#050210"/>
+    </radialGradient>
+
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8c47d1" stop-opacity="0.28"/>
+      <stop offset="55%"  stop-color="#6b2fb3" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="erosion" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="1"/>
+    </linearGradient>
+
+    <filter id="softglow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="strongglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0"  cy="0"  r="0.6" fill="#b57dd6" fill-opacity="0.06"/>
+      <circle cx="40" cy="40" r="0.4" fill="#b57dd6" fill-opacity="0.05"/>
+    </pattern>
+
+    <g id="spoke-intact">
+      <line x1="0" y1="0" x2="340" y2="0" stroke="#8c47d1" stroke-opacity="0.60" stroke-width="0.7"/>
+      <circle cx="72"  cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.85"/>
+      <circle cx="140" cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.8"/>
+      <circle cx="208" cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.75"/>
+      <circle cx="276" cy="0" r="1.1" fill="#b57dd6" fill-opacity="0.7"/>
+      <circle cx="340" cy="0" r="1.4" fill="#d9bff0" fill-opacity="0.95"/>
+    </g>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#ground)"/>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+  <rect width="1920" height="1080" fill="url(#erosion)" opacity="0.35"/>
+
+  <g transform="translate(1400 540)">
+    <circle cx="40" cy="0" r="440" fill="url(#aura)"/>
+
+    <g fill="none" stroke="#8c47d1" stroke-opacity="0.48" stroke-width="0.6">
+      <path d="M 0,-72  A 72 72  0 0 1 0,72"/>
+      <path d="M 0,-140 A 140 140 0 0 1 0,140"/>
+      <path d="M 0,-208 A 208 208 0 0 1 0,208"/>
+      <path d="M 0,-276 A 276 276 0 0 1 0,276"/>
+      <path d="M 0,-340 A 340 340 0 0 1 0,340" stroke-opacity="0.60" stroke-width="0.8"/>
+    </g>
+
+    <g fill="none" stroke="#8c47d1" stroke-width="0.6">
+      <path d="M 0,72  A 72 72  0 0 1 0,-72"  stroke-opacity="0.28" stroke-dasharray="4 6"/>
+      <path d="M 0,140 A 140 140 0 0 1 0,-140" stroke-opacity="0.22" stroke-dasharray="3 10"/>
+      <path d="M 0,208 A 208 208 0 0 1 0,-208" stroke-opacity="0.17" stroke-dasharray="2 14"/>
+      <path d="M 0,276 A 276 276 0 0 1 0,-276" stroke-opacity="0.12" stroke-dasharray="1.5 22"/>
+      <path d="M 0,340 A 340 340 0 0 1 0,-340" stroke-opacity="0.08" stroke-dasharray="1 34"/>
+    </g>
+
+    <g fill="none" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="1" filter="url(#softglow)">
+      <polyline points="0,-340 240.4,-240.4 340,0 240.4,240.4 0,340"/>
+    </g>
+    <g fill="#d9bff0" filter="url(#softglow)">
+      <circle cx="-240.4" cy="-240.4" r="2.2" fill-opacity="0.45"/>
+      <circle cx="-340"   cy="0"      r="2.6" fill-opacity="0.55"/>
+      <circle cx="-240.4" cy="240.4"  r="2.2" fill-opacity="0.45"/>
+    </g>
+
+    <g filter="url(#softglow)">
+      <use href="#spoke-intact" transform="rotate(-90)"/>
+      <use href="#spoke-intact" transform="rotate(-67.5)"/>
+      <use href="#spoke-intact" transform="rotate(-45)"/>
+      <use href="#spoke-intact" transform="rotate(-22.5)"/>
+      <use href="#spoke-intact" transform="rotate(0)"/>
+      <use href="#spoke-intact" transform="rotate(22.5)"/>
+      <use href="#spoke-intact" transform="rotate(45)"/>
+      <use href="#spoke-intact" transform="rotate(67.5)"/>
+      <use href="#spoke-intact" transform="rotate(90)"/>
+    </g>
+
+    <g>
+      <g transform="rotate(112.5)">
+        <line x1="0" y1="0" x2="180" y2="0" stroke="#8c47d1" stroke-opacity="0.32" stroke-width="0.6"/>
+        <circle cx="72"  cy="0" r="1" fill="#b57dd6" fill-opacity="0.55"/>
+        <circle cx="140" cy="0" r="0.9" fill="#b57dd6" fill-opacity="0.4"/>
+        <circle cx="210" cy="0" r="0.7" fill="#b57dd6" fill-opacity="0.25"/>
+        <circle cx="260" cy="0" r="0.5" fill="#b57dd6" fill-opacity="0.15"/>
+      </g>
+      <g transform="rotate(135)">
+        <line x1="0" y1="0" x2="140" y2="0" stroke="#8c47d1" stroke-opacity="0.26" stroke-width="0.6"/>
+        <circle cx="72"  cy="0" r="1" fill="#b57dd6" fill-opacity="0.50"/>
+        <circle cx="138" cy="0" r="0.7" fill="#b57dd6" fill-opacity="0.30"/>
+        <circle cx="200" cy="0" r="0.5" fill="#b57dd6" fill-opacity="0.16"/>
+        <circle cx="244" cy="-4" r="0.4" fill="#b57dd6" fill-opacity="0.10"/>
+        <circle cx="288" cy="3" r="0.4" fill="#b57dd6" fill-opacity="0.07"/>
+      </g>
+      <g transform="rotate(157.5)">
+        <line x1="0" y1="0" x2="98" y2="0" stroke="#8c47d1" stroke-opacity="0.22" stroke-width="0.6"/>
+        <circle cx="72" cy="0" r="0.9" fill="#b57dd6" fill-opacity="0.42"/>
+        <circle cx="125" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.22"/>
+        <circle cx="175" cy="2" r="0.5" fill="#b57dd6" fill-opacity="0.14"/>
+        <circle cx="220" cy="-3" r="0.4" fill="#b57dd6" fill-opacity="0.08"/>
+        <circle cx="275" cy="5"  r="0.3" fill="#b57dd6" fill-opacity="0.06"/>
+      </g>
+      <g transform="rotate(180)">
+        <line x1="0" y1="0" x2="60" y2="0" stroke="#8c47d1" stroke-opacity="0.18" stroke-width="0.6"/>
+        <circle cx="66"  cy="0" r="0.7" fill="#b57dd6" fill-opacity="0.30"/>
+        <circle cx="120" cy="-2" r="0.5" fill="#b57dd6" fill-opacity="0.16"/>
+        <circle cx="165" cy="3"  r="0.4" fill="#b57dd6" fill-opacity="0.10"/>
+        <circle cx="218" cy="-4" r="0.4" fill="#b57dd6" fill-opacity="0.07"/>
+        <circle cx="268" cy="2"  r="0.3" fill="#b57dd6" fill-opacity="0.05"/>
+      </g>
+      <g transform="rotate(202.5)">
+        <line x1="0" y1="0" x2="98" y2="0" stroke="#8c47d1" stroke-opacity="0.22" stroke-width="0.6"/>
+        <circle cx="72" cy="0" r="0.9" fill="#b57dd6" fill-opacity="0.42"/>
+        <circle cx="125" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.22"/>
+        <circle cx="175" cy="-2" r="0.5" fill="#b57dd6" fill-opacity="0.14"/>
+        <circle cx="220" cy="3"  r="0.4" fill="#b57dd6" fill-opacity="0.08"/>
+        <circle cx="275" cy="-5" r="0.3" fill="#b57dd6" fill-opacity="0.06"/>
+      </g>
+      <g transform="rotate(225)">
+        <line x1="0" y1="0" x2="140" y2="0" stroke="#8c47d1" stroke-opacity="0.26" stroke-width="0.6"/>
+        <circle cx="72"  cy="0" r="1" fill="#b57dd6" fill-opacity="0.50"/>
+        <circle cx="138" cy="0" r="0.7" fill="#b57dd6" fill-opacity="0.30"/>
+        <circle cx="200" cy="0" r="0.5" fill="#b57dd6" fill-opacity="0.16"/>
+        <circle cx="244" cy="4" r="0.4" fill="#b57dd6" fill-opacity="0.10"/>
+        <circle cx="288" cy="-3" r="0.4" fill="#b57dd6" fill-opacity="0.07"/>
+      </g>
+      <g transform="rotate(247.5)">
+        <line x1="0" y1="0" x2="180" y2="0" stroke="#8c47d1" stroke-opacity="0.32" stroke-width="0.6"/>
+        <circle cx="72"  cy="0" r="1" fill="#b57dd6" fill-opacity="0.55"/>
+        <circle cx="140" cy="0" r="0.9" fill="#b57dd6" fill-opacity="0.4"/>
+        <circle cx="210" cy="0" r="0.7" fill="#b57dd6" fill-opacity="0.25"/>
+        <circle cx="260" cy="0" r="0.5" fill="#b57dd6" fill-opacity="0.15"/>
+      </g>
+    </g>
+
+    <circle cx="0" cy="0" r="5" fill="#f5ebd8" fill-opacity="0.95" filter="url(#strongglow)"/>
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#f5ebd8" stroke-opacity="0.30" stroke-width="0.6"/>
+
+    <g fill="#b57dd6">
+      <circle cx="-360" cy="-120" r="0.9" fill-opacity="0.26"/>
+      <circle cx="-395" cy="-60"  r="0.6" fill-opacity="0.22"/>
+      <circle cx="-430" cy="10"   r="0.5" fill-opacity="0.18"/>
+      <circle cx="-405" cy="85"   r="0.7" fill-opacity="0.22"/>
+      <circle cx="-375" cy="160"  r="0.8" fill-opacity="0.25"/>
+      <circle cx="-510" cy="-200" r="0.4" fill-opacity="0.12"/>
+      <circle cx="-555" cy="-90"  r="0.5" fill-opacity="0.14"/>
+      <circle cx="-600" cy="30"   r="0.4" fill-opacity="0.10"/>
+      <circle cx="-540" cy="130"  r="0.6" fill-opacity="0.15"/>
+      <circle cx="-585" cy="225"  r="0.4" fill-opacity="0.10"/>
+      <circle cx="-700" cy="-80"  r="0.4" fill-opacity="0.08"/>
+      <circle cx="-760" cy="20"   r="0.3" fill-opacity="0.06"/>
+      <circle cx="-820" cy="-140" r="0.3" fill-opacity="0.05"/>
+      <circle cx="-870" cy="70"   r="0.3" fill-opacity="0.05"/>
+      <circle cx="-940" cy="-30"  r="0.3" fill-opacity="0.04"/>
+    </g>
+  </g>
+
+  <text x="120" y="388" fill="#b57dd6" fill-opacity="0.9" class="kicker" font-size="14">VOTRE SITE EXISTE&#8201;—&#8201;MAIS GOOGLE</text>
+
+  <text x="120" y="600" class="display" font-size="244" fill="#f5ebd8">
+    <tspan fill-opacity="1.00">i</tspan><tspan fill-opacity="0.96">n</tspan><tspan fill-opacity="0.92">v</tspan><tspan fill-opacity="0.84">i</tspan><tspan fill-opacity="0.72">s</tspan><tspan fill-opacity="0.55">i</tspan><tspan fill-opacity="0.36">b</tspan><tspan fill-opacity="0.20">l</tspan><tspan fill-opacity="0.09">e</tspan><tspan fill="#8c47d1" fill-opacity="0.55">.</tspan>
+  </text>
+
+  <text x="120" y="672" fill="#b57dd6" fill-opacity="0.82" class="mono-md" font-size="15">
+    5 CAUSES FRÉQUENTES &#8201;·&#8201; PME DE SUISSE ROMANDE
+  </text>
+
+  <line x1="120" y1="700" x2="520" y2="700" stroke="#b57dd6" stroke-opacity="0.45" stroke-width="0.6"/>
+
+  <g>
+    <text x="120" y="118" fill="#f5ebd8" fill-opacity="0.95" class="brand" font-size="16">KUMO <tspan class="jp" fill="#b57dd6" font-size="16">蜘蛛</tspan></text>
+    <text x="120" y="140" fill="#b57dd6" fill-opacity="0.65" class="mono" font-size="10">RÉFÉRENCEMENT NATUREL · JOURNAL</text>
+  </g>
+
+  <g>
+    <text x="1800" y="118" text-anchor="end" fill="#f5ebd8" fill-opacity="0.9" class="mono-md" font-size="12">OBS. 03·26 &#183; SIGNAL PERDU</text>
+    <text x="1800" y="140" text-anchor="end" fill="#b57dd6" fill-opacity="0.65" class="mono" font-size="10">46.93° N &#183; 6.63° E &#183; CH</text>
+  </g>
+
+  <g>
+    <text x="120" y="960" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">DIAGNOSTIC</text>
+    <text x="120" y="982" fill="#f5ebd8" fill-opacity="0.80" class="mono-md" font-size="12">
+      <tspan fill="#d9bff0">—</tspan> ROBOTS.TXT: DISALLOW&#160;/
+    </text>
+    <text x="120" y="1002" fill="#f5ebd8" fill-opacity="0.70" class="mono-md" font-size="12">
+      <tspan fill="#d9bff0">—</tspan> LCP: NO_LCP
+    </text>
+    <text x="120" y="1022" fill="#f5ebd8" fill-opacity="0.60" class="mono-md" font-size="12">
+      <tspan fill="#d9bff0">—</tspan> BACKLINKS: 0
+    </text>
+  </g>
+
+  <g>
+    <text x="1800" y="960" text-anchor="end" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">ARTICLE</text>
+    <text x="1800" y="982" text-anchor="end" fill="#f5ebd8" fill-opacity="0.85" class="mono-md" font-size="12">5 CAUSES · 8 MIN · MARS 2026</text>
+    <text x="1800" y="1002" text-anchor="end" fill="#b57dd6" fill-opacity="0.65" class="mono-md" font-size="11">KUMO-SEO.CH / BLOG</text>
+  </g>
+
+  <g stroke="#d9bff0" stroke-opacity="0.35" stroke-width="1">
+    <path d="M 60 96 L 96 96 M 96 60 L 96 96"/>
+    <path d="M 1860 96 L 1824 96 M 1824 60 L 1824 96"/>
+    <path d="M 60 984 L 96 984 M 96 1020 L 96 984"/>
+    <path d="M 1860 984 L 1824 984 M 1824 1020 L 1824 984"/>
+  </g>
+</svg>

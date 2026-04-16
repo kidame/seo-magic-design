@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Thumbnail — Freelance SEO vs Agence KUMO.">
+  <title>Freelance vs Agence — Thumbnail</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand   { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono    { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.14em; }
+    </style>
+    <radialGradient id="g" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#120a22"/>
+      <stop offset="55%" stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+    <radialGradient id="auraL" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8c47d1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auraR" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8c47d1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sg" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="tspL">
+      <line x1="0" y1="0" x2="82" y2="0" stroke="#d9bff0" stroke-opacity="0.70" stroke-width="0.7"/>
+      <circle cx="82" cy="0" r="1.1" fill="#f5ebd8" fill-opacity="0.95"/>
+    </g>
+    <g id="tspR">
+      <line x1="0" y1="0" x2="95" y2="0" stroke="#8c47d1" stroke-opacity="0.42" stroke-width="0.5"/>
+      <circle cx="95" cy="0" r="0.9" fill="#d9bff0" fill-opacity="0.70"/>
+    </g>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#g)"/>
+  <rect x="28" y="28" width="744" height="394" fill="none" stroke="#8c47d1" stroke-opacity="0.20" stroke-width="0.5"/>
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="0.8">
+    <path d="M 18 36 L 36 36 M 36 18 L 36 36"/>
+    <path d="M 782 36 L 764 36 M 764 18 L 764 36"/>
+    <path d="M 18 414 L 36 414 M 36 432 L 36 414"/>
+    <path d="M 782 414 L 764 414 M 764 432 L 764 414"/>
+  </g>
+
+  <line x1="400" y1="80" x2="400" y2="340" stroke="#b57dd6" stroke-opacity="0.30" stroke-width="0.5" stroke-dasharray="3 4"/>
+  <text x="400" y="76" text-anchor="middle" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="8">VS</text>
+
+  <!-- LEFT: Freelance -->
+  <g transform="translate(215 210)">
+    <circle cx="0" cy="0" r="115" fill="url(#auraL)"/>
+    <g fill="none" stroke="#d9bff0" stroke-opacity="0.55" stroke-width="0.6">
+      <circle cx="0" cy="0" r="28"/>
+      <circle cx="0" cy="0" r="56"/>
+      <circle cx="0" cy="0" r="82"/>
+    </g>
+    <g fill="none" stroke="#d9bff0" stroke-opacity="0.80" stroke-width="0.9" filter="url(#sg)">
+      <polygon points="82,0 58,58 0,82 -58,58 -82,0 -58,-58 0,-82 58,-58"/>
+    </g>
+    <g filter="url(#sg)">
+      <use href="#tspL" transform="rotate(0)"/>
+      <use href="#tspL" transform="rotate(45)"/>
+      <use href="#tspL" transform="rotate(90)"/>
+      <use href="#tspL" transform="rotate(135)"/>
+      <use href="#tspL" transform="rotate(180)"/>
+      <use href="#tspL" transform="rotate(225)"/>
+      <use href="#tspL" transform="rotate(270)"/>
+      <use href="#tspL" transform="rotate(315)"/>
+    </g>
+    <circle cx="0" cy="0" r="3.5" fill="#f5ebd8"/>
+    <text x="0" y="-95" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.90" class="brand" font-size="10">FREELANCE</text>
+  </g>
+
+  <!-- RIGHT: Agence -->
+  <g transform="translate(585 210)">
+    <circle cx="0" cy="0" r="125" fill="url(#auraR)"/>
+    <g fill="none" stroke="#8c47d1" stroke-opacity="0.40" stroke-width="0.5">
+      <circle cx="0" cy="0" r="28"/>
+      <circle cx="0" cy="0" r="58"/>
+      <circle cx="0" cy="0" r="82"/>
+      <circle cx="0" cy="0" r="100"/>
+    </g>
+    <g fill="none" stroke="#b57dd6" stroke-opacity="0.50" stroke-width="0.7">
+      <polygon points="95,0 67,67 0,95 -67,67 -95,0 -67,-67 0,-95 67,-67"/>
+    </g>
+    <g>
+      <use href="#tspR" transform="rotate(0)"/>
+      <use href="#tspR" transform="rotate(22.5)"/>
+      <use href="#tspR" transform="rotate(45)"/>
+      <use href="#tspR" transform="rotate(67.5)"/>
+      <use href="#tspR" transform="rotate(90)"/>
+      <use href="#tspR" transform="rotate(112.5)"/>
+      <use href="#tspR" transform="rotate(135)"/>
+      <use href="#tspR" transform="rotate(157.5)"/>
+      <use href="#tspR" transform="rotate(180)"/>
+      <use href="#tspR" transform="rotate(202.5)"/>
+      <use href="#tspR" transform="rotate(225)"/>
+      <use href="#tspR" transform="rotate(247.5)"/>
+      <use href="#tspR" transform="rotate(270)"/>
+      <use href="#tspR" transform="rotate(292.5)"/>
+      <use href="#tspR" transform="rotate(315)"/>
+      <use href="#tspR" transform="rotate(337.5)"/>
+    </g>
+    <g fill="#d9bff0" fill-opacity="0.85">
+      <circle cx="-14" cy="-8" r="1.8"/>
+      <circle cx="12" cy="-14" r="1.8"/>
+      <circle cx="14" cy="10" r="1.8"/>
+      <circle cx="-10" cy="14" r="1.8"/>
+    </g>
+    <text x="0" y="-105" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="brand" font-size="10">AGENCE</text>
+  </g>
+
+  <text x="400" y="378" text-anchor="middle" fill="#f5ebd8" class="display" font-size="30">
+    Freelance<tspan fill="#b57dd6"> ou </tspan>Agence
+  </text>
+  <text x="400" y="400" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="8.5">
+    PRESTATAIRE SEO &#8212; SUISSE ROMANDE
+  </text>
+
+  <text x="40" y="46" fill="#f5ebd8" fill-opacity="0.92" class="brand" font-size="10">KUMO</text>
+  <text x="760" y="46" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="8">04 / 05</text>
+</svg>

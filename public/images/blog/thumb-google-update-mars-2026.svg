@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Thumbnail — Google Update mars 2026 KUMO.">
+  <title>Google Update mars 2026 — Thumbnail</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand   { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono    { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.14em; }
+    </style>
+    <radialGradient id="g" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#120a22"/>
+      <stop offset="55%" stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5ebd8" stop-opacity="0.95"/>
+      <stop offset="22%" stop-color="#d9bff0" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#8c47d1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bg" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#g)"/>
+  <rect x="28" y="28" width="744" height="394" fill="none" stroke="#8c47d1" stroke-opacity="0.20" stroke-width="0.5"/>
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="0.8">
+    <path d="M 18 36 L 36 36 M 36 18 L 36 36"/>
+    <path d="M 782 36 L 764 36 M 764 18 L 764 36"/>
+    <path d="M 18 414 L 36 414 M 36 432 L 36 414"/>
+    <path d="M 782 414 L 764 414 M 764 432 L 764 414"/>
+  </g>
+
+  <g transform="translate(400 210)">
+    <g fill="none">
+      <circle cx="0" cy="0" r="22" stroke="#f5ebd8" stroke-opacity="0.75" stroke-width="1"/>
+      <circle cx="0" cy="0" r="44" stroke="#d9bff0" stroke-opacity="0.65" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="68" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.7"/>
+      <circle cx="0" cy="0" r="94" stroke="#8c47d1" stroke-opacity="0.45" stroke-width="0.6"/>
+      <circle cx="0" cy="0" r="122" stroke="#8c47d1" stroke-opacity="0.34" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <circle cx="0" cy="0" r="150" stroke="#8c47d1" stroke-opacity="0.22" stroke-width="0.5" stroke-dasharray="3 5"/>
+    </g>
+
+    <g stroke="#8c47d1" stroke-opacity="0.25" stroke-width="0.4" stroke-dasharray="2 3">
+      <line x1="0" y1="0" x2="130" y2="0"/>
+      <line x1="0" y1="0" x2="65" y2="112.6"/>
+      <line x1="0" y1="0" x2="-65" y2="112.6"/>
+      <line x1="0" y1="0" x2="-130" y2="0"/>
+      <line x1="0" y1="0" x2="-65" y2="-112.6"/>
+      <line x1="0" y1="0" x2="65" y2="-112.6"/>
+    </g>
+
+    <circle cx="0" cy="0" r="34" fill="url(#core)" filter="url(#bg)"/>
+    <circle cx="0" cy="0" r="3" fill="#f5ebd8"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#f5ebd8" stroke-opacity="0.60" stroke-width="0.6"/>
+  </g>
+
+  <text x="400" y="390" text-anchor="middle" fill="#f5ebd8" class="display" font-size="32">
+    Google Update<tspan fill="#b57dd6"> · 03 · 26</tspan>
+  </text>
+  <text x="400" y="410" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="8.5">
+    SPAM UPDATE &#8212; IMPACT PME ROMANDES
+  </text>
+
+  <text x="40" y="46" fill="#f5ebd8" fill-opacity="0.92" class="brand" font-size="10">KUMO</text>
+  <text x="760" y="46" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="8">02 / 05</text>
+</svg>

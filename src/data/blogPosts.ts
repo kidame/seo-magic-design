@@ -14,6 +14,10 @@ export interface BlogPost {
   og_title: string;
   og_description: string;
   og_image: string;
+  /** Thumbnail 16:9 SVG utilisée dans la grille du blog (BlogCard). */
+  cover_image: string;
+  /** Texte alternatif pour le thumbnail (a11y). */
+  cover_alt: string;
   primary_keyword: string;
   secondary_keywords: string[];
 }
@@ -35,6 +39,8 @@ export const blogPosts: BlogPost[] = [
     og_title: "Pourquoi votre site est invisible sur Google (et comment y remédier)",
     og_description: "5 causes concrètes identifiées sur le terrain chez les PME de Suisse romande.",
     og_image: "/images/blog/site-invisible-google.jpg",
+    cover_image: "/images/blog/thumb-site-invisible.svg",
+    cover_alt: "Diagramme KUMO — toile d'araignée cartographiant les causes d'invisibilité Google pour les PME suisses",
     primary_keyword: "site invisible google suisse",
     secondary_keywords: ["référencement PME suisse romande", "pourquoi mon site n'apparaît pas sur google", "SEO local suisse", "visibilité google PME"],
   },
@@ -54,6 +60,8 @@ export const blogPosts: BlogPost[] = [
     og_title: "Google Update mars 2026 : ce qui change pour les PME suisses",
     og_description: "Déploiement en moins de 20h, nouvelles règles anti-spam. Le point pour les entreprises romandes.",
     og_image: "/images/blog/google-update-mars-2026.jpg",
+    cover_image: "/images/blog/thumb-google-update-mars-2026.svg",
+    cover_alt: "Sismographe KUMO — onde de choc de la mise à jour Google mars 2026 sur les PME suisses",
     primary_keyword: "mise à jour google mars 2026",
     secondary_keywords: ["google update 2026 PME", "SEO suisse 2026", "spam update google", "référencement naturel 2026"],
   },
@@ -73,6 +81,8 @@ export const blogPosts: BlogPost[] = [
     og_title: "Créer un site internet en 2026 : ce qu'une PME suisse doit vraiment exiger",
     og_description: "7 critères concrets avant de signer un devis de site web. Par KUMO, Suisse romande.",
     og_image: "/images/blog/creer-site-internet-pme-suisse.jpg",
+    cover_image: "/images/blog/thumb-creer-site-internet-pme-suisse.svg",
+    cover_alt: "Plan architectural KUMO — 7 critères structurels d'un site web PME suisse en 2026",
     primary_keyword: "création site internet suisse",
     secondary_keywords: ["créer site web PME", "prix site internet suisse romande", "site web sur-mesure suisse", "agence web suisse romande", "cahier des charges site web"],
   },
@@ -92,6 +102,8 @@ export const blogPosts: BlogPost[] = [
     og_title: "Freelance SEO ou agence : comment choisir en Suisse romande",
     og_description: "Comparatif objectif freelance vs agence SEO pour les PME suisses. Prix, avantages, questions à poser.",
     og_image: "/images/blog/freelance-seo-vs-agence.jpg",
+    cover_image: "/images/blog/thumb-freelance-seo-vs-agence.svg",
+    cover_alt: "Diptyque comparatif KUMO — freelance SEO versus agence web en Suisse romande",
     primary_keyword: "freelance SEO Suisse",
     secondary_keywords: ["agence SEO Suisse romande", "consultant SEO indépendant", "choisir agence SEO", "prix SEO Suisse"],
   },
@@ -111,6 +123,8 @@ export const blogPosts: BlogPost[] = [
     og_title: "Audit SEO : pourquoi c'est indispensable pour votre site",
     og_description: "31 points de contrôle, rapport interactif, plan d'action 90 jours. Ce que comprend un audit SEO professionnel pour les PME suisses.",
     og_image: "/images/blog/audit-seo-indispensable.jpg",
+    cover_image: "/images/blog/thumb-audit-seo-indispensable.svg",
+    cover_alt: "Grille de contrôle KUMO — 31 points de crosshair de l'audit SEO pour PME suisses",
     primary_keyword: "audit SEO",
     secondary_keywords: ["audit SEO site", "audit référencement", "diagnostic SEO", "audit SEO prix Suisse"],
   },

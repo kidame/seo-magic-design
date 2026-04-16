@@ -227,14 +227,13 @@ const ServicesSection = () => {
                   transition={{ delay: i * 0.1 }}
                   className="bg-card p-8 flex flex-col h-full"
                 >
+                  <div className="flex justify-center mb-5 text-primary">{plan.serviceIcon}</div>
                   {plan.badge && (
                     <span className="inline-block text-xs font-mono text-primary-light border border-primary/30 rounded-full px-2 py-0.5 mb-3 self-start">
                       {plan.badge}
                     </span>
                   )}
-                  <div className="flex justify-center mb-4 text-primary">{plan.serviceIcon}</div>
-                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    {plan.tierIcon}
+                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
                     {plan.kanji} {plan.name} {plan.featured && "⭐"}
                   </span>
                   <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>

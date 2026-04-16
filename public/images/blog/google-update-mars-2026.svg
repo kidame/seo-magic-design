@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Mise à jour Google mars 2026 — impact pour les PME suisses. Diagramme KUMO : onde sismique de l'algorithme.">
+  <title>Google Update mars 2026 — Onde sismique KUMO</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display   { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand     { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono      { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.18em; }
+      .mono-soft { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.12em; }
+      .jp        { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif; font-weight: 400; }
+    </style>
+
+    <radialGradient id="ground" cx="50%" cy="46%" r="70%">
+      <stop offset="0%"   stop-color="#120a22"/>
+      <stop offset="55%"  stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+
+    <radialGradient id="pulseCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f5ebd8" stop-opacity="0.95"/>
+      <stop offset="18%"  stop-color="#d9bff0" stop-opacity="0.55"/>
+      <stop offset="55%"  stop-color="#8c47d1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="shockAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8c47d1" stop-opacity="0.26"/>
+      <stop offset="50%"  stop-color="#6b2fb3" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softglow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="bigglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.06"/>
+      <circle cx="40" cy="40" r="0.4" fill="#b57dd6" fill-opacity="0.05"/>
+    </pattern>
+
+    <g id="pulseSpoke">
+      <line x1="0" y1="0" x2="340" y2="0" stroke="#8c47d1" stroke-opacity="0.25" stroke-width="0.6" stroke-dasharray="2 4"/>
+    </g>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#ground)"/>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+
+  <rect x="80" y="80" width="1760" height="920" fill="none"
+        stroke="#8c47d1" stroke-opacity="0.18" stroke-width="0.6"/>
+
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="1">
+    <path d="M 60 96 L 96 96 M 96 60 L 96 96"/>
+    <path d="M 1860 96 L 1824 96 M 1824 60 L 1824 96"/>
+    <path d="M 60 984 L 96 984 M 96 1020 L 96 984"/>
+    <path d="M 1860 984 L 1824 984 M 1824 1020 L 1824 984"/>
+  </g>
+
+  <!-- Timeline ruler: rollout timeline at top -->
+  <g>
+    <line x1="240" y1="210" x2="1680" y2="210" stroke="#b57dd6" stroke-opacity="0.35" stroke-width="0.6"/>
+    <g fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="9">
+      <g transform="translate(240 210)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.6"/>
+        <text x="0" y="-12" text-anchor="middle">T-0H</text>
+      </g>
+      <g transform="translate(600 210)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.6"/>
+        <text x="0" y="-12" text-anchor="middle">T+5H</text>
+      </g>
+      <g transform="translate(960 210)">
+        <line x1="0" y1="-8" x2="0" y2="8" stroke="#d9bff0" stroke-opacity="0.85" stroke-width="0.8"/>
+        <text x="0" y="-14" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.90">T+10H</text>
+      </g>
+      <g transform="translate(1320 210)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.6"/>
+        <text x="0" y="-12" text-anchor="middle">T+15H</text>
+      </g>
+      <g transform="translate(1680 210)">
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.6"/>
+        <text x="0" y="-12" text-anchor="middle">T+20H</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Shockwave center -->
+  <g transform="translate(960 520)">
+    <!-- Outer violet aura -->
+    <circle cx="0" cy="0" r="500" fill="url(#shockAura)"/>
+
+    <!-- Seismic pulse rings — concentric, increasing stroke width to simulate expansion, decreasing opacity outward -->
+    <g fill="none">
+      <circle cx="0" cy="0" r="60"  stroke="#f5ebd8" stroke-opacity="0.70" stroke-width="1.4" filter="url(#softglow)"/>
+      <circle cx="0" cy="0" r="115" stroke="#d9bff0" stroke-opacity="0.62" stroke-width="1.1"/>
+      <circle cx="0" cy="0" r="175" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.9"/>
+      <circle cx="0" cy="0" r="240" stroke="#8c47d1" stroke-opacity="0.48" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="310" stroke="#8c47d1" stroke-opacity="0.38" stroke-width="0.7" stroke-dasharray="6 3"/>
+      <circle cx="0" cy="0" r="385" stroke="#8c47d1" stroke-opacity="0.28" stroke-width="0.6" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="0" r="465" stroke="#8c47d1" stroke-opacity="0.18" stroke-width="0.5" stroke-dasharray="3 6"/>
+    </g>
+
+    <!-- Dashed radial spokes to suggest propagation direction -->
+    <g filter="url(#softglow)">
+      <use href="#pulseSpoke" transform="rotate(0)"/>
+      <use href="#pulseSpoke" transform="rotate(30)"/>
+      <use href="#pulseSpoke" transform="rotate(60)"/>
+      <use href="#pulseSpoke" transform="rotate(90)"/>
+      <use href="#pulseSpoke" transform="rotate(120)"/>
+      <use href="#pulseSpoke" transform="rotate(150)"/>
+      <use href="#pulseSpoke" transform="rotate(180)"/>
+      <use href="#pulseSpoke" transform="rotate(210)"/>
+      <use href="#pulseSpoke" transform="rotate(240)"/>
+      <use href="#pulseSpoke" transform="rotate(270)"/>
+      <use href="#pulseSpoke" transform="rotate(300)"/>
+      <use href="#pulseSpoke" transform="rotate(330)"/>
+    </g>
+
+    <!-- Bright pulsing core -->
+    <circle cx="0" cy="0" r="90" fill="url(#pulseCore)" filter="url(#bigglow)"/>
+    <circle cx="0" cy="0" r="6" fill="#f5ebd8" fill-opacity="0.98"/>
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#f5ebd8" stroke-opacity="0.55" stroke-width="0.8"/>
+
+    <!-- Tremor markers on outer ring: small crosses where impact points are -->
+    <g stroke="#f5ebd8" stroke-opacity="0.75" stroke-width="0.8">
+      <g transform="translate(328 -210)">
+        <line x1="-4" y1="0" x2="4" y2="0"/><line x1="0" y1="-4" x2="0" y2="4"/>
+      </g>
+      <g transform="translate(-340 -180)">
+        <line x1="-4" y1="0" x2="4" y2="0"/><line x1="0" y1="-4" x2="0" y2="4"/>
+      </g>
+      <g transform="translate(-285 240)">
+        <line x1="-4" y1="0" x2="4" y2="0"/><line x1="0" y1="-4" x2="0" y2="4"/>
+      </g>
+      <g transform="translate(298 260)">
+        <line x1="-4" y1="0" x2="4" y2="0"/><line x1="0" y1="-4" x2="0" y2="4"/>
+      </g>
+    </g>
+
+    <!-- Epicenter label -->
+    <text x="0" y="-420" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono" font-size="11">ÉPICENTRE · 震源 · GOOGLE</text>
+  </g>
+
+  <!-- Central title -->
+  <text x="960" y="920" text-anchor="middle" fill="#f5ebd8" class="display" font-size="72">
+    Google Update<tspan fill="#b57dd6"> · 03 · 26</tspan>
+  </text>
+
+  <text x="960" y="966" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="14">
+    SPAM UPDATE &#8212; ROLLOUT &lt; 20H &#8212; IMPACT PME ROMANDES
+  </text>
+
+  <!-- Corner annotations -->
+  <g>
+    <text x="100" y="118" fill="#f5ebd8" fill-opacity="0.95" class="brand" font-size="15">KUMO <tspan class="jp" fill="#b57dd6">蜘蛛</tspan></text>
+    <text x="100" y="140" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">SEISMOGRAPHIE ALGO · MMXXVI</text>
+  </g>
+
+  <g>
+    <text x="1820" y="118" text-anchor="end" fill="#f5ebd8" fill-opacity="0.9" class="mono-soft" font-size="11">OBSERVATION N° 04 &#183; 26</text>
+    <text x="1820" y="140" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">46.93° N &#183; 6.63° E &#183; CH</text>
+  </g>
+
+  <g>
+    <text x="100" y="966" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">ALGORITHME</text>
+    <text x="100" y="984" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">— CORE + SPAM</text>
+    <text x="100" y="1004" fill="#b57dd6" fill-opacity="0.75" class="mono-soft" font-size="11">— AMPLITUDE: MAJEURE</text>
+    <text x="100" y="1024" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">— AFTERSHOCKS: EN COURS</text>
+  </g>
+
+  <g>
+    <text x="1820" y="966" text-anchor="end" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">PLANCHE V</text>
+    <text x="1820" y="984" text-anchor="end" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">DIAGRAMME 02 / 05</text>
+    <text x="1820" y="1004" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="11">KUMO-SEO.CH</text>
+  </g>
+</svg>

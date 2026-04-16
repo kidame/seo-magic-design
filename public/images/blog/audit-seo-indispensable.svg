@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Audit SEO KUMO — 31 points de contrôle répartis sur la cartographie du site. Diagnostic pour PME suisses.">
+  <title>Audit SEO — 31 points de contrôle KUMO</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display   { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand     { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono      { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.18em; }
+      .mono-soft { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.12em; }
+      .num       { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 500; letter-spacing: 0.04em; }
+      .jp        { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif; font-weight: 400; }
+    </style>
+
+    <radialGradient id="ground" cx="50%" cy="46%" r="70%">
+      <stop offset="0%"   stop-color="#120a22"/>
+      <stop offset="55%"  stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8c47d1" stop-opacity="0.22"/>
+      <stop offset="50%"  stop-color="#6b2fb3" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softglow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.06"/>
+      <circle cx="40" cy="40" r="0.4" fill="#b57dd6" fill-opacity="0.05"/>
+    </pattern>
+
+    <!-- Standard crosshair point (green/pass) -->
+    <g id="xh">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.7"/>
+      <line x1="-14" y1="0" x2="-6" y2="0" stroke="#d9bff0" stroke-opacity="0.85" stroke-width="0.8"/>
+      <line x1="6"   y1="0" x2="14"  y2="0" stroke="#d9bff0" stroke-opacity="0.85" stroke-width="0.8"/>
+      <line x1="0" y1="-14" x2="0" y2="-6" stroke="#d9bff0" stroke-opacity="0.85" stroke-width="0.8"/>
+      <line x1="0" y1="6"   x2="0" y2="14" stroke="#d9bff0" stroke-opacity="0.85" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="1.6" fill="#b57dd6"/>
+    </g>
+
+    <!-- Flagged crosshair (amber/attention) -->
+    <g id="xhFlag">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#f5ebd8" stroke-opacity="0.80" stroke-width="0.9"/>
+      <line x1="-14" y1="0" x2="-6" y2="0" stroke="#f5ebd8" stroke-opacity="0.95" stroke-width="1"/>
+      <line x1="6"   y1="0" x2="14"  y2="0" stroke="#f5ebd8" stroke-opacity="0.95" stroke-width="1"/>
+      <line x1="0" y1="-14" x2="0" y2="-6" stroke="#f5ebd8" stroke-opacity="0.95" stroke-width="1"/>
+      <line x1="0" y1="6"   x2="0" y2="14" stroke="#f5ebd8" stroke-opacity="0.95" stroke-width="1"/>
+      <circle cx="0" cy="0" r="2.2" fill="#f5ebd8"/>
+    </g>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#ground)"/>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+
+  <rect x="80" y="80" width="1760" height="920" fill="none"
+        stroke="#8c47d1" stroke-opacity="0.18" stroke-width="0.6"/>
+
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="1">
+    <path d="M 60 96 L 96 96 M 96 60 L 96 96"/>
+    <path d="M 1860 96 L 1824 96 M 1824 60 L 1824 96"/>
+    <path d="M 60 984 L 96 984 M 96 1020 L 96 984"/>
+    <path d="M 1860 984 L 1824 984 M 1824 1020 L 1824 984"/>
+  </g>
+
+  <!-- Central aura halo -->
+  <g transform="translate(960 460)">
+    <circle cx="0" cy="0" r="500" fill="url(#aura)"/>
+  </g>
+
+  <!-- Faint connection lines from center to each point (visual lattice) -->
+  <g stroke="#8c47d1" stroke-opacity="0.12" stroke-width="0.4">
+    <line x1="960" y1="460" x2="220" y2="240"/>
+    <line x1="960" y1="460" x2="420" y2="220"/>
+    <line x1="960" y1="460" x2="620" y2="260"/>
+    <line x1="960" y1="460" x2="820" y2="230"/>
+    <line x1="960" y1="460" x2="1100" y2="230"/>
+    <line x1="960" y1="460" x2="1300" y2="260"/>
+    <line x1="960" y1="460" x2="1500" y2="220"/>
+    <line x1="960" y1="460" x2="1700" y2="240"/>
+    <line x1="960" y1="460" x2="220" y2="400"/>
+    <line x1="960" y1="460" x2="420" y2="380"/>
+    <line x1="960" y1="460" x2="620" y2="420"/>
+    <line x1="960" y1="460" x2="1300" y2="420"/>
+    <line x1="960" y1="460" x2="1500" y2="380"/>
+    <line x1="960" y1="460" x2="1700" y2="400"/>
+    <line x1="960" y1="460" x2="220" y2="560"/>
+    <line x1="960" y1="460" x2="420" y2="540"/>
+    <line x1="960" y1="460" x2="620" y2="580"/>
+    <line x1="960" y1="460" x2="1300" y2="580"/>
+    <line x1="960" y1="460" x2="1500" y2="540"/>
+    <line x1="960" y1="460" x2="1700" y2="560"/>
+    <line x1="960" y1="460" x2="220" y2="720"/>
+    <line x1="960" y1="460" x2="420" y2="700"/>
+    <line x1="960" y1="460" x2="620" y2="740"/>
+    <line x1="960" y1="460" x2="820" y2="730"/>
+    <line x1="960" y1="460" x2="1100" y2="730"/>
+    <line x1="960" y1="460" x2="1300" y2="740"/>
+    <line x1="960" y1="460" x2="1500" y2="700"/>
+    <line x1="960" y1="460" x2="1700" y2="720"/>
+  </g>
+
+  <!-- ═══════════════ 31 CROSSHAIR POINTS ═══════════════ -->
+  <!-- Row 1: y=240 -->
+  <g transform="translate(220 240)"><use href="#xh"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">01</text></g>
+  <g transform="translate(420 220)"><use href="#xh"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">02</text></g>
+  <g transform="translate(620 260)"><use href="#xhFlag"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" class="num" font-size="10">03</text></g>
+  <g transform="translate(820 230)"><use href="#xh"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">04</text></g>
+  <g transform="translate(1100 230)"><use href="#xh"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">05</text></g>
+  <g transform="translate(1300 260)"><use href="#xh"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">06</text></g>
+  <g transform="translate(1500 220)"><use href="#xhFlag"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" class="num" font-size="10">07</text></g>
+  <g transform="translate(1700 240)"><use href="#xh"/><text x="0" y="-22" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">08</text></g>
+
+  <!-- Row 2: y=400 -->
+  <g transform="translate(220 400)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">09</text></g>
+  <g transform="translate(420 380)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">10</text></g>
+  <g transform="translate(620 420)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">11</text></g>
+  <g transform="translate(1300 420)"><use href="#xhFlag"/><text x="22" y="4" fill="#f5ebd8" class="num" font-size="10">12</text></g>
+  <g transform="translate(1500 380)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">13</text></g>
+  <g transform="translate(1700 400)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">14</text></g>
+
+  <!-- Row 3: y=560 -->
+  <g transform="translate(220 560)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">15</text></g>
+  <g transform="translate(420 540)"><use href="#xhFlag"/><text x="22" y="4" fill="#f5ebd8" class="num" font-size="10">16</text></g>
+  <g transform="translate(620 580)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">17</text></g>
+  <g transform="translate(1300 580)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">18</text></g>
+  <g transform="translate(1500 540)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">19</text></g>
+  <g transform="translate(1700 560)"><use href="#xh"/><text x="22" y="4" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">20</text></g>
+
+  <!-- Row 4: y=720 -->
+  <g transform="translate(220 720)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">21</text></g>
+  <g transform="translate(420 700)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">22</text></g>
+  <g transform="translate(620 740)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">23</text></g>
+  <g transform="translate(820 730)"><use href="#xhFlag"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" class="num" font-size="10">24</text></g>
+  <g transform="translate(1100 730)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">25</text></g>
+  <g transform="translate(1300 740)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">26</text></g>
+  <g transform="translate(1500 700)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">27</text></g>
+  <g transform="translate(1700 720)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">28</text></g>
+
+  <!-- Bottom extras to complete 31: 29, 30, 31 around center -->
+  <g transform="translate(780 620)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">29</text></g>
+  <g transform="translate(960 640)"><use href="#xhFlag"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" class="num" font-size="10">30</text></g>
+  <g transform="translate(1140 620)"><use href="#xh"/><text x="0" y="26" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="num" font-size="10">31</text></g>
+
+  <!-- ═══════════════ CENTRAL HUB ═══════════════ -->
+  <g transform="translate(960 460)">
+    <circle cx="0" cy="0" r="130" fill="#05030c" fill-opacity="0.85" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="0.8"/>
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="78"  fill="none" stroke="#8c47d1" stroke-opacity="0.28" stroke-width="0.5"/>
+
+    <!-- Small KUMO mark -->
+    <g fill="none" stroke="#d9bff0" stroke-opacity="0.80" stroke-width="1" filter="url(#softglow)">
+      <polygon points="60,0 42.4,42.4 0,60 -42.4,42.4 -60,0 -42.4,-42.4 0,-60 42.4,-42.4"/>
+    </g>
+    <circle cx="0" cy="0" r="3" fill="#f5ebd8" fill-opacity="0.95"/>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#f5ebd8" stroke-opacity="0.45" stroke-width="0.5"/>
+
+    <text x="0" y="-90" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="10">CENTRE D'AUDIT</text>
+    <text x="0" y="108" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.90" class="brand" font-size="13">31 POINTS</text>
+    <text x="0" y="126" text-anchor="middle" fill="#b57dd6" fill-opacity="0.75" class="mono" font-size="9">監査 · KANSA</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="900" text-anchor="middle" fill="#f5ebd8" class="display" font-size="68">
+    Audit SEO<tspan fill="#b57dd6"> · 31 points</tspan>
+  </text>
+
+  <text x="960" y="946" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="13">
+    DIAGNOSTIC COMPLET &#8212; PREMIÈRE ÉTAPE INDISPENSABLE
+  </text>
+
+  <!-- Corner annotations -->
+  <g>
+    <text x="100" y="118" fill="#f5ebd8" fill-opacity="0.95" class="brand" font-size="15">KUMO <tspan class="jp" fill="#b57dd6">蜘蛛</tspan></text>
+    <text x="100" y="140" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">GRILLE DE CONTRÔLE · MMXXVI</text>
+  </g>
+
+  <g>
+    <text x="1820" y="118" text-anchor="end" fill="#f5ebd8" fill-opacity="0.9" class="mono-soft" font-size="11">OBSERVATION N° 07 &#183; 26</text>
+    <text x="1820" y="140" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">31 &#215; CHECKPOINT &#183; CH</text>
+  </g>
+
+  <g>
+    <text x="100" y="966" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">RAPPORT</text>
+    <text x="100" y="984" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">— INTERACTIF</text>
+    <text x="100" y="1004" fill="#b57dd6" fill-opacity="0.75" class="mono-soft" font-size="11">— PLAN 90 JOURS</text>
+    <text x="100" y="1024" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">— PRIORITÉS CLASSÉES</text>
+  </g>
+
+  <g>
+    <text x="1820" y="966" text-anchor="end" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">PLANCHE V</text>
+    <text x="1820" y="984" text-anchor="end" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">DIAGRAMME 05 / 05</text>
+    <text x="1820" y="1004" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="11">KUMO-SEO.CH</text>
+  </g>
+</svg>

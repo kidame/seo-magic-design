@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Thumbnail — Créer un site internet en 2026 KUMO.">
+  <title>Créer un site 2026 — Thumbnail</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand   { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono    { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.14em; }
+    </style>
+    <radialGradient id="g" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#120a22"/>
+      <stop offset="55%" stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#8c47d1" stroke-opacity="0.12" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#g)"/>
+  <rect x="70" y="100" width="660" height="220" fill="url(#grid)"/>
+  <rect x="28" y="28" width="744" height="394" fill="none" stroke="#8c47d1" stroke-opacity="0.20" stroke-width="0.5"/>
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="0.8">
+    <path d="M 18 36 L 36 36 M 36 18 L 36 36"/>
+    <path d="M 782 36 L 764 36 M 764 18 L 764 36"/>
+    <path d="M 18 414 L 36 414 M 36 432 L 36 414"/>
+    <path d="M 782 414 L 764 414 M 764 432 L 764 414"/>
+  </g>
+
+  <!-- 7 stacked bands compressed -->
+  <g>
+    <g transform="translate(70 110)">
+      <rect x="0" y="0" width="660" height="28" fill="none" stroke="#b57dd6" stroke-opacity="0.50" stroke-width="0.6"/>
+      <text x="10" y="18" fill="#f5ebd8" fill-opacity="0.85" class="mono" font-size="8">01 · PERFORMANCE</text>
+    </g>
+    <g transform="translate(70 144)">
+      <rect x="0" y="0" width="660" height="28" fill="none" stroke="#b57dd6" stroke-opacity="0.50" stroke-width="0.6"/>
+      <text x="10" y="18" fill="#f5ebd8" fill-opacity="0.85" class="mono" font-size="8">02 · SEO</text>
+    </g>
+    <g transform="translate(70 178)">
+      <rect x="0" y="0" width="660" height="28" fill="none" stroke="#b57dd6" stroke-opacity="0.50" stroke-width="0.6"/>
+      <text x="10" y="18" fill="#f5ebd8" fill-opacity="0.85" class="mono" font-size="8">03 · A11Y</text>
+    </g>
+    <g transform="translate(70 212)">
+      <rect x="0" y="0" width="660" height="28" fill="#8c47d1" fill-opacity="0.10" stroke="#d9bff0" stroke-opacity="0.75" stroke-width="0.8"/>
+      <text x="10" y="18" fill="#f5ebd8" class="mono" font-size="8">04 · HOST · CH</text>
+    </g>
+    <g transform="translate(70 246)">
+      <rect x="0" y="0" width="660" height="28" fill="none" stroke="#b57dd6" stroke-opacity="0.50" stroke-width="0.6"/>
+      <text x="10" y="18" fill="#f5ebd8" fill-opacity="0.85" class="mono" font-size="8">05 · nLPD</text>
+    </g>
+    <g transform="translate(70 280)">
+      <rect x="0" y="0" width="660" height="28" fill="none" stroke="#b57dd6" stroke-opacity="0.50" stroke-width="0.6"/>
+      <text x="10" y="18" fill="#f5ebd8" fill-opacity="0.85" class="mono" font-size="8">06 · PROPRIÉTÉ</text>
+    </g>
+  </g>
+
+  <text x="400" y="370" text-anchor="middle" fill="#f5ebd8" class="display" font-size="30">
+    Créer un site<tspan fill="#b57dd6"> en 2026</tspan>
+  </text>
+  <text x="400" y="392" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="8.5">
+    CE QU'UNE PME SUISSE DOIT EXIGER
+  </text>
+
+  <text x="40" y="46" fill="#f5ebd8" fill-opacity="0.92" class="brand" font-size="10">KUMO</text>
+  <text x="760" y="46" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="8">03 / 05</text>
+</svg>

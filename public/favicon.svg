@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#0a0a0a"/>
+  <line x1="100.00" y1="100.00" x2="176.00" y2="100.00" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="153.74" y2="153.74" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="100.00" y2="176.00" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="46.26" y2="153.74" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="24.00" y2="100.00" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="46.26" y2="46.26" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="100.00" y2="24.00" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="100.00" y1="100.00" x2="153.74" y2="46.26" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+<polygon points="115.20,100.00 110.75,110.75 100.00,115.20 89.25,110.75 84.80,100.00 89.25,89.25 100.00,84.80 110.75,89.25" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="130.40,100.00 121.50,121.50 100.00,130.40 78.50,121.50 69.60,100.00 78.50,78.50 100.00,69.60 121.50,78.50" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="145.60,100.00 132.24,132.24 100.00,145.60 67.76,132.24 54.40,100.00 67.76,67.76 100.00,54.40 132.24,67.76" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="160.80,100.00 142.99,142.99 100.00,160.80 57.01,142.99 39.20,100.00 57.01,57.01 100.00,39.20 142.99,57.01" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="176.00,100.00 153.74,153.74 100.00,176.00 46.26,153.74 24.00,100.00 46.26,46.26 100.00,24.00 153.74,46.26" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+</svg>
