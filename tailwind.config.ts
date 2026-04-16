@@ -20,6 +20,7 @@ export default {
         heading: ['"Sora"', 'system-ui', 'sans-serif'],
         body: ['"Sora"', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
