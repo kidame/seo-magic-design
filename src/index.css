@@ -4,51 +4,52 @@
 
 @layer base {
   :root {
-    --background: 240 7% 4%;
-    --foreground: 30 6% 90%;
+    /* Theme: Evangelion light (fond blanc cass, violet profond + vert acide EVA-01) */
+    --background: 270 20% 97%;
+    --foreground: 270 15% 15%;
 
-    --card: 240 5% 7%;
-    --card-foreground: 30 6% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 15% 15%;
 
-    --popover: 240 5% 7%;
-    --popover-foreground: 30 6% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 15% 15%;
 
-    --primary: 270 60% 55%;
+    --primary: 265 70% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 10%;
-    --secondary-foreground: 30 6% 85%;
+    --secondary: 270 15% 94%;
+    --secondary-foreground: 270 15% 25%;
 
-    --muted: 240 4% 12%;
-    --muted-foreground: 240 3% 68%;
+    --muted: 270 15% 95%;
+    --muted-foreground: 270 10% 40%;
 
-    --accent: 270 60% 55%;
+    --accent: 75 70% 35%;
     --accent-foreground: 0 0% 100%;
 
-    --gold: 0 0% 95%;
-    --gold-dim: 0 0% 75%;
+    --gold: 270 15% 20%;
+    --gold-dim: 270 10% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5% 18%;
-    --border-light: 240 4% 22%;
-    --input: 240 5% 18%;
-    --ring: 270 60% 55%;
+    --border: 270 15% 88%;
+    --border-light: 270 15% 92%;
+    --input: 270 15% 88%;
+    --ring: 265 70% 42%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 240 5% 5%;
-    --sidebar-foreground: 30 6% 90%;
-    --sidebar-primary: 270 60% 55%;
+    --sidebar-background: 270 15% 95%;
+    --sidebar-foreground: 270 15% 15%;
+    --sidebar-primary: 265 70% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 5% 10%;
-    --sidebar-accent-foreground: 30 6% 90%;
-    --sidebar-border: 240 5% 18%;
-    --sidebar-ring: 270 60% 55%;
+    --sidebar-accent: 270 15% 90%;
+    --sidebar-accent-foreground: 270 15% 20%;
+    --sidebar-border: 270 15% 85%;
+    --sidebar-ring: 265 70% 42%;
 
-    --gradient-accent: linear-gradient(135deg, hsl(270 60% 55%), hsl(280 50% 65%));
-    --shadow-glow: 0 8px 32px hsl(270 60% 55% / 0.2);
+    --gradient-accent: linear-gradient(135deg, hsl(265 70% 42%), hsl(75 70% 38%));
+    --shadow-glow: 0 8px 32px hsl(265 70% 42% / 0.15);
   }
 }
 

@@ -18,7 +18,7 @@ const BlogCard = ({ post, index = 0 }: BlogCardProps) => {
     >
       <Link
         to={`/blog/${post.slug}`}
-        className="group block h-full glass-card rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-[0_4px_24px_hsl(270_60%_55%/0.1)]"
+        className="group block h-full glass-card rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-[0_4px_24px_hsl(265_70%_42%/0.15)]"
       >
         <span className="inline-block font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-4">
           {post.category}

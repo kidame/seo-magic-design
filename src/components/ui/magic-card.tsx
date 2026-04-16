@@ -12,8 +12,8 @@ interface MagicCardProps {
 const MagicCard = ({
   className,
   children,
-  glowFrom = "#8B5CF6",
-  glowTo = "#FFFFFF",
+  glowFrom = "#5B2ECC",
+  glowTo = "#7DB326",
   glowSize = 250,
 }: MagicCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);

@@ -209,7 +209,7 @@ const ServicesSection = () => {
             {sitePlans.map((plan, i) => (
               <ShineBorder
                 key={plan.name}
-                shineColor={plan.featured ? ["#8B5CF6", "#A78BFA", "#FFFFFF"] : ["#333", "#555", "#333"]}
+                shineColor={plan.featured ? ["#5B2ECC", "#7DB326", "#FFFFFF"] : ["#C4B7D4", "#A894C2", "#C4B7D4"]}
                 duration={plan.featured ? 6 : 12}
                 borderWidth={plan.featured ? 2 : 1}
               >
@@ -394,7 +394,7 @@ const ServicesSection = () => {
             {suiviPlans.map((plan, i) => (
               <ShineBorder
                 key={plan.name}
-                shineColor={plan.featured ? ["#8B5CF6", "#A78BFA", "#FFFFFF"] : ["#333", "#555", "#333"]}
+                shineColor={plan.featured ? ["#5B2ECC", "#7DB326", "#FFFFFF"] : ["#C4B7D4", "#A894C2", "#C4B7D4"]}
                 duration={plan.featured ? 6 : 12}
                 borderWidth={plan.featured ? 2 : 1}
               >

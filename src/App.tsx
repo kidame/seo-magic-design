@@ -66,7 +66,7 @@ const App = () => {
         <Suspense fallback={null}>
           <div className="fixed inset-0 -z-10 opacity-60">
             <Aurora
-              colorStops={["#8B5CF6", "#A78BFA", "#C4B5FD"]}
+              colorStops={["#5B2ECC", "#7DB326", "#9D7DF0"]}
               speed={0.6}
               blend={0.5}
               amplitude={1.2}

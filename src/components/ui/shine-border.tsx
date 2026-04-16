@@ -11,7 +11,7 @@ interface ShineBorderProps {
 
 const ShineBorder = ({
   className,
-  shineColor = ["#A07CFE", "#FE8FB5", "#FFBE7B"],
+  shineColor = ["#5B2ECC", "#7DB326", "#9D7DF0"],
   duration = 8,
   borderWidth = 1,
   children,
