@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import BlurText from "@/components/ui/blur-text";
+import { ChecklistAudit, CompetitorBar, Calendar90, DirectLine } from '@/components/icons/KumoIcons';
+
+const metrics = [
+  { value: "31",  label: "Points de contrôle technique",   icon: <ChecklistAudit size={28} /> },
+  { value: "3",   label: "Concurrents analysés par audit", icon: <CompetitorBar size={28} /> },
+  { value: "90j", label: "Plan d'action priorisé",         icon: <Calendar90 size={28} /> },
+  { value: "1:1", label: "Interlocuteur unique",           icon: <DirectLine size={28} /> },
+];
 
 const HeroSection = () => {
   return (
@@ -65,12 +73,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.9 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto min-h-[80px]"
         >
-          {[
-            { value: "31", label: "Points de contrôle technique" },
-            { value: "3", label: "Concurrents analysés par audit" },
-            { value: "90j", label: "Plan d'action priorisé" },
-            { value: "1:1", label: "Interlocuteur unique" },
-          ].map((m, i) => (
+          {metrics.map((m, i) => (
             <motion.div
               key={m.label}
               initial={{ opacity: 0, y: 15 }}
@@ -78,6 +81,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
               className="text-center"
             >
+              <div className="flex justify-center mb-2 text-primary">{m.icon}</div>
               <span className="text-2xl md:text-3xl font-bold text-gold font-mono">{m.value}</span>
               <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
             </motion.div>

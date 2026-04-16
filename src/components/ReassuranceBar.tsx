@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { PadLock, ServerCH, ChartRising, PersonCircle, Clock24 } from '@/components/icons/KumoIcons';
 
 const items = [
-  { kanji: "定", text: "Forfait fixe, pas de surprise" },
-  { kanji: "瑞", text: "Hébergement suisse" },
-  { kanji: "測", text: "Résultats mesurables" },
-  { kanji: "一", text: "Interlocuteur unique" },
-  { kanji: "速", text: "Réponse sous 24h" },
+  { icon: <PadLock size={18} />,      text: "Forfait fixe, pas de surprise" },
+  { icon: <ServerCH size={18} />,     text: "Hébergement suisse" },
+  { icon: <ChartRising size={18} />,  text: "Résultats mesurables" },
+  { icon: <PersonCircle size={18} />, text: "Interlocuteur unique" },
+  { icon: <Clock24 size={18} />,      text: "Réponse sous 24h" },
 ];
 
 const ReassuranceBar = () => {
@@ -20,7 +21,7 @@ const ReassuranceBar = () => {
         <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           {items.map((item) => (
             <div key={item.text} className="flex items-center gap-2">
-              <span className="font-jp text-primary-light text-sm">{item.kanji}</span>
+              {item.icon}
               <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">{item.text}</span>
             </div>
           ))}

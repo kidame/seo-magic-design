@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ShineBorder } from "@/components/ui/shine-border";
+import { SearchGraph, BrowserCode, CompassNeedle, LayeredBlocks, TargetBull, CrownIcon } from '@/components/icons/KumoIcons';
 
 /* ── Création de site ── */
 const siteFeatures = [
@@ -29,6 +30,8 @@ const sitePlans = [
     description: "Une base solide. 4 pages sur-mesure pour présenter votre activité et être visible localement.",
     noteSpeciale: "Rédaction guidée : KUMO définit avec vous la structure et les contenus attendus. Vous fournissez la matière. KUMO adapte et optimise pour Google.",
     values: ["4", true, true, true, true, true, false, false, false, true, false] as (string | boolean)[],
+    serviceIcon: <SearchGraph size={40} />,
+    tierIcon: <LayeredBlocks size={24} />,
   },
   {
     kanji: "推奨",
@@ -40,6 +43,8 @@ const sitePlans = [
     description: "La formule complète. 5 à 8 pages, présence locale optimisée, contenus rédigés, fiche Google configurée.",
     noteSpeciale: "Rédaction complète : KUMO rédige l'ensemble des textes. Vous validez, on ajuste.",
     values: ["5–8", true, true, true, true, false, true, true, true, true, false] as (string | boolean)[],
+    serviceIcon: <BrowserCode size={40} />,
+    tierIcon: <TargetBull size={24} />,
   },
   {
     kanji: "最上",
@@ -51,6 +56,8 @@ const sitePlans = [
     description: "Site complet + 3 mois de suivi après mise en ligne. Suivi visibilité Google, ajustements contenu, rapport mensuel, support prioritaire.",
     noteSpeciale: "Après les 3 mois inclus, transition vers une formule de suivi mensuel.",
     values: ["≤10", true, true, true, true, false, true, true, true, true, true] as (string | boolean)[],
+    serviceIcon: <CompassNeedle size={40} />,
+    tierIcon: <CrownIcon size={24} />,
   },
 ];
 
@@ -225,7 +232,9 @@ const ServicesSection = () => {
                       {plan.badge}
                     </span>
                   )}
-                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                  <div className="flex justify-center mb-4 text-primary">{plan.serviceIcon}</div>
+                  <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    {plan.tierIcon}
                     {plan.kanji} {plan.name} {plan.featured && "⭐"}
                   </span>
                   <div className="text-gold font-mono font-bold text-2xl mb-1">CHF {plan.price}.–</div>
