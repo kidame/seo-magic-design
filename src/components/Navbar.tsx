@@ -55,7 +55,9 @@ const Navbar = () => {
               alt="KUMO"
               width={96}
               height={55}
+              decoding="async"
               className="h-14 w-auto mix-blend-multiply"
+              {...({ fetchpriority: "high" } as Record<string, string>)}
             />
           </Link>
 

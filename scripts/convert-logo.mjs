@@ -14,8 +14,9 @@ const srcBuffer = readFileSync(SRC);
 const { width, height, size } = await sharp(srcBuffer).metadata();
 console.log(`Source : ${width}x${height}, ${(size / 1024).toFixed(0)} KB`);
 
-// 1) Logo WebP — qualité 85, conserve la transparence
+// 1) Logo WebP — resize à 192x110 (retina 2x de 96x55 affichés), qualité 85, conserve la transparence
 const webp = await sharp(srcBuffer)
+  .resize(192, 110, { fit: "inside", withoutEnlargement: true })
   .webp({ quality: 85, effort: 6 })
   .toBuffer();
 writeFileSync(WEBP_OUT, webp);
