@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Qu'est-ce que le Mandat SEO 90 jours ?",
-    answer: "Après un audit SEO, si votre site nécessite un travail d'optimisation en profondeur, nous proposons un mandat forfaitaire sur 90 jours. Trois niveaux selon la complexité : Standard (CHF 2'900, site vitrine simple), Élevé (CHF 4'500, site professionnel 20–50 pages), Très élevé (à partir de CHF 6'900, e-commerce ou site 50+ pages). Inclus : corrections techniques complètes, optimisation de toutes les pages, amélioration du contenu, stratégie de visibilité externe, suivi de positionnement, 2 points d'avancement en visio, rapport détaillé à 90 jours. Paiement en 3 mensualités possible.",
+    answer: "Après un audit SEO, si votre site nécessite un travail d'optimisation en profondeur, nous proposons un mandat forfaitaire sur 90 jours. Trois niveaux selon la complexité : Standard (CHF 2'900, site vitrine simple), Élevé (CHF 4'500, site professionnel 20–50 pages), Très élevé (à partir de CHF 6'900, e-commerce ou site 50+ pages). Inclus : corrections techniques complètes, optimisation de toutes les pages, amélioration du contenu, stratégie de visibilité externe, suivi de positionnement, 2 points d'avancement en visio, rapport détaillé à 90 jours.",
   },
   {
     question: "Comment se passe le paiement ?",

@@ -241,7 +241,7 @@ const AuditSeo = () => {
               ))}
             </div>
             <p className="text-xs text-muted-foreground">
-              Toujours précédé d'un Audit SEO (1'200 CHF). Paiement en 3 mensualités possibles.
+              Toujours précédé d'un Audit SEO (1'200 CHF).
             </p>
           </div>
 

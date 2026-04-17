@@ -164,7 +164,7 @@ const AccompagnementSeo = () => {
               Optimisation en <span className="text-gradient">profondeur.</span>
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Forfait fixe sur 90 jours. Toujours précédé d'un Audit SEO (1'200 CHF) qui détermine le niveau et le périmètre. Paiement en 3 mensualités possible.
+              Forfait fixe sur 90 jours. Toujours précédé d'un Audit SEO (1'200 CHF) qui détermine le niveau et le périmètre.
             </p>
           </motion.div>
 

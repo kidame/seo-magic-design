@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "Comment se passe le paiement ?",
-    answer: "Un acompte de 40 % est demandé à la commande pour lancer le projet. Le solde de 60 % est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait. Pour le Mandat SEO 90 jours, le paiement en 3 mensualités est possible.",
+    answer: "Un acompte de 40 % est demandé à la commande pour lancer le projet. Le solde de 60 % est facturé à la livraison, après validation finale. Deux séries de retours sont incluses dans chaque forfait.",
   },
   {
     question: "Pourquoi du code sur-mesure plutôt qu'un CMS ?",

@@ -372,7 +372,7 @@ const ServicesSection = () => {
               </div>
 
               <p className="text-xs text-muted-foreground mb-6">
-                Toujours précédé d'un Audit SEO (1'200 CHF). Paiement en 3 mensualités possibles.
+                Toujours précédé d'un Audit SEO (1'200 CHF).
               </p>
 
               {/* Encadré exemple */}
@@ -556,7 +556,7 @@ const ServicesSection = () => {
               <div className="space-y-2">
                 {[
                   "Création de site : 40 % à la signature, 60 % à la livraison",
-                  "Mandat 90 jours : paiement en 3 mensualités possibles",
+                  "Mandat 90 jours : acompte à la signature, solde à la livraison",
                   "Abonnements : facturation mensuelle",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2">
