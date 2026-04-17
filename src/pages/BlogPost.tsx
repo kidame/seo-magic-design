@@ -20,6 +20,7 @@ const articleComponents: Record<string, React.LazyExoticComponent<React.Componen
   "audit-seo-pourquoi-indispensable": lazy(() => import("@/content/blog/AuditSeoPourquoiIndispensable")),
   "pagespeed-insights-core-web-vitals-guide": lazy(() => import("@/content/blog/PagespeedCoreWebVitalsGuide")),
   "audit-seo-guide-complet-pme-suisse": lazy(() => import("@/content/blog/AuditSeoGuideCompletPmeSuisse")),
+  "agence-web-neuchatel-guide-choix-2026": lazy(() => import("@/content/blog/AgenceWebNeuchatelGuideChoix2026")),
 };
 
 const BlogPost = () => {
@@ -410,6 +411,20 @@ function extractFaqFromSlug(slug: string): { question: string; answer: string }[
       {
         question: "Combien de temps faut-il pour un audit SEO complet ?",
         answer: "Pour un site vitrine de PME (10 à 30 pages), compter 5 à 7 jours ouvrables incluant la collecte des données, l'analyse, la rédaction du rapport et la préparation du plan d'action. Pour un site plus volumineux ou multilingue, le délai peut atteindre 2 à 3 semaines.",
+      },
+    ],
+    "agence-web-neuchatel-guide-choix-2026": [
+      {
+        question: "Combien coûte un site web à Neuchâtel en 2026 ?",
+        answer: "Pour un site vitrine de PME (5 à 10 pages) avec travail SEO inclus, compter entre 3'500 et 7'000 CHF en 2026 (estimations marché). Les plateformes SaaS (type Wix) démarrent plus bas (1'500 à 3'500 CHF) mais plafonnent rapidement. Les agences établies se positionnent généralement au-dessus de 7'000 CHF sur le même périmètre.",
+      },
+      {
+        question: "Vaut-il mieux WordPress, Wix ou un site sur mesure ?",
+        answer: "Wix convient à un site vitrine de 3 à 5 pages sans ambition SEO. WordPress offre plus de flexibilité mais exige une maintenance régulière et pose des questions de sécurité. Un site sur mesure (Astro, Next.js, Svelte) est le plus performant mais demande un prestataire technique et n'est pas toujours rentable pour un site simple. Le bon choix dépend du volume de pages, des ambitions SEO et du budget de maintenance.",
+      },
+      {
+        question: "Un site web doit-il obligatoirement être hébergé en Suisse ?",
+        answer: "Ce n'est pas une obligation légale, mais c'est fortement recommandé pour une PME suisse : latence réduite pour une clientèle locale, conformité LPD simplifiée (pas de transfert transfrontalier à justifier), support technique en français ou allemand. Les hébergeurs suisses comme Infomaniak ou Hostpoint offrent des offres compétitives à partir de quelques centaines de francs par an.",
       },
     ],
   };

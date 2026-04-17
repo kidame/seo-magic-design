@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Agence web à Neuchâtel en 2026 : triptyque KUMO comparant agence, freelance et plateforme SaaS. Trois archétypes graphiques côte à côte avec fourchettes de prix.">
+  <title>Agence web Neuchâtel 2026 — Triptyque KUMO</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display   { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand     { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono      { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.18em; }
+      .mono-soft { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.12em; }
+    </style>
+
+    <radialGradient id="ground" cx="50%" cy="46%" r="70%">
+      <stop offset="0%"   stop-color="#120a22"/>
+      <stop offset="55%"  stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8c47d1" stop-opacity="0.20"/>
+      <stop offset="45%"  stop-color="#6b2fb3" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softglow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.06"/>
+      <circle cx="40" cy="40" r="0.4" fill="#b57dd6" fill-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="1920" height="1080" fill="url(#ground)"/>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+
+  <!-- Cadre editorial + coins -->
+  <rect x="60" y="60" width="1800" height="960" fill="none" stroke="#8c47d1" stroke-opacity="0.20" stroke-width="0.8"/>
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="1.2">
+    <path d="M 40 80 L 80 80 M 80 40 L 80 80"/>
+    <path d="M 1880 80 L 1840 80 M 1840 40 L 1840 80"/>
+    <path d="M 40 1000 L 80 1000 M 80 1040 L 80 1000"/>
+    <path d="M 1880 1000 L 1840 1000 M 1840 1040 L 1840 1000"/>
+  </g>
+
+  <!-- Bandeau superieur -->
+  <text x="100" y="120" fill="#f5ebd8" fill-opacity="0.92" class="brand" font-size="20">KUMO</text>
+  <text x="100" y="146" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="12">CRAWLER&#8217;S SILENCE &#183; 08 / 08</text>
+
+  <text x="1820" y="120" text-anchor="end" fill="#b57dd6" fill-opacity="0.75" class="mono" font-size="13">NEUCH&#194;TEL &#183; 2026</text>
+  <text x="1820" y="146" text-anchor="end" fill="#f5ebd8" fill-opacity="0.70" class="mono-soft" font-size="11">Trois archetypes, trois budgets, un choix.</text>
+
+  <!-- Separateurs verticaux dashed -->
+  <line x1="690" y1="210" x2="690" y2="820" stroke="#b57dd6" stroke-opacity="0.25" stroke-width="0.6" stroke-dasharray="4 6"/>
+  <line x1="1230" y1="210" x2="1230" y2="820" stroke="#b57dd6" stroke-opacity="0.25" stroke-width="0.6" stroke-dasharray="4 6"/>
+
+  <!-- ============================================ -->
+  <!-- PANNEAU 1 : AGENCE (gauche) -->
+  <!-- ============================================ -->
+  <g transform="translate(380 500)">
+    <!-- Numero -->
+    <text x="0" y="-330" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="14">01</text>
+    <text x="0" y="-300" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="display" font-size="42">Agence</text>
+    <text x="0" y="-275" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono-soft" font-size="11">&#201;QUIPE &#183; PROCESSUS &#183; DEVIS &#201;LEV&#201;S</text>
+
+    <!-- Aura -->
+    <circle cx="0" cy="0" r="220" fill="url(#aura)"/>
+
+    <!-- Orbites concentriques (nombreuses : structure agence) -->
+    <g fill="none" stroke="#8c47d1" stroke-opacity="0.38" stroke-width="0.7">
+      <circle cx="0" cy="0" r="60"/>
+      <circle cx="0" cy="0" r="105"/>
+      <circle cx="0" cy="0" r="150"/>
+      <circle cx="0" cy="0" r="190"/>
+    </g>
+
+    <!-- Polygone structurant -->
+    <g fill="none" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="1.1" filter="url(#softglow)">
+      <polygon points="140,0 99,99 0,140 -99,99 -140,0 -99,-99 0,-140 99,-99"/>
+    </g>
+
+    <!-- Noeuds d'equipe (points autour) -->
+    <g fill="#d9bff0" fill-opacity="0.85">
+      <circle cx="0" cy="-105" r="3.5"/>
+      <circle cx="74" cy="-74" r="3.5"/>
+      <circle cx="105" cy="0" r="3.5"/>
+      <circle cx="74" cy="74" r="3.5"/>
+      <circle cx="0" cy="105" r="3.5"/>
+      <circle cx="-74" cy="74" r="3.5"/>
+      <circle cx="-105" cy="0" r="3.5"/>
+      <circle cx="-74" cy="-74" r="3.5"/>
+    </g>
+
+    <!-- Satellites exterieurs (roles) -->
+    <g fill="#b57dd6" fill-opacity="0.70">
+      <circle cx="0" cy="-190" r="2.5"/>
+      <circle cx="134" cy="-134" r="2.5"/>
+      <circle cx="190" cy="0" r="2.5"/>
+      <circle cx="134" cy="134" r="2.5"/>
+      <circle cx="0" cy="190" r="2.5"/>
+      <circle cx="-134" cy="134" r="2.5"/>
+      <circle cx="-190" cy="0" r="2.5"/>
+      <circle cx="-134" cy="-134" r="2.5"/>
+    </g>
+
+    <!-- Hub central -->
+    <circle cx="0" cy="0" r="10" fill="#f5ebd8" fill-opacity="0.92"/>
+
+    <!-- Tarif -->
+    <text x="0" y="260" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="13">TARIF OBSERV&#201;</text>
+    <text x="0" y="290" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="display" font-size="32">
+      7&#8217;000 &#8211; 15&#8217;000 CHF
+    </text>
+    <text x="0" y="315" text-anchor="middle" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="10">SITE VITRINE PREMIUM &#183; MARCH&#201; 2026</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PANNEAU 2 : FREELANCE (centre) -->
+  <!-- ============================================ -->
+  <g transform="translate(960 500)">
+    <text x="0" y="-330" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="14">02</text>
+    <text x="0" y="-300" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="display" font-size="42">Freelance</text>
+    <text x="0" y="-275" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono-soft" font-size="11">UN INTERLOCUTEUR &#183; LIEN DIRECT</text>
+
+    <circle cx="0" cy="0" r="200" fill="url(#aura)"/>
+
+    <!-- Structure etoile : rayonnement depuis un centre unique -->
+    <g fill="none" stroke="#d9bff0" stroke-opacity="0.55" stroke-width="0.7">
+      <circle cx="0" cy="0" r="70"/>
+      <circle cx="0" cy="0" r="140"/>
+    </g>
+
+    <!-- Rayons principaux (competences) -->
+    <g stroke="#d9bff0" stroke-opacity="0.80" stroke-width="1" filter="url(#softglow)">
+      <line x1="0" y1="-140" x2="0" y2="-70"/>
+      <line x1="99" y1="-99" x2="50" y2="-50"/>
+      <line x1="140" y1="0" x2="70" y2="0"/>
+      <line x1="99" y1="99" x2="50" y2="50"/>
+      <line x1="0" y1="140" x2="0" y2="70"/>
+      <line x1="-99" y1="99" x2="-50" y2="50"/>
+      <line x1="-140" y1="0" x2="-70" y2="0"/>
+      <line x1="-99" y1="-99" x2="-50" y2="-50"/>
+    </g>
+
+    <!-- Points d'expertise en bout de rayons -->
+    <g fill="#f5ebd8" fill-opacity="0.90">
+      <circle cx="0" cy="-140" r="3"/>
+      <circle cx="99" cy="-99" r="3"/>
+      <circle cx="140" cy="0" r="3"/>
+      <circle cx="99" cy="99" r="3"/>
+      <circle cx="0" cy="140" r="3"/>
+      <circle cx="-99" cy="99" r="3"/>
+      <circle cx="-140" cy="0" r="3"/>
+      <circle cx="-99" cy="-99" r="3"/>
+    </g>
+
+    <!-- Centre unique (plus visible que agence) -->
+    <circle cx="0" cy="0" r="14" fill="#f5ebd8" fill-opacity="0.95" filter="url(#softglow)"/>
+    <circle cx="0" cy="0" r="6" fill="#120a22"/>
+
+    <text x="0" y="260" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="13">TARIF OBSERV&#201;</text>
+    <text x="0" y="290" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="display" font-size="32">
+      3&#8217;500 &#8211; 7&#8217;000 CHF
+    </text>
+    <text x="0" y="315" text-anchor="middle" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="10">SITE VITRINE OPTIMIS&#201; &#183; MARCH&#201; 2026</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PANNEAU 3 : PLATEFORME SAAS (droite) -->
+  <!-- ============================================ -->
+  <g transform="translate(1540 500)">
+    <text x="0" y="-330" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="14">03</text>
+    <text x="0" y="-300" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="display" font-size="42">Plateforme</text>
+    <text x="0" y="-275" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono-soft" font-size="11">WIX &#183; SQUARESPACE &#183; LIBRE-SERVICE</text>
+
+    <circle cx="0" cy="0" r="180" fill="url(#aura)"/>
+
+    <!-- Structure : cadres emboites (systeme ferme) -->
+    <g fill="none" stroke="#8c47d1" stroke-opacity="0.38" stroke-width="0.7">
+      <rect x="-60" y="-60" width="120" height="120"/>
+      <rect x="-100" y="-100" width="200" height="200"/>
+      <rect x="-140" y="-140" width="280" height="280"/>
+    </g>
+
+    <!-- Cadre principal -->
+    <g fill="none" stroke="#b57dd6" stroke-opacity="0.55" stroke-width="1.1" filter="url(#softglow)">
+      <rect x="-100" y="-100" width="200" height="200"/>
+    </g>
+
+    <!-- Coins : contrainte = limite -->
+    <g fill="#d9bff0" fill-opacity="0.75">
+      <rect x="-102" y="-102" width="6" height="6"/>
+      <rect x="96" y="-102" width="6" height="6"/>
+      <rect x="96" y="96" width="6" height="6"/>
+      <rect x="-102" y="96" width="6" height="6"/>
+    </g>
+
+    <!-- Blocs internes (template) -->
+    <g fill="#b57dd6" fill-opacity="0.35">
+      <rect x="-80" y="-80" width="60" height="30"/>
+      <rect x="20" y="-80" width="60" height="30"/>
+      <rect x="-80" y="-30" width="160" height="20"/>
+      <rect x="-80" y="20" width="160" height="40"/>
+    </g>
+
+    <!-- Point central "boxed" -->
+    <rect x="-7" y="-7" width="14" height="14" fill="#f5ebd8" fill-opacity="0.92"/>
+
+    <text x="0" y="260" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="13">TARIF OBSERV&#201;</text>
+    <text x="0" y="290" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="display" font-size="32">
+      1&#8217;500 &#8211; 3&#8217;500 CHF
+    </text>
+    <text x="0" y="315" text-anchor="middle" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="10">SITE VITRINE SIMPLE &#183; MARCH&#201; 2026</text>
+  </g>
+
+  <!-- Titre principal bas -->
+  <text x="960" y="910" text-anchor="middle" fill="#f5ebd8" class="display" font-size="64">
+    Agence web<tspan fill="#b57dd6"> &#183; Neuch&#226;tel 2026</tspan>
+  </text>
+  <text x="960" y="955" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono-soft" font-size="16">
+    TROIS ARCH&#201;TYPES &#183; TROIS BUDGETS &#183; UN CHOIX
+  </text>
+
+  <!-- Baseline KUMO -->
+  <text x="960" y="1000" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.35" class="mono-soft" font-size="9">
+    KUMO &#183; CRAWLER&#8217;S SILENCE &#183; GUIDE PRESTATAIRE WEB SUISSE ROMANDE &#183; 2026
+  </text>
+</svg>
