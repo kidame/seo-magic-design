@@ -19,6 +19,7 @@ const articleComponents: Record<string, React.LazyExoticComponent<React.Componen
   "freelance-seo-vs-agence-suisse": lazy(() => import("@/content/blog/FreelanceSeoVsAgence")),
   "audit-seo-pourquoi-indispensable": lazy(() => import("@/content/blog/AuditSeoPourquoiIndispensable")),
   "pagespeed-insights-core-web-vitals-guide": lazy(() => import("@/content/blog/PagespeedCoreWebVitalsGuide")),
+  "audit-seo-guide-complet-pme-suisse": lazy(() => import("@/content/blog/AuditSeoGuideCompletPmeSuisse")),
 };
 
 const BlogPost = () => {
@@ -391,6 +392,24 @@ function extractFaqFromSlug(slug: string): { question: string; answer: string }[
       {
         question: "Quel score PageSpeed viser pour un site de PME ?",
         answer: "Viser 75 sur 100 ou plus sur mobile et 90 sur 100 ou plus sur desktop, avec les trois Core Web Vitals dans le vert sur les données de terrain. Ce niveau permet de passer l'évaluation Page Experience sans compromis majeur sur les fonctionnalités du site (tracking, animations, images).",
+      },
+    ],
+    "audit-seo-guide-complet-pme-suisse": [
+      {
+        question: "Quelle est la différence entre audit SEO et audit technique ?",
+        answer: "Un audit technique couvre uniquement la composante technique (performance, indexation, HTML). Un audit SEO complet inclut en plus l'analyse de contenu, de concurrence, de SEO local et de backlinks. L'audit technique est un sous-ensemble de l'audit SEO, pas un équivalent.",
+      },
+      {
+        question: "Screaming Frog gratuit suffit-il pour un audit ?",
+        answer: "La version gratuite crawle jusqu'à 500 URL et donne accès aux fonctions de base (titres, métadescriptions, redirections, erreurs 404). Pour un site vitrine, elle couvre 80% des besoins techniques. Pour un e-commerce ou un site de plus de 500 pages, la licence payante devient nécessaire.",
+      },
+      {
+        question: "Un audit SEO sans Google Search Console est-il fiable ?",
+        answer: "Non. La Search Console donne accès aux données réelles de Google : requêtes d'apparition, pages indexées, erreurs d'exploration. Un audit qui se base uniquement sur des outils tiers (Semrush, Ahrefs) fonctionne avec des estimations, pas avec les données sources. L'accès GSC est indispensable.",
+      },
+      {
+        question: "Combien de temps faut-il pour un audit SEO complet ?",
+        answer: "Pour un site vitrine de PME (10 à 30 pages), compter 5 à 7 jours ouvrables incluant la collecte des données, l'analyse, la rédaction du rapport et la préparation du plan d'action. Pour un site plus volumineux ou multilingue, le délai peut atteindre 2 à 3 semaines.",
       },
     ],
   };

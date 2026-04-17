@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Audit SEO KUMO — les quatre composantes (technique, contenu, local, backlinks) reliées à un hub central, avec outils professionnels associés.">
+  <title>Audit SEO — 4 composantes KUMO</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display   { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand     { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono      { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.18em; }
+      .mono-soft { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.12em; }
+      .num       { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 500; letter-spacing: 0.04em; }
+      .jp        { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif; font-weight: 400; }
+    </style>
+
+    <radialGradient id="ground" cx="50%" cy="46%" r="70%">
+      <stop offset="0%"   stop-color="#120a22"/>
+      <stop offset="55%"  stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8c47d1" stop-opacity="0.22"/>
+      <stop offset="50%"  stop-color="#6b2fb3" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softglow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.6" fill="#b57dd6" fill-opacity="0.06"/>
+      <circle cx="40" cy="40" r="0.4" fill="#b57dd6" fill-opacity="0.05"/>
+    </pattern>
+
+    <g id="dotOutline">
+      <circle cx="0" cy="0" r="4" fill="none" stroke="#d9bff0" stroke-opacity="0.60" stroke-width="0.6"/>
+      <circle cx="0" cy="0" r="1.4" fill="#b57dd6"/>
+    </g>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#ground)"/>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+
+  <rect x="80" y="80" width="1760" height="920" fill="none"
+        stroke="#8c47d1" stroke-opacity="0.18" stroke-width="0.6"/>
+
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="1">
+    <path d="M 60 96 L 96 96 M 96 60 L 96 96"/>
+    <path d="M 1860 96 L 1824 96 M 1824 60 L 1824 96"/>
+    <path d="M 60 984 L 96 984 M 96 1020 L 96 984"/>
+    <path d="M 1860 984 L 1824 984 M 1824 1020 L 1824 984"/>
+  </g>
+
+  <!-- En-tête -->
+  <text x="100" y="118" fill="#f5ebd8" fill-opacity="0.95" class="brand" font-size="15">KUMO <tspan class="jp" fill="#b57dd6">蜘蛛</tspan></text>
+  <text x="100" y="140" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">MATRICE D'AUDIT · CH · MMXXVI</text>
+
+  <text x="1820" y="118" text-anchor="end" fill="#f5ebd8" fill-opacity="0.9" class="mono-soft" font-size="11">OBSERVATION N° 09 &#183; 26</text>
+  <text x="1820" y="140" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="10">4 COMPOSANTES &#183; GUIDE COMPLET</text>
+
+  <text x="960" y="210" text-anchor="middle" fill="#b57dd6" fill-opacity="0.80" class="mono" font-size="12">
+    LES QUATRE DIMENSIONS D'UN AUDIT SEO PROFESSIONNEL
+  </text>
+
+  <!-- Aura centrale -->
+  <g transform="translate(960 540)">
+    <circle cx="0" cy="0" r="620" fill="url(#aura)"/>
+  </g>
+
+  <!-- Grille 2x2 au centre -->
+  <g transform="translate(960 540)">
+    <!-- Axes -->
+    <line x1="-640" y1="0" x2="640" y2="0" stroke="#b57dd6" stroke-opacity="0.30" stroke-width="0.6"/>
+    <line x1="0" y1="-280" x2="0" y2="280" stroke="#b57dd6" stroke-opacity="0.30" stroke-width="0.6"/>
+
+    <!-- Lignes de liaison pointillées vers le hub -->
+    <g stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.7" stroke-dasharray="3 4" fill="none">
+      <line x1="0" y1="0" x2="-380" y2="-170"/>
+      <line x1="0" y1="0" x2="380" y2="-170"/>
+      <line x1="0" y1="0" x2="-380" y2="170"/>
+      <line x1="0" y1="0" x2="380" y2="170"/>
+    </g>
+
+    <!-- Q1 : TECHNIQUE (haut gauche) -->
+    <g transform="translate(-380 -170)">
+      <rect x="-240" y="-120" width="480" height="240" fill="#120a22" fill-opacity="0.50" stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.7"/>
+      <text x="-220" y="-95" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="10">01</text>
+      <text x="-220" y="-55" fill="#f5ebd8" class="display" font-size="44">Technique</text>
+      <text x="-220" y="-25" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="9">INDEXATION · CORE WEB VITALS · HTML · SITEMAP</text>
+
+      <g transform="translate(-220 20)" fill="#f5ebd8" fill-opacity="0.80" class="mono-soft" font-size="10.5">
+        <text>&#8212; Google Search Console</text>
+        <text y="20">&#8212; Screaming Frog SEO Spider</text>
+        <text y="40">&#8212; PageSpeed Insights</text>
+        <text y="60">&#8212; Chrome DevTools Lighthouse</text>
+      </g>
+      <g transform="translate(210 95)"><use href="#dotOutline"/></g>
+    </g>
+
+    <!-- Q2 : CONTENU (haut droit) -->
+    <g transform="translate(380 -170)">
+      <rect x="-240" y="-120" width="480" height="240" fill="#120a22" fill-opacity="0.50" stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.7"/>
+      <text x="-220" y="-95" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="10">02</text>
+      <text x="-220" y="-55" fill="#f5ebd8" class="display" font-size="44">Contenu</text>
+      <text x="-220" y="-25" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="9">KEYWORDS · H1 · INTENTION · CANNIBALISATION</text>
+
+      <g transform="translate(-220 20)" fill="#f5ebd8" fill-opacity="0.80" class="mono-soft" font-size="10.5">
+        <text>&#8212; Recherche de mots-clés locaux</text>
+        <text y="20">&#8212; Audit des titres et métas</text>
+        <text y="40">&#8212; Détection de contenu mince</text>
+        <text y="60">&#8212; Cartographie des intentions</text>
+      </g>
+      <g transform="translate(210 95)"><use href="#dotOutline"/></g>
+    </g>
+
+    <!-- Q3 : LOCAL (bas gauche) -->
+    <g transform="translate(-380 170)">
+      <rect x="-240" y="-120" width="480" height="240" fill="#120a22" fill-opacity="0.50" stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.7"/>
+      <text x="-220" y="-95" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="10">03</text>
+      <text x="-220" y="-55" fill="#f5ebd8" class="display" font-size="44">Local</text>
+      <text x="-220" y="-25" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="9">NAP · GBP · SCHEMA · ANNUAIRES SUISSES</text>
+
+      <g transform="translate(-220 20)" fill="#f5ebd8" fill-opacity="0.80" class="mono-soft" font-size="10.5">
+        <text>&#8212; Audit Google Business Profile</text>
+        <text y="20">&#8212; Cohérence NAP (site + GBP + annuaires)</text>
+        <text y="40">&#8212; local.ch · search.ch · cantonaux</text>
+        <text y="60">&#8212; Validation schema LocalBusiness</text>
+      </g>
+      <g transform="translate(210 95)"><use href="#dotOutline"/></g>
+    </g>
+
+    <!-- Q4 : BACKLINKS (bas droit) -->
+    <g transform="translate(380 170)">
+      <rect x="-240" y="-120" width="480" height="240" fill="#120a22" fill-opacity="0.50" stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.7"/>
+      <text x="-220" y="-95" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="10">04</text>
+      <text x="-220" y="-55" fill="#f5ebd8" class="display" font-size="44">Backlinks</text>
+      <text x="-220" y="-25" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="9">AUTORITÉ · TOXICITÉ · GAP CONCURRENTIEL</text>
+
+      <g transform="translate(-220 20)" fill="#f5ebd8" fill-opacity="0.80" class="mono-soft" font-size="10.5">
+        <text>&#8212; Ahrefs / Semrush / Majestic</text>
+        <text y="20">&#8212; Profil de liens entrants</text>
+        <text y="40">&#8212; Détection liens toxiques</text>
+        <text y="60">&#8212; Benchmark vs concurrents</text>
+      </g>
+      <g transform="translate(210 95)"><use href="#dotOutline"/></g>
+    </g>
+
+    <!-- HUB CENTRAL -->
+    <circle cx="0" cy="0" r="80" fill="#05030c" fill-opacity="0.92" stroke="#b57dd6" stroke-opacity="0.65" stroke-width="0.9"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#8c47d1" stroke-opacity="0.35" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#8c47d1" stroke-opacity="0.30" stroke-width="0.5"/>
+    <g fill="none" stroke="#d9bff0" stroke-opacity="0.80" stroke-width="1" filter="url(#softglow)">
+      <polygon points="36,0 25.5,25.5 0,36 -25.5,25.5 -36,0 -25.5,-25.5 0,-36 25.5,-25.5"/>
+    </g>
+    <circle cx="0" cy="0" r="2.2" fill="#f5ebd8"/>
+    <text x="0" y="56" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.95" class="brand" font-size="11">AUDIT SEO</text>
+    <text x="0" y="72" text-anchor="middle" fill="#b57dd6" fill-opacity="0.75" class="mono" font-size="8.5">監査 · KANSA</text>
+  </g>
+
+  <!-- Titre principal -->
+  <text x="960" y="946" text-anchor="middle" fill="#f5ebd8" class="display" font-size="52">
+    Quatre angles<tspan fill="#b57dd6"> · un seul diagnostic</tspan>
+  </text>
+
+  <!-- Annotations pied -->
+  <g>
+    <text x="100" y="966" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">LIVRABLE</text>
+    <text x="100" y="984" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">&#8212; RAPPORT INTERACTIF</text>
+    <text x="100" y="1004" fill="#b57dd6" fill-opacity="0.75" class="mono-soft" font-size="11">&#8212; PLAN D'ACTION 90 JOURS</text>
+    <text x="100" y="1024" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">&#8212; APPEL DE RESTITUTION</text>
+  </g>
+
+  <g>
+    <text x="1820" y="966" text-anchor="end" fill="#b57dd6" fill-opacity="0.55" class="mono" font-size="10">PLANCHE VII</text>
+    <text x="1820" y="984" text-anchor="end" fill="#f5ebd8" fill-opacity="0.85" class="mono-soft" font-size="11">DIAGRAMME 07 / 07</text>
+    <text x="1820" y="1004" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono-soft" font-size="11">KUMO-SEO.CH</text>
+  </g>
+</svg>

@@ -34,6 +34,7 @@ export const ROUTES = [
   { path: "/blog/freelance-seo-vs-agence-suisse", priority: 0.7, changefreq: "monthly" },
   { path: "/blog/audit-seo-pourquoi-indispensable", priority: 0.7, changefreq: "monthly" },
   { path: "/blog/pagespeed-insights-core-web-vitals-guide", priority: 0.7, changefreq: "monthly" },
+  { path: "/blog/audit-seo-guide-complet-pme-suisse", priority: 0.7, changefreq: "monthly" },
 
   // Pages locales
   { path: "/consultant-seo-suisse-romande", priority: 0.8, changefreq: "monthly" },
