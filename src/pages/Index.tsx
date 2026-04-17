@@ -42,7 +42,7 @@ const homepageJsonLd: Record<string, unknown>[] = [
         "@type": "HowToStep",
         position: 2,
         name: "Concurrence & Marché",
-        text: "Vos 3 concurrents directs sont analysés et comparés sur 7 indicateurs clés. Recherche des termes que vos clients tapent sur Google, avec un scoring par priorité.",
+        text: "Votre marché est cartographié : qui cherche quoi, avec quels mots. Vous savez où vous êtes fort, où vous perdez des clients, et pourquoi.",
       },
       {
         "@type": "HowToStep",

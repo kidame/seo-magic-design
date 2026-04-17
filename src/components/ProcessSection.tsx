@@ -14,7 +14,7 @@ const steps = [
     number: "02",
     kanji: "測定 · Mesure",
     title: "Concurrence & Marché",
-    description: "Vos 3 concurrents directs sont analysés et comparés sur 7 indicateurs clés. Recherche des termes que vos clients tapent sur Google, avec un scoring par priorité.",
+    description: "Votre marché est cartographié : qui cherche quoi, avec quels mots. Vous savez où vous êtes fort, où vous perdez des clients, et pourquoi.",
     icon: <RulerMeasure size={32} />,
   },
   {
