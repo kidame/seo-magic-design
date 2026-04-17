@@ -15,9 +15,13 @@ const H = 630;
 // #0a0a0a = theme-color du site (même fond que la navbar + manifest)
 const BG = { r: 10, g: 10, b: 10, alpha: 1 };
 
-// 1) Prépare le logo redimensionné (hauteur 220 px, proportions conservées)
+// 1) Prépare le logo redimensionné (hauteur 220 px, proportions conservées).
+// Le logo source est noir sur transparent (optimisé pour fond clair avec
+// mix-blend-multiply). Sur l'og-image fond noir, on inverse les pixels RGB
+// pour obtenir un logo blanc. L'alpha est preserve (negate({ alpha: false })).
 const logoBuffer = await sharp(readFileSync(LOGO))
   .resize({ height: 220, withoutEnlargement: false })
+  .negate({ alpha: false })
   .toBuffer();
 const { width: logoW, height: logoH } = await sharp(logoBuffer).metadata();
 
