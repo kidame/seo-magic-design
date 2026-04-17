@@ -22,6 +22,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const infoItems = [
   { kanji: "郵", label: "Email", value: "thomas.puglisi@kumo-seo.ch", href: "mailto:thomas.puglisi@kumo-seo.ch" },
+  { kanji: "電", label: "Téléphone", value: "+41 78 930 81 00", href: "tel:+41789308100" },
   { kanji: "所", label: "Basé à", value: "Val-de-Travers, Neuchâtel", href: null },
   { kanji: "域", label: "Zone d'intervention", value: "Toute la Suisse romande", href: null },
   { kanji: "速", label: "Délai de réponse", value: "Sous 24 heures", href: null },
@@ -68,7 +69,7 @@ const Contact = () => {
       name: "KUMO SEO",
       url: "https://kumo-seo.ch",
       email: "thomas.puglisi@kumo-seo.ch",
-      telephone: "",
+      telephone: "+41 78 930 81 00",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Val-de-Travers",
@@ -98,7 +99,7 @@ const Contact = () => {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-3xl mx-auto px-4 mb-8">
           <Breadcrumb>
@@ -249,7 +250,7 @@ const Contact = () => {
             {[
               { step: "01", title: "Échange initial", desc: "Je lis votre message et analyse rapidement votre site. Réponse sous 24h." },
               { step: "02", title: "Diagnostic gratuit", desc: "Premiers constats et recommandations par email. Sans engagement." },
-              { step: "03", title: "Proposition sur-mesure", desc: "Si pertinent, je vous propose un forfait adapté à vos objectifs et budget." },
+              { step: "03", title: "Forfait adapté à votre opportunité", desc: "Si pertinent, je vous propose un forfait adapté à vos objectifs et budget." },
             ].map((s, i) => (
               <motion.div
                 key={s.step}

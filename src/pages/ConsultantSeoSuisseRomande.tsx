@@ -57,6 +57,8 @@ const ConsultantSeoSuisseRomande = () => {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
         url: "https://kumo-seo.ch",
+        telephone: "+41 78 930 81 00",
+        email: "thomas.puglisi@kumo-seo.ch",
         areaServed: { "@type": "Place", name: "Suisse romande" },
         address: {
           "@type": "PostalAddress",
@@ -123,7 +125,7 @@ const ConsultantSeoSuisseRomande = () => {
         jsonLd={jsonLd}
       />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-4xl mx-auto px-4 mb-8">
           <Breadcrumb>

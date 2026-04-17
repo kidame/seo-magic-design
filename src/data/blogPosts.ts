@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["SEO", "PME", "Suisse romande", "visibilité Google", "référencement local"],
     reading_time: "8 min",
     word_count: 1550,
-    seo_title: "Votre site est invisible sur Google ? 5 causes fréquentes chez les PME suisses",
+    seo_title: "Site invisible sur Google : 5 causes chez les PME suisses",
     seo_description: "Votre site web n'apparaît pas sur Google ? Découvrez les 5 causes les plus fréquentes chez les PME de Suisse romande et comment y remédier.",
     canonical: "https://kumo-seo.ch/blog/site-invisible-google-pme-suisse",
     og_title: "Pourquoi votre site est invisible sur Google (et comment y remédier)",

@@ -27,7 +27,7 @@ const MentionsLegales = () => {
         noIndex
       />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         <div className="container max-w-3xl mx-auto px-4">
           <p className="section-label mb-4">法 Mentions légales</p>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-12">
@@ -44,7 +44,7 @@ const MentionsLegales = () => {
                 <li><strong className="text-foreground">Raison individuelle :</strong> KUMO SEO</li>
                 <li><strong className="text-foreground">Activité :</strong> Consultant SEO indépendant, création de sites web</li>
                 <li><strong className="text-foreground">Siège :</strong> Val-de-Travers, canton de Neuchâtel, Suisse</li>
-                <li><strong className="text-foreground">E-mail :</strong> contact@kumo-seo.ch</li>
+                <li><strong className="text-foreground">E-mail :</strong> thomas.puglisi@kumo-seo.ch</li>
               </ul>
             </section>
 

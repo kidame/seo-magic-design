@@ -15,6 +15,10 @@ dist-ssr
 lighthouse-reports
 lighthouse-reports-vercel
 
+# Build artifacts
+kumo-seo-dist.zip
+*.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

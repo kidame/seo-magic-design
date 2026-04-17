@@ -32,6 +32,8 @@ const APropos = () => {
         name: "KUMO SEO",
         description: "Consultant SEO indépendant basé à Neuchâtel, spécialisé dans l'audit technique et la création de sites web pour PME de Suisse romande.",
         url: "https://kumo-seo.ch",
+        telephone: "+41 78 930 81 00",
+        email: "thomas.puglisi@kumo-seo.ch",
         founder: { "@type": "Person", name: "Thomas Puglisi", jobTitle: "Consultant SEO & Développeur Web" },
         areaServed: { "@type": "Place", name: "Suisse romande" },
         address: { "@type": "PostalAddress", addressLocality: "Val-de-Travers", addressRegion: "Neuchâtel", addressCountry: "CH" },
@@ -72,7 +74,7 @@ const APropos = () => {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-4xl mx-auto px-4 mb-8">
           <Breadcrumb>

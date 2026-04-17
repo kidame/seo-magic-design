@@ -50,7 +50,8 @@ const Footer = () => {
               Consultant SEO indépendant<br />
               Audit SEO & Création de sites web<br />
               Val-de-Travers, Neuchâtel<br />
-              contact@kumo-seo.ch
+              <a href="mailto:thomas.puglisi@kumo-seo.ch" className="hover:text-foreground transition-colors">thomas.puglisi@kumo-seo.ch</a><br />
+              <a href="tel:+41789308100" className="hover:text-foreground transition-colors">+41 78 930 81 00</a>
             </p>
           </div>
           {footerColumns.map((col) => (

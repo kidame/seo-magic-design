@@ -54,6 +54,8 @@ const ConsultantSeoGeneve = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Genève",
       url: "https://kumo-seo.ch/consultant-seo-geneve",
+      telephone: "+41 78 930 81 00",
+      email: "thomas.puglisi@kumo-seo.ch",
       description: "Consultant SEO indépendant pour entreprises genevoises. Audit technique, création de site, accompagnement mensuel. Sans engagement longue durée. Forfait fixe CHF.",
       areaServed: {
         "@type": "State",
@@ -125,7 +127,7 @@ const ConsultantSeoGeneve = () => {
         jsonLd={jsonLd}
       />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-4xl mx-auto px-4 mb-8">
           <Breadcrumb>
@@ -336,7 +338,9 @@ const ConsultantSeoGeneve = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <p className="text-sm text-muted-foreground mb-8">
-              contact@kumo-seo.ch
+              <a href="mailto:thomas.puglisi@kumo-seo.ch" className="hover:text-foreground transition-colors">thomas.puglisi@kumo-seo.ch</a>
+              {" · "}
+              <a href="tel:+41789308100" className="hover:text-foreground transition-colors">+41 78 930 81 00</a>
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">

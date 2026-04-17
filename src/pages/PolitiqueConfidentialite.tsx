@@ -27,7 +27,7 @@ const PolitiqueConfidentialite = () => {
         noIndex
       />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         <div className="container max-w-3xl mx-auto px-4">
           <p className="section-label mb-4">守 Confidentialité</p>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-12">
@@ -43,7 +43,7 @@ const PolitiqueConfidentialite = () => {
               <ul className="list-none mt-3 space-y-1">
                 <li><strong className="text-foreground">KUMO SEO</strong> : raison individuelle</li>
                 <li>Val-de-Travers, canton de Neuchâtel, Suisse</li>
-                <li>E-mail : contact@kumo-seo.ch</li>
+                <li>E-mail : thomas.puglisi@kumo-seo.ch</li>
               </ul>
               <p className="mt-3">
                 La présente politique est conforme à la nouvelle Loi fédérale sur la protection des données 
@@ -128,7 +128,7 @@ const PolitiqueConfidentialite = () => {
                 <li><strong className="text-foreground">Droit d'opposition</strong> : vous opposer au traitement de vos données.</li>
               </ul>
               <p className="mt-3">
-                Pour exercer ces droits, contactez-nous à : <strong className="text-foreground">contact@kumo-seo.ch</strong>. 
+                Pour exercer ces droits, contactez-nous à : <strong className="text-foreground">thomas.puglisi@kumo-seo.ch</strong>. 
                 Nous répondrons dans un délai de 30 jours.
               </p>
             </section>

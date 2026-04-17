@@ -113,7 +113,7 @@ const AccompagnementSeo = () => {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-4xl mx-auto px-4 mb-8">
           <Breadcrumb>

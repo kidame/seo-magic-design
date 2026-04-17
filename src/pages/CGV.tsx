@@ -27,7 +27,7 @@ const CGV = () => {
         noIndex
       />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         <div className="container max-w-3xl mx-auto px-4">
           <p className="section-label mb-4">約 Conditions générales</p>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-12">

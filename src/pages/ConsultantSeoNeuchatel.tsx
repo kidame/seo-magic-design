@@ -58,6 +58,8 @@ const ConsultantSeoNeuchatel = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Neuchâtel",
       url: "https://kumo-seo.ch/consultant-seo-neuchatel",
+      telephone: "+41 78 930 81 00",
+      email: "thomas.puglisi@kumo-seo.ch",
       description: "Consultant SEO indépendant à Neuchâtel. Audit SEO 31 points, création de site web sur-mesure, accompagnement mensuel. Forfait fixe pour PME neuchâteloises.",
       areaServed: {
         "@type": "State",
@@ -104,7 +106,7 @@ const ConsultantSeoNeuchatel = () => {
         jsonLd={jsonLd}
       />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-4xl mx-auto px-4 mb-8">
           <Breadcrumb>
@@ -295,7 +297,9 @@ const ConsultantSeoNeuchatel = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <p className="text-sm text-muted-foreground mb-8">
-              contact@kumo-seo.ch
+              <a href="mailto:thomas.puglisi@kumo-seo.ch" className="hover:text-foreground transition-colors">thomas.puglisi@kumo-seo.ch</a>
+              {" · "}
+              <a href="tel:+41789308100" className="hover:text-foreground transition-colors">+41 78 930 81 00</a>
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
               <Link to="/contact">

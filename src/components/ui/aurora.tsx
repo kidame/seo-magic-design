@@ -136,7 +136,13 @@ export default function Aurora({
       renderer = new Renderer({
         alpha: true,
         premultipliedAlpha: true,
-        antialias: true,
+        // antialias: false → évite le stall GPU `GL_CLOSE_PATH_NV ReadPixels`
+        // signalé par GSC (multisample resolve à chaque frame sur NVIDIA).
+        // Le shader Aurora est un gradient basse fréquence : AA invisible à l'œil.
+        antialias: false,
+        // powerPreference: "low-power" → privilégie l'iGPU / évite de solliciter
+        // le dGPU pour une animation de fond décorative.
+        powerPreference: "low-power",
       });
     } catch {
       return;

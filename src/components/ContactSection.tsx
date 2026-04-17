@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const infoItems = [
-  { label: "Email", value: "contact@kumo-seo.ch" },
+  { label: "Email", value: "thomas.puglisi@kumo-seo.ch" },
   { label: "Basé à", value: "Val-de-Travers, Neuchâtel" },
   { label: "Zone", value: "Toute la Suisse romande" },
   { label: "Réponse", value: "Sous 24 heures" },
@@ -38,7 +38,7 @@ const ContactSection = () => {
           </div>
 
           <Button variant="hero" size="lg" asChild>
-            <a href="mailto:contact@kumo-seo.ch">
+            <a href="mailto:thomas.puglisi@kumo-seo.ch">
               Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
             </a>
           </Button>

@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="flex h-12 md:h-14 items-center justify-between px-5 md:px-6">
           <Link to="/" className="shrink-0 flex items-center gap-2" aria-label="KUMO, accueil">
             <img
-              src="/logo-kumo.png"
+              src="/logo-kumo.webp"
               alt="KUMO"
               width={96}
               height={55}

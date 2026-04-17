@@ -22,7 +22,7 @@ const NotFound = () => {
         noIndex
       />
       <Navbar />
-      <main className="pt-32 md:pt-40 pb-24 md:pb-40">
+      <main id="main-content" className="pt-32 md:pt-40 pb-24 md:pb-40">
         <div className="container max-w-2xl mx-auto px-4 text-center">
           <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-primary-light mb-4">
             Erreur 404

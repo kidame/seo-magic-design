@@ -52,7 +52,7 @@ const Blog = () => {
       </a>
       <Navbar />
 
-      <main className="pt-32 md:pt-40 pb-24 md:pb-40" id="blog-content">
+      <main id="main-content" className="pt-32 md:pt-40 pb-24 md:pb-40">
         <div className="container max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

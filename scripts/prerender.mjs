@@ -10,6 +10,13 @@ const DIST = resolve(__dirname, "../dist");
 
 const PRERENDER_PATHS = ROUTES.map((r) => r.path);
 
+// Capture le template Vite vanilla UNE SEULE FOIS, avant tout prerender.
+// Sans ca, dist/index.html est ecrase par le prerender de "/" (avec son FAQPage,
+// ses scripts JSON-LD, etc.), et les pages suivantes herited ce contenu en SPA
+// fallback -> injecte des schemas residuels (FAQPage tarifs de la home qui se
+// retrouve sur /consultant-seo-lausanne, /faq, etc.).
+const VANILLA_TEMPLATE = readFileSync(join(DIST, "index.html"), "utf-8");
+
 // Simple static file server for dist/
 function startServer(port) {
   const mimeTypes = {
@@ -24,12 +31,17 @@ function startServer(port) {
   };
 
   const server = createServer((req, res) => {
-    let filePath = join(DIST, req.url === "/" ? "/index.html" : req.url);
+    // Toute requete HTML (route SPA, "/", fallback) sert le template vanilla.
+    // Les requetes d'assets (.js/.css/.svg/...) passent par le disque.
+    const isAssetRequest = /\.[a-z0-9]+$/i.test(req.url) && !req.url.endsWith(".html");
 
-    // SPA fallback
-    if (!existsSync(filePath)) {
-      filePath = join(DIST, "index.html");
+    if (!isAssetRequest) {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(VANILLA_TEMPLATE);
+      return;
     }
+
+    const filePath = join(DIST, req.url);
 
     try {
       const content = readFileSync(filePath);

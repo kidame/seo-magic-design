@@ -136,7 +136,7 @@ const BlogPost = () => {
       </a>
       <Navbar />
 
-      <main className="pt-32 md:pt-40 pb-24 md:pb-40">
+      <main id="main-content" className="pt-32 md:pt-40 pb-24 md:pb-40">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-3 lg:order-1">

@@ -71,16 +71,15 @@ const faqs = [
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-border/50" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <div className="border-b border-border/50">
       <button onClick={() => setOpen(!open)} className="w-full py-5 flex items-center justify-between text-left" aria-expanded={open}>
-        <span className="text-base font-medium pr-4" itemProp="name">{question}</span>
+        <span className="text-base font-medium pr-4">{question}</span>
         <ChevronDown className={`shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} size={18} aria-hidden="true" />
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
-        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
       >
-        <p className="text-sm text-muted-foreground pb-5 leading-relaxed" itemProp="text">{answer}</p>
+        <p className="text-sm text-muted-foreground pb-5 leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -116,7 +115,7 @@ const FAQPage = () => {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main id="main-content" className="pt-32 pb-24">
         {/* Breadcrumb */}
         <div className="container max-w-3xl mx-auto px-4 mb-8">
           <Breadcrumb>
@@ -151,7 +150,7 @@ const FAQPage = () => {
         </section>
 
         {/* FAQ List */}
-        <section className="container max-w-3xl mx-auto px-4 mb-24" itemScope itemType="https://schema.org/FAQPage">
+        <section className="container max-w-3xl mx-auto px-4 mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             {faqs.map((faq, i) => (
               <FAQItem key={i} {...faq} />
