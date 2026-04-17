@@ -1,5 +1,6 @@
 name: Deploy to Infomaniak
 
+# Deploiement via SFTP (rsync sur SSH), secrets SFTP_* requis.
 on:
   push:
     branches: [main]
