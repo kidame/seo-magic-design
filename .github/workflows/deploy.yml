@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 # Un seul deploy a la fois. Un nouveau push sur main annule le precedent run
-# encore en cours -> pas de 2 uploads FTP simultanes qui se marcheraient dessus.
+# encore en cours -> pas de 2 uploads SFTP simultanes qui se marcheraient dessus.
 concurrency:
   group: deploy-infomaniak
   cancel-in-progress: true
@@ -43,22 +43,20 @@ jobs:
       - name: Build + prerender
         run: npm run build:prerender
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      # Deploiement SFTP via rsync sur SSH (port 22).
+      # Remplace l'ancien FTP-Deploy-Action : le port 21 est bloque
+      # (ETIMEDOUT depuis le runner GitHub vers Infomaniak).
+      # --delete supprime cote serveur les fichiers absents de dist/
+      # -> equivalent strict de l'ancien dangerous-clean-slate: true.
+      # Flags volontairement sans -p/-o/-a : l'hebergement mutualise
+      # Infomaniak refuse la preservation owner/permissions.
+      - name: Deploy via SFTP (rsync over SSH)
+        uses: easingthemes/ssh-deploy@v5.1.1
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./dist/
-          server-dir: /
-          dangerous-clean-slate: true
-          log-level: verbose
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/.DS_Store
-            **/stats.html
-            **/.ftpquota
+          SSH_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
+          REMOTE_HOST:     ${{ secrets.SFTP_HOST }}
+          REMOTE_USER:     ${{ secrets.SFTP_USERNAME }}
+          REMOTE_PORT:     22
+          SOURCE:          "dist/"
+          TARGET:          ${{ secrets.SFTP_TARGET_DIR }}
+          ARGS:            "-rlvz --delete --exclude=.git* --exclude=node_modules --exclude=.DS_Store --exclude=stats.html --exclude=.ftpquota"
