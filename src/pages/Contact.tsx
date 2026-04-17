@@ -68,6 +68,7 @@ const Contact = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
       url: "https://kumo-seo.ch",
+      logo: "https://kumo-seo.ch/logo-kumo.png",
       email: "thomas.puglisi@kumo-seo.ch",
       telephone: "+41 78 930 81 00",
       address: {

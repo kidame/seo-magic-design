@@ -57,6 +57,7 @@ const ConsultantSeoSuisseRomande = () => {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
         url: "https://kumo-seo.ch",
+        logo: "https://kumo-seo.ch/logo-kumo.png",
         telephone: "+41 78 930 81 00",
         email: "thomas.puglisi@kumo-seo.ch",
         areaServed: { "@type": "Place", name: "Suisse romande" },

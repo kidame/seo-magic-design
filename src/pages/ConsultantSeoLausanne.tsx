@@ -50,6 +50,7 @@ const ConsultantSeoLausanne = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Lausanne",
       url: "https://kumo-seo.ch/consultant-seo-lausanne",
+      logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
       description: "Consultant SEO pour entreprises lausannoises. Audit SEO complet, création web sur-mesure, suivi mensuel. Intervention à distance ou sur place. Forfait fixe.",

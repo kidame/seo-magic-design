@@ -66,7 +66,7 @@ const BlogPost = () => {
         url: "https://kumo-seo.ch",
         logo: {
           "@type": "ImageObject",
-          url: "https://kumo-seo.ch/og-image.jpg",
+          url: "https://kumo-seo.ch/logo-kumo.png",
         },
       },
       mainEntityOfPage: {

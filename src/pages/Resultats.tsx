@@ -26,6 +26,7 @@ const Resultats = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
       url: "https://kumo-seo.ch",
+      logo: "https://kumo-seo.ch/logo-kumo.png",
     },
   };
 

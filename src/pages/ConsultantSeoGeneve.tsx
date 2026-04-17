@@ -54,6 +54,7 @@ const ConsultantSeoGeneve = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Genève",
       url: "https://kumo-seo.ch/consultant-seo-geneve",
+      logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
       description: "Consultant SEO indépendant pour entreprises genevoises. Audit technique, création de site, accompagnement mensuel. Sans engagement longue durée. Forfait fixe CHF.",

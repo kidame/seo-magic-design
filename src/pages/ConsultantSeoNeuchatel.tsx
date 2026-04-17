@@ -58,6 +58,7 @@ const ConsultantSeoNeuchatel = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Neuchâtel",
       url: "https://kumo-seo.ch/consultant-seo-neuchatel",
+      logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
       description: "Consultant SEO indépendant à Neuchâtel. Audit SEO 31 points, création de site web sur-mesure, accompagnement mensuel. Forfait fixe pour PME neuchâteloises.",

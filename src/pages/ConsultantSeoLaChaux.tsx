@@ -54,6 +54,7 @@ const ConsultantSeoLaChaux = () => {
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO La Chaux-de-Fonds",
       url: "https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds",
+      logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
       description: "Consultant SEO local pour PME de La Chaux-de-Fonds. Audit SEO, création web, suivi mensuel. Spécialiste de la région neuchâteloise. Forfait fixe.",
