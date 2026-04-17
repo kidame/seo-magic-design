@@ -3,11 +3,11 @@ import ParallaxLayer from "@/components/ParallaxLayer";
 import { Link } from "react-router-dom";
 
 const them = [
-  "Rapport PDF générique : « améliorez votre contenu »",
-  "Facturation à l'heure : plus c'est long, plus ils gagnent",
-  "Un senior en réunion de vente, un stagiaire sur votre dossier",
-  "Sites basés sur des thèmes surchargés de plugins, lents et fragiles",
-  "Devis opaque, surprises à la facture finale",
+  "Recommandations SEO difficiles à transformer en actions concrètes",
+  "Budget qui s'étire au fil du projet, coûts peu prévisibles",
+  "Plusieurs interlocuteurs selon les phases, suivi fragmenté",
+  "Un site qui ralentit à mesure que les extensions s'accumulent",
+  "Classements qui stagnent malgré les audits successifs",
 ];
 
 const us = [
@@ -30,7 +30,7 @@ const DifferentiatorSection = () => {
         >
           <p className="section-label mb-4">Approche</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Freelance SEO vs agence :{" "}
+            Freelance SEO sur-mesure :{" "}
             <span className="text-primary">pourquoi choisir</span> <span className="text-primary text-neon-line relative">KUMO</span>
           </h2>
         </motion.div>
@@ -44,7 +44,7 @@ const DifferentiatorSection = () => {
               viewport={{ once: true }}
               className="glass-card p-6"
             >
-              <h3 className="font-mono text-sm text-muted-foreground uppercase tracking-wider mb-6">Agence classique</h3>
+              <h3 className="font-mono text-sm text-muted-foreground uppercase tracking-wider mb-6">Avant KUMO</h3>
               <div className="space-y-4">
                 {them.map((t, i) => (
                   <div key={i} className="flex items-start gap-3">
