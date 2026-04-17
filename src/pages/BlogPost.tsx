@@ -18,6 +18,7 @@ const articleComponents: Record<string, React.LazyExoticComponent<React.Componen
   "creer-site-internet-pme-suisse-2026": lazy(() => import("@/content/blog/CreerSiteInternet2026")),
   "freelance-seo-vs-agence-suisse": lazy(() => import("@/content/blog/FreelanceSeoVsAgence")),
   "audit-seo-pourquoi-indispensable": lazy(() => import("@/content/blog/AuditSeoPourquoiIndispensable")),
+  "pagespeed-insights-core-web-vitals-guide": lazy(() => import("@/content/blog/PagespeedCoreWebVitalsGuide")),
 };
 
 const BlogPost = () => {
@@ -372,6 +373,24 @@ function extractFaqFromSlug(slug: string): { question: string; answer: string }[
       {
         question: "Puis-je mettre en oeuvre les recommandations moi-même ?",
         answer: "Oui. Le rapport et le plan d'action sont rédigés pour être compréhensibles par un non-spécialiste. Certaines actions techniques nécessiteront un développeur, mais les recommandations de contenu et de structure peuvent souvent être mises en oeuvre en interne.",
+      },
+    ],
+    "pagespeed-insights-core-web-vitals-guide": [
+      {
+        question: "C'est quoi exactement les Core Web Vitals ?",
+        answer: "Les Core Web Vitals sont trois métriques de performance définies par Google pour évaluer l'expérience utilisateur d'une page web : le LCP (vitesse d'affichage du contenu principal), l'INP (réactivité aux clics) et le CLS (stabilité visuelle). Elles sont intégrées aux signaux de classement via l'évaluation Page Experience.",
+      },
+      {
+        question: "Quel outil utiliser pour tester mon site ?",
+        answer: "PageSpeed Insights (pagespeed.web.dev) est l'outil officiel de Google et la référence pour évaluer les Core Web Vitals. GTmetrix complète utilement l'analyse grâce à son graphique en cascade. Chrome DevTools permet des tests locaux rapides pendant les corrections.",
+      },
+      {
+        question: "Mon site a un bon LCP mais un mauvais CLS, c'est grave ?",
+        answer: "Oui. Google évalue les trois Core Web Vitals ensemble. Un site ne peut passer l'évaluation que si le 75e percentile de ses visiteurs obtient de bonnes valeurs sur les trois métriques simultanément. Un CLS dégradé annule les efforts faits sur le LCP.",
+      },
+      {
+        question: "Quel score PageSpeed viser pour un site de PME ?",
+        answer: "Viser 75 sur 100 ou plus sur mobile et 90 sur 100 ou plus sur desktop, avec les trois Core Web Vitals dans le vert sur les données de terrain. Ce niveau permet de passer l'évaluation Page Experience sans compromis majeur sur les fonctionnalités du site (tracking, animations, images).",
       },
     ],
   };

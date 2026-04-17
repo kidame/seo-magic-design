@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Thumbnail KUMO — trois jauges Core Web Vitals LCP, INP et CLS avec seuils de performance.">
+  <title>Core Web Vitals — Thumbnail</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap');
+      .display { font-family: 'Instrument Serif', 'Sora', Georgia, serif; font-style: italic; font-weight: 400; }
+      .brand   { font-family: 'Sora', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+      .mono    { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 400; letter-spacing: 0.14em; }
+    </style>
+    <radialGradient id="g" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#120a22"/>
+      <stop offset="55%" stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8c47d1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#8c47d1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sg" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#g)"/>
+  <rect x="28" y="28" width="744" height="394" fill="none" stroke="#8c47d1" stroke-opacity="0.20" stroke-width="0.5"/>
+  <g stroke="#d9bff0" stroke-opacity="0.45" stroke-width="0.8">
+    <path d="M 18 36 L 36 36 M 36 18 L 36 36"/>
+    <path d="M 782 36 L 764 36 M 764 18 L 764 36"/>
+    <path d="M 18 414 L 36 414 M 36 432 L 36 414"/>
+    <path d="M 782 414 L 764 414 M 764 432 L 764 414"/>
+  </g>
+
+  <!-- aura centrale -->
+  <g transform="translate(400 210)">
+    <circle cx="0" cy="0" r="220" fill="url(#aura)"/>
+  </g>
+
+  <!-- Trois colonnes verticales LCP / INP / CLS -->
+  <!-- Chaque colonne : zone bon (vert bas), zone à améliorer (ambre milieu), zone médiocre (rouge haut) -->
+  <!-- Echelle verticale : y=80 (haut, médiocre) à y=330 (bas, bon) -->
+
+  <!-- Colonne 1 : LCP -->
+  <g transform="translate(200 0)">
+    <rect x="-48" y="80"  width="96" height="82" fill="#3a1515" fill-opacity="0.55" stroke="#c86464" stroke-opacity="0.45" stroke-width="0.6"/>
+    <rect x="-48" y="162" width="96" height="80" fill="#3a2a10" fill-opacity="0.55" stroke="#d8a55c" stroke-opacity="0.45" stroke-width="0.6"/>
+    <rect x="-48" y="242" width="96" height="88" fill="#122a18" fill-opacity="0.55" stroke="#6fbf8a" stroke-opacity="0.55" stroke-width="0.6"/>
+
+    <text x="0" y="108" text-anchor="middle" fill="#e0a0a0" class="mono" font-size="8.5">&gt; 4,0 s</text>
+    <text x="0" y="122" text-anchor="middle" fill="#c86464" fill-opacity="0.80" class="mono" font-size="7.5">MÉDIOCRE</text>
+
+    <text x="0" y="192" text-anchor="middle" fill="#e4c58e" class="mono" font-size="8.5">2,5 &#8211; 4,0 s</text>
+    <text x="0" y="206" text-anchor="middle" fill="#d8a55c" fill-opacity="0.80" class="mono" font-size="7.5">A AMELIORER</text>
+
+    <text x="0" y="276" text-anchor="middle" fill="#a0dcb4" class="mono" font-size="8.5">&#8804; 2,5 s</text>
+    <text x="0" y="290" text-anchor="middle" fill="#6fbf8a" fill-opacity="0.85" class="mono" font-size="7.5">BON</text>
+
+    <text x="0" y="360" text-anchor="middle" fill="#f5ebd8" class="display" font-size="36">LCP</text>
+    <text x="0" y="380" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="7.5">LARGEST CONTENTFUL PAINT</text>
+  </g>
+
+  <!-- Colonne 2 : INP -->
+  <g transform="translate(400 0)">
+    <rect x="-48" y="80"  width="96" height="82" fill="#3a1515" fill-opacity="0.55" stroke="#c86464" stroke-opacity="0.45" stroke-width="0.6"/>
+    <rect x="-48" y="162" width="96" height="80" fill="#3a2a10" fill-opacity="0.55" stroke="#d8a55c" stroke-opacity="0.45" stroke-width="0.6"/>
+    <rect x="-48" y="242" width="96" height="88" fill="#122a18" fill-opacity="0.55" stroke="#6fbf8a" stroke-opacity="0.55" stroke-width="0.6"/>
+
+    <text x="0" y="108" text-anchor="middle" fill="#e0a0a0" class="mono" font-size="8.5">&gt; 500 ms</text>
+    <text x="0" y="122" text-anchor="middle" fill="#c86464" fill-opacity="0.80" class="mono" font-size="7.5">MÉDIOCRE</text>
+
+    <text x="0" y="192" text-anchor="middle" fill="#e4c58e" class="mono" font-size="8.5">200 &#8211; 500 ms</text>
+    <text x="0" y="206" text-anchor="middle" fill="#d8a55c" fill-opacity="0.80" class="mono" font-size="7.5">A AMELIORER</text>
+
+    <text x="0" y="276" text-anchor="middle" fill="#a0dcb4" class="mono" font-size="8.5">&#8804; 200 ms</text>
+    <text x="0" y="290" text-anchor="middle" fill="#6fbf8a" fill-opacity="0.85" class="mono" font-size="7.5">BON</text>
+
+    <text x="0" y="360" text-anchor="middle" fill="#f5ebd8" class="display" font-size="36">INP</text>
+    <text x="0" y="380" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="7.5">INTERACTION TO NEXT PAINT</text>
+  </g>
+
+  <!-- Colonne 3 : CLS -->
+  <g transform="translate(600 0)">
+    <rect x="-48" y="80"  width="96" height="82" fill="#3a1515" fill-opacity="0.55" stroke="#c86464" stroke-opacity="0.45" stroke-width="0.6"/>
+    <rect x="-48" y="162" width="96" height="80" fill="#3a2a10" fill-opacity="0.55" stroke="#d8a55c" stroke-opacity="0.45" stroke-width="0.6"/>
+    <rect x="-48" y="242" width="96" height="88" fill="#122a18" fill-opacity="0.55" stroke="#6fbf8a" stroke-opacity="0.55" stroke-width="0.6"/>
+
+    <text x="0" y="108" text-anchor="middle" fill="#e0a0a0" class="mono" font-size="8.5">&gt; 0,25</text>
+    <text x="0" y="122" text-anchor="middle" fill="#c86464" fill-opacity="0.80" class="mono" font-size="7.5">MÉDIOCRE</text>
+
+    <text x="0" y="192" text-anchor="middle" fill="#e4c58e" class="mono" font-size="8.5">0,10 &#8211; 0,25</text>
+    <text x="0" y="206" text-anchor="middle" fill="#d8a55c" fill-opacity="0.80" class="mono" font-size="7.5">A AMELIORER</text>
+
+    <text x="0" y="276" text-anchor="middle" fill="#a0dcb4" class="mono" font-size="8.5">&#8804; 0,10</text>
+    <text x="0" y="290" text-anchor="middle" fill="#6fbf8a" fill-opacity="0.85" class="mono" font-size="7.5">BON</text>
+
+    <text x="0" y="360" text-anchor="middle" fill="#f5ebd8" class="display" font-size="36">CLS</text>
+    <text x="0" y="380" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="7.5">CUMULATIVE LAYOUT SHIFT</text>
+  </g>
+
+  <!-- Metrics header -->
+  <text x="400" y="62" text-anchor="middle" fill="#f5ebd8" fill-opacity="0.92" class="brand" font-size="10">CORE WEB VITALS &#183; SEUILS GOOGLE</text>
+
+  <!-- Bandeau KUMO -->
+  <text x="40" y="46" fill="#f5ebd8" fill-opacity="0.92" class="brand" font-size="10">KUMO</text>
+  <text x="760" y="46" text-anchor="end" fill="#b57dd6" fill-opacity="0.70" class="mono" font-size="8">06 / 06</text>
+
+  <text x="400" y="410" text-anchor="middle" fill="#b57dd6" fill-opacity="0.85" class="mono" font-size="8">PAGESPEED INSIGHTS &#183; GUIDE PME SUISSES</text>
+</svg>
