@@ -34,20 +34,21 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0a0a0a" />
 
-    <!-- Fonts: preconnect + non-blocking CSS (Sora + JetBrains Mono only) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts: self-hosted WOFF2 variables - 1 fichier par famille couvre toutes les graisses via axe wght -->
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
+      as="font"
+      href="/fonts/sora-variable.woff2"
+      type="font/woff2"
+      crossorigin
     />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    /></noscript>
+    <link
+      rel="preload"
+      as="font"
+      href="/fonts/jetbrains-mono-variable.woff2"
+      type="font/woff2"
+      crossorigin
+    />
 
     <!-- Instrument Serif italic 400 - self-hosted (drop cap + pull quote blog) -->
     <link
@@ -67,7 +68,7 @@
       "url": "https://kumo-seo.ch",
       "description": "Audit SEO technique, accompagnement SEO continu et création de sites web sur-mesure pour PME de Suisse romande.",
       "image": "https://kumo-seo.ch/og-image.jpg",
-      "logo": "https://kumo-seo.ch/logo-kumo.png",
+      "logo": "https://kumo-seo.ch/logo-kumo.webp",
       "telephone": "+41 78 930 81 00",
       "email": "thomas.puglisi@kumo-seo.ch",
       "address": {

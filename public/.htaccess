@@ -21,6 +21,19 @@
   ExpiresByType font/woff "access plus 1 year"
 </IfModule>
 
+# Cache-Control: public, immutable sur les assets hash\u00e9s par Vite + fonts self-hosted
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2|woff)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpg|jpeg|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|txt|json|webmanifest)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
 # Gzip compression
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
@@ -33,6 +46,6 @@
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'"
   Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
