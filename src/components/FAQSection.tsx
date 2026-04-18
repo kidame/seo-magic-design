@@ -57,28 +57,12 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
   );
 };
 
-// JSON-LD FAQPage — rendu inline par React pour éviter la double injection
-// (prerender + hydratation client) qui créait un doublon détecté par GSC.
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
-
+// Pas de JSON-LD FAQPage ici : ces questions sont deja declarees sur /faq
+// (page canonique). Emettre un second FAQPage sur / declenche un doublon inter-URL
+// signale par GSC ("Champ FAQPage en double").
 const FAQSection = () => {
   return (
     <section id="faq" className="py-24 md:py-40 border-t border-border/50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       <div className="container max-w-3xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
