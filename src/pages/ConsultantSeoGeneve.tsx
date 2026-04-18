@@ -123,7 +123,7 @@ const ConsultantSeoGeneve = () => {
     <div className="min-h-screen">
       <SeoHead
         title="Consultant SEO Genève - Audit & Référencement | KUMO"
-        description="Consultant SEO indépendant pour entreprises genevoises. Audit technique, création de site, accompagnement mensuel. Sans engagement longue durée. Forfait fixe CHF."
+        description="Consultant SEO pour PME genevoises et marché transfrontalier Grand Genève. Référencement local adapté à un marché compétitif. Devis gratuit."
         canonical="https://kumo-seo.ch/consultant-seo-geneve"
         jsonLd={jsonLd}
       />
