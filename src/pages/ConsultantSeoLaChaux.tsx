@@ -97,7 +97,7 @@ const ConsultantSeoLaChaux = () => {
     <div className="min-h-screen">
       <SeoHead
         title="Consultant SEO La Chaux-de-Fonds - Référencement PME | KUMO"
-        description="Consultant SEO local pour PME de La Chaux-de-Fonds. Audit SEO, création web, suivi mensuel. Spécialiste de la région neuchâteloise. Forfait fixe."
+        description="Consultant SEO à La Chaux-de-Fonds. PME, sous-traitants horlogers, artisans des Montagnes neuchâteloises. Peu de concurrence en ligne, résultats plus rapides."
         canonical="https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds"
         jsonLd={jsonLd}
       />
