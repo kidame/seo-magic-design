@@ -121,7 +121,7 @@ const ConsultantSeoSuisseRomande = () => {
     <div className="min-h-screen">
       <SeoHead
         title="Consultant SEO en Suisse romande | KUMO - Neuchâtel"
-        description="Consultant SEO indépendant en Suisse romande. Audit technique, création de sites et accompagnement SEO pour PME. Basé à Neuchâtel, actif dans toute la Romandie."
+        description="SEO pour PME de Suisse romande, de Neuchâtel à Genève. Diagnostic, suivi mensuel et création web. Tarifs en CHF, sans engagement longue durée."
         canonical="https://kumo-seo.ch/consultant-seo-suisse-romande"
         jsonLd={jsonLd}
       />
