@@ -70,7 +70,7 @@ const APropos = () => {
     <div className="min-h-screen">
       <SeoHead
         title="À propos | KUMO - Freelance SEO en Suisse romande"
-        description="Consultant SEO indépendant à Neuchâtel. Audit technique, création de sites web et accompagnement SEO pour PME de Suisse romande."
+        description="Thomas Puglisi, freelance SEO basé à Neuchâtel. Méthode transparente, forfait fixe, zéro jargon. Un seul interlocuteur du diagnostic aux résultats."
         canonical="https://kumo-seo.ch/a-propos"
         jsonLd={jsonLd}
       />
