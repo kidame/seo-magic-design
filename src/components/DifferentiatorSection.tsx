@@ -77,7 +77,7 @@ const DifferentiatorSection = () => {
           </ParallaxLayer>
         </div>
         <div className="mt-8 text-center">
-          <Link to="/a-propos" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+          <Link to="/a-propos/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
             En savoir plus sur le freelance SEO KUMO
           </Link>
         </div>

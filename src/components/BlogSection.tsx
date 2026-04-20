@@ -43,7 +43,7 @@ const BlogSection = () => {
           className="text-center mt-12"
         >
           <Button variant="heroOutline" className="rounded-full" asChild>
-            <Link to="/blog">
+            <Link to="/blog/">
               Tous les articles <ArrowRight size={16} className="ml-2" />
             </Link>
           </Button>

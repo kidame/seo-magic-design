@@ -53,7 +53,7 @@ const ConsultantSeoLaChaux = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO La Chaux-de-Fonds",
-      url: "https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds",
+      url: "https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
@@ -87,8 +87,8 @@ const ConsultantSeoLaChaux = () => {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande" },
-        { "@type": "ListItem", position: 3, name: "La Chaux-de-Fonds", item: "https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds" },
+        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande/" },
+        { "@type": "ListItem", position: 3, name: "La Chaux-de-Fonds", item: "https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds/" },
       ],
     },
   ];
@@ -98,7 +98,7 @@ const ConsultantSeoLaChaux = () => {
       <SeoHead
         title="Consultant SEO La Chaux-de-Fonds - Référencement PME | KUMO"
         description="Consultant SEO à La Chaux-de-Fonds. PME, sous-traitants horlogers, artisans des Montagnes neuchâteloises. Peu de concurrence en ligne, résultats plus rapides."
-        canonical="https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds"
+        canonical="https://kumo-seo.ch/consultant-seo-la-chaux-de-fonds/"
         jsonLd={jsonLd}
       />
       <Navbar />
@@ -112,7 +112,7 @@ const ConsultantSeoLaChaux = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild><Link to="/consultant-seo-suisse-romande">Consultant SEO</Link></BreadcrumbLink>
+                <BreadcrumbLink asChild><Link to="/consultant-seo-suisse-romande/">Consultant SEO</Link></BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -138,7 +138,7 @@ const ConsultantSeoLaChaux = () => {
               La Chaux-de-Fonds est la troisième ville de Suisse romande et le coeur industriel des Montagnes neuchâteloises. Classée au patrimoine mondial de l'UNESCO pour son urbanisme horloger, la ville abrite un tissu économique unique en Suisse : horlogerie de luxe, microtechnique de pointe, artisanat et commerces de proximité. Pourtant, la majorité des entreprises chaux-de-fonnières restent peu visibles sur Google. Basé à Val-de-Travers, à moins de 30 minutes, j'interviens régulièrement dans les Montagnes neuchâteloises. En tant que consultant SEO indépendant, je propose des forfaits fixes et transparents, sans engagement longue durée, adaptés aux réalités économiques de la région.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>
@@ -175,21 +175,21 @@ const ConsultantSeoLaChaux = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO - CHF 1'200</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 31 points de contrôle, analyse de 3 concurrents dans votre secteur, plan d'action priorisé sur 90 jours. Appel de restitution de 30 minutes inclus.
               </p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
               <h3 className="font-bold mb-2">Site web sur-mesure - dès CHF 3'900</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Site codé sur-mesure, optimisé SEO dès la conception. Performance 90+ PageSpeed, design unique, hébergement suisse inclus la première année.
               </p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO - dès CHF 250/mois</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -248,10 +248,10 @@ const ConsultantSeoLaChaux = () => {
             ))}
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link to="/consultant-seo-neuchatel" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-neuchatel/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO Neuchâtel <ArrowRight size={14} />
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-suisse-romande/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
           </div>
@@ -263,12 +263,12 @@ const ConsultantSeoLaChaux = () => {
             <p className="section-label mb-4">記事 Sur le blog</p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/site-invisible-google-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
               <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
             </Link>
-            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
               <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
               <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
@@ -291,7 +291,7 @@ const ConsultantSeoLaChaux = () => {
               <a href="tel:+41789308100" className="hover:text-foreground transition-colors">+41 78 930 81 00</a>
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

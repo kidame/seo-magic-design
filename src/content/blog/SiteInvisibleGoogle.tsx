@@ -21,7 +21,7 @@ const SiteInvisibleGoogle = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Comment est-ce possible ? Plusieurs scénarios reviennent régulièrement dans nos{" "}
-          <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audits SEO</Link> :
+          <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audits SEO</Link> :
         </p>
         <Marginalia label="DÉFINITION">
           Indexation : processus par lequel Google ajoute une page à la liste qu'il peut afficher en résultats. Sans indexation, la page reste invisible même si elle existe.
@@ -48,7 +48,7 @@ const SiteInvisibleGoogle = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Une{" "}
-          <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">étude stratégique de mots-clés</Link>{" "}
+          <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">étude stratégique de mots-clés</Link>{" "}
           adaptée au marché suisse permet d'identifier les termes que vos clients utilisent réellement. En Suisse romande, cela implique souvent de travailler la longue traîne par canton et par ville, car c'est là que se trouvent les opportunités avec le moins de concurrence.
         </p>
       </div>
@@ -97,7 +97,7 @@ const SiteInvisibleGoogle = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Enfin, votre site lui-même doit contenir des signaux géographiques : nom de votre ville dans les titres, pages dédiées aux zones desservies, balisage Schema LocalBusiness dans le code. Notre{" "}
-          <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement SEO</Link>{" "}
+          <Link to="/services/accompagnement-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement SEO</Link>{" "}
           inclut systématiquement l'optimisation de ces signaux locaux.
         </p>
       </div>
@@ -130,7 +130,7 @@ const SiteInvisibleGoogle = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Notre{" "}
-          <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
+          <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
           analyse 31 points techniques, évalue votre positionnement actuel sur vos mots-clés stratégiques, identifie vos concurrents locaux et produit un plan d'action priorisé sur 90 jours. Vous savez exactement ce qui bloque et dans quel ordre agir.
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -162,7 +162,7 @@ const SiteInvisibleGoogle = () => (
       <h3 className="text-lg font-semibold mt-8 mb-3">Combien coûte un audit SEO en Suisse ?</h3>
       <p className="text-muted-foreground leading-relaxed">
         Les tarifs varient considérablement selon la profondeur de l'analyse. Chez KUMO, l'{" "}
-        <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
+        <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
         est proposé à 1 200 CHF forfaitaire. Il comprend l'analyse technique, l'étude concurrentielle, un rapport interactif et une restitution en visioconférence avec un plan d'action concret.
       </p>
 
@@ -170,7 +170,7 @@ const SiteInvisibleGoogle = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous voulez savoir exactement pourquoi votre site n'apparaît pas sur Google ?{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Contactez-nous</Link>{" "}
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Contactez-nous</Link>{" "}
         pour un premier échange gratuit de 15 minutes.
       </p>
     </div>

@@ -11,11 +11,11 @@ const blogJsonLd: Record<string, unknown>[] = [
     "@type": "CollectionPage",
     name: "Blog | KUMO",
     description: "Articles SEO pratiques pour PME de Suisse romande. Référencement naturel, création de site, visibilité Google.",
-    url: "https://kumo-seo.ch/blog",
+    url: "https://kumo-seo.ch/blog/",
     publisher: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
     },
   },
@@ -33,7 +33,7 @@ const blogJsonLd: Record<string, unknown>[] = [
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://kumo-seo.ch/blog",
+        item: "https://kumo-seo.ch/blog/",
       },
     ],
   },
@@ -45,7 +45,7 @@ const Blog = () => {
       <SeoHead
         title="Blog SEO - Conseils référencement PME suisses | KUMO"
         description="Articles SEO pratiques pour PME de Suisse romande. Référencement naturel, création de site, visibilité Google. Par un consultant SEO indépendant à Neuchâtel."
-        canonical="https://kumo-seo.ch/blog"
+        canonical="https://kumo-seo.ch/blog/"
         jsonLd={blogJsonLd}
       />
       <a href="#blog-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md">

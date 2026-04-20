@@ -14,9 +14,9 @@ const AgenceWebNeuchatelGuideChoix2026 = () => (
       </p>
       <p className="text-muted-foreground leading-relaxed">
         Il complète utilement les articles existants sur le{" "}
-        <Link to="/blog/freelance-seo-vs-agence-suisse" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">choix freelance ou agence</Link>
+        <Link to="/blog/freelance-seo-vs-agence-suisse/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">choix freelance ou agence</Link>
         {" "}et sur la{" "}
-        <Link to="/blog/creer-site-internet-pme-suisse-2026" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">création de site internet en 2026</Link>
+        <Link to="/blog/creer-site-internet-pme-suisse-2026/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">création de site internet en 2026</Link>
         . Ici, on se place du point de vue d'une entreprise neuchâteloise qui doit trancher.
       </p>
     </div>
@@ -54,7 +54,7 @@ const AgenceWebNeuchatelGuideChoix2026 = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Pour comprendre pourquoi ces différences existent et ce qu'elles impliquent, voir{" "}
-          <Link to="/blog/pagespeed-insights-core-web-vitals-guide" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">notre guide PageSpeed et Core Web Vitals</Link>.
+          <Link to="/blog/pagespeed-insights-core-web-vitals-guide/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">notre guide PageSpeed et Core Web Vitals</Link>.
         </p>
 
         <h3 className="text-lg font-semibold mt-8 mb-3">Flexibilité SEO</h3>
@@ -97,7 +97,7 @@ const AgenceWebNeuchatelGuideChoix2026 = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           <strong className="text-foreground">Site vitrine optimisé (5 à 10 pages), freelance ou petit studio</strong> : 3'500 à 7'000 CHF. Design personnalisé, travail SEO de base (recherche de mots-clés, balises, maillage), performance correcte, rédaction des contenus principaux. C'est la fourchette où se trouvent les{" "}
-          <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">formules KUMO</Link>
+          <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">formules KUMO</Link>
           {" "}(Essentiel à 3'900 CHF, Pro à 4'900 CHF, Premium à 6'500 CHF).
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -191,9 +191,9 @@ const AgenceWebNeuchatelGuideChoix2026 = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous réfléchissez à refaire votre site à Neuchâtel ?{" "}
-        <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Découvrez les formules KUMO</Link>
+        <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Découvrez les formules KUMO</Link>
         {" "}ou{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>
         {" "}pour un échange de 15 minutes.
       </p>
     </div>

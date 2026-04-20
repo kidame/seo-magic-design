@@ -7,12 +7,12 @@ const PolitiqueConfidentialite = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Politique de confidentialité | KUMO SEO",
-    url: "https://kumo-seo.ch/politique-de-confidentialite",
+    url: "https://kumo-seo.ch/politique-de-confidentialite/",
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch" },
-        { "@type": "ListItem", position: 2, name: "Politique de confidentialité", item: "https://kumo-seo.ch/politique-de-confidentialite" },
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+        { "@type": "ListItem", position: 2, name: "Politique de confidentialité", item: "https://kumo-seo.ch/politique-de-confidentialite/" },
       ],
     },
   };
@@ -22,7 +22,7 @@ const PolitiqueConfidentialite = () => {
       <SeoHead
         title="Politique de confidentialité | KUMO"
         description="Politique de confidentialité conforme à la nLPD suisse. Données collectées, droits des personnes et cookies."
-        canonical="https://kumo-seo.ch/politique-de-confidentialite"
+        canonical="https://kumo-seo.ch/politique-de-confidentialite/"
         jsonLd={jsonLd}
         noIndex
       />

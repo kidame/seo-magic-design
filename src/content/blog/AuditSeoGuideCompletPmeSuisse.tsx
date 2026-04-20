@@ -14,7 +14,7 @@ const AuditSeoGuideCompletPmeSuisse = () => (
       </p>
       <p className="text-muted-foreground leading-relaxed">
         Il complète l'article{" "}
-        <Link to="/blog/audit-seo-pourquoi-indispensable" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Audit SEO, pourquoi c'est indispensable</Link>
+        <Link to="/blog/audit-seo-pourquoi-indispensable/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Audit SEO, pourquoi c'est indispensable</Link>
         , qui explique le pourquoi. Ici, on regarde le comment.
       </p>
     </div>
@@ -42,7 +42,7 @@ const AuditSeoGuideCompletPmeSuisse = () => (
         <h3 className="text-lg font-semibold mt-8 mb-3">Composante technique</h3>
         <p className="text-muted-foreground leading-relaxed">
           L'audit technique examine les fondations : statut d'indexation des pages dans Google, vitesse de chargement et Core Web Vitals (voir{" "}
-          <Link to="/blog/pagespeed-insights-core-web-vitals-guide" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">notre guide PageSpeed et Core Web Vitals</Link>
+          <Link to="/blog/pagespeed-insights-core-web-vitals-guide/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">notre guide PageSpeed et Core Web Vitals</Link>
           ), qualité du HTML (balises title, méta, hiérarchie des H1 à H6), sitemap XML et robots.txt, redirections, erreurs 404, balises canonical, présence et validité des données structurées Schema.org.
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -152,9 +152,9 @@ const AuditSeoGuideCompletPmeSuisse = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           À titre de référence, l'{" "}
-          <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO KUMO</Link>
+          <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO KUMO</Link>
           {" "}est proposé à 1'200 CHF forfaitaire. Le tarif est fixe, le périmètre couvre les quatre composantes, et le livrable inclut le rapport interactif, le plan d'action 90 jours et la restitution. Pour un comparatif plus large, voir l'article sur le choix entre{" "}
-          <Link to="/blog/freelance-seo-vs-agence-suisse" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">freelance SEO et agence</Link>.
+          <Link to="/blog/freelance-seo-vs-agence-suisse/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">freelance SEO et agence</Link>.
         </p>
       </div>
     </ArticleSection>
@@ -228,9 +228,9 @@ const AuditSeoGuideCompletPmeSuisse = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous voulez un diagnostic clair de votre site ?{" "}
-        <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Découvrez l'audit SEO KUMO</Link>
+        <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Découvrez l'audit SEO KUMO</Link>
         {" "}ou{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>
         {" "}pour un échange de 15 minutes.
       </p>
     </div>

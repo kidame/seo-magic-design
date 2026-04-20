@@ -7,12 +7,12 @@ const MentionsLegales = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Mentions légales | KUMO SEO",
-    url: "https://kumo-seo.ch/mentions-legales",
+    url: "https://kumo-seo.ch/mentions-legales/",
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch" },
-        { "@type": "ListItem", position: 2, name: "Mentions légales", item: "https://kumo-seo.ch/mentions-legales" },
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+        { "@type": "ListItem", position: 2, name: "Mentions légales", item: "https://kumo-seo.ch/mentions-legales/" },
       ],
     },
   };
@@ -22,7 +22,7 @@ const MentionsLegales = () => {
       <SeoHead
         title="Mentions légales | KUMO - Consultant SEO"
         description="Mentions légales du site kumo-seo.ch. Identité de l'éditeur, hébergement, propriété intellectuelle et droit applicable."
-        canonical="https://kumo-seo.ch/mentions-legales"
+        canonical="https://kumo-seo.ch/mentions-legales/"
         jsonLd={jsonLd}
         noIndex
       />

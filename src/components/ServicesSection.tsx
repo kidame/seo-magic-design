@@ -69,7 +69,7 @@ const ponctuelles = [
     price: "1'200",
     description: "Analyse complète : technique, contenu, visibilité, concurrents. Rapport interactif + plan d'action 90 jours + appel de restitution 30 min.",
     pourQui: "Toute entreprise qui veut savoir où elle en est et quoi améliorer.",
-    link: "/services/audit-seo",
+    link: "/services/audit-seo/",
   },
   {
     kanji: "設計",
@@ -78,7 +78,7 @@ const ponctuelles = [
     description: "Architecture, mots-clés, textes, feuille de route. La fondation d'un site qui performe.",
     pourQui: "Entreprise qui prépare un nouveau site et veut valider la stratégie avant de s'engager.",
     note: "Ce montant est intégralement déduit du forfait si vous confirmez la création du site.",
-    link: "/contact",
+    link: "/contact/",
   },
 ];
 
@@ -262,7 +262,7 @@ const ServicesSection = () => {
                   </div>
 
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                   >
                     Demander un devis <ArrowRight size={14} />
@@ -437,7 +437,7 @@ const ServicesSection = () => {
                   </div>
 
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                   >
                     Souscrire <ArrowRight size={14} />
@@ -517,7 +517,7 @@ const ServicesSection = () => {
               ))}
             </div>
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary-light transition-colors"
             >
               Discutons de votre projet <ArrowRight className="w-4 h-4" />

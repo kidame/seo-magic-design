@@ -31,7 +31,7 @@ const APropos = () => {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
         description: "Consultant SEO indépendant basé à Neuchâtel, spécialisé dans l'audit technique et la création de sites web pour PME de Suisse romande.",
-        url: "https://kumo-seo.ch",
+        url: "https://kumo-seo.ch/",
         logo: "https://kumo-seo.ch/logo-kumo.png",
         telephone: "+41 78 930 81 00",
         email: "thomas.puglisi@kumo-seo.ch",
@@ -45,12 +45,12 @@ const APropos = () => {
       "@type": "Person",
       name: "Thomas Puglisi",
       jobTitle: "Consultant SEO & Développeur Web",
-      url: "https://kumo-seo.ch/a-propos",
+      url: "https://kumo-seo.ch/a-propos/",
       knowsAbout: ["SEO", "Référencement naturel", "Création de sites web"],
       worksFor: {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
-        url: "https://kumo-seo.ch",
+        url: "https://kumo-seo.ch/",
         logo: "https://kumo-seo.ch/logo-kumo.png",
       },
       address: { "@type": "PostalAddress", addressLocality: "Val-de-Travers", addressRegion: "Neuchâtel", addressCountry: "CH" },
@@ -62,7 +62,7 @@ const APropos = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-      { "@type": "ListItem", position: 2, name: "À propos", item: "https://kumo-seo.ch/a-propos" },
+      { "@type": "ListItem", position: 2, name: "À propos", item: "https://kumo-seo.ch/a-propos/" },
     ],
   };
 
@@ -71,7 +71,7 @@ const APropos = () => {
       <SeoHead
         title="À propos | KUMO - Freelance SEO en Suisse romande"
         description="Thomas Puglisi, freelance SEO basé à Neuchâtel. Méthode transparente, forfait fixe, zéro jargon. Un seul interlocuteur du diagnostic aux résultats."
-        canonical="https://kumo-seo.ch/a-propos"
+        canonical="https://kumo-seo.ch/a-propos/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -190,19 +190,19 @@ const APropos = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <h3 className="font-bold mb-2">Audit SEO</h3>
               <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours.</p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Suivi mensuel continu pour progresser dans Google.</p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <h3 className="font-bold mb-2">Création de site</h3>
               <p className="text-sm text-muted-foreground">Sites web sur-mesure, optimisés SEO.</p>
             </Link>
-            <Link to="/blog" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <h3 className="font-bold mb-2">Blog</h3>
               <p className="text-sm text-muted-foreground">Guides et analyses SEO pour PME suisses.</p>
             </Link>
@@ -219,7 +219,7 @@ const APropos = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Prendre contact <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

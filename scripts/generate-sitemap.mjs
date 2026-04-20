@@ -10,8 +10,13 @@ const today = new Date().toISOString().split("T")[0];
 
 const sitemapRoutes = ROUTES.filter((r) => r.sitemap !== false);
 
+// Infomaniak/Apache (mod_dir) ajoute un trailing slash a toute URL qui correspond
+// a un dossier (dist/<path>/index.html cree par le prerender). On declare donc la
+// forme terminale "/<path>/" dans le sitemap pour eviter les 301 cote crawl.
+const withTrailingSlash = (p) => (p === "/" ? "/" : p.endsWith("/") ? p : `${p}/`);
+
 const urls = sitemapRoutes.map((route) => `  <url>
-    <loc>${SITE_URL}${route.path}</loc>
+    <loc>${SITE_URL}${withTrailingSlash(route.path)}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority.toFixed(1)}</priority>

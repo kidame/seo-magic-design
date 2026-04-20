@@ -59,7 +59,7 @@ const AuditSeo = () => {
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       areaServed: { "@type": "Place", name: "Suisse romande" },
     },
@@ -73,7 +73,7 @@ const AuditSeo = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://kumo-seo.ch/#services" },
-      { "@type": "ListItem", position: 3, name: "Audit SEO", item: "https://kumo-seo.ch/services/audit-seo" },
+      { "@type": "ListItem", position: 3, name: "Audit SEO", item: "https://kumo-seo.ch/services/audit-seo/" },
     ],
   };
 
@@ -82,7 +82,7 @@ const AuditSeo = () => {
       <SeoHead
         title="Audit SEO site web | KUMO - Consultant Neuchâtel"
         description="Audit SEO de site web complet : 31 points de contrôle, analyse de 3 concurrents et plan d'action 90 jours pour PME romandes."
-        canonical="https://kumo-seo.ch/services/audit-seo"
+        canonical="https://kumo-seo.ch/services/audit-seo/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -125,7 +125,7 @@ const AuditSeo = () => {
               Appel de restitution de 30 min inclus.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <a href="/contact">
+              <a href="/contact/">
                 Demander un audit <ArrowRight className="ml-1" size={18} />
               </a>
             </Button>
@@ -247,7 +247,7 @@ const AuditSeo = () => {
           </div>
 
           <Button variant="hero" size="sm" className="rounded-full" asChild>
-            <Link to="/contact">
+            <Link to="/contact/">
               Discuter de mon projet <ArrowRight className="ml-1" size={16} />
             </Link>
           </Button>
@@ -262,22 +262,22 @@ const AuditSeo = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/rapport" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/rapport/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">報告 Rapport</p>
               <h3 className="font-bold mb-2">Structure du rapport</h3>
               <p className="text-sm text-muted-foreground">Découvrez le contenu détaillé du rapport d'audit que vous recevrez.</p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Après l'audit, passez à l'action avec un suivi mensuel continu.</p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
               <h3 className="font-bold mb-2">Site web sur-mesure</h3>
               <p className="text-sm text-muted-foreground">Un nouveau site optimisé SEO dès la première ligne de code.</p>
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/consultant-seo-suisse-romande/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">地域 Zones</p>
               <h3 className="font-bold mb-2">Suisse romande</h3>
               <p className="text-sm text-muted-foreground">Consultant SEO actif dans toute la Romandie.</p>
@@ -294,12 +294,12 @@ const AuditSeo = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/site-invisible-google-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
               <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
             </Link>
-            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
               <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
               <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
@@ -317,7 +317,7 @@ const AuditSeo = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <a href="/contact">
+              <a href="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </a>
             </Button>

@@ -101,7 +101,7 @@ const FAQPage = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-      { "@type": "ListItem", position: 2, name: "FAQ", item: "https://kumo-seo.ch/faq" },
+      { "@type": "ListItem", position: 2, name: "FAQ", item: "https://kumo-seo.ch/faq/" },
     ],
   };
 
@@ -110,7 +110,7 @@ const FAQPage = () => {
       <SeoHead
         title="FAQ : audit SEO & création web | KUMO Neuchâtel"
         description="Réponses aux questions fréquentes sur l'audit SEO, la création de site web sur-mesure, les tarifs et l'accompagnement SEO pour PME suisses."
-        canonical="https://kumo-seo.ch/faq"
+        canonical="https://kumo-seo.ch/faq/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -168,7 +168,7 @@ const FAQPage = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Nous contacter <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

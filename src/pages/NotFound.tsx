@@ -5,11 +5,11 @@ import SeoHead from "@/components/SeoHead";
 
 const links = [
   { to: "/", label: "Accueil" },
-  { to: "/services/audit-seo", label: "Audit SEO" },
-  { to: "/services/creation-site-web", label: "Création de site web" },
-  { to: "/services/accompagnement-seo", label: "Accompagnement SEO" },
-  { to: "/blog", label: "Blog" },
-  { to: "/contact", label: "Contact" },
+  { to: "/services/audit-seo/", label: "Audit SEO" },
+  { to: "/services/creation-site-web/", label: "Création de site web" },
+  { to: "/services/accompagnement-seo/", label: "Accompagnement SEO" },
+  { to: "/blog/", label: "Blog" },
+  { to: "/contact/", label: "Contact" },
 ];
 
 const NotFound = () => {

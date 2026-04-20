@@ -43,7 +43,7 @@ const BlogPost = () => {
   }, [post]);
 
   if (!post || !slug) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to="/blog/" replace />;
   }
 
   const ArticleContent = articleComponents[slug];
@@ -66,7 +66,7 @@ const BlogPost = () => {
       publisher: {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
-        url: "https://kumo-seo.ch",
+        url: "https://kumo-seo.ch/",
         logo: {
           "@type": "ImageObject",
           url: "https://kumo-seo.ch/logo-kumo.png",
@@ -95,7 +95,7 @@ const BlogPost = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blog",
-          item: "https://kumo-seo.ch/blog",
+          item: "https://kumo-seo.ch/blog/",
         },
         {
           "@type": "ListItem",
@@ -164,7 +164,7 @@ const BlogPost = () => {
                   </li>
                   <li aria-hidden="true" className="text-muted-foreground/40">/</li>
                   <li>
-                    <Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link>
+                    <Link to="/blog/" className="hover:text-foreground transition-colors">Blog</Link>
                   </li>
                   <li aria-hidden="true" className="text-muted-foreground/40">/</li>
                   <li aria-current="page" className="text-foreground/70 truncate max-w-[200px] md:max-w-none">
@@ -230,7 +230,7 @@ const BlogPost = () => {
                 <div className="flex flex-col sm:flex-row justify-between gap-4">
                   {prevPost ? (
                     <Link
-                      to={`/blog/${prevPost.slug}`}
+                      to={`/blog/${prevPost.slug}/`}
                       className="group flex-1 glass-card rounded-xl p-5 transition-all duration-300 hover:border-primary/30"
                       rel="prev"
                     >
@@ -244,7 +244,7 @@ const BlogPost = () => {
                   ) : <div className="flex-1" />}
                   {nextPost ? (
                     <Link
-                      to={`/blog/${nextPost.slug}`}
+                      to={`/blog/${nextPost.slug}/`}
                       className="group flex-1 glass-card rounded-xl p-5 text-right transition-all duration-300 hover:border-primary/30"
                       rel="next"
                     >
@@ -272,7 +272,7 @@ const BlogPost = () => {
                   Échangeons 15 minutes sur votre situation. C'est gratuit et sans engagement.
                 </p>
                 <Button variant="hero" className="rounded-full" asChild>
-                  <Link to="/contact">Prendre contact</Link>
+                  <Link to="/contact/">Prendre contact</Link>
                 </Button>
               </aside>
             </article>

@@ -21,11 +21,11 @@ const Resultats = () => {
     "@type": "WebPage",
     name: "Résultats & études de cas | KUMO SEO",
     description: "Études de cas et résultats concrets d'accompagnement SEO pour PME suisses. Page en construction.",
-    url: "https://kumo-seo.ch/resultats",
+    url: "https://kumo-seo.ch/resultats/",
     publisher: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
     },
   };
@@ -35,7 +35,7 @@ const Resultats = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-      { "@type": "ListItem", position: 2, name: "Résultats", item: "https://kumo-seo.ch/resultats" },
+      { "@type": "ListItem", position: 2, name: "Résultats", item: "https://kumo-seo.ch/resultats/" },
     ],
   };
 
@@ -44,7 +44,7 @@ const Resultats = () => {
       <SeoHead
         title="Résultats & études de cas SEO | KUMO Neuchâtel"
         description="Études de cas et résultats concrets d'accompagnement SEO pour PME suisses romandes. Bientôt disponible."
-        canonical="https://kumo-seo.ch/resultats"
+        canonical="https://kumo-seo.ch/resultats/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -101,13 +101,13 @@ const Resultats = () => {
         {/* Liens services */}
         <section className="container max-w-3xl mx-auto px-4 mb-24 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-wrap justify-center gap-4">
-            <Link to="/services/audit-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/audit-seo/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Audit SEO technique <ArrowRight size={14} />
             </Link>
-            <Link to="/services/accompagnement-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Accompagnement SEO <ArrowRight size={14} />
             </Link>
-            <Link to="/rapport" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/rapport/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Structure du rapport <ArrowRight size={14} />
             </Link>
           </motion.div>
@@ -123,7 +123,7 @@ const Resultats = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

@@ -4,37 +4,37 @@ const footerColumns = [
   {
     heading: "Services",
     links: [
-      { label: "Audit SEO complet", href: "/services/audit-seo" },
-      { label: "Création de site web", href: "/services/creation-site-web" },
-      { label: "Accompagnement SEO", href: "/services/accompagnement-seo" },
+      { label: "Audit SEO complet", href: "/services/audit-seo/" },
+      { label: "Création de site web", href: "/services/creation-site-web/" },
+      { label: "Accompagnement SEO", href: "/services/accompagnement-seo/" },
     ],
   },
   {
     heading: "Zones couvertes",
     links: [
-      { label: "Neuchâtel", href: "/consultant-seo-neuchatel" },
-      { label: "Lausanne", href: "/consultant-seo-lausanne" },
-      { label: "Genève", href: "/consultant-seo-geneve" },
-      { label: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds" },
-      { label: "Suisse romande", href: "/consultant-seo-suisse-romande" },
+      { label: "Neuchâtel", href: "/consultant-seo-neuchatel/" },
+      { label: "Lausanne", href: "/consultant-seo-lausanne/" },
+      { label: "Genève", href: "/consultant-seo-geneve/" },
+      { label: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds/" },
+      { label: "Suisse romande", href: "/consultant-seo-suisse-romande/" },
     ],
   },
   {
     heading: "Ressources",
     links: [
-      { label: "Blog", href: "/blog" },
-      { label: "Questions fréquentes", href: "/faq" },
-      { label: "Résultats", href: "/resultats" },
-      { label: "À propos", href: "/a-propos" },
-      { label: "Contact", href: "/contact" },
+      { label: "Blog", href: "/blog/" },
+      { label: "Questions fréquentes", href: "/faq/" },
+      { label: "Résultats", href: "/resultats/" },
+      { label: "À propos", href: "/a-propos/" },
+      { label: "Contact", href: "/contact/" },
     ],
   },
 ];
 
 const legalLinks = [
-  { label: "Mentions légales", href: "/mentions-legales" },
-  { label: "CGV", href: "/cgv" },
-  { label: "Politique de confidentialité", href: "/politique-de-confidentialite" },
+  { label: "Mentions légales", href: "/mentions-legales/" },
+  { label: "CGV", href: "/cgv/" },
+  { label: "Politique de confidentialité", href: "/politique-de-confidentialite/" },
 ];
 
 const Footer = () => {

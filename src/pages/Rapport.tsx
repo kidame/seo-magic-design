@@ -76,11 +76,11 @@ const Rapport = () => {
     "@type": "WebPage",
     name: "Rapport d'audit SEO : structure et livrables",
     description: "Découvrez la structure du rapport d'audit SEO KUMO : 31 points de contrôle, analyse concurrentielle, performance et mots-clés stratégiques.",
-    url: "https://kumo-seo.ch/rapport",
+    url: "https://kumo-seo.ch/rapport/",
     publisher: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
     },
   };
@@ -90,7 +90,7 @@ const Rapport = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-      { "@type": "ListItem", position: 2, name: "Rapport", item: "https://kumo-seo.ch/rapport" },
+      { "@type": "ListItem", position: 2, name: "Rapport", item: "https://kumo-seo.ch/rapport/" },
     ],
   };
 
@@ -99,7 +99,7 @@ const Rapport = () => {
       <SeoHead
         title="Rapport d'audit SEO | KUMO - Consultant Neuchâtel"
         description="Structure du rapport d'audit SEO KUMO : 31 points techniques, analyse de performance, étude concurrentielle et recherche de mots-clés stratégiques."
-        canonical="https://kumo-seo.ch/rapport"
+        canonical="https://kumo-seo.ch/rapport/"
         jsonLd={jsonLd}
         noIndex={true}
       />
@@ -177,17 +177,17 @@ const Rapport = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO technique</h3>
               <p className="text-sm text-muted-foreground">31 points de contrôle pour identifier les problèmes de votre site.</p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Maintenez et améliorez vos positions avec un suivi mensuel.</p>
             </Link>
-            <Link to="/resultats" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/resultats/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">実績 Résultats</p>
               <h3 className="font-bold mb-2">Nos résultats</h3>
               <p className="text-sm text-muted-foreground">Études de cas et résultats concrets obtenus pour nos clients.</p>
@@ -205,7 +205,7 @@ const Rapport = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Demander un audit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

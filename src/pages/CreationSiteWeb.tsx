@@ -91,7 +91,7 @@ const CreationSiteWeb = () => {
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       areaServed: { "@type": "Place", name: "Suisse romande" },
     },
@@ -105,7 +105,7 @@ const CreationSiteWeb = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://kumo-seo.ch/#services" },
-      { "@type": "ListItem", position: 3, name: "Création de site web", item: "https://kumo-seo.ch/services/creation-site-web" },
+      { "@type": "ListItem", position: 3, name: "Création de site web", item: "https://kumo-seo.ch/services/creation-site-web/" },
     ],
   };
 
@@ -114,7 +114,7 @@ const CreationSiteWeb = () => {
       <SeoHead
         title="Création de site web sur-mesure | KUMO Neuchâtel"
         description="Site web sur-mesure en code : 3 forfaits dès CHF 3'900. Performance 90+ PageSpeed, SEO intégré dès la conception. Pour PME suisses."
-        canonical="https://kumo-seo.ch/services/creation-site-web"
+        canonical="https://kumo-seo.ch/services/creation-site-web/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -156,7 +156,7 @@ const CreationSiteWeb = () => {
               Pas de template. Pas de CMS lourd. Juste ce dont vous avez besoin.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Demander un devis <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>
@@ -266,7 +266,7 @@ const CreationSiteWeb = () => {
                 </div>
 
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium mt-6"
                 >
                   Demander un devis <ArrowRight size={14} />
@@ -311,17 +311,17 @@ const CreationSiteWeb = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO technique</h3>
               <p className="text-sm text-muted-foreground">Diagnostiquez votre site existant avec 31 points de contrôle.</p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Maintenez et améliorez vos positions avec un suivi mensuel.</p>
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/consultant-seo-suisse-romande/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">地域 Zones</p>
               <h3 className="font-bold mb-2">Suisse romande</h3>
               <p className="text-sm text-muted-foreground">Consultant SEO actif dans toute la Romandie.</p>
@@ -338,12 +338,12 @@ const CreationSiteWeb = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/creer-site-internet-pme-suisse-2026" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/creer-site-internet-pme-suisse-2026/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Créer un site internet en 2026</h3>
               <p className="text-sm text-muted-foreground">Ce qu'une PME suisse doit exiger de son prestataire.</p>
             </Link>
-            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/site-invisible-google-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
               <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
@@ -361,7 +361,7 @@ const CreationSiteWeb = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

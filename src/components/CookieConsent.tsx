@@ -16,7 +16,7 @@ const CookieConsent = ({ onAccept, onRefuse }: CookieConsentProps) => {
         <div className="flex-1 text-sm text-muted-foreground">
           Ce site utilise Google Analytics pour améliorer votre expérience. Aucune donnée personnelle n'est revendue.{" "}
           <Link
-            to="/politique-de-confidentialite"
+            to="/politique-de-confidentialite/"
             className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors"
           >
             En savoir plus

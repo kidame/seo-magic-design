@@ -89,7 +89,7 @@ const MiseAJourGoogle2026 = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Chez KUMO, notre{" "}
-          <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO technique</Link>{" "}
+          <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO technique</Link>{" "}
           inclut une vérification complète de ces paramètres et identifie précisément les zones à risque.
         </p>
       </div>
@@ -112,7 +112,7 @@ const MiseAJourGoogle2026 = () => (
         <h3 className="text-lg font-semibold mt-8 mb-3">Si votre site a perdu des positions</h3>
         <p className="text-muted-foreground leading-relaxed">
           Ne faites rien dans la précipitation. Diagnostiquez d'abord. Un{" "}
-          <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
+          <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO complet</Link>{" "}
           vous donnera une image claire de la situation : est-ce un problème technique, un problème de contenu, ou un problème de pratiques SEO passées ?
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -125,7 +125,7 @@ const MiseAJourGoogle2026 = () => (
         <h3 className="text-lg font-semibold mt-8 mb-3">Si vous n'avez pas de site ou si votre site est en fin de vie</h3>
         <p className="text-muted-foreground leading-relaxed">
           Paradoxalement, c'est le meilleur moment pour repartir sur des bases saines. Plutôt que de rafistoler un site problématique, investir dans une{" "}
-          <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">création de site propre et optimisée</Link>{" "}
+          <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">création de site propre et optimisée</Link>{" "}
           vous place directement du bon côté de l'algorithme.
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -144,7 +144,7 @@ const MiseAJourGoogle2026 = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           C'est exactement la logique derrière nos formules d'{" "}
-          <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement SEO</Link>{" "}
+          <Link to="/services/accompagnement-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement SEO</Link>{" "}
           : un suivi mensuel qui détecte les problèmes avant qu'ils n'impactent votre visibilité, et qui capitalise sur les opportunités au fur et à mesure qu'elles apparaissent.
         </p>
       </div>
@@ -179,7 +179,7 @@ const MiseAJourGoogle2026 = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous n'êtes pas sûr de l'impact de cette mise à jour sur votre site ?{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Prenez contact</Link>{" "}
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Prenez contact</Link>{" "}
         pour un diagnostic rapide de votre situation.
       </p>
     </div>

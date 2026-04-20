@@ -67,7 +67,7 @@ const Contact = () => {
     mainEntity: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       email: "thomas.puglisi@kumo-seo.ch",
       telephone: "+41 78 930 81 00",
@@ -86,7 +86,7 @@ const Contact = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-      { "@type": "ListItem", position: 2, name: "Contact", item: "https://kumo-seo.ch/contact" },
+      { "@type": "ListItem", position: 2, name: "Contact", item: "https://kumo-seo.ch/contact/" },
     ],
   };
 
@@ -95,7 +95,7 @@ const Contact = () => {
       <SeoHead
         title="Contact | KUMO - Consultant SEO Neuchâtel"
         description="Contactez KUMO SEO pour un diagnostic gratuit. Consultant SEO indépendant à Neuchâtel. Réponse personnelle sous 24 heures."
-        canonical="https://kumo-seo.ch/contact"
+        canonical="https://kumo-seo.ch/contact/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -275,13 +275,13 @@ const Contact = () => {
             viewport={{ once: true }}
             className="mt-12 flex flex-wrap justify-center gap-4"
           >
-            <Link to="/services/audit-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/audit-seo/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Audit SEO <ArrowRight size={14} />
             </Link>
-            <Link to="/services/creation-site-web" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/creation-site-web/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Création de site <ArrowRight size={14} />
             </Link>
-            <Link to="/services/accompagnement-seo" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Accompagnement SEO <ArrowRight size={14} />
             </Link>
           </motion.div>

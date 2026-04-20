@@ -85,7 +85,7 @@ const AccompagnementSeo = () => {
     provider: {
       "@type": "ProfessionalService",
       name: "KUMO SEO",
-      url: "https://kumo-seo.ch",
+      url: "https://kumo-seo.ch/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       areaServed: { "@type": "Place", name: "Suisse romande" },
     },
@@ -100,7 +100,7 @@ const AccompagnementSeo = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://kumo-seo.ch/#services" },
-      { "@type": "ListItem", position: 3, name: "Accompagnement SEO", item: "https://kumo-seo.ch/services/accompagnement-seo" },
+      { "@type": "ListItem", position: 3, name: "Accompagnement SEO", item: "https://kumo-seo.ch/services/accompagnement-seo/" },
     ],
   };
 
@@ -109,7 +109,7 @@ const AccompagnementSeo = () => {
       <SeoHead
         title="Accompagnement SEO mensuel | KUMO Neuchâtel"
         description="Formules de suivi SEO mensuel : maintenance dès CHF 250/mois, suivi visibilité CHF 590/mois, croissance CHF 1'490/mois. Pour PME suisses."
-        canonical="https://kumo-seo.ch/services/accompagnement-seo"
+        canonical="https://kumo-seo.ch/services/accompagnement-seo/"
         jsonLd={jsonLd}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -150,7 +150,7 @@ const AccompagnementSeo = () => {
               Si votre site existant a besoin d'un travail d'optimisation en profondeur, commencez par un Mandat SEO 90 jours. Ensuite, choisissez une formule mensuelle pour maintenir et améliorer vos positions dans la durée.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Demander un devis <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>
@@ -237,7 +237,7 @@ const AccompagnementSeo = () => {
                   ))}
                 </ul>
                 <Button variant="hero" size="sm" className="rounded-full mt-8 w-full" asChild>
-                  <Link to="/contact">Demander un devis</Link>
+                  <Link to="/contact/">Demander un devis</Link>
                 </Button>
               </motion.div>
             ))}
@@ -275,17 +275,17 @@ const AccompagnementSeo = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO technique</h3>
               <p className="text-sm text-muted-foreground">31 points de contrôle pour identifier les problèmes de votre site.</p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
               <h3 className="font-bold mb-2">Site web sur-mesure</h3>
               <p className="text-sm text-muted-foreground">Un site performant et optimisé SEO dès la première ligne de code.</p>
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/consultant-seo-suisse-romande/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">地域 Zones</p>
               <h3 className="font-bold mb-2">Suisse romande</h3>
               <p className="text-sm text-muted-foreground">Consultant SEO actif dans toute la Romandie.</p>
@@ -302,12 +302,12 @@ const AccompagnementSeo = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
               <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
               <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
             </Link>
-            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/site-invisible-google-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
               <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
@@ -325,7 +325,7 @@ const AccompagnementSeo = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

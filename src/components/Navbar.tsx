@@ -11,15 +11,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const serviceLinks = [
-  { label: "Audit SEO", href: "/services/audit-seo" },
-  { label: "Création de site web", href: "/services/creation-site-web" },
-  { label: "Accompagnement SEO", href: "/services/accompagnement-seo" },
+  { label: "Audit SEO", href: "/services/audit-seo/" },
+  { label: "Création de site web", href: "/services/creation-site-web/" },
+  { label: "Accompagnement SEO", href: "/services/accompagnement-seo/" },
 ];
 
 const navLinks = [
-  { label: "À propos", href: "/a-propos" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Blog", href: "/blog" },
+  { label: "À propos", href: "/a-propos/" },
+  { label: "FAQ", href: "/faq/" },
+  { label: "Blog", href: "/blog/" },
 ];
 
 const Navbar = () => {
@@ -94,13 +94,13 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-3">
             <Link
-              to="/contact"
+              to="/contact/"
               className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact
             </Link>
             <Button variant="hero" size="sm" className="rounded-full h-8 px-4 text-xs" asChild>
-              <Link to="/contact">Diagnostic gratuit</Link>
+              <Link to="/contact/">Diagnostic gratuit</Link>
             </Button>
           </div>
 
@@ -153,7 +153,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                to="/contact/"
                 onClick={() => setOpen(false)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 role="menuitem"
@@ -161,7 +161,7 @@ const Navbar = () => {
                 Contact
               </Link>
               <Button variant="hero" size="sm" className="rounded-full mt-1" asChild>
-                <Link to="/contact" onClick={() => setOpen(false)}>Diagnostic gratuit</Link>
+                <Link to="/contact/" onClick={() => setOpen(false)}>Diagnostic gratuit</Link>
               </Button>
             </div>
           </motion.div>

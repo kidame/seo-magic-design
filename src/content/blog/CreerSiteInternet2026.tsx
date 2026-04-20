@@ -30,7 +30,7 @@ const CreerSiteInternet2026 = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Si votre prestataire commence par le design sans avoir fait ce travail, vous construisez une maison sans fondations. Chez KUMO, l'{" "}
-          <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">étude stratégique</Link>{" "}
+          <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">étude stratégique</Link>{" "}
           est la première étape de tout projet de site. Elle est même créditée intégralement si vous confirmez la création du site, parce que nous considérons qu'elle est indispensable, pas optionnelle.
         </p>
       </div>
@@ -140,9 +140,9 @@ const CreerSiteInternet2026 = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Notre offre{" "}
-          <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Site Premium</Link>{" "}
+          <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Site Premium</Link>{" "}
           inclut 3 mois d'accompagnement post-lancement précisément pour cette raison. Pour les sites Essentiel et Pro, un{" "}
-          <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">retainer de suivi</Link>{" "}
+          <Link to="/services/accompagnement-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">retainer de suivi</Link>{" "}
           mensuel peut prendre le relais.
         </p>
       </div>
@@ -212,7 +212,7 @@ const CreerSiteInternet2026 = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous préparez un projet de site web pour votre entreprise ?{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Discutons-en</Link>{" "}
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Discutons-en</Link>{" "}
         pour évaluer vos besoins et vous proposer une approche sur-mesure.
       </p>
     </div>

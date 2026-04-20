@@ -17,7 +17,7 @@ const BlogCard = ({ post, index = 0 }: BlogCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Link
-        to={`/blog/${post.slug}`}
+        to={`/blog/${post.slug}/`}
         className="group flex flex-col h-full glass-card rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-[0_4px_24px_hsl(265_70%_42%/0.15)]"
       >
         {post.cover_image && (

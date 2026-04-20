@@ -103,7 +103,7 @@ const PagespeedCoreWebVitalsGuide = () => (
         </p>
         <Marginalia label="VOIR AUSSI">
           L'audit SEO KUMO intègre une analyse PageSpeed complète sur vos pages clés, avec recommandations de correction priorisées. Voir{" "}
-          <Link to="/blog/audit-seo-pourquoi-indispensable" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Audit SEO, pourquoi c'est indispensable</Link>.
+          <Link to="/blog/audit-seo-pourquoi-indispensable/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Audit SEO, pourquoi c'est indispensable</Link>.
         </Marginalia>
         <p className="text-muted-foreground leading-relaxed">
           Pour un diagnostic local détaillé depuis votre navigateur, Chrome DevTools propose un onglet Lighthouse intégré. Il produit le même type de rapport que PageSpeed Insights, mais permet de tester des pages en accès restreint (intranet, environnement de préproduction). C'est l'outil préféré des développeurs pour itérer pendant les corrections.
@@ -203,9 +203,9 @@ const PagespeedCoreWebVitalsGuide = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous voulez une analyse complète de la performance de votre site ?{" "}
-        <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">L'audit SEO KUMO</Link>{" "}
+        <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">L'audit SEO KUMO</Link>{" "}
         inclut l'analyse PageSpeed et un plan d'action priorisé. Ou{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>{" "}
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">prenez contact</Link>{" "}
         pour un échange de 15 minutes.
       </p>
     </div>

@@ -16,10 +16,10 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const villes = [
-  { name: "Neuchâtel", href: "/consultant-seo-neuchatel", desc: "Canton de Neuchâtel et Val-de-Travers" },
-  { name: "Lausanne", href: "/consultant-seo-lausanne", desc: "Canton de Vaud et agglomération lausannoise" },
-  { name: "Genève", href: "/consultant-seo-geneve", desc: "Canton de Genève et Grand Genève" },
-  { name: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds", desc: "Montagnes neuchâteloises" },
+  { name: "Neuchâtel", href: "/consultant-seo-neuchatel/", desc: "Canton de Neuchâtel et Val-de-Travers" },
+  { name: "Lausanne", href: "/consultant-seo-lausanne/", desc: "Canton de Vaud et agglomération lausannoise" },
+  { name: "Genève", href: "/consultant-seo-geneve/", desc: "Canton de Genève et Grand Genève" },
+  { name: "La Chaux-de-Fonds", href: "/consultant-seo-la-chaux-de-fonds/", desc: "Montagnes neuchâteloises" },
 ];
 
 const pourquoi = [
@@ -56,7 +56,7 @@ const ConsultantSeoSuisseRomande = () => {
       provider: {
         "@type": "ProfessionalService",
         name: "KUMO SEO",
-        url: "https://kumo-seo.ch",
+        url: "https://kumo-seo.ch/",
         logo: "https://kumo-seo.ch/logo-kumo.png",
         telephone: "+41 78 930 81 00",
         email: "thomas.puglisi@kumo-seo.ch",
@@ -82,7 +82,7 @@ const ConsultantSeoSuisseRomande = () => {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande" },
+        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande/" },
       ],
     },
     {
@@ -122,7 +122,7 @@ const ConsultantSeoSuisseRomande = () => {
       <SeoHead
         title="Consultant SEO en Suisse romande | KUMO - Neuchâtel"
         description="SEO pour PME de Suisse romande, de Neuchâtel à Genève. Diagnostic, suivi mensuel et création web. Tarifs en CHF, sans engagement longue durée."
-        canonical="https://kumo-seo.ch/consultant-seo-suisse-romande"
+        canonical="https://kumo-seo.ch/consultant-seo-suisse-romande/"
         jsonLd={jsonLd}
       />
       <Navbar />
@@ -163,7 +163,7 @@ const ConsultantSeoSuisseRomande = () => {
               </p>
             </div>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>
@@ -254,7 +254,7 @@ const ConsultantSeoSuisseRomande = () => {
             ))}
           </div>
           <div className="mt-6">
-            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo/#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               SEO local pour les entreprises romandes <ArrowRight size={14} />
             </Link>
           </div>
@@ -293,17 +293,17 @@ const ConsultantSeoSuisseRomande = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO de site web</h3>
               <p className="text-sm text-muted-foreground">31 points de contrôle, plan d'action 90 jours. CHF 1'200.</p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
               <h3 className="font-bold mb-2">Site web sur-mesure</h3>
               <p className="text-sm text-muted-foreground">Sites codés en React, optimisés SEO. Dès CHF 3'900.</p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO</h3>
               <p className="text-sm text-muted-foreground">Suivi mensuel continu. Dès CHF 250/mois.</p>
@@ -320,12 +320,12 @@ const ConsultantSeoSuisseRomande = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/site-invisible-google-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
               <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
             </Link>
-            <Link to="/blog/creer-site-internet-pme-suisse-2026" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/creer-site-internet-pme-suisse-2026/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Créer un site internet en 2026</h3>
               <p className="text-sm text-muted-foreground">Ce qu'une PME suisse doit exiger de son prestataire web.</p>
@@ -343,7 +343,7 @@ const ConsultantSeoSuisseRomande = () => {
               Diagnostic initial gratuit. Réponse personnelle sous 24 heures.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

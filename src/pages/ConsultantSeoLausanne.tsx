@@ -49,7 +49,7 @@ const ConsultantSeoLausanne = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Lausanne",
-      url: "https://kumo-seo.ch/consultant-seo-lausanne",
+      url: "https://kumo-seo.ch/consultant-seo-lausanne/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
@@ -79,8 +79,8 @@ const ConsultantSeoLausanne = () => {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande" },
-        { "@type": "ListItem", position: 3, name: "Lausanne", item: "https://kumo-seo.ch/consultant-seo-lausanne" },
+        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande/" },
+        { "@type": "ListItem", position: 3, name: "Lausanne", item: "https://kumo-seo.ch/consultant-seo-lausanne/" },
       ],
     },
     {
@@ -120,7 +120,7 @@ const ConsultantSeoLausanne = () => {
       <SeoHead
         title="Consultant SEO Lausanne - Audit & Référencement | KUMO"
         description="Alternative aux agences lausannoises : un freelance SEO qui travaille en direct sur votre projet. Tarifs clairs, rapport mensuel lisible, zéro intermédiaire."
-        canonical="https://kumo-seo.ch/consultant-seo-lausanne"
+        canonical="https://kumo-seo.ch/consultant-seo-lausanne/"
         jsonLd={jsonLd}
       />
       <Navbar />
@@ -134,7 +134,7 @@ const ConsultantSeoLausanne = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild><Link to="/consultant-seo-suisse-romande">Consultant SEO</Link></BreadcrumbLink>
+                <BreadcrumbLink asChild><Link to="/consultant-seo-suisse-romande/">Consultant SEO</Link></BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -160,7 +160,7 @@ const ConsultantSeoLausanne = () => {
               Lausanne est un marché compétitif. Agences web, consultants, freelances : les offres SEO ne manquent pas dans le canton de Vaud. Ce qui manque, c'est la clarté. KUMO propose une alternative simple : un consultant SEO indépendant, un forfait fixe annoncé avant le premier jour de travail, et un seul interlocuteur du début à la fin. Pas d'équipe intermédiaire, pas de réunions inutiles. Je travaille principalement à distance (visioconférence, email, rapports partagés), avec la possibilité de me déplacer à Lausanne pour les rendez-vous clés. Que vous soyez une startup du quartier de l'Innovation Park, un commerce du centre-ville ou un cabinet à Pully, l'objectif est le même : comprendre où vous en êtes sur Google et mettre en place un plan concret pour progresser.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>
@@ -197,21 +197,21 @@ const ConsultantSeoLausanne = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO complet - CHF 1'200</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 31 points de contrôle techniques, analyse de 3 concurrents directs dans votre marché lausannois, et un plan d'action priorisé sur 90 jours. Restitution en visioconférence de 30 minutes.
               </p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
               <h3 className="font-bold mb-2">Site web performant - dès CHF 3'900</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Site codé sur-mesure en React, pas un template WordPress. Performance 90+ PageSpeed, SEO intégré dès la conception, hébergement suisse inclus la première année.
               </p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Suivi et accompagnement - dès CHF 250/mois</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -270,13 +270,13 @@ const ConsultantSeoLausanne = () => {
             ))}
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link to="/consultant-seo-geneve" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-geneve/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO Genève <ArrowRight size={14} />
             </Link>
-            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo/#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               SEO local pour PME vaudoises <ArrowRight size={14} />
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-suisse-romande/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
           </div>
@@ -312,12 +312,12 @@ const ConsultantSeoLausanne = () => {
             <p className="section-label mb-4">記事 Sur le blog</p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/creer-site-internet-pme-suisse-2026" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/creer-site-internet-pme-suisse-2026/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Créer un site internet en 2026</h3>
               <p className="text-sm text-muted-foreground">Ce qu'une PME suisse doit exiger de son prestataire.</p>
             </Link>
-            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
               <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
               <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
@@ -340,7 +340,7 @@ const ConsultantSeoLausanne = () => {
               <a href="tel:+41789308100" className="hover:text-foreground transition-colors">+41 78 930 81 00</a>
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

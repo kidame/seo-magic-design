@@ -53,7 +53,7 @@ const ConsultantSeoGeneve = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       name: "KUMO SEO - Consultant SEO Genève",
-      url: "https://kumo-seo.ch/consultant-seo-geneve",
+      url: "https://kumo-seo.ch/consultant-seo-geneve/",
       logo: "https://kumo-seo.ch/logo-kumo.png",
       telephone: "+41 78 930 81 00",
       email: "thomas.puglisi@kumo-seo.ch",
@@ -83,8 +83,8 @@ const ConsultantSeoGeneve = () => {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
-        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande" },
-        { "@type": "ListItem", position: 3, name: "Genève", item: "https://kumo-seo.ch/consultant-seo-geneve" },
+        { "@type": "ListItem", position: 2, name: "Consultant SEO Suisse romande", item: "https://kumo-seo.ch/consultant-seo-suisse-romande/" },
+        { "@type": "ListItem", position: 3, name: "Genève", item: "https://kumo-seo.ch/consultant-seo-geneve/" },
       ],
     },
     {
@@ -124,7 +124,7 @@ const ConsultantSeoGeneve = () => {
       <SeoHead
         title="Consultant SEO Genève - Audit & Référencement | KUMO"
         description="Consultant SEO pour PME genevoises et marché transfrontalier Grand Genève. Référencement local adapté à un marché compétitif. Devis gratuit."
-        canonical="https://kumo-seo.ch/consultant-seo-geneve"
+        canonical="https://kumo-seo.ch/consultant-seo-geneve/"
         jsonLd={jsonLd}
       />
       <Navbar />
@@ -138,7 +138,7 @@ const ConsultantSeoGeneve = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild><Link to="/consultant-seo-suisse-romande">Consultant SEO</Link></BreadcrumbLink>
+                <BreadcrumbLink asChild><Link to="/consultant-seo-suisse-romande/">Consultant SEO</Link></BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -164,7 +164,7 @@ const ConsultantSeoGeneve = () => {
               Genève est le marché le plus compétitif de Suisse romande. Les PME genevoises font face à une concurrence internationale : sièges de multinationales, organisations internationales, et entreprises de toute la francophonie qui se positionnent sur les mêmes requêtes Google. Pour se démarquer dans ce contexte, il faut une stratégie SEO précise et exécutée avec rigueur. KUMO propose une approche boutique, pas une usine à sites. Un consultant indépendant, un forfait fixe en CHF, des résultats mesurables. Je travaille depuis Neuchâtel avec des clients dans tout le canton de Genève et le Grand Genève, par visioconférence et email, avec la possibilité de déplacements quand le projet le justifie.
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>
@@ -201,21 +201,21 @@ const ConsultantSeoGeneve = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/services/audit-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/audit-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">検査 Audit</p>
               <h3 className="font-bold mb-2">Audit SEO - CHF 1'200</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 31 points de contrôle techniques, analyse de 3 concurrents genevois directs, plan d'action priorisé sur 90 jours. Votre site est évalué selon les critères qui comptent pour Google.
               </p>
             </Link>
-            <Link to="/services/creation-site-web" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/creation-site-web/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">制作 Création</p>
               <h3 className="font-bold mb-2">Création de site internet - dès CHF 3'900</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Site web codé sur-mesure, pas un thème WordPress. Performance 90+ PageSpeed, SEO natif, hébergement suisse inclus. Adapté aux exigences du marché genevois.
               </p>
             </Link>
-            <Link to="/services/accompagnement-seo" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/services/accompagnement-seo/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">伴走 Suivi</p>
               <h3 className="font-bold mb-2">Accompagnement SEO continu - dès CHF 250/mois</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -274,13 +274,13 @@ const ConsultantSeoGeneve = () => {
             ))}
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link to="/consultant-seo-lausanne" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-lausanne/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Consultant SEO Lausanne <ArrowRight size={14} />
             </Link>
-            <Link to="/services/accompagnement-seo#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/services/accompagnement-seo/#seo-local" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               SEO local pour PME genevoises <ArrowRight size={14} />
             </Link>
-            <Link to="/consultant-seo-suisse-romande" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
+            <Link to="/consultant-seo-suisse-romande/" className="text-sm text-primary-light hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium">
               Toutes les zones couvertes <ArrowRight size={14} />
             </Link>
           </div>
@@ -316,12 +316,12 @@ const ConsultantSeoGeneve = () => {
             <p className="section-label mb-4">記事 Sur le blog</p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
-            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/mise-a-jour-google-mars-2026-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Actualité</p>
               <h3 className="font-bold mb-2">Mise à jour Google mars 2026</h3>
               <p className="text-sm text-muted-foreground">Ce que ça change pour votre entreprise en Suisse.</p>
             </Link>
-            <Link to="/blog/site-invisible-google-pme-suisse" className="bg-card p-6 hover:bg-card/80 transition-colors">
+            <Link to="/blog/site-invisible-google-pme-suisse/" className="bg-card p-6 hover:bg-card/80 transition-colors">
               <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-2">Guide</p>
               <h3 className="font-bold mb-2">Votre site est invisible sur Google ?</h3>
               <p className="text-sm text-muted-foreground">5 causes fréquentes chez les PME romandes et comment y remédier.</p>
@@ -344,7 +344,7 @@ const ConsultantSeoGeneve = () => {
               <a href="tel:+41789308100" className="hover:text-foreground transition-colors">+41 78 930 81 00</a>
             </p>
             <Button variant="hero" size="lg" className="rounded-full" asChild>
-              <Link to="/contact">
+              <Link to="/contact/">
                 Diagnostic gratuit <ArrowRight className="ml-1" size={18} />
               </Link>
             </Button>

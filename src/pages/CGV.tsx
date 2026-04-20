@@ -7,12 +7,12 @@ const CGV = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Conditions générales de vente | KUMO SEO",
-    url: "https://kumo-seo.ch/cgv",
+    url: "https://kumo-seo.ch/cgv/",
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch" },
-        { "@type": "ListItem", position: 2, name: "CGV", item: "https://kumo-seo.ch/cgv" },
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://kumo-seo.ch/" },
+        { "@type": "ListItem", position: 2, name: "CGV", item: "https://kumo-seo.ch/cgv/" },
       ],
     },
   };
@@ -22,7 +22,7 @@ const CGV = () => {
       <SeoHead
         title="Conditions générales de vente | KUMO"
         description="Conditions générales de vente applicables aux prestations KUMO SEO. Forfaits, abonnements, paiement et droit suisse."
-        canonical="https://kumo-seo.ch/cgv"
+        canonical="https://kumo-seo.ch/cgv/"
         jsonLd={jsonLd}
         noIndex
       />

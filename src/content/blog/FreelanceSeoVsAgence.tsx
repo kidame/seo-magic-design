@@ -91,11 +91,11 @@ const FreelanceSeoVsAgence = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Chez KUMO, la transparence tarifaire est un principe. L'{" "}
-          <Link to="/services/audit-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO</Link>{" "}
+          <Link to="/services/audit-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">audit SEO</Link>{" "}
           est à CHF 1'200 forfaitaire. L'{" "}
-          <Link to="/services/accompagnement-seo" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement SEO mensuel</Link>{" "}
+          <Link to="/services/accompagnement-seo/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">accompagnement SEO mensuel</Link>{" "}
           démarre à CHF 250/mois. La{" "}
-          <Link to="/services/creation-site-web" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">création de site web</Link>{" "}
+          <Link to="/services/creation-site-web/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">création de site web</Link>{" "}
           commence à CHF 3'900. Pas de frais cachés, pas de tarif horaire imprédictible.
         </p>
       </div>
@@ -134,8 +134,8 @@ const FreelanceSeoVsAgence = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Pour en savoir plus sur la manière dont un{" "}
-          <Link to="/blog/site-invisible-google-pme-suisse" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">site invisible sur Google peut être corrigé</Link>, ou pour comprendre{" "}
-          <Link to="/blog/audit-seo-pourquoi-indispensable" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">pourquoi un audit SEO est la première étape</Link>, consultez nos articles dédiés.
+          <Link to="/blog/site-invisible-google-pme-suisse/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">site invisible sur Google peut être corrigé</Link>, ou pour comprendre{" "}
+          <Link to="/blog/audit-seo-pourquoi-indispensable/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">pourquoi un audit SEO est la première étape</Link>, consultez nos articles dédiés.
         </p>
       </div>
     </ArticleSection>
@@ -169,7 +169,7 @@ const FreelanceSeoVsAgence = () => (
 
       <p className="text-muted-foreground leading-relaxed italic">
         Vous hésitez entre freelance et agence pour votre projet SEO ?{" "}
-        <Link to="/contact" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Contactez-nous</Link>{" "}
+        <Link to="/contact/" className="text-primary-light hover:text-primary/80 underline underline-offset-4 transition-colors">Contactez-nous</Link>{" "}
         pour un échange gratuit de 15 minutes. Nous vous dirons honnêtement si KUMO est le bon choix pour votre situation.
       </p>
     </div>
